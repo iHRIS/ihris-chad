@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CivilServantCategoryValueSet",
+  "id": "civil-servant-category-valueset",
+  "title": "Civil Servant Category ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/civil-servant-category-valueset",
+  "date": "2024-02-07T08:12:00.000Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/civil-servant-category-codesystem"
+      }
+    ]
+  }
+}

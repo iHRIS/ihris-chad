@@ -1,0 +1,113 @@
+{
+  "resourceType": "Basic",
+  "id": "ihris-page-situation",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-page"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "page",
+        "system": "http://ihris.org/fhir/CodeSystem/ihris-resource-codesystem"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-display",
+      "extension": [
+        {
+          "url": "resource",
+          "valueReference": {
+            "reference": "StructureDefinition/situation-profile"
+          }
+        },
+        {
+          "url": "search",
+          "valueString": "Agent Status|extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding"
+        },
+        {
+          "extension": [
+            {
+              "url": "field",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "url",
+              "valueUrl": "/resource/view/practitioner/FIELD"
+            },
+            {
+              "url": "text",
+              "valueString": "View Health Worker"
+            },
+            {
+              "url": "button",
+              "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-account-arrow-right"
+            }
+          ],
+          "url": "link"
+        },
+        {
+          "extension": [
+            {
+              "url": "path",
+              "valueString": "Basic.extension:practitioner.value[x]:valueReference"
+            },
+            {
+              "url": "readOnlyIfSet",
+              "valueBoolean": true
+            }
+          ],
+          "url": "field"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Situation Information"
+        },
+        {
+          "url": "description",
+          "valueString": "Situation Information"
+        },
+        {
+          "url": "name",
+          "valueString": "situationinformation"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:practitioner"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:agent-status"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:qualification"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:function"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:level"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:study-level"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+{
+  "resourceType": "Basic",
+  "id": "ihris-page-education-type",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-page"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "page",
+        "system": "http://ihris.org/fhir/CodeSystem/ihris-resource-codesystem"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-display",
+      "extension": [
+        {
+          "url": "resource",
+          "valueReference": {
+            "reference": "StructureDefinition/td-education-type-profile"
+          }
+        },
+        {
+          "url": "search",
+          "valueString": "Name|Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-basic-name').valueString"
+        },
+        {
+          "extension": [
+            {
+              "url": "url",
+              "valueUrl": "/resource/view/education-type/FIELD?edit=true"
+            },
+            {
+              "url": "field",
+              "valueString": "Basic.id"
+            },
+            {
+              "url": "text",
+              "valueString": "Edit"
+            },
+            {
+              "url": "button",
+              "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-pencil"
+            },
+            {
+              "url": "class",
+              "valueString": "primary"
+            }
+          ],
+          "url": "link"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Education Type"
+        },
+        {
+          "url": "description",
+          "valueString": "Education Type"
+        },
+        {
+          "url": "name",
+          "valueString": "Education Type"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:name"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    }
+  ]
+}

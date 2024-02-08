@@ -1,0 +1,71 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "situation",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/situation",
+  "title": "iHRIS Situation Information Workflow",
+  "description": "iHRIS workflow to record a Situation Information",
+  "name": "situation",
+  "status": "active",
+  "date": "2020-09-02",
+  "purpose": "Situation information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile",
+      "text": "Situation",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:agent-status.value[x]:valueCoding",
+          "text": "Agent Status",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/agent-status-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:qualification.value[x]:valueCoding",
+          "text": "Profile/Qualification",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/qualification-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:function.value[x]:valueCoding",
+          "text": "Function",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/function-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[4]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:level.value[x]:valueCoding",
+          "text": "Level",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/level-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[5]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:study-level.value[x]:valueCoding",
+          "text": "Level of Study",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

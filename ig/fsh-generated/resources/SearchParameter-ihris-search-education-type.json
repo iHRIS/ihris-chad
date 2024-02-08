@@ -1,0 +1,18 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "ihris-search-education-type",
+  "url": "http://ihris.org/fhir/SearchParameter/ihris-search-education-type",
+  "description": "search parameter for Education Type",
+  "name": "search parameter for Education Type",
+  "status": "active",
+  "experimental": false,
+  "code": "educationtype",
+  "base": [
+    "Basic"
+  ],
+  "type": "reference",
+  "expression": "Basic.extension('http://ihris.org/fhir/StructureDefinition/education-type')",
+  "target": [
+    "Basic"
+  ]
+}

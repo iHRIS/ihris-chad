@@ -1,0 +1,76 @@
+{
+  "resourceType": "Basic",
+  "id": "ihris-page-echelon",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-page"
+    ]
+  },
+  "code": {
+    "coding": [
+      {
+        "code": "page",
+        "system": "http://ihris.org/fhir/CodeSystem/ihris-resource-codesystem"
+      }
+    ]
+  },
+  "extension": [
+    {
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-display",
+      "extension": [
+        {
+          "url": "resource",
+          "valueReference": {
+            "reference": "CodeSystem/echelon-codesystem"
+          }
+        },
+        {
+          "url": "search",
+          "valueString": "Display|display"
+        },
+        {
+          "url": "search",
+          "valueString": "Code|code"
+        },
+        {
+          "extension": [
+            {
+              "url": "path",
+              "valueString": "CodeSystem.code"
+            },
+            {
+              "url": "readOnlyIfSet",
+              "valueBoolean": true
+            }
+          ],
+          "url": "field"
+        }
+      ]
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Echelon"
+        },
+        {
+          "url": "description",
+          "valueString": "Echelon"
+        },
+        {
+          "url": "name",
+          "valueString": "CodeSystem"
+        },
+        {
+          "url": "field",
+          "valueString": "CodeSystem.display"
+        },
+        {
+          "url": "field",
+          "valueString": "CodeSystem.code"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    }
+  ]
+}

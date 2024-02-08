@@ -1,0 +1,26 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ContractualCategoryCodeSystem",
+  "id": "contractual-category-codesystem",
+  "title": "Contractual Category Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/contractual-category-codesystem",
+  "concept": [
+    {
+      "code": "I",
+      "display": "I"
+    },
+    {
+      "code": "II",
+      "display": "II"
+    },
+    {
+      "code": "III",
+      "display": "III"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 3
+}

@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "QualificationCodeSystem",
+  "id": "qualification-codesystem",
+  "title": "Qualification Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/qualification-codesystem",
+  "concept": [
+    {
+      "code": "doctor",
+      "display": "Doctor"
+    },
+    {
+      "code": "nurse",
+      "display": "Nurse"
+    },
+    {
+      "code": "engineer",
+      "display": "Enginner"
+    },
+    {
+      "code": "agent",
+      "display": "Agent"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 4
+}

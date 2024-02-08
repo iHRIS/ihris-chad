@@ -1,0 +1,92 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "ihris-task",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/ihris-task",
+  "title": "iHRIS Add Task Workflow",
+  "description": "iHRIS workflow to record a Role",
+  "name": "ihris-task",
+  "status": "active",
+  "date": "2022-02-20",
+  "purpose": "Workflow page for user role tasks information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "text": "Add Task",
+      "type": "group",
+      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "text": "Task Attributes",
+          "type": "group",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:attributes",
+          "item": [
+            {
+              "linkId": "Basic.extension[0].extension[0]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:attributes.extension:permission.value[x]:valueCode",
+              "text": "Permission",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/ihris-task-permission",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[1]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:attributes.extension:resource.value[x]:valueCode",
+              "text": "Resource",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/ihris-task-resource",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[2]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:attributes.extension:instance.value[x]:valueId",
+              "text": "Instance",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[3]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:attributes.extension:constraint.value[x]:valueString",
+              "text": "Constraint",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[4]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:attributes.extension:field.value[x]:valueString",
+              "text": "Field",
+              "type": "string",
+              "required": false,
+              "repeats": false
+            }
+          ]
+        },
+        {
+          "linkId": "CompositeTasks",
+          "text": "Composite/Linked Tasks",
+          "type": "group",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:compositeTask",
+          "item": [
+            {
+              "linkId": "linkedtasks",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-task#Basic.extension:compositeTask.value[x]:valueReference",
+              "text": "Composite/Linked Tasks",
+              "type": "reference",
+              "required": false,
+              "repeats": true
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

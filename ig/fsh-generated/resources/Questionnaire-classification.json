@@ -1,0 +1,119 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "classification",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/classification",
+  "title": "iHRIS Classification Information Workflow",
+  "description": "iHRIS workflow to record a Classification Information",
+  "name": "classification",
+  "status": "active",
+  "date": "2020-09-02",
+  "purpose": "Classification information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile",
+      "text": "Classification",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:grade.value[x]:valueCoding",
+          "text": "Grade",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/grade-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:civil-servant-category.value[x]:valueCoding",
+          "text": "Civil Servant Category",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/civil-servant-category-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:contractual-category.value[x]:valueCoding",
+          "text": "Cantractual Category",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/contractual-category-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-class.value[x]:valueCoding",
+          "text": "Class",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/classification-class-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[4]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:echelon.value[x]:valueCoding",
+          "text": "Echelon",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/echelon-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[5]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:date-last-admin-situation.value[x]:valueDate",
+          "text": "Date of last Administrative situation",
+          "type": "date",
+          "required": false,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[6]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-echelon.value[x]:valueString",
+          "text": "Reference Echelon",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[7]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:integration-date.value[x]:valueDate",
+          "text": "Integration Date",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[8]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-integration-act.value[x]:valueString",
+          "text": "Reference Act of Integration",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[9]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-date.value[x]:valueDate",
+          "text": "Date of Tenure",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[10]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-reference.value[x]:valueString",
+          "text": "Reference of the Tenure",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

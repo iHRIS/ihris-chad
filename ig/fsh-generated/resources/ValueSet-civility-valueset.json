@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "CivilityValueSet",
+  "id": "civility-valueset",
+  "title": "Civility ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/civility-valueset",
+  "date": "2024-02-02T08:14:00.000Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/civility-codesystem"
+      }
+    ]
+  }
+}

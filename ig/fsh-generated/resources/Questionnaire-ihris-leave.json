@@ -1,0 +1,59 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "ihris-leave",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/ihris-leave",
+  "title": "iHRIS Leave Workflow",
+  "description": "iHRIS workflow to record a leave",
+  "name": "ihris-leave",
+  "status": "active",
+  "date": "2020-08-20",
+  "purpose": "Workflow page for recording a leave information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.id",
+      "text": "Leave Details",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0].extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:leave-type.value[x]:valueCoding",
+          "text": "Leave Type",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/ihris-leave-type-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[0].extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:period.value[x]:valuePeriod.start",
+          "text": "Start Date",
+          "type": "dateTime",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[0].extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:period.value[x]:valuePeriod.end",
+          "text": "End Date",
+          "type": "dateTime",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[0].extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-leave#Basic.extension:leave.extension:dateRequested.value[x]:valueDate",
+          "text": "Date Requested",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

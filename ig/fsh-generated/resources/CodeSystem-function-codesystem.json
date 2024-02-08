@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "FunctionCodeSystem",
+  "id": "function-codesystem",
+  "title": "Function Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/function-codesystem",
+  "concept": [
+    {
+      "code": "hod",
+      "display": "Head of Department"
+    },
+    {
+      "code": "director",
+      "display": "Director"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 2
+}
