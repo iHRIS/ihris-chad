@@ -1,0 +1,11 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "FacilityTypeCodeSystem",
+  "id": "facility-type-codesystem",
+  "title": "Facility Type Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/facility-type-codesystem",
+  "date": "2024-02-19T13:43:00.000Z"
+}

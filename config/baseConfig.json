@@ -25,7 +25,7 @@
     },
     {
       "name": "app:site:path",
-      "valueString": "/home/ally/iHRIS/ihris-backend/chad"
+      "valueString": "/home/ally/iHRIS/ihris-backend/ihris-chad"
     },
     {
       "name": "app:core:path",
@@ -138,6 +138,10 @@
     {
       "name": "auth:tokenDuration",
       "valueString": "5400"
+    },
+    {
+      "name": "defaults:fields:PractitionerRole.location:initialValue",
+      "valueString": "Location/countrytd"
     },
     {
       "name": "auth:signup:enabled",

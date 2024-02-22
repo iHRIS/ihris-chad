@@ -645,16 +645,17 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/ihris-jurisdiction"
+              "http://ihris.org/fhir/StructureDefinition/td-region",
+              "http://ihris.org/fhir/StructureDefinition/td-district"
             ]
           }
         ],
         "constraint": [
           {
-            "key": "ihris-location-residence",
-            "severity": "warning",
-            "human": "Must be a location",
-            "expression": "reference.matches('^Location/')",
+            "key": "ele-1",
+            "severity": "error",
+            "human": "All FHIR elements must have a @value or children",
+            "expression": "hasValue() or (children().count() > id.count())",
             "xpath": "@value|f:*|h:div",
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }

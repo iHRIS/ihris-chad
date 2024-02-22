@@ -247,6 +247,119 @@ Usage:          #example
 * extension[section][0].extension[field][0].valueString = "CodeSystem.display"
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 
+Instance:       ihris-page-education-sector
+InstanceOf:     IhrisPage
+Title:          "Education Sector Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/education-sector-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Education Sector"
+* extension[section][0].extension[description].valueString = "Education Sector"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-training-mode
+InstanceOf:     IhrisPage
+Title:          "Training Mode Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/training-mode-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Training Mode"
+* extension[section][0].extension[description].valueString = "Training Mode"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-training-fund
+InstanceOf:     IhrisPage
+Title:          "Training Fund Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/training-fund-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Training Fund"
+* extension[section][0].extension[description].valueString = "Training Fund"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-ministry
+InstanceOf:     IhrisPage
+Title:          "Ministry Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/ministry-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Ministry"
+* extension[section][0].extension[description].valueString = "Ministry"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-service
+InstanceOf:     IhrisPage
+Title:          "Service Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/work-service-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Service"
+* extension[section][0].extension[description].valueString = "Service"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
+Instance:       ihris-page-discipline-action-type
+InstanceOf:     IhrisPage
+Title:          "iHRIS Discipline Action Type CodeSystem Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/ihris-discipline-action-type-codesystem)
+* extension[display].extension[search][0].valueString = "Code|code"
+* extension[display].extension[search][1].valueString = "Display|display"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Discipline Action Type"
+* extension[section][0].extension[description].valueString = "Discipline Action Type"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+* extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
+
+Instance:       ihris-page-disciplinary-action-taken
+InstanceOf:     IhrisPage
+Title:          "Disciplinary Action Taken Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/disciplinary-action-taken-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Disciplinary Action Taken"
+* extension[section][0].extension[description].valueString = "Disciplinary Action Taken"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
 Instance:       ihris-search-education-type
 InstanceOf:     SearchParameter
 Title:          "search parameter for Education Type"

@@ -11,42 +11,90 @@
   "item": [
     {
       "linkId": "Basic",
-      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.id",
+      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance",
       "text": "Performance",
       "type": "group",
       "item": [
         {
-          "linkId": "Basic.extension[0].extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:evaluator.value[x]:valueString",
-          "text": "Evaluator's Name",
-          "type": "string",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[0].extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:period.value[x]:valuePeriod.start",
-          "text": "Evaluation Period Start Date",
-          "type": "date",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[0].extension[2]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:period.value[x]:valuePeriod.end",
-          "text": "Evaluation Period End Date",
-          "type": "date",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Basic.extension[0].extension[3]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:score.value[x]:valueCoding",
-          "text": "Score Attained",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/ihris-performance-score-valueset",
-          "required": true,
-          "repeats": false
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance",
+          "text": "Details",
+          "type": "group",
+          "item": [
+            {
+              "linkId": "Basic.extension[0].extension[0]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:evaluator.value[x]:valueString",
+              "text": "Reviewer Name",
+              "type": "string",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[1]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:start-date.value[x]:valueDate",
+              "text": "Start date of the Performance period",
+              "type": "date",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[2]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:end-date.value[x]:valueDate",
+              "text": "End date of the Performance period",
+              "type": "date",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[3]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:general-knowledge.value[x]:valueInteger",
+              "text": "Criteria 1: General Knowledge /5",
+              "type": "integer",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[4]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:professional-culture.value[x]:valueInteger",
+              "text": "Criteria 2: Professional Culture /5",
+              "type": "integer",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[5]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:effectiveness.value[x]:valueInteger",
+              "text": "Criteria 3: Effectiveness in carrying out duties/5",
+              "type": "integer",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[6]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:aptitude.value[x]:valueInteger",
+              "text": "Criteria 4: Aptitude for command functions /5",
+              "type": "integer",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[7]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:manner.value[x]:valueInteger",
+              "text": "Criteria 4: Manner of carrying out its functions /5",
+              "type": "integer",
+              "required": true,
+              "repeats": false
+            },
+            {
+              "linkId": "Basic.extension[0].extension[8]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:score.value[x]:valueCoding",
+              "text": "Score Attained",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/performance-score-valueset",
+              "required": true,
+              "repeats": false
+            }
+          ]
         }
       ]
     }

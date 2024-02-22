@@ -1,0 +1,18 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "ihris-search-inservice-training-request",
+  "url": "http://ihris.org/fhir/SearchParameter/ihris-search-inservice-training-request",
+  "description": "search parameter for Inservice Training Request",
+  "name": "search parameter for Inservice Training Request",
+  "status": "active",
+  "experimental": false,
+  "code": "inservicetrainingrequest",
+  "base": [
+    "Basic"
+  ],
+  "type": "reference",
+  "expression": "Basic.extension('http://ihris.org/fhir/StructureDefinition/inservice-training-request-reference')",
+  "target": [
+    "Basic"
+  ]
+}

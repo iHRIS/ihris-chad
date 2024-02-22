@@ -463,19 +463,6 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Days Requested"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='daysRequested').valueInteger"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
                   "valueString": "Requested Date"
                 },
                 {
@@ -493,7 +480,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='period').valuePeriod.start"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='start-date').valueDate"
                 }
               ],
               "url": "column"
@@ -506,7 +493,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='period').valuePeriod.end"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='end-date').valueDate"
                 }
               ],
               "url": "column"
@@ -545,6 +532,10 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-leave"
                 }
               ],
               "url": "action"
@@ -566,6 +557,31 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-leave/leave/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-leave"
                 }
               ],
               "url": "action"
@@ -607,7 +623,7 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Evaluator's Name"
+                  "valueString": "Reviewer Name"
                 },
                 {
                   "url": "field",
@@ -640,7 +656,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='period').valuePeriod.start"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='start-date').valueDate"
                 }
               ],
               "url": "column"
@@ -653,7 +669,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='period').valuePeriod.end"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='end-date').valueDate"
                 }
               ],
               "url": "column"
@@ -692,6 +708,10 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-performance"
                 }
               ],
               "url": "action"
@@ -716,6 +736,31 @@
                 }
               ],
               "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-performance/performance/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-performance"
+                }
+              ],
+              "url": "action"
             }
           ],
           "url": "resource"
@@ -727,22 +772,22 @@
       "extension": [
         {
           "url": "title",
-          "valueString": "Education History"
+          "valueString": "Preservice Training History"
         },
         {
           "url": "description",
-          "valueString": "Education History Details for the Person"
+          "valueString": "Preservice Training History"
         },
         {
           "url": "name",
-          "valueString": "education-history"
+          "valueString": "preservice-training-history"
         },
         {
           "extension": [
             {
               "url": "resource",
               "valueReference": {
-                "reference": "StructureDefinition/ihris-basic-education-history"
+                "reference": "StructureDefinition/preservice-training-profile"
               }
             },
             {
@@ -754,11 +799,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Degree"
+                  "valueString": "Diploma"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-education-history').extension.where(url='degree').valueReference"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='degree').valueReference"
                 }
               ]
             },
@@ -774,11 +819,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Specialization"
+                  "valueString": "Sector"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-education-history').extension.where(url='specialization').valueCoding"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='sector').valueCoding"
                 }
               ],
               "url": "column"
@@ -791,7 +836,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-education-history').extension.where(url='institution').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='institution').valueString"
                 }
               ],
               "url": "column"
@@ -800,11 +845,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Location"
+                  "valueString": "Country"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-education-history').extension.where(url='location').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='country').valueCoding"
                 }
               ],
               "url": "column"
@@ -813,11 +858,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Year"
+                  "valueString": "Graduation Year"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-education-history').extension.where(url='year').valueDate"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/preservice-training').extension.where(url='end-year').valueDate"
                 }
               ],
               "url": "column"
@@ -839,11 +884,11 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/questionnaire/ihris-education-history/education-history?practitioner=FHIRID"
+                  "valueString": "/questionnaire/preservice-training/preservice-training?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
-                  "valueString": "Add Education History"
+                  "valueString": "Add Preservice Training"
                 },
                 {
                   "url": "row",
@@ -859,7 +904,7 @@
                 },
                 {
                   "url": "task",
-                  "valueId": "ihris-task-add-education"
+                  "valueId": "ihris-task-add-preservice-training"
                 }
               ],
               "url": "action"
@@ -868,7 +913,7 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/resource/view/education-history/ITEMID"
+                  "valueString": "/resource/view/preservice-training/ITEMID"
                 },
                 {
                   "url": "text",
@@ -889,7 +934,7 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/questionnaire/ihris-education-history/education-history/ITEMID?practitioner=FHIRID"
+                  "valueString": "/questionnaire/preservice-training/preservice-training/ITEMID?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
@@ -905,7 +950,313 @@
                 },
                 {
                   "url": "task",
-                  "valueId": "ihris-task-edit-education"
+                  "valueId": "ihris-task-edit-preservice-training"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Request Inservice Training"
+        },
+        {
+          "url": "description",
+          "valueString": "Request Inservice Training"
+        },
+        {
+          "url": "name",
+          "valueString": "inservice-training-request"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/inservice-training-request-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Authorization reference"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/authorization-reference').valueString"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "url": "searchfieldtarget",
+              "valueString": "Practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "End of Service Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/service-end-date').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Service Resumption Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/service-resumption-date').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/inservice-training/inservice-training-request?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Inservice Training Request"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-inservice-training-request"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/resource/view/inservice-training-request/ITEMID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "View"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/inservice-training-request/inservice-training-request/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-inservice-training-request"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Inservice Training History"
+        },
+        {
+          "url": "description",
+          "valueString": "Inservice Training History"
+        },
+        {
+          "url": "name",
+          "valueString": "inservice-training-history"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/inservice-training-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Diploma"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='degree').valueReference"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "url": "searchfieldtarget",
+              "valueString": "Practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Sector"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='sector').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Institution"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='institution').valueString"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Country"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='country').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Graduation Year"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/inservice-training').extension.where(url='end-year').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/resource/view/inservice-training/ITEMID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "View"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
                 }
               ],
               "url": "action"
@@ -947,7 +1298,7 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Organization Name"
+                  "valueString": "Organization"
                 },
                 {
                   "url": "field",
@@ -963,11 +1314,24 @@
               "extension": [
                 {
                   "url": "header",
+                  "valueString": "Ministry"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='ministry').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
                   "valueString": "Position"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='startingPosition').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='job').valueString"
                 }
               ],
               "url": "column"
@@ -976,11 +1340,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Date Started"
+                  "valueString": "Year Started"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='period').valuePeriod.start"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='start-year').valueDate"
                 }
               ],
               "url": "column"
@@ -989,11 +1353,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Date Ended"
+                  "valueString": "Year Ended"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='period').valuePeriod.end"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-employment-history').extension.where(url='end-year').valueDate"
                 }
               ],
               "url": "column"
@@ -1057,6 +1421,31 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-employment-history/employment-history/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-employment"
                 }
               ],
               "url": "action"
@@ -1127,11 +1516,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Mobile Phone"
+                  "valueString": "Phone"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='mobile').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='phone').valueString"
                 }
               ],
               "url": "column"
@@ -1170,6 +1559,10 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-emergency"
                 }
               ],
               "url": "action"
@@ -1178,11 +1571,11 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/resource/view/emergency/ITEMID"
+                  "valueString": "/questionnaire/ihris-emergency/emergency/ITEMID?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
-                  "valueString": "View"
+                  "valueString": "Edit"
                 },
                 {
                   "url": "row",
@@ -1191,6 +1584,10 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-emergency"
                 }
               ],
               "url": "action"
@@ -1213,7 +1610,7 @@
         },
         {
           "url": "name",
-          "valueString": "Employee Discipline"
+          "valueString": "disciplinary-action"
         },
         {
           "extension": [
@@ -1232,7 +1629,7 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Discipline Action Type"
+                  "valueString": "Action Type"
                 },
                 {
                   "url": "field",
@@ -1252,7 +1649,7 @@
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='actionTaken').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='actionTaken').valueCoding.display"
                 }
               ],
               "url": "column"
@@ -1261,11 +1658,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Start Date"
+                  "valueString": "Effective Start Date"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='period').valuePeriod.start"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='start-date').valueDate"
                 }
               ],
               "url": "column"
@@ -1274,11 +1671,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "End Date"
+                  "valueString": "Effective End Date"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='period').valuePeriod.end"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-discipline').extension.where(url='end-date').valueDate"
                 }
               ],
               "url": "column"
@@ -1317,6 +1714,10 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-disciplinary-action"
                 }
               ],
               "url": "action"
@@ -1338,6 +1739,31 @@
                 {
                   "url": "class",
                   "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-discipline/discipline/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-disciplinary-action"
                 }
               ],
               "url": "action"
@@ -1499,179 +1925,6 @@
                 {
                   "url": "link",
                   "valueString": "/resource/view/salary/ITEMID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "View"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                }
-              ],
-              "url": "action"
-            }
-          ],
-          "url": "resource"
-        }
-      ],
-      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
-    },
-    {
-      "extension": [
-        {
-          "url": "title",
-          "valueString": "In-Service Training Information"
-        },
-        {
-          "url": "description",
-          "valueString": "In-Service Training Information for the Person"
-        },
-        {
-          "url": "name",
-          "valueString": "In-Service Training Information"
-        },
-        {
-          "extension": [
-            {
-              "url": "resource",
-              "valueReference": {
-                "reference": "StructureDefinition/ihris-basic-inservice-training"
-              }
-            },
-            {
-              "url": "linkfield",
-              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
-            },
-            {
-              "url": "column",
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Training Provider"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-inservice-training').extension.where(url='provider').valueString"
-                }
-              ]
-            },
-            {
-              "url": "searchfield",
-              "valueString": "practitioner"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Training Type/Category"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-inservice-training').extension.where(url='training').valueCoding.display"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Course Name"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-inservice-training').extension.where(url='courseName').valueString"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Credits"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-inservice-training').extension.where(url='credits').valueInteger"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Start Date"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-inservice-training').extension.where(url='startDate').valueDate"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "End Date"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-inservice-training').extension.where(url='endDate').valueDate"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Actions"
-                },
-                {
-                  "url": "field",
-                  "valueString": "_action"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/questionnaire/ihris-inservice-training/inservice-training?practitioner=FHIRID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "Add In-Service Training Info"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": false
-                },
-                {
-                  "url": "emptyDisplay",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                }
-              ],
-              "url": "action"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/resource/view/inservice-training/ITEMID"
                 },
                 {
                   "url": "text",

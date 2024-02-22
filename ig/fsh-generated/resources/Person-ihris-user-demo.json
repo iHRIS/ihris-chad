@@ -3,7 +3,7 @@
   "id": "ihris-user-demo",
   "meta": {
     "profile": [
-      "http://ihris.org/fhir/StructureDefinition/ihris-person-user"
+      "http://ihris.org/fhir/StructureDefinition/bw-person-user"
     ]
   },
   "extension": [

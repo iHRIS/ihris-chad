@@ -31,24 +31,53 @@
         },
         {
           "linkId": "Basic.extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:civil-servant-category.value[x]:valueCoding",
-          "text": "Civil Servant Category",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-category.value[x]:valueCoding",
+          "text": "Category",
           "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/civil-servant-category-valueset",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/classification-category-valueset",
           "required": true,
           "repeats": false
         },
         {
           "linkId": "Basic.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:civil-servant-category.value[x]:valueCoding",
+          "text": "Civil Servant Category",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/civil-servant-category-valueset",
+          "required": true,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Basic.extension[1]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "civilservant",
+                "system": "http://ihris.org/fhir/CodeSystem/classification-category-codesystem"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Basic.extension[3]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:contractual-category.value[x]:valueCoding",
           "text": "Cantractual Category",
           "type": "choice",
           "answerValueSet": "http://ihris.org/fhir/ValueSet/contractual-category-valueset",
           "required": true,
-          "repeats": false
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Basic.extension[1]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "contract",
+                "system": "http://ihris.org/fhir/CodeSystem/classification-category-codesystem"
+              }
+            }
+          ]
         },
         {
-          "linkId": "Basic.extension[3]",
+          "linkId": "Basic.extension[4]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-class.value[x]:valueCoding",
           "text": "Class",
           "type": "choice",
@@ -57,7 +86,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[4]",
+          "linkId": "Basic.extension[5]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:echelon.value[x]:valueCoding",
           "text": "Echelon",
           "type": "choice",
@@ -66,7 +95,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[5]",
+          "linkId": "Basic.extension[6]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:date-last-admin-situation.value[x]:valueDate",
           "text": "Date of last Administrative situation",
           "type": "date",
@@ -74,7 +103,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[6]",
+          "linkId": "Basic.extension[7]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-echelon.value[x]:valueString",
           "text": "Reference Echelon",
           "type": "string",
@@ -82,7 +111,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[7]",
+          "linkId": "Basic.extension[8]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:integration-date.value[x]:valueDate",
           "text": "Integration Date",
           "type": "date",
@@ -90,7 +119,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[8]",
+          "linkId": "Basic.extension[9]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-integration-act.value[x]:valueString",
           "text": "Reference Act of Integration",
           "type": "string",
@@ -98,7 +127,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[9]",
+          "linkId": "Basic.extension[10]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-date.value[x]:valueDate",
           "text": "Date of Tenure",
           "type": "date",
@@ -106,7 +135,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[10]",
+          "linkId": "Basic.extension[11]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-reference.value[x]:valueString",
           "text": "Reference of the Tenure",
           "type": "string",

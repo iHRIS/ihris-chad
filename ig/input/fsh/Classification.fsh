@@ -16,10 +16,14 @@ Description:    "Classification Information Profile."
     IntegrationDate named integration-date 1..1 MS and
     ReferenceIntegrationAct named reference-integration-act 1..1 MS and
     TenureDate named tenure-date 1..1 MS and
-    TenureReference named tenure-reference 1..1 MS
+    TenureReference named tenure-reference 1..1 MS and
+    ClassificationCategory named classification-category 1..1 MS
 * extension[grade]  1..1 MS
 * extension[grade]  ^label = "Grade"
 * extension[grade].valueCoding MS
+* extension[classification-category]  1..1 MS
+* extension[classification-category]  ^label = "Classification Category"
+* extension[classification-category].valueCoding MS
 * extension[civil-servant-category]  1..1 MS
 * extension[civil-servant-category]  ^label = "Civil servant category"
 * extension[civil-servant-category].valueCoding MS
@@ -61,6 +65,17 @@ Description:    "Grade."
 * valueCoding 1..1 MS
 * valueCoding ^label = "Grade"
 * valueCoding from http://ihris.org/fhir/ValueSet/grade-valueset (required)
+
+Extension:      ClassificationCategory
+Id:             classification-category
+Title:          "Classification Category"
+Description:    "Classification Category."
+* ^context.type = #element
+* ^context.expression = "Practitioner"
+* value[x] only Coding
+* valueCoding 1..1 MS
+* valueCoding ^label = "Grade"
+* valueCoding from ClassificationCategoryValueSet (required)
 
 Extension:      CivilServantCategory
 Id:             civil-servant-category
@@ -192,78 +207,92 @@ Usage:          #definition
 * item[0].item[0].repeats = false
 
 * item[0].item[1].linkId = "Basic.extension[1]"
-* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:civil-servant-category.value[x]:valueCoding"
-* item[0].item[1].text = "Civil Servant Category"
+* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-category.value[x]:valueCoding"
+* item[0].item[1].text = "Category"
 * item[0].item[1].type = #choice
-* item[0].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/civil-servant-category-valueset"
+* item[0].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/classification-category-valueset"
 * item[0].item[1].required = true
 * item[0].item[1].repeats = false
 
 * item[0].item[2].linkId = "Basic.extension[2]"
-* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:contractual-category.value[x]:valueCoding"
-* item[0].item[2].text = "Cantractual Category"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:civil-servant-category.value[x]:valueCoding"
+* item[0].item[2].text = "Civil Servant Category"
 * item[0].item[2].type = #choice
-* item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/contractual-category-valueset"
+* item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/civil-servant-category-valueset"
 * item[0].item[2].required = true
 * item[0].item[2].repeats = false
+* item[0].item[2].enableWhen[0].question = "Basic.extension[1]"
+* item[0].item[2].enableWhen[0].operator = #=
+* item[0].item[2].enableWhen[0].answerCoding = classification-category-codesystem#civilservant
 
 * item[0].item[3].linkId = "Basic.extension[3]"
-* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-class.value[x]:valueCoding"
-* item[0].item[3].text = "Class"
+* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:contractual-category.value[x]:valueCoding"
+* item[0].item[3].text = "Cantractual Category"
 * item[0].item[3].type = #choice
-* item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/classification-class-valueset"
+* item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/contractual-category-valueset"
 * item[0].item[3].required = true
 * item[0].item[3].repeats = false
+* item[0].item[3].enableWhen[0].question = "Basic.extension[1]"
+* item[0].item[3].enableWhen[0].operator = #=
+* item[0].item[3].enableWhen[0].answerCoding = classification-category-codesystem#contract
 
 * item[0].item[4].linkId = "Basic.extension[4]"
-* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:echelon.value[x]:valueCoding"
-* item[0].item[4].text = "Echelon"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-class.value[x]:valueCoding"
+* item[0].item[4].text = "Class"
 * item[0].item[4].type = #choice
-* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/echelon-valueset"
+* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/classification-class-valueset"
 * item[0].item[4].required = true
 * item[0].item[4].repeats = false
 
 * item[0].item[5].linkId = "Basic.extension[5]"
-* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:date-last-admin-situation.value[x]:valueDate"
-* item[0].item[5].text = "Date of last Administrative situation"
-* item[0].item[5].type = #date
-* item[0].item[5].required = false
+* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:echelon.value[x]:valueCoding"
+* item[0].item[5].text = "Echelon"
+* item[0].item[5].type = #choice
+* item[0].item[5].answerValueSet = "http://ihris.org/fhir/ValueSet/echelon-valueset"
+* item[0].item[5].required = true
 * item[0].item[5].repeats = false
 
 * item[0].item[6].linkId = "Basic.extension[6]"
-* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-echelon.value[x]:valueString"
-* item[0].item[6].text = "Reference Echelon"
-* item[0].item[6].type = #string
-* item[0].item[6].required = true
+* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:date-last-admin-situation.value[x]:valueDate"
+* item[0].item[6].text = "Date of last Administrative situation"
+* item[0].item[6].type = #date
+* item[0].item[6].required = false
 * item[0].item[6].repeats = false
 
 * item[0].item[7].linkId = "Basic.extension[7]"
-* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:integration-date.value[x]:valueDate"
-* item[0].item[7].text = "Integration Date"
-* item[0].item[7].type = #date
+* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-echelon.value[x]:valueString"
+* item[0].item[7].text = "Reference Echelon"
+* item[0].item[7].type = #string
 * item[0].item[7].required = true
 * item[0].item[7].repeats = false
 
 * item[0].item[8].linkId = "Basic.extension[8]"
-* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-integration-act.value[x]:valueString"
-* item[0].item[8].text = "Reference Act of Integration"
-* item[0].item[8].type = #string
+* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:integration-date.value[x]:valueDate"
+* item[0].item[8].text = "Integration Date"
+* item[0].item[8].type = #date
 * item[0].item[8].required = true
 * item[0].item[8].repeats = false
 
 * item[0].item[9].linkId = "Basic.extension[9]"
-* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-date.value[x]:valueDate"
-* item[0].item[9].text = "Date of Tenure"
-* item[0].item[9].type = #date
+* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-integration-act.value[x]:valueString"
+* item[0].item[9].text = "Reference Act of Integration"
+* item[0].item[9].type = #string
 * item[0].item[9].required = true
 * item[0].item[9].repeats = false
 
 * item[0].item[10].linkId = "Basic.extension[10]"
-* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-reference.value[x]:valueString"
-* item[0].item[10].text = "Reference of the Tenure"
-* item[0].item[10].type = #string
+* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-date.value[x]:valueDate"
+* item[0].item[10].text = "Date of Tenure"
+* item[0].item[10].type = #date
 * item[0].item[10].required = true
 * item[0].item[10].repeats = false
+
+* item[0].item[11].linkId = "Basic.extension[11]"
+* item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-reference.value[x]:valueString"
+* item[0].item[11].text = "Reference of the Tenure"
+* item[0].item[11].type = #string
+* item[0].item[11].required = true
+* item[0].item[11].repeats = false
 
 Instance:       ihris-page-classification
 InstanceOf:     IhrisPage

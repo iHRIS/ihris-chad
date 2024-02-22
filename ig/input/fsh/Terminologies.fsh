@@ -41,6 +41,96 @@ Title:             "Civility ValueSet"
 * ^version = "0.1.0"
 * codes from system CivilityCodeSystem
 
+CodeSystem:       ClassificationCategoryCodeSystem
+Id:               classification-category-codesystem
+Title:            "Classification Category Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #contract "Contract"
+* #civilservant "Civil Servant"
+
+ValueSet:          ClassificationCategoryValueSet
+Id:                classification-category-valueset
+Title:             "Classification Category ValueSet"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* codes from system ClassificationCategoryCodeSystem
+
+CodeSystem:       EducationSectorCodeSystem
+Id:               education-sector-codesystem
+Title:            "Education Sector Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #health "Health"
+
+ValueSet:          EducationSectorValueSet
+Id:                education-sector-valueset
+Title:             "Education Sector ValueSet"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* codes from system EducationSectorCodeSystem
+
+CodeSystem:       TrainingModeCodeSystem
+Id:               training-mode-codesystem
+Title:            "Training Mode Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #online "Online"
+
+ValueSet:          TrainingModeValueSet
+Id:                training-mode-valueset
+Title:             "Training Mode ValueSet"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* codes from system TrainingModeCodeSystem
+
+CodeSystem:       TrainingFundCodeSystem
+Id:               training-fund-codesystem
+Title:            "Training Fund Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #government "Government"
+
+ValueSet:          TrainingFundValueSet
+Id:                training-fund-valueset
+Title:             "Training Fund ValueSet"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* codes from system TrainingFundCodeSystem
+
+CodeSystem:       PerformanceScoreCodeSystem
+Id:               performance-score-codesystem
+Title:            "Performance Score Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #1 "1"
+* #2 "2"
+* #3 "3"
+* #4 "4"
+* #5 "5"
+* #6 "6"
+* #7 "7"
+* #8 "8"
+* #9 "9"
+* #10 "10"
+* #11 "11"
+* #12 "12"
+* #13 "13"
+* #14 "14"
+* #15 "15"
+* #16 "16"
+* #17 "17"
+* #18 "18"
+* #19 "19"
+* #20 "20"
+
+ValueSet:          PerformanceScoreValueSet
+Id:                performance-score-valueset
+Title:             "Performance Score ValueSet"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* codes from system PerformanceScoreCodeSystem
+
 CodeSystem:       MaritalStatusCodeSystem
 Id:               marital-status-codesystem
 Title:            "Marital Status Code System"
@@ -57,6 +147,47 @@ Title:            "Marital Status ValueSet"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
 * codes from system MaritalStatusCodeSystem
+
+CodeSystem:       InstitutionTypeCodeSystem
+Id:               institution-type-codesystem
+Title:            "Institution Type Code System"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+* #ministry "Ministry"
+* #organization "Organization"
+
+ValueSet:          InstitutionTypeValueSet
+Id:                institution-type-valueset
+Title:            "Institution Type ValueSet"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+* codes from system InstitutionTypeCodeSystem
+
+CodeSystem:       MinistryCodeSystem
+Id:               ministry-codesystem
+Title:            "Ministry Code System"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+
+ValueSet:          MinistryValueSet
+Id:                ministry-valueset
+Title:            "Ministry ValueSet"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+* codes from system MinistryCodeSystem
+
+CodeSystem:       WorkServiceCodeSystem
+Id:               work-service-codesystem
+Title:            "Service Code System"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+
+ValueSet:          WorkServiceValueSet
+Id:                work-service-valueset
+Title:            "Service ValueSet"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+* codes from system WorkServiceCodeSystem
 
 CodeSystem:       AgentStatusCodeSystem
 Id:               agent-status-codesystem
@@ -257,7 +388,7 @@ Title:            "Echelon ValueSet"
 CodeSystem:       YesNoCodeSystem
 Id:               yes-no-codesystem
 Title:            "Yes/No Code System"
-* ^date = "2023-11-18T19:04:00.000Z"
+* ^date = "2024-02-19T13:41:00.000Z"
 * ^version = "0.1.0"
 * #yes "Yes"
 * #no "No"
@@ -265,6 +396,67 @@ Title:            "Yes/No Code System"
 ValueSet:          YesNoValueSet
 Id:                yes-no-valueset
 Title:            "Yes/No ValueSet"
-* ^date = "2023-11-18T19:04:00.000Z"
+* ^date = "2024-02-19T13:41:00.000Z"
 * ^version = "0.1.0"
 * codes from system YesNoCodeSystem
+
+CodeSystem:       FacilityTypeCodeSystem
+Id:               facility-type-codesystem
+Title:            "Facility Type Code System"
+* ^date = "2024-02-19T13:43:00.000Z"
+* ^version = "0.1.0"
+
+ValueSet:         FacilityTypeValueSet
+Id:               facility-type-valueset
+Title:            "Facility Type ValueSet"
+* ^date = "2024-02-19T13:43:00.000Z"
+* ^version = "0.1.0"
+* codes from system FacilityTypeCodeSystem
+
+CodeSystem:      TDJurisdictionTypeCodeSystem
+Id:              td-jurisdiction-type-codesystem
+Title:           "Jurisdiction Type Code System"
+* ^date = "2024-02-19T13:41:00.000Z"
+* ^version = "0.4.0"
+* #country "Country" "Country"
+* #region "Province" "Province"
+* #district "District" "District"
+
+ValueSet:         TDJurisdictionTypeValueSet
+Id:               td-jurisdiction-type-valueset
+Title:            "Jurisdiction Type ValueSet"
+* ^date = "2024-02-19T13:41:00.000Z"
+* ^version = "0.4.0"
+* codes from system TDJurisdictionTypeCodeSystem
+
+CodeSystem:      IhrisDisciplinaryActionType
+Id:              ihris-discipline-action-type-codesystem
+Title:           "Disciplinary Action Type"
+* ^date = "2020-11-10T08:41:04.362Z"
+* ^version = "0.3.0"
+* #warning "Warning"
+* #layoff "Layoff"
+* #blame "Blame"
+
+ValueSet:         DisciplinaryActionTypeValueSet
+Id:               discipline-action-type-valueset
+Title:            "iHRIS Disciplinary Action Type ValueSet"
+* ^date = "2020-11-10T08:41:04.362Z"
+* ^version = "0.3.0"
+* codes from system IhrisDisciplinaryActionType
+
+CodeSystem:      DisciplinaryActionTakenCodeSystem
+Id:              disciplinary-action-taken-codesystem
+Title:           "Disciplinary Action Taken"
+* ^date = "2020-11-10T08:41:04.362Z"
+* ^version = "0.3.0"
+* #order "Order"
+* #decree "Decree"
+* #memo "Memo"
+
+ValueSet:         DisciplinaryActionTakenValueSet
+Id:               disciplinary-action-taken-valueset
+Title:            "iHRIS Disciplinary Action Taken ValueSet"
+* ^date = "2020-11-10T08:41:04.362Z"
+* ^version = "0.3.0"
+* codes from system DisciplinaryActionTakenCodeSystem

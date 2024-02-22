@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "DisciplinaryActionTakenValueSet",
+  "id": "disciplinary-action-taken-valueset",
+  "title": "iHRIS Disciplinary Action Taken ValueSet",
+  "version": "0.3.0",
+  "url": "http://ihris.org/fhir/ValueSet/disciplinary-action-taken-valueset",
+  "date": "2020-11-10T08:41:04.362Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/disciplinary-action-taken-codesystem"
+      }
+    ]
+  }
+}

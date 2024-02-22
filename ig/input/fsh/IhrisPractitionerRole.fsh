@@ -47,84 +47,39 @@ Description:    "iHRIS profile of Practitioner Role."
 * specialty.coding ^label = "Specialty"
 * location 1..1 MS 
 * location ^label = "Facility"
-* location only Reference(IhrisFacility)
+* location only Reference(TDFacility)
 * extension contains
-    IhrisPractitionerRoleSalary named salary 0..1 MS and
-    IhrisPractitionerRoleEmploymentStatus named employmentStatus 0..1 MS and
-    IhrisPractitionerRoleFirstEmploymentDate named firstEmploymentDate 1..1 MS and
-    IhrisPractitionerRoleReasonDeparture named reasonForDepature 0..1 MS and
     IhrisPractitionerRolePositionStatus named positionStatus 1..1 MS and
-    IhrisPractitionerRoleSalaryScale named salaryScale 0..1 MS 
-* extension[salary].valueMoney MS
-* extension[salary] ^label = "Salary"
-* extension[salaryScale].valueCoding MS
-* extension[salaryScale] ^label = "Salary Scale"
-* extension[employmentStatus].valueCoding MS
-* extension[employmentStatus] ^label = "Employment Status"
-* extension[firstEmploymentDate].valueDate MS
-* extension[firstEmploymentDate] ^label = "First Employment Date"
+    AppointmentDate named appointment-date 1..1 MS and
+    AppointmentReference named appointment-reference 1..1 MS and
+    ServiceStartReference named service-start-reference 1..1 MS and
+    EffectivePresenceDate named effective-presence-date 0..1 MS and
+    EffectivePresenceReference named effective-presence-reference 0..1 MS and
+    AssignmentAct named assignment-act 1..1 MS and
+    Comments named comments 0..1 MS and
+    IhrisPractitionerRoleReasonDeparture named reasonForDepature 0..1 MS
+* extension[appointment-date] ^label = "Date of Assignment or Appointment"
+* extension[appointment-date].valueDate MS
+* extension[appointment-reference] ^label = "Appointment Reference"
+* extension[appointment-reference].valueString MS
+* extension[service-start-reference] ^label = "Service Start Reference"
+* extension[service-start-reference].valueString MS
+* extension[effective-presence-date] ^label = "Date of Effective Presence"
+* extension[effective-presence-date].valueDate MS
+* extension[effective-presence-reference] ^label = "Effective Presence Reference"
+* extension[effective-presence-reference].valueString MS
+* extension[assignment-act] ^label = "Act of assignment or appointment"
+* extension[assignment-act].valueAttachment MS
+* extension[comments] ^label = "Comments"
+* extension[comments].valueString MS
+* extension[appointment-date].valueDate MS
+* extension[appointment-date] ^label = "Date of Assignment or Appointment"
+* extension[appointment-reference].valueString MS
+* extension[appointment-reference] ^label = "Reference Assignment or Appointment"
 * extension[positionStatus].valueCoding MS
 * extension[positionStatus] ^label = "Position Status"
 * extension[reasonForDepature].valueCoding MS
 * extension[reasonForDepature] ^label = "Reason for Departure"
-
-Extension:      IhrisPractitionerRoleSalaryScale
-Id:             ihris-practitionerrole-salary-scale
-Title:          "iHRIS Salary Scale"
-Description:    "iHRIS extension for Job Description Salary Scale."
-* ^context.type = #element
-* ^context.expression = "PractitionerRole"
-* value[x] only Coding
-* valueCoding 0..1 MS
-* valueCoding ^label = "Salary Scale"
-* valueCoding from IhrisSalaryScaleValueSet (required)
-
-CodeSystem:      IhrisSalaryScaleCodeSystem
-Id:              ihris-salary-scale-codesystem
-Title:           "Salary Scale"
-* ^date = "2020-09-29T08:41:04.362Z"
-* ^version = "0.3.0"
-
-ValueSet:         IhrisSalaryScaleValueSet
-Id:               ihris-salary-scale-valueset
-Title:            "iHRIS Salary Scale ValueSet"
-* ^date = "2020-09-29T08:41:04.362Z"
-* ^version = "0.3.0"
-* codes from system IhrisSalaryScaleCodeSystem
-
-Extension:      IhrisPractitionerRoleSalary
-Id:             ihris-practitionerrole-salary
-Title:          "iHRIS Job Description salary"
-Description:    "iHRIS extension for Job Information Salary."
-* ^context.type = #element
-* ^context.expression = "PractitionerRole"
-* value[x] only Money
-* valueMoney 0..1 MS
-* valueMoney ^label = "Salary"
-
-Extension:      IhrisPractitionerRoleEmploymentStatus
-Id:             ihris-practitionerrole-employment-status
-Title:          "iHRIS Job Description Employment Status"
-Description:    "iHRIS extension for Job Description Employment Status."
-* ^context.type = #element
-* ^context.expression = "PractitionerRole"
-* value[x] only Coding
-* valueCoding 1..1 MS
-* valueCoding ^label = "Employment Status"
-* valueCoding from IhrisEmploymentStatusValueSet (required)
-
-CodeSystem:      IhrisEmploymentStatusCodeSystem
-Id:              ihris-employment-status-codesystem
-Title:           "iHRIS Employment Status CodeSystem"
-* #contract "Contract" "Contract"
-* #fullTime "Full-time" "Full-time"
-* #partTime "Part-Time" "Part-Time"
-* #volunteer  "Volunteer"
-
-ValueSet:         IhrisEmploymentStatusValueSet
-Id:               ihris-employment-status-valueset
-Title:            "iHRIS Employment Status ValueSet"
-* codes from system IhrisEmploymentStatusCodeSystem
 
 Extension:      IhrisPractitionerRolePositionStatus
 Id:             ihris-practitionerrole-position-status
@@ -208,8 +163,8 @@ Id:               ihris-job-type-valueset
 Title:            "iHRIS Job Type ValueSet"
 * codes from system IhrisJobTypeCodeSystem
 
-Extension:      IhrisPractitionerRoleFirstEmploymentDate
-Id:             ihris-practitionerrole-first-employment-date
+Extension:      AppointmentDate
+Id:             appointment-date
 Title:          "iHRIS Job Description First Employment Date"
 Description:    "iHRIS extension for First Employment Date."
 * ^context.type = #element
@@ -217,6 +172,66 @@ Description:    "iHRIS extension for First Employment Date."
 * value[x] only date
 * valueDate 1..1 MS
 * valueDate ^label = "First Employment Date"
+
+Extension:      AppointmentReference
+Id:             appointment-reference
+Title:          "iHRIS Job Description Appointment Reference"
+Description:    "iHRIS extension for Appointment Reference."
+* ^context.type = #element
+* ^context.expression = "PractitionerRole"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Appointment Reference"
+
+Extension:      ServiceStartReference
+Id:             service-start-reference
+Title:          "iHRIS Job Description Service Start Reference"
+Description:    "iHRIS extension for Service Start Reference."
+* ^context.type = #element
+* ^context.expression = "PractitionerRole"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Service Start Reference"
+
+Extension:      EffectivePresenceDate
+Id:             effective-presence-date
+Title:          "iHRIS Job Description Date of Effective Presence"
+Description:    "iHRIS extension for Date of Effective Presence."
+* ^context.type = #element
+* ^context.expression = "PractitionerRole"
+* value[x] only date
+* valueDate 1..1 MS
+* valueDate ^label = "Date of Effective Presence"
+
+Extension:      EffectivePresenceReference
+Id:             effective-presence-reference
+Title:          "iHRIS Job Description Effective Presence Reference"
+Description:    "iHRIS extension for Effective Presence Reference."
+* ^context.type = #element
+* ^context.expression = "PractitionerRole"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Effective Presence Reference"
+
+Extension:      AssignmentAct
+Id:             assignment-act
+Title:          "iHRIS Job Description Act of assignment or appointment"
+Description:    "iHRIS extension for Act of assignment or appointment."
+* ^context.type = #element
+* ^context.expression = "PractitionerRole"
+* value[x] only Attachment
+* valueAttachment 1..1 MS
+* valueAttachment ^label = "Act of assignment or appointment"
+
+Extension:      Comments
+Id:             comments
+Title:          "iHRIS Job Description Comments"
+Description:    "iHRIS extension for Comments."
+* ^context.type = #element
+* ^context.expression = "PractitionerRole"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Comments"
 
 Instance:       ihris-page-practitionerrole
 InstanceOf:     IhrisPage
@@ -394,6 +409,101 @@ Usage:          #example
 * extension[section][0].extension[field][0].valueString = "CodeSystem.display"
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 * extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
+
+Instance:       AssignJob
+InstanceOf:     IhrisQuestionnaire
+Usage:          #definition
+* title = "iHRIS Assign Job Workflow"
+* description = "iHRIS workflow to record a promotion"
+* id = "assign-job"
+* url = "http://ihris.org/fhir/Questionnaire/assign-job"
+* name = "assign-job"
+* status = #active
+* date = 2020-08-09
+* purpose = "Workflow page for assigning job."
+
+* item[0].linkId = "PractitionerRole"
+* item[0].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role"
+* item[0].text = "Position|Position the person holds"
+* item[0].type = #group
+
+* item[0].item[0].linkId = "PractitionerRole.code"
+* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.code"
+* item[0].item[0].text = "Job Title"
+* item[0].item[0].type = #choice
+* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/ihris-job"
+* item[0].item[0].required = true
+* item[0].item[0].repeats = false
+
+* item[0].item[1].linkId = "PractitionerRole.extension[0]"
+* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-date.value[x]:valueDate"
+* item[0].item[1].text = "Date of Assignment or Appointment"
+* item[0].item[1].type = #date
+* item[0].item[1].required = true
+* item[0].item[1].repeats = false
+
+* item[0].item[2].linkId = "PractitionerRole.extension[1]"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-reference.value[x]:valueString"
+* item[0].item[2].text = "Reference Assignment or Appointment"
+* item[0].item[2].type = #string
+* item[0].item[2].required = true
+* item[0].item[2].repeats = false
+
+* item[0].item[3].linkId = "PractitionerRole.period.start"
+* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.start"
+* item[0].item[3].text = "Service Start Date"
+* item[0].item[3].type = #dateTime
+* item[0].item[3].required = true
+* item[0].item[3].repeats = false
+
+* item[0].item[4].linkId = "PractitionerRole.period.end"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.end"
+* item[0].item[4].text = "Service End Date"
+* item[0].item[4].type = #dateTime
+* item[0].item[4].required = false
+* item[0].item[4].repeats = false
+
+* item[0].item[5].linkId = "PractitionerRole.extension[2]"
+* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:service-start-reference.value[x]:valueString"
+* item[0].item[5].text = "Service Start Reference"
+* item[0].item[5].type = #string
+* item[0].item[5].required = false
+* item[0].item[5].repeats = false
+
+* item[0].item[6].linkId = "PractitionerRole.extension[3]"
+* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-date.value[x]:valueDate"
+* item[0].item[6].text = "Date of Effective Presence"
+* item[0].item[6].type = #date
+* item[0].item[6].required = false
+* item[0].item[6].repeats = false
+
+* item[0].item[7].linkId = "PractitionerRole.extension[4]"
+* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-reference.value[x]:valueString"
+* item[0].item[7].text = "Effective Presence Reference"
+* item[0].item[7].type = #string
+* item[0].item[7].required = false
+* item[0].item[7].repeats = false
+
+* item[0].item[8].linkId = "PractitionerRole.extension[5]"
+* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:assignment-act.value[x]:valueAttachment"
+* item[0].item[8].text = "Act of Assignment or Appointment"
+* item[0].item[8].type = #attachment
+* item[0].item[8].required = false
+* item[0].item[8].repeats = false
+
+* item[0].item[9].linkId = "PractitionerRole.extension[6]#text"
+* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:comments.value[x]:valueString"
+* item[0].item[9].text = "Comments"
+* item[0].item[9].type = #string
+* item[0].item[9].required = false
+* item[0].item[9].repeats = false
+
+* item[0].item[10].linkId = "PractitionerRole.location"
+* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.location"
+* item[0].item[10].text = "Facility"
+* item[0].item[10].type = #reference
+* item[0].item[10].required = true
+* item[0].item[10].repeats = false
 
 Instance:       IhrisPractitionerWorkflowEndRole
 InstanceOf:     IhrisQuestionnaire

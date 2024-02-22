@@ -20,7 +20,7 @@
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "QjTTAU58+gA54ah3sZb35QqgwG3a1RrMsEbhwJjQMGJBwaLeMYw1wbLu3JqiwwpUmiXD2SWLj+anq3bl6IHP1Xhf//gP/05se6Rgm7LUQeYdG0HqSNpqdHts0bXVJ2cqAex/Z2WL4d9frmjylTdOke6lrjgR2xTN7vET6YGXgmg="
+        "data": "Y97cy663TdXJSNCf7fL/u5mSRHU3QLEqnZjgyp2TpAr2EsqBHQ81UiImjCraYvo2BbxocZIZqEZXLyqJhyvPVsZunGwwyA3NCyl9AVsQREsvLhok9Az9Q3JfuAgT/iCgKCN3RYhc+QnSqO/0wszcnN4ehtqjfAklvDhSW44qxE0="
       }
     },
     {
@@ -239,50 +239,6 @@
           "valueString": "/resource/search/facility"
         },
         {
-          "name": "site:nav:menu:mhero:order",
-          "valueString": "7"
-        },
-        {
-          "name": "site:nav:menu:mhero:text",
-          "valueString": "mHero"
-        },
-        {
-          "name": "site:nav:menu:mhero:icon",
-          "valueString": "mdi-cellphone-basic"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:message:text",
-          "valueString": "Send Messages"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:message:url",
-          "valueString": "/page/mhero"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:scheduledcommunications:text",
-          "valueString": "Scheduled Messages"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:scheduledcommunications:url",
-          "valueString": "/page/mhero-scheduled-message"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:groups:text",
-          "valueString": "Contact Groups"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:groups:url",
-          "valueString": "/page/contact-groups"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:reports:text",
-          "valueString": "Reports"
-        },
-        {
-          "name": "site:nav:menu:mhero:menu:reports:url",
-          "valueString": "/page/mhero-reports"
-        },
-        {
           "name": "site:nav:menu:database:text",
           "valueString": "Database"
         },
@@ -404,7 +360,7 @@
         },
         {
           "name": "site:nav:menu:database:menu:eduLists:menu:degree:text",
-          "valueString": "Degree/Course"
+          "valueString": "Degree"
         },
         {
           "name": "site:nav:menu:database:menu:eduLists:menu:degree:url",
@@ -449,6 +405,78 @@
         {
           "name": "site:nav:menu:database:menu:eduLists:menu:institution:order",
           "valueString": "5"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:education-sector:text",
+          "valueString": "Sector"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:education-sector:url",
+          "valueString": "/resource/search/education-sector"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:education-sector:order",
+          "valueString": "6"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:training-mode:text",
+          "valueString": "Training Mode"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:training-mode:url",
+          "valueString": "/resource/search/training-mode"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:training-mode:order",
+          "valueString": "7"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:qualification:text",
+          "valueString": "Qualification"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:qualification:url",
+          "valueString": "/resource/search/qualification"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:qualification:order",
+          "valueString": "8"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:specialization:text",
+          "valueString": "Specialization"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:specialization:url",
+          "valueString": "/resource/search/specialization"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:specialization:order",
+          "valueString": "9"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:education-type:text",
+          "valueString": "Education Type"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:education-type:url",
+          "valueString": "/resource/search/education-type"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:education-type:order",
+          "valueString": "10"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:fund:text",
+          "valueString": "Training Fund"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:fund:url",
+          "valueString": "/resource/search/training-fund"
+        },
+        {
+          "name": "site:nav:menu:database:menu:eduLists:menu:fund:order",
+          "valueString": "11"
         },
         {
           "name": "site:nav:menu:database:menu:postLists:text",
@@ -567,6 +595,18 @@
           "valueString": "3"
         },
         {
+          "name": "site:nav:menu:database:menu:otherLists:menu:disciplineactiontaken:text",
+          "valueString": "Discipline Action Taken"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:disciplineactiontaken:url",
+          "valueString": "/resource/search/disciplinary-action-taken"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:disciplineactiontaken:order",
+          "valueString": "4"
+        },
+        {
           "name": "site:nav:menu:database:menu:otherLists:menu:training:text",
           "valueString": "In-Service Training Type/Category"
         },
@@ -576,71 +616,31 @@
         },
         {
           "name": "site:nav:menu:database:menu:otherLists:menu:training:order",
-          "valueString": "4"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:text",
-          "valueString": "Education Lists"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:color",
-          "valueString": "#B32317"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:order",
           "valueString": "5"
         },
         {
-          "name": "site:nav:menu:database:menu:education:icon",
-          "valueString": "mdi-database"
+          "name": "site:nav:menu:database:menu:otherLists:menu:ministry:text",
+          "valueString": "Ministries"
         },
         {
-          "name": "site:nav:menu:database:menu:education:menu:qualification:text",
-          "valueString": "Qualification"
+          "name": "site:nav:menu:database:menu:otherLists:menu:ministry:url",
+          "valueString": "/resource/search/ministry"
         },
         {
-          "name": "site:nav:menu:database:menu:education:menu:qualification:url",
-          "valueString": "/resource/search/qualification"
+          "name": "site:nav:menu:database:menu:otherLists:menu:ministry:order",
+          "valueString": "6"
         },
         {
-          "name": "site:nav:menu:database:menu:education:menu:qualification:order",
-          "valueString": "0"
+          "name": "site:nav:menu:database:menu:otherLists:menu:service:text",
+          "valueString": "Service"
         },
         {
-          "name": "site:nav:menu:database:menu:education:menu:specialization:text",
-          "valueString": "Specialization"
+          "name": "site:nav:menu:database:menu:otherLists:menu:service:url",
+          "valueString": "/resource/search/service"
         },
         {
-          "name": "site:nav:menu:database:menu:education:menu:specialization:url",
-          "valueString": "/resource/search/specialization"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:menu:specialization:order",
-          "valueString": "1"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:menu:education-type:text",
-          "valueString": "Education Type"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:menu:education-type:url",
-          "valueString": "/resource/search/education-type"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:menu:education-type:order",
-          "valueString": "2"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:menu:degree:text",
-          "valueString": "Degree"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:menu:degree:url",
-          "valueString": "/resource/search/degree"
-        },
-        {
-          "name": "site:nav:menu:database:menu:education:menu:degree:order",
-          "valueString": "3"
+          "name": "site:nav:menu:database:menu:otherLists:menu:service:order",
+          "valueString": "7"
         },
         {
           "name": "site:nav:menu:database:menu:situation:text",
@@ -781,6 +781,70 @@
         {
           "name": "site:nav:menu:database:menu:classification:menu:echelon:order",
           "valueString": "4"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:text",
+          "valueString": "Geographical Information"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:color",
+          "valueString": "#78496a"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:region:text",
+          "valueString": "Province"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:region:url",
+          "valueString": "/resource/search/td-region"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:region:order",
+          "valueString": "0"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:district:text",
+          "valueString": "District"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:district:url",
+          "valueString": "/resource/search/td-district"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:district:order",
+          "valueString": "1"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:text",
+          "valueString": "Facility Data"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:color",
+          "valueString": "#8a8d35"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:facility-type:text",
+          "valueString": "Facility Type"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:facility-type:url",
+          "valueString": "/resource/search/facility-type"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:facility-type:order",
+          "valueString": "0"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:facility:text",
+          "valueString": "Facility"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:facility:url",
+          "valueString": "/resource/search/td-facility"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:facility:order",
+          "valueString": "1"
         },
         {
           "name": "site:nav:menu:reports:text",
@@ -991,12 +1055,28 @@
           "valueString": "http://ihris.org/fhir/Questionnaire/classification"
         },
         {
-          "name": "workflow:processor:education:file",
-          "valueString": "educationWorkflow"
+          "name": "workflow:processor:preservice-training:file",
+          "valueString": "preserviceTrainingWorkflow"
         },
         {
-          "name": "workflow:questionnaire:education:url",
-          "valueString": "http://ihris.org/fhir/Questionnaire/ihris-education-history"
+          "name": "workflow:questionnaire:preservice-training:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/preservice-training"
+        },
+        {
+          "name": "workflow:processor:inservice-training:file",
+          "valueString": "inserviceTrainingWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:inservice-training:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/inservice-training"
+        },
+        {
+          "name": "workflow:processor:inservice-training-request:file",
+          "valueString": "inserviceTrainingRequestWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:inservice-training-request:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/inservice-training-request"
         },
         {
           "name": "workflow:processor:endrole:file",
@@ -1032,7 +1112,7 @@
         },
         {
           "name": "workflow:processor:leave:file",
-          "valueString": "workflowLeave"
+          "valueString": "leaveWorkflow"
         },
         {
           "name": "workflow:questionnaire:leave:url",
@@ -1040,7 +1120,7 @@
         },
         {
           "name": "workflow:processor:performance:file",
-          "valueString": "workflowPerformance"
+          "valueString": "performanceWorkflow"
         },
         {
           "name": "workflow:questionnaire:performance:url",
@@ -1056,7 +1136,7 @@
         },
         {
           "name": "workflow:processor:employment:file",
-          "valueString": "workflowEmploymentHistory"
+          "valueString": "employmentWorkflow"
         },
         {
           "name": "workflow:questionnaire:employment:url",
@@ -1064,7 +1144,7 @@
         },
         {
           "name": "workflow:processor:emergency:file",
-          "valueString": "workflowEmergency"
+          "valueString": "emergencyWorkflow"
         },
         {
           "name": "workflow:questionnaire:emergency:url",
@@ -1072,7 +1152,7 @@
         },
         {
           "name": "workflow:processor:discipline:file",
-          "valueString": "workflowDiscipline"
+          "valueString": "disciplineWorkflow"
         },
         {
           "name": "workflow:questionnaire:discipline:url",
@@ -1153,6 +1233,30 @@
         {
           "name": "defaults:fields:Person.extension:practitioner.value[x]:valueReference:referenceDisplayPath",
           "valueString": "name.where(use='official').given.first() + ' ' + name.where(use='official').family"
+        },
+        {
+          "name": "defaults:fields:Basic.extension:preservice-training.extension:degree.value[x]:valueReference:searchParameter",
+          "valueString": "educationtype"
+        },
+        {
+          "name": "defaults:fields:Basic.extension:preservice-training.extension:degree.value[x]:valueReference:type",
+          "valueString": "tree"
+        },
+        {
+          "name": "defaults:fields:Basic.extension:preservice-training.extension:degree.value[x]:valueReference:initialProfile",
+          "valueString": "http://ihris.org/fhir/StructureDefinition/td-education-type-profile"
+        },
+        {
+          "name": "defaults:page:td-district:fields:Location.partOf:initialValue",
+          "valueString": "Location/countrytd"
+        },
+        {
+          "name": "defaults:page:td-facility:fields:Location.partOf:initialValue",
+          "valueString": "Location/countrytd"
+        },
+        {
+          "name": "defaults:page:employment-history:fields:Basic.extension:employmentHistory.extension:location.value[x]:valueReference:initialValue",
+          "valueString": "Location/countrytd"
         }
       ]
     }

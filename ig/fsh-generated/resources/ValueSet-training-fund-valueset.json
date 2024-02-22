@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "TrainingFundValueSet",
+  "id": "training-fund-valueset",
+  "title": "Training Fund ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/training-fund-valueset",
+  "date": "2024-02-02T08:14:00.000Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/training-fund-codesystem"
+      }
+    ]
+  }
+}

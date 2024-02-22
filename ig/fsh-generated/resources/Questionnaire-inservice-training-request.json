@@ -1,0 +1,70 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "inservice-training-request",
+  "url": "http://ihris.org/fhir/Questionnaire/inservice-training-request",
+  "title": "Inservice Training Request Workflow",
+  "description": "iHRIS workflow to record a Inservice Training Request",
+  "name": "inservice-training-request",
+  "status": "active",
+  "date": "2024-02-15",
+  "purpose": "Workflow page for recording a Inservice Training Request information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile",
+      "text": "Request Inservice Training",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:authorization-letter.value[x]:valueAttachment",
+          "text": "Authorization Letter",
+          "type": "attachment",
+          "required": true
+        },
+        {
+          "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:authorization-reference.value[x]:valueString",
+          "text": "Authorization Reference",
+          "type": "string",
+          "required": true
+        },
+        {
+          "linkId": "Basic.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:authorization-confirmation-letter.value[x]:valueAttachment",
+          "text": "Authorization Confirmation Letter",
+          "type": "attachment",
+          "required": false
+        },
+        {
+          "linkId": "Basic.extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:service-end-date.value[x]:valueDate",
+          "text": "End of Service Date",
+          "type": "date",
+          "required": false
+        },
+        {
+          "linkId": "Basic.extension[4]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:end-service-reference.value[x]:valueString",
+          "text": "End of Service Reference",
+          "type": "string",
+          "required": false
+        },
+        {
+          "linkId": "Basic.extension[5]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:service-resumption-date.value[x]:valueDate",
+          "text": "Service Resumption Date",
+          "type": "date",
+          "required": false
+        },
+        {
+          "linkId": "Basic.extension[6]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-request-profile#Basic.extension:service-resumption-reference.value[x]:valueString",
+          "text": "Service Resumption Reference",
+          "type": "string",
+          "required": false
+        }
+      ]
+    }
+  ]
+}

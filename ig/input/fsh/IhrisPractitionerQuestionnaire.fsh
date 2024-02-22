@@ -277,26 +277,75 @@ Usage:          #definition
 * item[2].item[1].required = true
 * item[2].item[1].repeats = false
 
-* item[2].item[2].linkId = "PractitionerRole.period.start"
-* item[2].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.start"
-* item[2].item[2].text = "Start Date"
-* item[2].item[2].type = #dateTime
+* item[2].item[2].linkId = "PractitionerRole.extension[0]"
+* item[2].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-date.value[x]:valueDate"
+* item[2].item[2].text = "Date of Assignment or Appointment"
+* item[2].item[2].type = #date
 * item[2].item[2].required = true
 * item[2].item[2].repeats = false
 
-* item[2].item[3].linkId = "PractitionerRole.period.end"
-* item[2].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.end"
-* item[2].item[3].text = "End Date"
-* item[2].item[3].type = #dateTime
-* item[2].item[3].required = false
+* item[2].item[3].linkId = "PractitionerRole.extension[1]"
+* item[2].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-reference.value[x]:valueString"
+* item[2].item[3].text = "Reference Assignment or Appointment"
+* item[2].item[3].type = #string
+* item[2].item[3].required = true
 * item[2].item[3].repeats = false
 
-* item[2].item[4].linkId = "PractitionerRole.location[0]"
-* item[2].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.location"
-* item[2].item[4].text = "Facility"
-* item[2].item[4].type = #reference
-* item[2].item[4].required = false
+* item[2].item[4].linkId = "PractitionerRole.period.start"
+* item[2].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.start"
+* item[2].item[4].text = "Service Start Date"
+* item[2].item[4].type = #dateTime
+* item[2].item[4].required = true
 * item[2].item[4].repeats = false
+
+* item[2].item[5].linkId = "PractitionerRole.period.end"
+* item[2].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.end"
+* item[2].item[5].text = "Service End Date"
+* item[2].item[5].type = #dateTime
+* item[2].item[5].required = false
+* item[2].item[5].repeats = false
+
+* item[2].item[6].linkId = "PractitionerRole.extension[2]"
+* item[2].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:service-start-reference.value[x]:valueString"
+* item[2].item[6].text = "Service Start Reference"
+* item[2].item[6].type = #string
+* item[2].item[6].required = false
+* item[2].item[6].repeats = false
+
+* item[2].item[7].linkId = "PractitionerRole.extension[3]"
+* item[2].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-date.value[x]:valueDate"
+* item[2].item[7].text = "Date of Effective Presence"
+* item[2].item[7].type = #date
+* item[2].item[7].required = false
+* item[2].item[7].repeats = false
+
+* item[2].item[8].linkId = "PractitionerRole.extension[4]"
+* item[2].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-reference.value[x]:valueString"
+* item[2].item[8].text = "Effective Presence Reference"
+* item[2].item[8].type = #string
+* item[2].item[8].required = false
+* item[2].item[8].repeats = false
+
+* item[2].item[9].linkId = "PractitionerRole.extension[5]"
+* item[2].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:assignment-act.value[x]:valueAttachment"
+* item[2].item[9].text = "Act of Assignment or Appointment"
+* item[2].item[9].type = #attachment
+* item[2].item[9].required = false
+* item[2].item[9].repeats = false
+
+* item[2].item[10].linkId = "PractitionerRole.extension[6]#text"
+* item[2].item[10].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:comments.value[x]:valueString"
+* item[2].item[10].text = "Comments"
+* item[2].item[10].type = #string
+* item[2].item[10].required = false
+* item[2].item[10].repeats = false
+
+* item[2].item[11].linkId = "PractitionerRole.location"
+* item[2].item[11].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.location"
+* item[2].item[11].text = "Facility"
+* item[2].item[11].type = #reference
+* item[2].item[11].required = true
+* item[2].item[11].repeats = false
 
 * item[3].linkId = "Practitioner.identifier"
 * item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.identifier"

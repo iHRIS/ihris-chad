@@ -21,7 +21,7 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "StructureDefinition/ihris-person-user"
+            "reference": "StructureDefinition/bw-person-user"
           }
         },
         {
@@ -56,12 +56,16 @@
         {
           "extension": [
             {
-              "url": "text",
-              "valueString": "Add Another User"
+              "url": "field",
+              "valueString": ""
             },
             {
               "url": "url",
               "valueUrl": "/questionnaire/ihris-user/user"
+            },
+            {
+              "url": "text",
+              "valueString": "Add Another User"
             },
             {
               "url": "button",

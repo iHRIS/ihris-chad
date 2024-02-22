@@ -9,16 +9,16 @@
   "url": "http://ihris.org/fhir/CodeSystem/ihris-discipline-action-type-codesystem",
   "concept": [
     {
-      "code": "judicial",
-      "display": "Judicial"
+      "code": "warning",
+      "display": "Warning"
     },
     {
-      "code": "administrative",
-      "display": "Administrative"
+      "code": "layoff",
+      "display": "Layoff"
     },
     {
-      "code": "demotion",
-      "display": "Demotion"
+      "code": "blame",
+      "display": "Blame"
     }
   ],
   "date": "2020-11-10T08:41:04.362Z",

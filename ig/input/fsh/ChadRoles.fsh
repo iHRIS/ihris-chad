@@ -18,6 +18,46 @@ Title:          "Add Situation"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-situation"
 
+Instance:       ihris-task-add-performance
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Performance"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-performance"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-performance"
+
+Instance:       ihris-task-edit-performance
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Performance"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-performance"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-performance"
+
+Instance:       ihris-task-add-leave
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Leave"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-leave"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-leave"
+
+Instance:       ihris-task-edit-leave
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Leave"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-leave"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-leave"
+
 Instance:       ihris-task-add-employment
 InstanceOf:     IhrisTask
 Usage:          #example
@@ -38,25 +78,85 @@ Title:          "Edit Employment"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-employment"
 
-Instance:       ihris-task-add-education
+Instance:       ihris-task-add-emergency
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Emergency"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-emergency"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-emergency"
+
+Instance:       ihris-task-edit-emergency
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Emergency"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-emergency"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-emergency"
+
+Instance:       ihris-task-add-disciplinary-action
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Disciplinary Action"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-disciplinary-action"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-disciplinary-action"
+
+Instance:       ihris-task-edit-disciplinary-action
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Disciplinary Action"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-disciplinary-action"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-disciplinary-action"
+
+Instance:       ihris-task-add-preservice-training
 InstanceOf:     IhrisTask
 Usage:          #example
 Title:          "Add Education"
 * code = IhrisResourceCodeSystem#task
-* extension[name].valueString = "add-education"
+* extension[name].valueString = "add-preservice-training"
 * extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
-* extension[attributes][0].extension[instance].valueId = "add-education"
+* extension[attributes][0].extension[instance].valueId = "add-preservice-training"
 
-Instance:       ihris-task-edit-education
+Instance:       ihris-task-edit-preservice-training
 InstanceOf:     IhrisTask
 Usage:          #example
-Title:          "Edit Education"
+Title:          "Edit Preservice Training"
 * code = IhrisResourceCodeSystem#task
-* extension[name].valueString = "edit-education"
+* extension[name].valueString = "edit-preservice-training"
 * extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
-* extension[attributes][0].extension[instance].valueId = "edit-education"
+* extension[attributes][0].extension[instance].valueId = "edit-preservice-training"
+
+Instance:       ihris-task-add-inservice-training
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Education"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-inservice-training"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-inservice-training"
+
+Instance:       ihris-task-edit-inservice-training
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Inservice Training"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-inservice-training"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-inservice-training"
 
 Instance:       ihris-task-section-situation
 InstanceOf:     IhrisTask
@@ -78,6 +178,56 @@ Title:          "See Classification Section"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#section
 * extension[attributes][0].extension[instance].valueId = "classification"
 
+Instance:       ihris-task-section-inservice-training
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "See Inservice Training Section"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "inservice-training"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#section
+* extension[attributes][0].extension[instance].valueId = "inservice-training"
+
+Instance:       ihris-task-section-inservice-training-request
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "See Inservice Training Request Section"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "inservice-training-request"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#section
+* extension[attributes][0].extension[instance].valueId = "inservice-training-request"
+
+Instance:       ihris-task-section-preservice-training
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "See Preservice Training Section"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "preservice-training"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#section
+* extension[attributes][0].extension[instance].valueId = "preservice-training"
+
+Instance:       ihris-task-section-emergency
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "See Emergency Section"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "emergency"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#section
+* extension[attributes][0].extension[instance].valueId = "emergency"
+
+Instance:       ihris-task-section-disciplinary-action
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "See Disciplinary Action Section"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "disciplinary-action"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#section
+* extension[attributes][0].extension[instance].valueId = "disciplinary-action"
+
 Instance:       ihris-task-add-classification
 InstanceOf:     IhrisTask
 Usage:          #example
@@ -97,3 +247,23 @@ Title:          "Edit Classification"
 * extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-classification"
+
+Instance:       ihris-task-add-inservice-training-request
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Inservice Training Request"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-inservice-training-request"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-inservice-training-request"
+
+Instance:       ihris-task-edit-inservice-training-request
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Inservice Training Request"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-inservice-training-request"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-inservice-training-request"

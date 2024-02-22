@@ -1,0 +1,26 @@
+{
+  "resourceType": "Location",
+  "id": "countrytd",
+  "meta": {
+    "versionId": "1",
+    "lastUpdated": "2023-05-03T21:33:07.462+03:00",
+    "source": "#HtC6uAx9AM64G20N",
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/td-country"
+    ]
+  },
+  "status": "active",
+  "name": "Chad",
+  "type": [
+    {
+      "coding": [
+        {
+          "version": "0.4.0",
+          "code": "country",
+          "system": "http://ihris.org/fhir/CodeSystem/td-jurisdiction-type-codesystem",
+          "display": "Country"
+        }
+      ]
+    }
+  ]
+}

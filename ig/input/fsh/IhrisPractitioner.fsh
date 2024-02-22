@@ -207,11 +207,7 @@ Description:    "iHRIS extension for Practitioner residence."
 * value[x] only Reference
 * valueReference 1..1 MS
 * valueReference ^label = "Residence"
-* valueReference ^constraint[0].key = "ihris-location-residence"
-* valueReference ^constraint[0].severity = #warning
-* valueReference ^constraint[0].expression = "reference.matches('^Location/')"
-* valueReference ^constraint[0].human = "Must be a location"
-* valueReference only Reference(IhrisJurisdiction)
+* valueReference only Reference(TDRegion or TDDistrict)
 * valueReference.reference 1..1 MS
 * valueReference.reference ^label = "Location"
 * valueReference.type 0..0
