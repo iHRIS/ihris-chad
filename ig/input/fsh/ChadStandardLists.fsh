@@ -360,6 +360,57 @@ Usage:          #example
 * extension[section][0].extension[field][0].valueString = "CodeSystem.display"
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 
+Instance:       ihris-page-facility-type
+InstanceOf:     IhrisPage
+Title:          "Facility Type Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/facility-type-codesystem)
+* extension[display].extension[search][0].valueString = "Code|code"
+* extension[display].extension[search][1].valueString = "Action|display"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Facility Type"
+* extension[section][0].extension[description].valueString = "Facility Type"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+* extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
+
+Instance:       ihris-page-country
+InstanceOf:     IhrisPage
+Title:          "Country Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/country-codesystem)
+* extension[display].extension[search][0].valueString = "Code|code"
+* extension[display].extension[search][1].valueString = "Action|display"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Country"
+* extension[section][0].extension[description].valueString = "Country"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+* extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
+
+Instance:       ihris-page-nationality
+InstanceOf:     IhrisPage
+Title:          "Nationality Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/nationality-codesystem)
+* extension[display].extension[search][0].valueString = "Code|code"
+* extension[display].extension[search][1].valueString = "Action|display"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Nationality"
+* extension[section][0].extension[description].valueString = "Nationality"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+* extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
+
 Instance:       ihris-search-education-type
 InstanceOf:     SearchParameter
 Title:          "search parameter for Education Type"

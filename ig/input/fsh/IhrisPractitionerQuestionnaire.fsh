@@ -100,7 +100,7 @@ Usage:          #definition
 * item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:nationality.value[x]:valueCoding"
 * item[0].item[5].text = "Nationality"
 * item[0].item[5].type = #choice
-* item[0].item[5].answerValueSet = "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+* item[0].item[5].answerValueSet = "http://ihris.org/fhir/ValueSet/nationality-valueset"
 * item[0].item[5].required = true
 * item[0].item[5].repeats = false
 
@@ -392,8 +392,8 @@ Usage:          #definition
 * item[3].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.identifier.extension:countryIssued.value[x]:valueCoding"
 * item[3].item[0].item[4].text = "Country of Issue"
 * item[3].item[0].item[4].type = #choice
-* item[3].item[0].item[4].answerValueSet = "http://hl7.org/fhir/ValueSet/iso3166-1-2"
-* item[3].item[0].item[4].initial[0].valueCoding = ISO3166Part1#TD
+* item[3].item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
+* item[3].item[0].item[4].initial[0].valueCoding = CountryCodeSystem#country98
 * item[3].item[0].item[4].repeats = false
 * item[3].item[0].item[4].required = false
 

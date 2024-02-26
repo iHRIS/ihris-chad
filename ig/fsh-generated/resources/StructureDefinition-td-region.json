@@ -4,7 +4,7 @@
   "url": "http://ihris.org/fhir/StructureDefinition/td-region",
   "version": "0.1.0",
   "name": "TDRegion",
-  "title": "Region",
+  "title": "Province",
   "status": "active",
   "description": "iHRIS Profile of Locations to manage jurisdictions.",
   "fhirVersion": "4.0.1",

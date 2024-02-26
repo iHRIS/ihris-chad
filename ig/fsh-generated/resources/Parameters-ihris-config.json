@@ -20,7 +20,7 @@
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "Y97cy663TdXJSNCf7fL/u5mSRHU3QLEqnZjgyp2TpAr2EsqBHQ81UiImjCraYvo2BbxocZIZqEZXLyqJhyvPVsZunGwwyA3NCyl9AVsQREsvLhok9Az9Q3JfuAgT/iCgKCN3RYhc+QnSqO/0wszcnN4ehtqjfAklvDhSW44qxE0="
+        "data": "Br1qOCmV6CGQQWQ4CTD0UgxYcX3C5cyDehAO5aE/F1BET/vRoWLlwTW43VoYHPcrJ/RHRzI/r7PJgP80e13qrvQdWr0aROrNLHI0CIHuCBdCYQ1MemRBxB/NCOMcF+GofDtM3lzBwpsO+v9wy5wON41Wnt/RHIPSAQ+uTua/9pk="
       }
     },
     {
@@ -791,6 +791,18 @@
           "valueString": "#78496a"
         },
         {
+          "name": "site:nav:menu:database:menu:geography:menu:country:text",
+          "valueString": "Country"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:country:url",
+          "valueString": "/resource/search/country"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:country:order",
+          "valueString": "0"
+        },
+        {
           "name": "site:nav:menu:database:menu:geography:menu:region:text",
           "valueString": "Province"
         },
@@ -800,7 +812,7 @@
         },
         {
           "name": "site:nav:menu:database:menu:geography:menu:region:order",
-          "valueString": "0"
+          "valueString": "1"
         },
         {
           "name": "site:nav:menu:database:menu:geography:menu:district:text",
@@ -812,7 +824,19 @@
         },
         {
           "name": "site:nav:menu:database:menu:geography:menu:district:order",
-          "valueString": "1"
+          "valueString": "2"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:nationality:text",
+          "valueString": "Nationality"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:nationality:url",
+          "valueString": "/resource/search/nationality"
+        },
+        {
+          "name": "site:nav:menu:database:menu:geography:menu:nationality:order",
+          "valueString": "3"
         },
         {
           "name": "site:nav:menu:database:menu:facility-data:text",

@@ -1,0 +1,298 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NationalityCodeSystem",
+  "id": "nationality-codesystem",
+  "title": "Nationality Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/nationality-codesystem",
+  "concept": [
+    {
+      "code": "nationality1",
+      "display": "Sud-africaine"
+    },
+    {
+      "code": "nationality3",
+      "display": "Algérienne"
+    },
+    {
+      "code": "nationality4",
+      "display": "Allemande"
+    },
+    {
+      "code": "nationality5",
+      "display": "Angolaise"
+    },
+    {
+      "code": "nationality6",
+      "display": "Saoudienne"
+    },
+    {
+      "code": "nationality8",
+      "display": "Autrichienne"
+    },
+    {
+      "code": "nationality9",
+      "display": "Bangladesh"
+    },
+    {
+      "code": "nationality10",
+      "display": "Belge"
+    },
+    {
+      "code": "nationality11",
+      "display": "Béninoise"
+    },
+    {
+      "code": "nationality12",
+      "display": "Burkinabé"
+    },
+    {
+      "code": "nationality13",
+      "display": "Burundaise"
+    },
+    {
+      "code": "nationality14",
+      "display": "Camerounaise"
+    },
+    {
+      "code": "nationality15",
+      "display": "Canadienne"
+    },
+    {
+      "code": "nationality16",
+      "display": "Centrafricaine"
+    },
+    {
+      "code": "nationality17",
+      "display": "Chinoise"
+    },
+    {
+      "code": "nationality18",
+      "display": "Congolaise"
+    },
+    {
+      "code": "nationality19",
+      "display": "Sud-Coréenne"
+    },
+    {
+      "code": "nationality20",
+      "display": "Ivoirienne"
+    },
+    {
+      "code": "nationality22",
+      "display": "Cubaine"
+    },
+    {
+      "code": "nationality23",
+      "display": "Danoise"
+    },
+    {
+      "code": "nationality24",
+      "display": "Djiboutienne"
+    },
+    {
+      "code": "nationality25",
+      "display": "Doubaî"
+    },
+    {
+      "code": "nationality26",
+      "display": "Egyptienne"
+    },
+    {
+      "code": "nationality28",
+      "display": "Espagnole"
+    },
+    {
+      "code": "nationality29",
+      "display": "Américaine"
+    },
+    {
+      "code": "nationality30",
+      "display": "Ethiopienne"
+    },
+    {
+      "code": "nationality31",
+      "display": "Finlandaise"
+    },
+    {
+      "code": "nationality32",
+      "display": "Française"
+    },
+    {
+      "code": "nationality33",
+      "display": "Gabonnaise"
+    },
+    {
+      "code": "nationality34",
+      "display": "Gambienne"
+    },
+    {
+      "code": "nationality35",
+      "display": "Ghanéenne"
+    },
+    {
+      "code": "nationality36",
+      "display": "Anglaise"
+    },
+    {
+      "code": "nationality37",
+      "display": "Greque"
+    },
+    {
+      "code": "nationality41",
+      "display": "Hollandaise"
+    },
+    {
+      "code": "nationality42",
+      "display": "Hongroise"
+    },
+    {
+      "code": "nationality43",
+      "display": "Indou"
+    },
+    {
+      "code": "nationality44",
+      "display": "Iraniène"
+    },
+    {
+      "code": "nationality45",
+      "display": "Iraquiene"
+    },
+    {
+      "code": "nationality47",
+      "display": "Islandaise"
+    },
+    {
+      "code": "nationality49",
+      "display": "Italienne"
+    },
+    {
+      "code": "nationality50",
+      "display": "Japonnaise"
+    },
+    {
+      "code": "nationality51",
+      "display": "Kénianne"
+    },
+    {
+      "code": "nationality52",
+      "display": "Koweitienne"
+    },
+    {
+      "code": "nationality54",
+      "display": "Libanaise"
+    },
+    {
+      "code": "nationality55",
+      "display": "Liberianne"
+    },
+    {
+      "code": "nationality56",
+      "display": "Libyen"
+    },
+    {
+      "code": "nationality57",
+      "display": "Luxembourgeoise"
+    },
+    {
+      "code": "nationality58",
+      "display": "Lybienne"
+    },
+    {
+      "code": "nationality59",
+      "display": "Malgache"
+    },
+    {
+      "code": "nationality62",
+      "display": "Malienne"
+    },
+    {
+      "code": "nationality63",
+      "display": "Marocaine"
+    },
+    {
+      "code": "nationality65",
+      "display": "Mauritanienne"
+    },
+    {
+      "code": "nationality66",
+      "display": "Mexicaine"
+    },
+    {
+      "code": "nationality69",
+      "display": "Nigérienne"
+    },
+    {
+      "code": "nationality70",
+      "display": "Nigérianne"
+    },
+    {
+      "code": "nationality71",
+      "display": "Norvégienne"
+    },
+    {
+      "code": "nationality73",
+      "display": "Ougandaise"
+    },
+    {
+      "code": "nationality79",
+      "display": "Portugaise"
+    },
+    {
+      "code": "nationality81",
+      "display": "Roumaine"
+    },
+    {
+      "code": "nationality83",
+      "display": "Russe"
+    },
+    {
+      "code": "nationality85",
+      "display": "Sénégalaise"
+    },
+    {
+      "code": "nationality90",
+      "display": "Soudannaise"
+    },
+    {
+      "code": "nationality92",
+      "display": "Suédoise"
+    },
+    {
+      "code": "nationality93",
+      "display": "Suisse"
+    },
+    {
+      "code": "nationality95",
+      "display": "Syrienne"
+    },
+    {
+      "code": "nationality98",
+      "display": "Tchadienne"
+    },
+    {
+      "code": "nationality100",
+      "display": "Togolaise"
+    },
+    {
+      "code": "nationality101",
+      "display": "Tunisienne"
+    },
+    {
+      "code": "nationality102",
+      "display": "Turque"
+    },
+    {
+      "code": "nationality107",
+      "display": "Yemenite"
+    },
+    {
+      "code": "nationality109",
+      "display": "Zambienne"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 71
+}

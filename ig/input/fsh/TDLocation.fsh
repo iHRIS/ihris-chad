@@ -19,7 +19,7 @@ Description:    "iHRIS Profile of Locations to manage jurisdictions."
 Profile:        TDRegion
 Parent:         Location
 Id:             td-region
-Title:          "Region"
+Title:          "Province"
 Description:    "iHRIS Profile of Locations to manage jurisdictions."
 * type 1..1 MS
 * type ^label = "Location Type"
@@ -54,7 +54,7 @@ Description:    "iHRIS Profile of Locations to manage jurisdictions."
 * status ^label = "Status"
 * partOf 1..1 MS
 * partOf only Reference(TDRegion)
-* partOf ^label = "Region"
+* partOf ^label = "Province"
 
 Profile:        TDFacility
 Parent:         Location
@@ -150,9 +150,9 @@ Usage:          #example
 * extension[display].extension[link][0].extension[button].valueBoolean = true
 * extension[display].extension[link][0].extension[icon].valueString = "mdi-pencil"
 * extension[display].extension[link][0].extension[class].valueString = "primary"
-* extension[section][0].extension[title].valueString = "Regions"
+* extension[section][0].extension[title].valueString = "Province"
 * extension[section][0].extension[description].valueString = "Regions"
-* extension[section][0].extension[name].valueString = "Regions"
+* extension[section][0].extension[name].valueString = "province"
 * extension[section][0].extension[field][0].valueString = "Location.name"
 * extension[section][0].extension[field][1].valueString = "Location.type"
 * extension[section][0].extension[field][2].valueString = "Location.partOf"

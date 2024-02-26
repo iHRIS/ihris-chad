@@ -1470,7 +1470,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+          "valueSet": "http://ihris.org/fhir/ValueSet/nationality-valueset"
         },
         "mapping": [
           {
@@ -3027,7 +3027,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+          "valueSet": "http://ihris.org/fhir/ValueSet/country-valueset"
         },
         "mapping": [
           {

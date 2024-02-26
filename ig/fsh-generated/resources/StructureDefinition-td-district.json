@@ -1435,7 +1435,7 @@
       {
         "id": "Location.partOf",
         "path": "Location.partOf",
-        "label": "Region",
+        "label": "Province",
         "short": "Another Location this one is physically a part of",
         "definition": "Another Location of which this Location is physically a part of.",
         "requirements": "For purposes of location, display and identification, knowing which locations are located within other locations is important.",
@@ -1932,7 +1932,7 @@
       {
         "id": "Location.partOf",
         "path": "Location.partOf",
-        "label": "Region",
+        "label": "Province",
         "min": 1,
         "type": [
           {

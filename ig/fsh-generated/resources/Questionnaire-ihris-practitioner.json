@@ -120,7 +120,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:nationality.value[x]:valueCoding",
           "text": "Nationality",
           "type": "choice",
-          "answerValueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/nationality-valueset",
           "required": true,
           "repeats": false
         },
@@ -524,12 +524,12 @@
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.identifier.extension:countryIssued.value[x]:valueCoding",
               "text": "Country of Issue",
               "type": "choice",
-              "answerValueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/country-valueset",
               "initial": [
                 {
                   "valueCoding": {
-                    "code": "TD",
-                    "system": "urn:iso:std:iso:3166"
+                    "code": "country98",
+                    "system": "http://ihris.org/fhir/CodeSystem/country-codesystem"
                   }
                 }
               ],

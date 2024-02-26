@@ -310,7 +310,7 @@
         "reference": {
           "reference": "StructureDefinition/td-region"
         },
-        "name": "Region",
+        "name": "Province",
         "description": "iHRIS Profile of Locations to manage jurisdictions.",
         "exampleBoolean": false
       },
@@ -1074,6 +1074,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/country-valueset"
+        },
+        "name": "Country ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/currencies"
         },
         "name": "CurrencyCode",
@@ -1347,6 +1354,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/nationality-valueset"
+        },
+        "name": "Nationality ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/organization-type"
         },
         "name": "Organization type",
@@ -1558,6 +1572,13 @@
           "reference": "CodeSystem/contractual-category-codesystem"
         },
         "name": "Contractual Category Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/country-codesystem"
+        },
+        "name": "Country Code System",
         "exampleBoolean": false
       },
       {
@@ -1841,6 +1862,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/nationality-codesystem"
+        },
+        "name": "Nationality Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/organization-type"
         },
         "name": "Organization type",
@@ -1976,6 +2004,13 @@
           "reference": "SearchParameter/active-user"
         },
         "name": "active-user",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/assign-job"
+        },
+        "name": "AssignJob",
         "exampleBoolean": false
       },
       {
@@ -2183,6 +2218,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-country"
+        },
+        "name": "Country Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-degree"
         },
         "name": "Degree Type Page",
@@ -2249,6 +2291,13 @@
           "reference": "Basic/ihris-page-employment-status"
         },
         "name": "iHRIS Employment Status CodeSystem Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-facility-type"
+        },
+        "name": "Facility Type Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2333,6 +2382,13 @@
           "reference": "Basic/ihris-page-ministry"
         },
         "name": "Ministry Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-nationality"
+        },
+        "name": "Nationality Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {

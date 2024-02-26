@@ -6,6 +6,7 @@
   },
   "dependencies": {
     "debug": "^4.3.3",
+    "fast-csv": "^5.0.1",
     "http": "^0.0.1-security",
     "underscore": "^1.13.4"
   }

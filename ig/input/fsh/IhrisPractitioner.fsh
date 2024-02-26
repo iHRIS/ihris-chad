@@ -166,7 +166,7 @@ Description:    "iHRIS extension for Country Issued."
 * value[x] only Coding
 * valueCoding 1..1 MS
 * valueCoding ^label = "Country Issued"
-* valueCoding from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
+* valueCoding from http://ihris.org/fhir/ValueSet/country-valueset (required)
 
 Extension:      Civility
 Id:             civility
@@ -248,7 +248,7 @@ Description:    "iHRIS extension for Practitioner nationality."
 * value[x] only Coding
 * valueCoding 1..1 MS
 * valueCoding ^label = "Nationality"
-* valueCoding from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
+* valueCoding from http://ihris.org/fhir/ValueSet/nationality-valueset (required)
 
 Extension:      IhrisPractitionerMaritalStatus
 Id:             ihris-practitioner-marital-status
