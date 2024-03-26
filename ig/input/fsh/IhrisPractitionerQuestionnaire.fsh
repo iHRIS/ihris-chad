@@ -66,70 +66,70 @@ Usage:          #definition
 * item[0].item[1].item[4].required = false
 * item[0].item[1].item[4].repeats = true
 
-* item[0].item[1].item[5].linkId = "Practitioner.photo"
-* item[0].item[1].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.photo"
-* item[0].item[1].item[5].text = "Photo"
-* item[0].item[1].item[5].type = #attachment
-* item[0].item[1].item[5].required = true
-* item[0].item[1].item[5].repeats = false
-
-* item[0].item[2].linkId = "Practitioner.gender"
-* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.gender"
-* item[0].item[2].text = "Gender"
-* item[0].item[2].type = #choice
-* item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/td-gender-valueset"
+* item[0].item[2].linkId = "Practitioner.photo"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.photo"
+* item[0].item[2].text = "Photo"
+* item[0].item[2].type = #attachment
 * item[0].item[2].required = true
 * item[0].item[2].repeats = false
 
-* item[0].item[3].linkId = "Practitioner.extension[1]"
-* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:marital-status.value[x]:valueCoding"
-* item[0].item[3].text = "Marital Status"
+* item[0].item[3].linkId = "Practitioner.gender"
+* item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.gender"
+* item[0].item[3].text = "Gender"
 * item[0].item[3].type = #choice
-* item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/marital-status-valueset"
+* item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/td-gender-valueset"
 * item[0].item[3].required = true
 * item[0].item[3].repeats = false
 
-* item[0].item[4].linkId = "Practitioner.birthDate"
-* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.birthDate"
-* item[0].item[4].text = "Date of Birth"
-* item[0].item[4].type = #date
+* item[0].item[4].linkId = "Practitioner.extension[1]"
+* item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:marital-status.value[x]:valueCoding"
+* item[0].item[4].text = "Marital Status"
+* item[0].item[4].type = #choice
+* item[0].item[4].answerValueSet = "http://ihris.org/fhir/ValueSet/marital-status-valueset"
 * item[0].item[4].required = true
 * item[0].item[4].repeats = false
 
-* item[0].item[5].linkId = "Practitioner.extension[2]"
-* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:birth-place.value[x]:valueString"
-* item[0].item[5].text = "Place of Birth"
-* item[0].item[5].type = #string
+* item[0].item[5].linkId = "Practitioner.birthDate"
+* item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.birthDate"
+* item[0].item[5].text = "Date of Birth"
+* item[0].item[5].type = #date
 * item[0].item[5].required = true
 * item[0].item[5].repeats = false
 
-* item[0].item[6].linkId = "Practitioner.extension[3]"
-* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:nationality.value[x]:valueCoding"
-* item[0].item[6].text = "Nationality"
-* item[0].item[6].type = #choice
-* item[0].item[6].answerValueSet = "http://ihris.org/fhir/ValueSet/nationality-valueset"
+* item[0].item[6].linkId = "Practitioner.extension[2]"
+* item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:birth-place.value[x]:valueString"
+* item[0].item[6].text = "Place of Birth"
+* item[0].item[6].type = #string
 * item[0].item[6].required = true
 * item[0].item[6].repeats = false
 
-* item[0].item[7].linkId = "Practitioner.extension[4]"
-* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger"
-* item[0].item[7].text = "Number of Children"
-* item[0].item[7].type = #integer
+* item[0].item[7].linkId = "Practitioner.extension[3]"
+* item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:nationality.value[x]:valueCoding"
+* item[0].item[7].text = "Nationality"
+* item[0].item[7].type = #choice
+* item[0].item[7].answerValueSet = "http://ihris.org/fhir/ValueSet/nationality-valueset"
 * item[0].item[7].required = true
 * item[0].item[7].repeats = false
 
-* item[0].item[8].linkId = "Practitioner.extension[5]"
-* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:residence.value[x]:valueReference"
-* item[0].item[8].text = "Residence"
-* item[0].item[8].type = #reference
-* item[0].item[8].required = false
+* item[0].item[8].linkId = "Practitioner.extension[4]"
+* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger"
+* item[0].item[8].text = "Number of Children"
+* item[0].item[8].type = #integer
+* item[0].item[8].required = true
 * item[0].item[8].repeats = false
 
-* item[0].item[9].linkId = "Practitioner.active"
-* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.active"
-* item[0].item[9].text = "Active"
-* item[0].item[9].type = #boolean
-* item[0].item[9].required = true
+* item[0].item[9].linkId = "Practitioner.extension[5]"
+* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:residence.value[x]:valueReference"
+* item[0].item[9].text = "Residence"
+* item[0].item[9].type = #reference
+* item[0].item[9].required = false
+* item[0].item[9].repeats = false
+
+* item[0].item[10].linkId = "Practitioner.active"
+* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.active"
+* item[0].item[10].text = "Active"
+* item[0].item[10].type = #boolean
+* item[0].item[10].required = true
 
 * item[1].linkId = "__Practitioner:contact"
 * item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner"

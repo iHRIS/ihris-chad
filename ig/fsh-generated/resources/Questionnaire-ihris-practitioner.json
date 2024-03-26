@@ -78,16 +78,16 @@
               "type": "string",
               "required": false,
               "repeats": true
-            },
-            {
-              "linkId": "Practitioner.photo",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.photo",
-              "text": "Photo",
-              "type": "attachment",
-              "required": true,
-              "repeats": false
             }
           ]
+        },
+        {
+          "linkId": "Practitioner.photo",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.photo",
+          "text": "Photo",
+          "type": "attachment",
+          "required": true,
+          "repeats": false
         },
         {
           "linkId": "Practitioner.gender",
