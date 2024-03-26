@@ -10,19 +10,19 @@
   "concept": [
     {
       "code": "divorced",
-      "display": "Divorced"
+      "display": "Divorcé(e)"
     },
     {
       "code": "married",
-      "display": "Married"
+      "display": "Marié(e)"
     },
     {
       "code": "single",
-      "display": "Single"
+      "display": "Célibataire"
     },
     {
       "code": "widowed",
-      "display": "Widowed"
+      "display": "Veuf(ve)"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",

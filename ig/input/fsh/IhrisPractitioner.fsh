@@ -109,6 +109,7 @@ Description:    "iHRIS profile of Practitioner."
 * communication.extension[proficiency].extension[level].valueCoding MS
 * communication.extension[proficiency].extension[type].valueCoding MS
 * extension contains
+    RegistrationNumber named registrationNumber 1..1 MS and
     IhrisPractitionerResidence named residence 0..1 MS and
     BirthPlace named birth-place 0..1 MS and
     IhrisPractitionerNationality named nationality 0..1 and
@@ -124,8 +125,20 @@ Description:    "iHRIS profile of Practitioner."
 * extension[marital-status].valueCoding MS
 * extension[children]  ^label = "Number of Children"
 * extension[children].valueInteger MS
+* extension[registrationNumber].valueString 1..1 MS
+* extension[registrationNumber].valueString ^label = "Registration Number"
 * active 1..1 MS
 * active ^label = "Active"
+
+Extension:      RegistrationNumber
+Id:             registration-number
+Title:          "Registration Number"
+Description:    "Registration Number"
+* ^context.type = #element
+* ^context.expression = "Basic"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Registration Number"
 
 Extension:      IdIssueDate
 Id:             id-issue-date
@@ -306,3 +319,18 @@ Usage:          #example
 * extension[section][0].extension[field][0].valueString = "CodeSystem.display"
 * extension[section][0].extension[field][1].valueString = "CodeSystem.code"
 * extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
+
+Instance:       ihris-search-registration-number
+InstanceOf:     SearchParameter
+Title:          "search parameter for registration Number"
+Usage:          #definition
+* url = "http://ihris.org/fhir/SearchParameter/ihris-search-license-registration"
+* description = "search parameter for registration Number"
+* name = "search parameter for registration number"
+* status = #active
+* experimental = false
+* code = #regnum
+* base[0] = #Practitioner
+* type = #string
+* expression = "Practitioner.extension('http://ihris.org/fhir/StructureDefinition/registration-number')"
+* target[0] = #Practitioner

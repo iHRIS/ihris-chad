@@ -41,12 +41,20 @@
           "valueString": "Gender|Practitioner.gender|http://hl7.org/fhir/administrative-gender"
         },
         {
+          "url": "search",
+          "valueString": "Registration Number|Practitioner.extension.where(url='http://ihris.org/fhir/StructureDefinition/registration-number').valueString"
+        },
+        {
           "url": "filter",
           "valueString": "Name|name:contains"
         },
         {
           "url": "filter",
           "valueString": "Gender|gender|http://hl7.org/fhir/ValueSet/administrative-gender"
+        },
+        {
+          "url": "filter",
+          "valueString": "Registration Number|regnum"
         },
         {
           "extension": [
@@ -69,7 +77,7 @@
           "extension": [
             {
               "url": "url",
-              "valueUrl": "/resource/view/practitioner/FIELD?edit=true"
+              "valueUrl": "/questionnaire/ihris-practitioner/practitioner/FIELD"
             },
             {
               "url": "field",
@@ -95,55 +103,6 @@
           "url": "link"
         }
       ]
-    },
-    {
-      "extension": [
-        {
-          "url": "title",
-          "valueString": "Health Worker"
-        },
-        {
-          "url": "description",
-          "valueString": "Primary demographic details"
-        },
-        {
-          "url": "name",
-          "valueString": "Practitioner"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.name"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.name.given"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.name.family"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.birthDate"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.gender"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.extension:maritalStatus"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.extension:nationality"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.extension:residence"
-        }
-      ],
-      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
     },
     {
       "extension": [
@@ -186,6 +145,59 @@
       "extension": [
         {
           "url": "title",
+          "valueString": "Health Worker"
+        },
+        {
+          "url": "description",
+          "valueString": "Primary demographic details"
+        },
+        {
+          "url": "name",
+          "valueString": "Practitioner"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.extension:registrationNumber"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.name"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.name.given"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.name.family"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.birthDate"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.gender"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.extension:maritalStatus"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.extension:nationality"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.extension:residence"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
           "valueString": "Contact Details"
         },
         {
@@ -211,19 +223,334 @@
       "extension": [
         {
           "url": "title",
-          "valueString": "Language Details"
+          "valueString": "Situation Information"
         },
         {
           "url": "description",
-          "valueString": "Languages spoken"
+          "valueString": "Situation Information for the Person"
         },
         {
           "url": "name",
-          "valueString": "language"
+          "valueString": "situation"
         },
         {
-          "url": "field",
-          "valueString": "Practitioner.communication"
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/situation-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Agent Status"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Qualification"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/qualification').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Function"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/function').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Level"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/level').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Study Level"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/study-level').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/situation/situation?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Situation"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-situation"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/situation/situation/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-situation"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Classification Information"
+        },
+        {
+          "url": "description",
+          "valueString": "Classification Information for the Person"
+        },
+        {
+          "url": "name",
+          "valueString": "classification"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/classification-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Grade"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/grade').valueCoding"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Civil servant category"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/civil-servant-category').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Contractual Category"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/contractual-category').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Class"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/classification-class').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Echelon"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/echelon').valueCoding"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/classification/classification?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Classification"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-classification"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/resource/view/classification/ITEMID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "View"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-classification"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
@@ -406,358 +733,6 @@
                 {
                   "url": "class",
                   "valueString": "accent"
-                }
-              ],
-              "url": "action"
-            }
-          ],
-          "url": "resource"
-        }
-      ],
-      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
-    },
-    {
-      "extension": [
-        {
-          "url": "title",
-          "valueString": "Leave Information"
-        },
-        {
-          "url": "description",
-          "valueString": "Leave Details for the Person"
-        },
-        {
-          "url": "name",
-          "valueString": "leave"
-        },
-        {
-          "extension": [
-            {
-              "url": "resource",
-              "valueReference": {
-                "reference": "StructureDefinition/ihris-basic-leave"
-              }
-            },
-            {
-              "url": "linkfield",
-              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
-            },
-            {
-              "url": "column",
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Leave Type"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='leave-type').valueCoding"
-                }
-              ]
-            },
-            {
-              "url": "searchfield",
-              "valueString": "practitioner"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Requested Date"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='dateRequested').valueDate"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Start Date"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='start-date').valueDate"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "End Date"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='end-date').valueDate"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Actions"
-                },
-                {
-                  "url": "field",
-                  "valueString": "_action"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/questionnaire/ihris-leave/leave?practitioner=FHIRID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "Add Leave"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": false
-                },
-                {
-                  "url": "emptyDisplay",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                },
-                {
-                  "url": "task",
-                  "valueId": "ihris-task-add-leave"
-                }
-              ],
-              "url": "action"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/resource/view/leave/ITEMID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "View"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                }
-              ],
-              "url": "action"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/questionnaire/ihris-leave/leave/ITEMID?practitioner=FHIRID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "Edit"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                },
-                {
-                  "url": "task",
-                  "valueId": "ihris-task-edit-leave"
-                }
-              ],
-              "url": "action"
-            }
-          ],
-          "url": "resource"
-        }
-      ],
-      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
-    },
-    {
-      "extension": [
-        {
-          "url": "title",
-          "valueString": "Performance Evaluation Information"
-        },
-        {
-          "url": "description",
-          "valueString": "Performance Evaluation for the Person"
-        },
-        {
-          "url": "name",
-          "valueString": "performance"
-        },
-        {
-          "extension": [
-            {
-              "url": "resource",
-              "valueReference": {
-                "reference": "StructureDefinition/ihris-basic-performance"
-              }
-            },
-            {
-              "url": "linkfield",
-              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
-            },
-            {
-              "url": "column",
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Reviewer Name"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='evaluator').valueString"
-                }
-              ]
-            },
-            {
-              "url": "searchfield",
-              "valueString": "practitioner"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Score"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='score').valueCoding.display"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Start Date"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='start-date').valueDate"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "End Date"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='end-date').valueDate"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Actions"
-                },
-                {
-                  "url": "field",
-                  "valueString": "_action"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/questionnaire/ihris-performance/performance?practitioner=FHIRID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "Add Perfromamce Evaluation"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": false
-                },
-                {
-                  "url": "emptyDisplay",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                },
-                {
-                  "url": "task",
-                  "valueId": "ihris-task-add-performance"
-                }
-              ],
-              "url": "action"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/resource/view/performance/ITEMID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "View"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                }
-              ],
-              "url": "action"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/questionnaire/ihris-performance/performance/ITEMID?practitioner=FHIRID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "Edit"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                },
-                {
-                  "url": "task",
-                  "valueId": "ihris-task-edit-performance"
                 }
               ],
               "url": "action"
@@ -1460,22 +1435,22 @@
       "extension": [
         {
           "url": "title",
-          "valueString": "Emergency Contact"
+          "valueString": "Leave Information"
         },
         {
           "url": "description",
-          "valueString": "Emergency Contact for the Person"
+          "valueString": "Leave Details for the Person"
         },
         {
           "url": "name",
-          "valueString": "emergency"
+          "valueString": "leave"
         },
         {
           "extension": [
             {
               "url": "resource",
               "valueReference": {
-                "reference": "StructureDefinition/ihris-basic-emergency"
+                "reference": "StructureDefinition/ihris-basic-leave"
               }
             },
             {
@@ -1487,11 +1462,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Name"
+                  "valueString": "Leave Type"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='name').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='leave-type').valueCoding"
                 }
               ]
             },
@@ -1503,11 +1478,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Relationship"
+                  "valueString": "Requested Date"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='relation').valueCoding.display"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='dateRequested').valueDate"
                 }
               ],
               "url": "column"
@@ -1516,11 +1491,24 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Phone"
+                  "valueString": "Start Date"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='phone').valueString"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='start-date').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "End Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-leave').extension.where(url='end-date').valueDate"
                 }
               ],
               "url": "column"
@@ -1542,11 +1530,11 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/questionnaire/ihris-emergency/emergency?practitioner=FHIRID"
+                  "valueString": "/questionnaire/ihris-leave/leave?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
-                  "valueString": "Add Emergency Contact"
+                  "valueString": "Add Leave"
                 },
                 {
                   "url": "row",
@@ -1562,7 +1550,7 @@
                 },
                 {
                   "url": "task",
-                  "valueId": "ihris-task-add-emergency"
+                  "valueId": "ihris-task-add-leave"
                 }
               ],
               "url": "action"
@@ -1571,7 +1559,28 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/questionnaire/ihris-emergency/emergency/ITEMID?practitioner=FHIRID"
+                  "valueString": "/resource/view/leave/ITEMID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "View"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-leave/leave/ITEMID?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
@@ -1587,7 +1596,183 @@
                 },
                 {
                   "url": "task",
-                  "valueId": "ihris-task-edit-emergency"
+                  "valueId": "ihris-task-edit-leave"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Performance Evaluation Information"
+        },
+        {
+          "url": "description",
+          "valueString": "Performance Evaluation for the Person"
+        },
+        {
+          "url": "name",
+          "valueString": "performance"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/ihris-basic-performance"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Reviewer Name"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='evaluator').valueString"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Score"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='score').valueCoding.display"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Start Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='start-date').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "End Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='end-date').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-performance/performance?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Perfromamce Evaluation"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-performance"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/resource/view/performance/ITEMID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "View"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/ihris-performance/performance/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-performance"
                 }
               ],
               "url": "action"
@@ -1951,22 +2136,22 @@
       "extension": [
         {
           "url": "title",
-          "valueString": "Situation Information"
+          "valueString": "Emergency Contact"
         },
         {
           "url": "description",
-          "valueString": "Situation Information for the Person"
+          "valueString": "Emergency Contact for the Person"
         },
         {
           "url": "name",
-          "valueString": "situation"
+          "valueString": "emergency"
         },
         {
           "extension": [
             {
               "url": "resource",
               "valueReference": {
-                "reference": "StructureDefinition/situation-profile"
+                "reference": "StructureDefinition/ihris-basic-emergency"
               }
             },
             {
@@ -1978,11 +2163,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Agent Status"
+                  "valueString": "Name"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='name').valueString"
                 }
               ]
             },
@@ -1994,11 +2179,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Qualification"
+                  "valueString": "Relationship"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/qualification').valueCoding"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='relation').valueCoding.display"
                 }
               ],
               "url": "column"
@@ -2007,37 +2192,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Function"
+                  "valueString": "Phone"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/function').valueCoding"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Level"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/level').valueCoding"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Study Level"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/study-level').valueCoding"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-emergency').extension.where(url='phone').valueString"
                 }
               ],
               "url": "column"
@@ -2059,11 +2218,11 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/questionnaire/situation/situation?practitioner=FHIRID"
+                  "valueString": "/questionnaire/ihris-emergency/emergency?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
-                  "valueString": "Add Situation"
+                  "valueString": "Add Emergency Contact"
                 },
                 {
                   "url": "row",
@@ -2079,7 +2238,7 @@
                 },
                 {
                   "url": "task",
-                  "valueId": "ihris-task-add-situation"
+                  "valueId": "ihris-task-add-emergency"
                 }
               ],
               "url": "action"
@@ -2088,7 +2247,7 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/questionnaire/situation/situation/ITEMID?practitioner=FHIRID"
+                  "valueString": "/questionnaire/ihris-emergency/emergency/ITEMID?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
@@ -2104,175 +2263,7 @@
                 },
                 {
                   "url": "task",
-                  "valueId": "ihris-task-edit-situation"
-                }
-              ],
-              "url": "action"
-            }
-          ],
-          "url": "resource"
-        }
-      ],
-      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
-    },
-    {
-      "extension": [
-        {
-          "url": "title",
-          "valueString": "Classification Information"
-        },
-        {
-          "url": "description",
-          "valueString": "Classification Information for the Person"
-        },
-        {
-          "url": "name",
-          "valueString": "classification"
-        },
-        {
-          "extension": [
-            {
-              "url": "resource",
-              "valueReference": {
-                "reference": "StructureDefinition/classification-profile"
-              }
-            },
-            {
-              "url": "linkfield",
-              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
-            },
-            {
-              "url": "column",
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Grade"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/grade').valueCoding"
-                }
-              ]
-            },
-            {
-              "url": "searchfield",
-              "valueString": "practitioner"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Civil servant category"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/civil-servant-category').valueCoding"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Contractual Category"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/contractual-category').valueCoding"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Class"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/classification-class').valueCoding"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Echelon"
-                },
-                {
-                  "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/echelon').valueCoding"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "header",
-                  "valueString": "Actions"
-                },
-                {
-                  "url": "field",
-                  "valueString": "_action"
-                }
-              ],
-              "url": "column"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/questionnaire/classification/classification?practitioner=FHIRID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "Add Classification"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": false
-                },
-                {
-                  "url": "emptyDisplay",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                },
-                {
-                  "url": "task",
-                  "valueId": "ihris-task-add-classification"
-                }
-              ],
-              "url": "action"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/resource/view/classification/ITEMID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "View"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "class",
-                  "valueString": "primary"
-                },
-                {
-                  "url": "task",
-                  "valueId": "ihris-task-edit-classification"
+                  "valueId": "ihris-task-edit-emergency"
                 }
               ],
               "url": "action"

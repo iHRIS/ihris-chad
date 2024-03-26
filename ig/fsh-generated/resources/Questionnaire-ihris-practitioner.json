@@ -15,6 +15,14 @@
       "type": "group",
       "item": [
         {
+          "linkId": "Practitioner.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:registrationNumber.value[x]:valueString",
+          "text": "Registration Number",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        },
+        {
           "linkId": "Practitioner.name[0]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.name",
           "text": "Name",
@@ -91,7 +99,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[0]",
+          "linkId": "Practitioner.extension[1]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:marital-status.value[x]:valueCoding",
           "text": "Marital Status",
           "type": "choice",
@@ -108,7 +116,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[1]",
+          "linkId": "Practitioner.extension[2]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:birth-place.value[x]:valueString",
           "text": "Place of Birth",
           "type": "string",
@@ -116,7 +124,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[2]",
+          "linkId": "Practitioner.extension[3]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:nationality.value[x]:valueCoding",
           "text": "Nationality",
           "type": "choice",
@@ -125,7 +133,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[3]",
+          "linkId": "Practitioner.extension[4]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger",
           "text": "Number of Children",
           "type": "integer",
@@ -133,7 +141,7 @@
           "repeats": false
         },
         {
-          "linkId": "Practitioner.extension[4]",
+          "linkId": "Practitioner.extension[5]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:residence.value[x]:valueReference",
           "text": "Residence",
           "type": "reference",

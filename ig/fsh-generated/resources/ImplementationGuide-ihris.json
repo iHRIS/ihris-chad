@@ -742,6 +742,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/iHRISReportParameters"
+        },
+        "name": "ihRIS Report parameters",
+        "description": "Lists parameters ",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/ihris-resource-relationships"
         },
         "name": "iHRIS Resource Relationships",
@@ -917,6 +925,14 @@
         },
         "name": "Reference Integration Act",
         "description": "Reference Integration Act.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/registration-number"
+        },
+        "name": "Registration Number",
+        "description": "Registration Number",
         "exampleBoolean": false
       },
       {
@@ -2662,6 +2678,13 @@
           "reference": "SearchParameter/ihris-search-inservice-training-request"
         },
         "name": "search parameter for inservice training request",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "SearchParameter/ihris-search-registration-number"
+        },
+        "name": "search parameter for registration Number",
         "exampleBoolean": false
       },
       {

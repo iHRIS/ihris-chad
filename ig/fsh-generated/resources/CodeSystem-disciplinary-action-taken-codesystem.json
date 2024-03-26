@@ -10,17 +10,21 @@
   "concept": [
     {
       "code": "order",
-      "display": "Order"
-    },
-    {
-      "code": "decree",
-      "display": "Decree"
+      "display": "Arrêté"
     },
     {
       "code": "memo",
-      "display": "Memo"
+      "display": "Note de service"
+    },
+    {
+      "code": "decision",
+      "display": "Décision"
+    },
+    {
+      "code": "decree",
+      "display": "Décret"
     }
   ],
   "date": "2020-11-10T08:41:04.362Z",
-  "count": 3
+  "count": 4
 }

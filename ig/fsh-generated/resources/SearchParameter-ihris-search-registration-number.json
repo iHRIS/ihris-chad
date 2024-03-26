@@ -1,0 +1,18 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "ihris-search-registration-number",
+  "url": "http://ihris.org/fhir/SearchParameter/ihris-search-license-registration",
+  "description": "search parameter for registration Number",
+  "name": "search parameter for registration number",
+  "status": "active",
+  "experimental": false,
+  "code": "regnum",
+  "base": [
+    "Practitioner"
+  ],
+  "type": "string",
+  "expression": "Practitioner.extension('http://ihris.org/fhir/StructureDefinition/registration-number')",
+  "target": [
+    "Practitioner"
+  ]
+}

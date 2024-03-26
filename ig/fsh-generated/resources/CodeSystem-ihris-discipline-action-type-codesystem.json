@@ -10,15 +10,15 @@
   "concept": [
     {
       "code": "warning",
-      "display": "Warning"
+      "display": "Avertissement"
     },
     {
       "code": "layoff",
-      "display": "Layoff"
+      "display": "Licenciement"
     },
     {
       "code": "blame",
-      "display": "Blame"
+      "display": "Blâme"
     }
   ],
   "date": "2020-11-10T08:41:04.362Z",

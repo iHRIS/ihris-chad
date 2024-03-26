@@ -13,10 +13,12 @@
         "system": "http://hl7.org/fhir/administrative-gender",
         "concept": [
           {
-            "code": "male"
+            "code": "male",
+            "display": "Masculin"
           },
           {
-            "code": "female"
+            "code": "female",
+            "display": "Féminin"
           }
         ]
       }

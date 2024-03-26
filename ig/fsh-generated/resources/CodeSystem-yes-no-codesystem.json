@@ -10,11 +10,11 @@
   "concept": [
     {
       "code": "yes",
-      "display": "Yes"
+      "display": "Oui"
     },
     {
       "code": "no",
-      "display": "No"
+      "display": "Non"
     }
   ],
   "date": "2024-02-19T13:41:00.000Z",

@@ -3,11 +3,11 @@ Id:               td-id-type-codesystem
 Title:            "Identifier Types Code System"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
-* #employeecode "Employee Code"
-* #nni "National Identification Number"
-* #passport "Passport"
-* #drivinglicense "Driving License"
-* #cni "National Identification card"
+* #employeecode "Numéro Matricule"
+* #nni "Numero National d’Identification (NNI)"
+* #passport "Passeport"
+* #drivinglicense "Permis de conduire"
+* #cni "Carte Nationale d’Identité (CNI)"
 
 ValueSet:          TDIDTypeValueSet
 Id:                td-id-type-valueset
@@ -21,18 +21,18 @@ Id:               td-gender-valueset
 Title:            "TD Gender ValueSet"
 * ^date = "2023-03-28T05:55:04.362Z"
 * ^version = "0.1.0"
-* include http://hl7.org/fhir/administrative-gender#male
-* include http://hl7.org/fhir/administrative-gender#female
+* include http://hl7.org/fhir/administrative-gender#male "Masculin"
+* include http://hl7.org/fhir/administrative-gender#female "Féminin"
 
 CodeSystem:       CivilityCodeSystem
 Id:               civility-codesystem
 Title:            "Civility Code System"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
-* #madam "Madam"
-* #miss "Miss"
-* #sir "Sir"
-* #doctor "Doctor"
+* #madam "Madame"
+* #miss "Mademoiselle"
+* #sir "Monsieur"
+* #doctor "Docteur"
 
 ValueSet:          CivilityValueSet
 Id:                civility-valueset
@@ -46,8 +46,8 @@ Id:               classification-category-codesystem
 Title:            "Classification Category Code System"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
-* #contract "Contract"
-* #civilservant "Civil Servant"
+* #contract "Contrat"
+* #civilservant "Fonctionnaire"
 
 ValueSet:          ClassificationCategoryValueSet
 Id:                classification-category-valueset
@@ -61,7 +61,7 @@ Id:               education-sector-codesystem
 Title:            "Education Sector Code System"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
-* #health "Health"
+* #health "Santé"
 
 ValueSet:          EducationSectorValueSet
 Id:                education-sector-valueset
@@ -75,7 +75,7 @@ Id:               training-mode-codesystem
 Title:            "Training Mode Code System"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
-* #online "Online"
+* #online "En ligne"
 
 ValueSet:          TrainingModeValueSet
 Id:                training-mode-valueset
@@ -89,7 +89,7 @@ Id:               training-fund-codesystem
 Title:            "Training Fund Code System"
 * ^date = "2024-02-02T08:14:00.000Z"
 * ^version = "0.1.0"
-* #government "Government"
+* #government "Gouvernement"
 
 ValueSet:          TrainingFundValueSet
 Id:                training-fund-valueset
@@ -136,10 +136,10 @@ Id:               marital-status-codesystem
 Title:            "Marital Status Code System"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
-* #divorced "Divorced"
-* #married "Married"
-* #single "Single"
-* #widowed "Widowed"
+* #divorced "Divorcé(e)"
+* #married "Marié(e)"
+* #single "Célibataire"
+* #widowed "Veuf(ve)"
 
 ValueSet:          MaritalStatusValueSet
 Id:                marital-status-valueset
@@ -153,8 +153,8 @@ Id:               institution-type-codesystem
 Title:            "Institution Type Code System"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
-* #ministry "Ministry"
-* #organization "Organization"
+* #ministry "Ministère"
+* #organization "Organisation"
 
 ValueSet:          InstitutionTypeValueSet
 Id:                institution-type-valueset
@@ -1067,10 +1067,12 @@ Id:               agent-status-codesystem
 Title:            "Agent Status Code System"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
-* #regularcivilservant "Regular Civil Servant"
-* #traineecivilservant "Trainee Civil Servant"
-* #politicalpersonality "Political Personality"
-* #contractual "Contractual"
+* #regularcivilservant "Fonctionnaire Titulaire"
+* #traineecivilservant "Fonctionnaire Stagiaire"
+* #politicalpersonality "Personnalité Politique"
+* #contractual "Contractuel"
+* #costreccontr "Contractuel sur recouvrement de coût"
+* #other "Autres"
 
 ValueSet:          AgentStatusValueSet
 Id:                agent-status-valueset
@@ -1693,7 +1695,7 @@ Title:            "Level Code System"
 * #central "Central"
 * #province "Province"
 * #district "District"
-* #healthstructure "Health Structure"
+* #healthstructure "Structure Sanitaire"
 
 ValueSet:          LevelValueSet
 Id:                level-valueset
@@ -1821,8 +1823,8 @@ Id:               yes-no-codesystem
 Title:            "Yes/No Code System"
 * ^date = "2024-02-19T13:41:00.000Z"
 * ^version = "0.1.0"
-* #yes "Yes"
-* #no "No"
+* #yes "Oui"
+* #no "Non"
 
 ValueSet:          YesNoValueSet
 Id:                yes-no-valueset
@@ -1849,7 +1851,7 @@ Id:              td-jurisdiction-type-codesystem
 Title:           "Jurisdiction Type Code System"
 * ^date = "2024-02-19T13:41:00.000Z"
 * ^version = "0.4.0"
-* #country "Country" "Country"
+* #country "Country" "Pays"
 * #region "Province" "Province"
 * #district "District" "District"
 
@@ -1865,9 +1867,9 @@ Id:              ihris-discipline-action-type-codesystem
 Title:           "Disciplinary Action Type"
 * ^date = "2020-11-10T08:41:04.362Z"
 * ^version = "0.3.0"
-* #warning "Warning"
-* #layoff "Layoff"
-* #blame "Blame"
+* #warning "Avertissement"
+* #layoff "Licenciement"
+* #blame "Blâme"
 
 ValueSet:         DisciplinaryActionTypeValueSet
 Id:               discipline-action-type-valueset
@@ -1881,9 +1883,10 @@ Id:              disciplinary-action-taken-codesystem
 Title:           "Disciplinary Action Taken"
 * ^date = "2020-11-10T08:41:04.362Z"
 * ^version = "0.3.0"
-* #order "Order"
-* #decree "Decree"
-* #memo "Memo"
+* #order "Arrêté"
+* #memo "Note de service"
+* #decision "Décision"
+* #decree "Décret"
 
 ValueSet:         DisciplinaryActionTakenValueSet
 Id:               disciplinary-action-taken-valueset

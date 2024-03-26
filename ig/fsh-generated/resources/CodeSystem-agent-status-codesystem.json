@@ -10,21 +10,29 @@
   "concept": [
     {
       "code": "regularcivilservant",
-      "display": "Regular Civil Servant"
+      "display": "Fonctionnaire Titulaire"
     },
     {
       "code": "traineecivilservant",
-      "display": "Trainee Civil Servant"
+      "display": "Fonctionnaire Stagiaire"
     },
     {
       "code": "politicalpersonality",
-      "display": "Political Personality"
+      "display": "Personnalité Politique"
     },
     {
       "code": "contractual",
-      "display": "Contractual"
+      "display": "Contractuel"
+    },
+    {
+      "code": "costreccontr",
+      "display": "Contractuel sur recouvrement de coût"
+    },
+    {
+      "code": "other",
+      "display": "Autres"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 4
+  "count": 6
 }

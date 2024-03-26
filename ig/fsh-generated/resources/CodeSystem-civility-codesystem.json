@@ -10,19 +10,19 @@
   "concept": [
     {
       "code": "madam",
-      "display": "Madam"
+      "display": "Madame"
     },
     {
       "code": "miss",
-      "display": "Miss"
+      "display": "Mademoiselle"
     },
     {
       "code": "sir",
-      "display": "Sir"
+      "display": "Monsieur"
     },
     {
       "code": "doctor",
-      "display": "Doctor"
+      "display": "Docteur"
     }
   ],
   "date": "2024-02-02T08:14:00.000Z",

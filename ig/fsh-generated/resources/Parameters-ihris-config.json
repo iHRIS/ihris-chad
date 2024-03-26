@@ -20,7 +20,7 @@
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "Br1qOCmV6CGQQWQ4CTD0UgxYcX3C5cyDehAO5aE/F1BET/vRoWLlwTW43VoYHPcrJ/RHRzI/r7PJgP80e13qrvQdWr0aROrNLHI0CIHuCBdCYQ1MemRBxB/NCOMcF+GofDtM3lzBwpsO+v9wy5wON41Wnt/RHIPSAQ+uTua/9pk="
+        "data": "Tv6+6D/fPmi9QvB9o889jt0pr49u4lR7icT1WBxaTCYLoN4mAXzTzkjy1C39FiK7yIBP67aIx6fD5rafd/hLfKR9Cdch/Z4cMhmLTRJ2hKr0ZV1yDefws69cKFmfGB9h8hPHTL6IZOWJA8R+S3/yU/zBudNmUBCbNtaGBFudlqA="
       }
     },
     {
@@ -28,7 +28,7 @@
       "part": [
         {
           "name": "site:title",
-          "valueString": "CHAD Ministry of Public Health and Prevention"
+          "valueString": "TCHAD Ministry of Public Health and Prevention"
         },
         {
           "name": "site:site",
@@ -1241,6 +1241,62 @@
         {
           "name": "app:site:routes:upload:authenticate",
           "valueString": "true"
+        },
+        {
+          "name": "site:intro:default:title",
+          "valueString": "Summary"
+        },
+        {
+          "name": "site:intro:default:data:firstname:text",
+          "valueString": "Firstname"
+        },
+        {
+          "name": "site:intro:default:data:firstname:path",
+          "valueString": "Practitioner.name.given[0]"
+        },
+        {
+          "name": "site:intro:default:data:title:text",
+          "valueString": "Job"
+        },
+        {
+          "name": "site:intro:default:data:title:path",
+          "valueString": "PractitionerRole.code.coding.display"
+        },
+        {
+          "name": "site:intro:default:data:surname:text",
+          "valueString": "Surname"
+        },
+        {
+          "name": "site:intro:default:data:surname:path",
+          "valueString": "Practitioner.name.family"
+        },
+        {
+          "name": "site:intro:default:data:gender:text",
+          "valueString": "Gender"
+        },
+        {
+          "name": "site:intro:default:data:gender:path",
+          "valueString": "Practitioner.gender"
+        },
+        {
+          "name": "site:intro:default:data:dateOfBirth:text",
+          "valueString": "Date Of Birth"
+        },
+        {
+          "name": "site:intro:default:data:dateOfBirth:path",
+          "valueString": "Practitioner.birthDate"
+        },
+        {
+          "name": "site:intro:default:data:profilePicture:text",
+          "valueString": "Photo"
+        },
+        {
+          "name": "site:intro:default:data:profilePicture:type",
+          "valueString": "photo"
+        },
+        {
+          "name": "site:intro:default:data:profilePicture:path",
+          "valueString": "Practitioner.photo[0]"
         },
         {
           "name": "defaults:fields:Person.extension:practitioner.value[x]:valueReference:type",
