@@ -206,7 +206,7 @@ Usage:          #definition
 * item[1].item[2].required = true
 * item[1].item[2].repeats = false
 * item[1].item[2].readOnly = true
-* item[1].item[2].answerOption.valueCoding = http://hl7.org/fhir/contact-point-system#phone
+* item[1].item[2].answerOption.valueCoding = http://ihris.org/fhir/ValueSet/contact-type-codesystem#phone
 * item[1].item[2].answerOption.initialSelected = true
 
 * item[1].item[3].linkId = "Practitioner.telecom[0].value"

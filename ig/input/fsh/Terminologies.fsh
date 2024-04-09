@@ -24,6 +24,22 @@ Title:            "TD Gender ValueSet"
 * include http://hl7.org/fhir/administrative-gender#male "Masculin"
 * include http://hl7.org/fhir/administrative-gender#female "Féminin"
 
+CodeSystem:       ContactTypeCodeSystem
+Id:               contact-type-codesystem
+Title:            "Contact Type Code System"
+* ^date = "2024-02-02T08:14:00.000Z"
+* ^version = "0.1.0"
+* #phone "Téléphone"
+* #email "E-mail"
+* #fax "Fax"
+
+ValueSet:         ContactTypeValueSet
+Id:               contact-type-valueset
+Title:            "Contact Type ValueSet"
+* ^date = "2023-03-28T05:55:04.362Z"
+* ^version = "0.1.0"
+* codes from system ContactTypeCodeSystem
+
 CodeSystem:       CivilityCodeSystem
 Id:               civility-codesystem
 Title:            "Civility Code System"

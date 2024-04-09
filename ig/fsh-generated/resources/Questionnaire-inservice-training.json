@@ -43,7 +43,7 @@
               "definition": "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:country.value[x]:valueCoding",
               "text": "Country of training",
               "type": "choice",
-              "answerValueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/country-valueset",
               "required": true,
               "repeats": false
             },

@@ -4525,15 +4525,8 @@
         "isModifier": false,
         "isSummary": true,
         "binding": {
-          "extension": [
-            {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-              "valueString": "ContactPointSystem"
-            }
-          ],
           "strength": "required",
-          "description": "Telecommunications form for contact point.",
-          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system|4.0.1"
+          "valueSet": "http://ihris.org/fhir/ValueSet/contact-type-valueset"
         },
         "mapping": [
           {
@@ -4921,7 +4914,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": true,
         "isModifierReason": "This is labeled as \"Is Modifier\" because applications should not mistake a temporary or old address etc.for a current/permanent one",
         "isSummary": true,
@@ -4986,7 +4978,6 @@
             "source": "http://hl7.org/fhir/StructureDefinition/Element"
           }
         ],
-        "mustSupport": true,
         "isModifier": false,
         "isSummary": true,
         "binding": {
@@ -7452,7 +7443,11 @@
         "id": "Practitioner.telecom.system",
         "path": "Practitioner.telecom.system",
         "label": "Contact Type",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://ihris.org/fhir/ValueSet/contact-type-valueset"
+        }
       },
       {
         "id": "Practitioner.telecom.value",
@@ -7475,14 +7470,12 @@
       {
         "id": "Practitioner.address.use",
         "path": "Practitioner.address.use",
-        "label": "Use",
-        "mustSupport": true
+        "label": "Use"
       },
       {
         "id": "Practitioner.address.type",
         "path": "Practitioner.address.type",
-        "label": "Type",
-        "mustSupport": true
+        "label": "Type"
       },
       {
         "id": "Practitioner.address.line",

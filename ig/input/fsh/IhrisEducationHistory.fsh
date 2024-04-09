@@ -141,7 +141,7 @@ Title:          "Preservice Training details"
 * extension[institution].valueString ^label = "Institution Name"
 * extension[country].value[x] only Coding
 * extension[country].valueCoding ^label = "Country of training"
-* extension[country].valueCoding from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
+* extension[country].valueCoding from http://ihris.org/fhir/ValueSet/country-valueset (required)
 * extension[start-year].value[x] only date
 * extension[start-year].valueDate ^label = "Year of training start"
 * extension[end-year].value[x] only date
@@ -185,7 +185,7 @@ Title:          "Inservice Training details"
 * extension[institution].valueString ^label = "Institution Name"
 * extension[country].value[x] only Coding
 * extension[country].valueCoding ^label = "Country of training"
-* extension[country].valueCoding from http://hl7.org/fhir/ValueSet/iso3166-1-2 (required)
+* extension[country].valueCoding from http://ihris.org/fhir/ValueSet/country-valueset (required)
 * extension[start-year].value[x] only date
 * extension[start-year].valueDate ^label = "Year of training start"
 * extension[end-year].value[x] only date
@@ -328,7 +328,7 @@ Usage:          #definition
 * item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:country.value[x]:valueCoding"
 * item[0].item[0].item[2].text = "Country of training"
 * item[0].item[0].item[2].type = #choice
-* item[0].item[0].item[2].answerValueSet = "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+* item[0].item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
 * item[0].item[0].item[2].required = true
 * item[0].item[0].item[2].repeats = false
 
@@ -433,7 +433,7 @@ Usage:          #definition
 * item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:country.value[x]:valueCoding"
 * item[0].item[0].item[2].text = "Country of training"
 * item[0].item[0].item[2].type = #choice
-* item[0].item[0].item[2].answerValueSet = "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+* item[0].item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
 * item[0].item[0].item[2].required = true
 * item[0].item[0].item[2].repeats = false
 

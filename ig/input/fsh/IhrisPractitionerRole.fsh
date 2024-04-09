@@ -47,7 +47,7 @@ Description:    "iHRIS profile of Practitioner Role."
 * specialty.coding ^label = "Specialty"
 * location 1..1 MS 
 * location ^label = "Facility"
-* location only Reference(TDFacility)
+* location only Reference(TDRegion or TDDistrict or TDFacility)
 * extension contains
     IhrisPractitionerRolePositionStatus named positionStatus 1..1 MS and
     AppointmentDate named appointment-date 1..1 MS and

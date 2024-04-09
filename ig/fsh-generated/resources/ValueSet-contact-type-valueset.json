@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ContactTypeValueSet",
+  "id": "contact-type-valueset",
+  "title": "Contact Type ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/contact-type-valueset",
+  "date": "2023-03-28T05:55:04.362Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/contact-type-codesystem"
+      }
+    ]
+  }
+}

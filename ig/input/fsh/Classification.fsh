@@ -323,3 +323,4 @@ Usage:          #example
 * extension[section][0].extension[field][9].valueString = "Basic.extension:reference-integration-act"
 * extension[section][0].extension[field][10].valueString = "Basic.extension:tenure-date"
 * extension[section][0].extension[field][11].valueString = "Basic.extension:tenure-reference"
+* extension[section][0].extension[field][12].valueString = "Basic.extension:classification-category"

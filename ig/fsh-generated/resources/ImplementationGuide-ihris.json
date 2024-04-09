@@ -1114,6 +1114,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/contact-type-valueset"
+        },
+        "name": "Contact Type ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/contractual-category-valueset"
         },
         "name": "Contractual Category ValueSet",
@@ -1619,6 +1626,13 @@
         },
         "name": "ContactPointUse",
         "description": "Use of contact point.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/contact-type-codesystem"
+        },
+        "name": "Contact Type Code System",
         "exampleBoolean": false
       },
       {

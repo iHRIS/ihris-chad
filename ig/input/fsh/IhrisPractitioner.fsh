@@ -59,6 +59,7 @@ Description:    "iHRIS profile of Practitioner."
 * telecom ^label = "Telecom"
 * telecom.system MS
 * telecom.system ^label = "Contact Type"
+* telecom.system from http://ihris.org/fhir/ValueSet/contact-type-valueset
 * telecom.use MS
 * telecom.use ^label = "Use"
 * telecom.value MS
@@ -69,9 +70,9 @@ Description:    "iHRIS profile of Practitioner."
 * telecom ^constraint[0].human = "The identifier must be unique and another record has this identifier"
 * address 0..* MS
 * address ^label = "Address"
-* address.use MS
+* address.use
 * address.use ^label = "Use"
-* address.type MS
+* address.type
 * address.type ^label = "Type"
 * address.line 1..1 MS
 * address.line ^label = "Line"

@@ -275,7 +275,7 @@
             {
               "valueCoding": {
                 "code": "phone",
-                "system": "http://hl7.org/fhir/contact-point-system"
+                "system": "http://ihris.org/fhir/ValueSet/contact-type-codesystem"
               },
               "initialSelected": true
             }
