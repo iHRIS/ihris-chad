@@ -16,32 +16,32 @@
   "item": [
     {
       "linkId": "PractitionerRole",
-      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.id",
-      "text": "End Appointment",
+      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role",
+      "text": "End Current Appointment",
       "type": "group",
       "item": [
         {
-          "linkId": "PracitionerRole.period.end",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PracitionerRole.period.end",
+          "linkId": "PractitionerRole.period.end",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.end",
           "text": "End Date",
           "type": "date",
           "required": true,
           "repeats": false
-        },
+        }
+      ]
+    },
+    {
+      "linkId": "Basic[0]",
+      "definition": "http://ihris.org/fhir/StructureDefinition/role-departure-profile",
+      "text": "Change Reasons Information",
+      "type": "group",
+      "item": [
         {
-          "linkId": "PracitionerRole.extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PracitionerRole.extension:reasonForDepature.value[x]:valueCoding",
-          "text": "Reason For Departure",
+          "linkId": "Basic[0].extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/role-departure-profile#Basic.extension:position-departure-reason.value[x]:valueCoding",
+          "text": "Reason for change",
           "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/ihris-reason-departure-valueset",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "PracitionerRole.active",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PracitionerRole.active",
-          "text": "Status",
-          "type": "boolean",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/position-departure-reason-valueset",
           "required": true,
           "repeats": false
         }

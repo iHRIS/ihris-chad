@@ -21,7 +21,7 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "CodeSystem/ihris-reason-departure-codesystem"
+            "reference": "CodeSystem/position-departure-reason-codesystem"
           }
         },
         {

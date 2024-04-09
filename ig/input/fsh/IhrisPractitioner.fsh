@@ -15,14 +15,14 @@ Description:    "iHRIS profile of Practitioner."
 * identifier ^constraint[0].severity = #error
 * identifier ^constraint[0].expression = "'Practitioner' | 'identifier' | iif(system.exists(), system & '|' & value, value)"
 * identifier ^constraint[0].human = "The identifier must be unique and another record has this identifier"
-* identifier.use MS
+* identifier.use 0..0
 * identifier.use ^label = "Use"
 * identifier.type MS
 * identifier.type ^label = "Type"
 * identifier.type.coding 1..1 MS
 * identifier.type.coding from http://ihris.org/fhir/ValueSet/td-id-type-valueset
 * identifier.type.coding ^label = "Type"
-* identifier.system MS
+* identifier.system 0..0
 * identifier.system ^label = "System"
 * identifier.value MS
 * identifier.value ^label = "Value"
@@ -50,7 +50,7 @@ Description:    "iHRIS profile of Practitioner."
 * name.family ^constraint[0].human = "Name must be only text."
 * name.given 1..* MS
 * name.given ^label = "Given Name"
-* name.suffix MS
+* name.suffix 0..0
 * name.suffix ^label = "Suffix"
 * name.extension contains Civility named civility 0..1 MS
 * name.extension[civility].valueCoding MS
@@ -110,13 +110,10 @@ Description:    "iHRIS profile of Practitioner."
 * communication.extension[proficiency].extension[type].valueCoding MS
 * extension contains
     RegistrationNumber named registrationNumber 1..1 MS and
-    IhrisPractitionerResidence named residence 0..1 MS and
     BirthPlace named birth-place 0..1 MS and
-    IhrisPractitionerNationality named nationality 0..1 and
-    IhrisPractitionerMaritalStatus named marital-status 0..1 and
-    IhrisPractitionerChildren named children 0..1
-* extension[residence] ^label = "Residence"
-* extension[residence].valueReference.reference MS
+    IhrisPractitionerNationality named nationality 0..1 MS and
+    IhrisPractitionerMaritalStatus named marital-status 0..1 MS and
+    IhrisPractitionerChildren named children 0..1 MS
 * extension[birth-place] ^label = "Place of Birth"
 * extension[birth-place].valueString MS
 * extension[nationality]  ^label = "Nationality"

@@ -260,6 +260,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/role-departure-profile"
+        },
+        "name": "Role Departure Details",
+        "description": "Role Departure Details.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/situation-profile"
         },
         "name": "Situation Information",
@@ -448,6 +456,14 @@
         },
         "name": "Date of last Administrative situation",
         "description": "Date of last Administrative situation.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/departure-date"
+        },
+        "name": "Departure Date",
+        "description": "Departure Date.",
         "exampleBoolean": false
       },
       {
@@ -710,14 +726,6 @@
       },
       {
         "reference": {
-          "reference": "StructureDefinition/ihris-practitionerrole-reason-departure"
-        },
-        "name": "iHRIS Job Description Reason for Departure",
-        "description": "iHRIS extension for Job Description Reason for Departure.",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "StructureDefinition/iHRISReportDetails"
         },
         "name": "Details of a report",
@@ -899,6 +907,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/position-departure-reason"
+        },
+        "name": "Departure Reason",
+        "description": "Departure Reason.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/practitioner-role-reference"
+        },
+        "name": "Practitioner Role Reference",
+        "description": "Practitioner Role Reference",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/preservice-training"
         },
         "name": "Preservice Training details",
@@ -1027,6 +1051,13 @@
           "reference": "ValueSet/agent-status-valueset"
         },
         "name": "Agent Status ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/chad-job-valueset"
+        },
+        "name": "Job ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1245,13 +1276,6 @@
       },
       {
         "reference": {
-          "reference": "ValueSet/ihris-reason-departure-valueset"
-        },
-        "name": "iHRIS Reason Departure ValueSet",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "ValueSet/ihris-relation-valueset"
         },
         "name": "iHRIS Relationship ValueSet",
@@ -1388,6 +1412,13 @@
           "reference": "ValueSet/performance-score-valueset"
         },
         "name": "Performance Score ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/position-departure-reason-valueset"
+        },
+        "name": "iHRIS Reason Departure ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1529,6 +1560,13 @@
           "reference": "CodeSystem/agent-status-codesystem"
         },
         "name": "Agent Status Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/chad-job-codesystem"
+        },
+        "name": "Job Code System",
         "exampleBoolean": false
       },
       {
@@ -1754,13 +1792,6 @@
       },
       {
         "reference": {
-          "reference": "CodeSystem/ihris-reason-departure-codesystem"
-        },
-        "name": "Reason For Change/Departure",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
           "reference": "CodeSystem/ihris-relation-codesystem"
         },
         "name": "Relationship",
@@ -1896,6 +1927,13 @@
           "reference": "CodeSystem/performance-score-codesystem"
         },
         "name": "Performance Score Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/position-departure-reason-codesystem"
+        },
+        "name": "Reason For Change/Departure",
         "exampleBoolean": false
       },
       {
@@ -2052,6 +2090,13 @@
       },
       {
         "reference": {
+          "reference": "SearchParameter/basic-practitioner-role"
+        },
+        "name": "basic-practitioner-role",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "SearchParameter/basic-related-location"
         },
         "name": "basic-related-location",
@@ -2062,6 +2107,13 @@
           "reference": "SearchParameter/basic-related-practitioner"
         },
         "name": "basic-related-practitioner",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/change-job"
+        },
+        "name": "ChangeJob",
         "exampleBoolean": false
       },
       {
@@ -2514,13 +2566,6 @@
       },
       {
         "reference": {
-          "reference": "Basic/ihris-page-shift"
-        },
-        "name": "iHRIS Shift CodeSystem Page",
-        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
-      },
-      {
-        "reference": {
           "reference": "Basic/ihris-page-situation"
         },
         "name": "Situation Information Page",
@@ -2622,13 +2667,6 @@
           "reference": "Questionnaire/ihris-practitioner"
         },
         "name": "IhrisPractitionerQuestionnaire",
-        "exampleBoolean": false
-      },
-      {
-        "reference": {
-          "reference": "Questionnaire/ihris-promotion"
-        },
-        "name": "IhrisPractitionerWorkflowPromotion",
         "exampleBoolean": false
       },
       {

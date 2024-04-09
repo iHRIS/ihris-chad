@@ -7,6 +7,12 @@
     ]
   },
   "url": "http://ihris.org/fhir/Questionnaire/ihris-practitioner",
+  "title": "iHRIS Practitioner Questionnaire",
+  "description": "iHRIS Practitioner initial data entry questionnaire.",
+  "name": "ihris-practitioner",
+  "status": "active",
+  "date": "2020-06-22",
+  "purpose": "Data entry page for practitioners.",
   "item": [
     {
       "linkId": "Practitioner",
@@ -70,14 +76,6 @@
               "answerValueSet": "http://ihris.org/fhir/ValueSet/civility-valueset",
               "required": false,
               "repeats": false
-            },
-            {
-              "linkId": "Practitioner.name[0].suffix[0]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.name.suffix",
-              "text": "Suffix",
-              "type": "string",
-              "required": false,
-              "repeats": true
             }
           ]
         },
@@ -138,14 +136,6 @@
           "text": "Number of Children",
           "type": "integer",
           "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "Practitioner.extension[5]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:residence.value[x]:valueReference",
-          "text": "Residence",
-          "type": "reference",
-          "required": false,
           "repeats": false
         },
         {
@@ -346,141 +336,6 @@
       ]
     },
     {
-      "extension": [
-        {
-          "extension": [
-            {
-              "url": "key",
-              "valueId": "ihris-start-end-date"
-            },
-            {
-              "url": "severity",
-              "valueCode": "error"
-            },
-            {
-              "url": "expression",
-              "valueString": "where(linkId='PractitionerRole.period.end').answer.first().valueDateTime.empty() or where(linkId='PractitionerRole.period.end').answer.first().valueDateTime >= where(linkId='PractitionerRole.period.start').answer.first().valueDateTime"
-            },
-            {
-              "url": "human",
-              "valueString": "The end date must be after the start date."
-            }
-          ],
-          "url": "http://hl7.org/fhir/StructureDefinition/questionnaire-constraint"
-        }
-      ],
-      "linkId": "PractitionerRole",
-      "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role",
-      "text": "Position|Position the person holds",
-      "type": "group",
-      "item": [
-        {
-          "linkId": "PractitionerRole.practitioner",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.practitioner",
-          "text": "Practitioner",
-          "type": "string",
-          "required": true,
-          "repeats": false,
-          "readOnly": true,
-          "answerOption": [
-            {
-              "valueString": "__REPLACE__Practitioner",
-              "initialSelected": true
-            }
-          ]
-        },
-        {
-          "linkId": "PractitionerRole.code",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.code",
-          "text": "Job Title",
-          "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/ihris-job",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-date.value[x]:valueDate",
-          "text": "Date of Assignment or Appointment",
-          "type": "date",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.extension[1]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:appointment-reference.value[x]:valueString",
-          "text": "Reference Assignment or Appointment",
-          "type": "string",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.period.start",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.start",
-          "text": "Service Start Date",
-          "type": "dateTime",
-          "required": true,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.period.end",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.end",
-          "text": "Service End Date",
-          "type": "dateTime",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.extension[2]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:service-start-reference.value[x]:valueString",
-          "text": "Service Start Reference",
-          "type": "string",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.extension[3]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-date.value[x]:valueDate",
-          "text": "Date of Effective Presence",
-          "type": "date",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.extension[4]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:effective-presence-reference.value[x]:valueString",
-          "text": "Effective Presence Reference",
-          "type": "string",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.extension[5]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:assignment-act.value[x]:valueAttachment",
-          "text": "Act of Assignment or Appointment",
-          "type": "attachment",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.extension[6]#text",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.extension:comments.value[x]:valueString",
-          "text": "Comments",
-          "type": "string",
-          "required": false,
-          "repeats": false
-        },
-        {
-          "linkId": "PractitionerRole.location",
-          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.location",
-          "text": "Facility",
-          "type": "reference",
-          "required": true,
-          "repeats": false
-        }
-      ]
-    },
-    {
       "linkId": "Practitioner.identifier",
       "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.identifier",
       "text": "Identifiers|Identifiers for the practitioner",
@@ -556,11 +411,5 @@
         }
       ]
     }
-  ],
-  "title": "iHRIS Practitioner Questionnaire",
-  "description": "iHRIS Practitioner initial data entry questionnaire.",
-  "name": "ihris-practitioner",
-  "status": "active",
-  "date": "2020-06-22",
-  "purpose": "Data entry page for practitioners."
+  ]
 }

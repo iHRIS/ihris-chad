@@ -1,0 +1,19 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "basic-practitioner-role",
+  "url": "http://ihris.org/fhir/SearchParameter/basic-practitioner-role",
+  "name": "Search Parameter on an practitioner role extension on Basic resources",
+  "status": "active",
+  "description": "Search by practitioner role for a Basic resource.",
+  "code": "practitionerrole",
+  "base": [
+    "Basic"
+  ],
+  "type": "reference",
+  "expression": "Basic.extension('http://ihris.org/fhir/StructureDefinition/practitioner-role-reference')",
+  "xpath": "f:Basic/f:extension[@url='http://ihris.org/fhir/StructureDefinition/practitioner-role-reference']",
+  "xpathUsage": "normal",
+  "target": [
+    "PractitionerRole"
+  ]
+}

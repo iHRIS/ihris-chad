@@ -11,8 +11,12 @@
     {
       "code": "online",
       "display": "En ligne"
+    },
+    {
+      "code": "inperson",
+      "display": "En Présentiel"
     }
   ],
   "date": "2024-02-02T08:14:00.000Z",
-  "count": 1
+  "count": 2
 }

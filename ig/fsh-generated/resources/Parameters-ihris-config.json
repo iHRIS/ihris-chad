@@ -251,7 +251,7 @@
           "valueString": "mdi-database"
         },
         {
-          "name": "site:nav:menu:database:showInGrid",
+          "name": "site:nav:menu:database:menuGridView",
           "valueString": "true"
         },
         {
@@ -883,7 +883,7 @@
           "valueString": "mdi-chart-bar"
         },
         {
-          "name": "site:nav:menu:reports:showInGrid",
+          "name": "site:nav:menu:reports:menuGridView",
           "valueString": "true"
         },
         {
@@ -1103,12 +1103,28 @@
           "valueString": "http://ihris.org/fhir/Questionnaire/inservice-training-request"
         },
         {
-          "name": "workflow:processor:endrole:file",
-          "valueString": "workflowEndRole"
+          "name": "workflow:processor:end-job:file",
+          "valueString": "workflowEndJob"
         },
         {
-          "name": "workflow:questionnaire:endrole:url",
+          "name": "workflow:questionnaire:end-job:url",
           "valueString": "http://ihris.org/fhir/Questionnaire/ihris-endrole"
+        },
+        {
+          "name": "workflow:processor:change-job:file",
+          "valueString": "workflowChangeJob"
+        },
+        {
+          "name": "workflow:questionnaire:change-job:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/change-job"
+        },
+        {
+          "name": "workflow:processor:assign-job:file",
+          "valueString": "workflowAssignJob"
+        },
+        {
+          "name": "workflow:questionnaire:assign-job:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/assign-job"
         },
         {
           "name": "workflow:processor:contract:file",

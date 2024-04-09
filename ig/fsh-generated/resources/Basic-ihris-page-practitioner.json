@@ -38,7 +38,7 @@
         },
         {
           "url": "search",
-          "valueString": "Gender|Practitioner.gender|http://hl7.org/fhir/administrative-gender"
+          "valueString": "Gender|Practitioner.gender|http://ihris.org/fhir/ValueSet/td-gender-valueset"
         },
         {
           "url": "search",
@@ -50,7 +50,7 @@
         },
         {
           "url": "filter",
-          "valueString": "Gender|gender|http://hl7.org/fhir/ValueSet/administrative-gender"
+          "valueString": "Gender|gender|http://ihris.org/fhir/ValueSet/td-gender-valueset"
         },
         {
           "url": "filter",
@@ -120,6 +120,10 @@
         },
         {
           "url": "field",
+          "valueString": "Practitioner.extension:registrationNumber"
+        },
+        {
+          "url": "field",
           "valueString": "Practitioner.identifier"
         },
         {
@@ -157,19 +161,7 @@
         },
         {
           "url": "field",
-          "valueString": "Practitioner.extension:registrationNumber"
-        },
-        {
-          "url": "field",
           "valueString": "Practitioner.name"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.name.given"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.name.family"
         },
         {
           "url": "field",
@@ -181,15 +173,15 @@
         },
         {
           "url": "field",
+          "valueString": "Practitioner.extension:children"
+        },
+        {
+          "url": "field",
           "valueString": "Practitioner.extension:maritalStatus"
         },
         {
           "url": "field",
           "valueString": "Practitioner.extension:nationality"
-        },
-        {
-          "url": "field",
-          "valueString": "Practitioner.extension:residence"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
@@ -641,7 +633,7 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/resource/add/practitionerrole?PractitionerRole.practitioner.reference=Practitioner/FHIRID"
+                  "valueString": "/questionnaire/assign-job/practitionerrole?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
@@ -657,11 +649,40 @@
                 },
                 {
                   "url": "condition",
-                  "valueString": "PractitionerRole.period.end.exists()"
+                  "valueString": "PractitionerRole.id.empty()"
                 },
                 {
                   "url": "class",
                   "valueString": "primary"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/change-job/practitionerrole?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Change Job"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "condition",
+                  "valueString": "PractitionerRole.id.exists()"
+                },
+                {
+                  "url": "class",
+                  "valueString": "accent"
                 }
               ],
               "url": "action"
@@ -708,31 +729,6 @@
                 {
                   "url": "class",
                   "valueString": "warning"
-                }
-              ],
-              "url": "action"
-            },
-            {
-              "extension": [
-                {
-                  "url": "link",
-                  "valueString": "/questionnaire/ihris-promotion/practitioner?practitionerrole=ITEMID"
-                },
-                {
-                  "url": "text",
-                  "valueString": "Enter Promotion"
-                },
-                {
-                  "url": "row",
-                  "valueBoolean": true
-                },
-                {
-                  "url": "condition",
-                  "valueString": "PractitionerRole.period.end.empty()"
-                },
-                {
-                  "url": "class",
-                  "valueString": "accent"
                 }
               ],
               "url": "action"
