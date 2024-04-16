@@ -1,6 +1,7 @@
 const ihrissmartrequire = require("ihrissmartrequire")
 const winston = require('winston')
 const fhirQuestionnaire = ihrissmartrequire('modules/fhir/fhirQuestionnaire')
+const moment = require("moment")
 
 const workflowChangeJob = {
   process: ( req ) => {
@@ -8,6 +9,23 @@ const workflowChangeJob = {
       fhirQuestionnaire.processQuestionnaire( req.body ).then(async(bundle) => {
         bundle.entry[0].resource.practitioner = {
           reference: "Practitioner/" + req.query.practitioner
+        }
+        let appointmentDate = bundle.entry[0].resource.extension.find((ext) => {
+          return ext.url === 'http://ihris.org/fhir/StructureDefinition/appointment-date'
+        })
+        let presenceDate = bundle.entry[0].resource.extension.find((ext) => {
+          return ext.url === 'http://ihris.org/fhir/StructureDefinition/effective-presence-date'
+        })
+        let serviceStartDate = bundle.entry[0].resource.period.start
+        let serviceEndDate = bundle.entry[0].resource.period.end
+        if(appointmentDate && serviceStartDate && moment(appointmentDate.valueDate).isAfter(serviceStartDate)) {
+          return reject({message: "Appointment date must be before service start date"})
+        }
+        if(presenceDate && serviceStartDate && moment(serviceStartDate).isAfter(presenceDate.valueDate)) {
+          return reject({message: "Service start date must be before date of effective presence"})
+        }
+        if(presenceDate && serviceEndDate && moment(presenceDate.valueDate).isAfter(serviceEndDate)) {
+          return reject({message: "Date of effective presence must be before service end date"})
         }
         return resolve(bundle)
       })

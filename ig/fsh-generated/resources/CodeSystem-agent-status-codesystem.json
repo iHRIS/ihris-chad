@@ -29,10 +29,14 @@
       "display": "Contractuel sur recouvrement de coût"
     },
     {
+      "code": "contractualpartners",
+      "display": "Contractuel des Partenaires"
+    },
+    {
       "code": "other",
       "display": "Autres"
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 6
+  "count": 7
 }

@@ -31,6 +31,25 @@
         },
         {
           "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:organization.value[x]:valueCoding",
+          "text": "Organization",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/organization-valueset",
+          "required": true,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Basic.extension[0]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "contractualpartners",
+                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Basic.extension[2]",
           "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:qualification.value[x]:valueCoding",
           "text": "Profile/Qualification",
           "type": "choice",
@@ -62,6 +81,15 @@
           "text": "Level of Study",
           "type": "choice",
           "answerValueSet": "http://ihris.org/fhir/ValueSet/study-level-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[6]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:specialty.value[x]:valueCoding",
+          "text": "Specialty",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/specialty-valueset",
           "required": true,
           "repeats": false
         }

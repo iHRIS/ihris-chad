@@ -180,6 +180,21 @@ Title:            "Institution Type ValueSet"
 * ^version = "0.1.0"
 * codes from system InstitutionTypeCodeSystem
 
+CodeSystem:       OrganizationCodeSystem
+Id:               organization-codesystem
+Title:            "Organization Code System"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+* #gavi "GAVI"
+* #globalfunds "Global Funds"
+
+ValueSet:          OrganizationValueSet
+Id:                organization-valueset
+Title:            "Organization ValueSet"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+* codes from system OrganizationCodeSystem
+
 CodeSystem:       MinistryCodeSystem
 Id:               ministry-codesystem
 Title:            "Ministry Code System"
@@ -1089,6 +1104,7 @@ Title:            "Agent Status Code System"
 * #politicalpersonality "Personnalité Politique"
 * #contractual "Contractuel"
 * #costreccontr "Contractuel sur recouvrement de coût"
+* #contractualpartners "Contractuel des Partenaires"
 * #other "Autres"
 
 ValueSet:          AgentStatusValueSet
@@ -1423,6 +1439,19 @@ Title:            "Specialization ValueSet"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
 * codes from system SpecializationCodeSystem
+
+CodeSystem:       SpecialtyCodeSystem
+Id:               specialty-codesystem
+Title:            "Specialty Code System"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+
+ValueSet:          SpecialtyValueSet
+Id:                specialty-valueset
+Title:            "Specialty ValueSet"
+* ^date = "2024-02-07T08:12:00.000Z"
+* ^version = "0.1.0"
+* codes from system SpecialtyCodeSystem
 
 CodeSystem:       FunctionCodeSystem
 Id:               function-codesystem

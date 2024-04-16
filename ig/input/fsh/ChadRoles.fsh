@@ -248,6 +248,26 @@ Title:          "Edit Classification"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-classification"
 
+Instance:       ihris-task-add-validation
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Validation"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-validation"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-validation"
+
+Instance:       ihris-task-edit-validation
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Validation"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-validation"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-validation"
+
 Instance:       ihris-task-add-inservice-training-request
 InstanceOf:     IhrisTask
 Usage:          #example

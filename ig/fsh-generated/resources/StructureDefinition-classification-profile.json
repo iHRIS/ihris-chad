@@ -3892,7 +3892,7 @@
         "id": "Basic.extension:classification-category.value[x]:valueCoding",
         "path": "Basic.extension.value[x]",
         "sliceName": "valueCoding",
-        "label": "Grade",
+        "label": "Classification Category",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,

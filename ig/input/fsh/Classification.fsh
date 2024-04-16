@@ -74,7 +74,7 @@ Description:    "Classification Category."
 * ^context.expression = "Practitioner"
 * value[x] only Coding
 * valueCoding 1..1 MS
-* valueCoding ^label = "Grade"
+* valueCoding ^label = "Classification Category"
 * valueCoding from ClassificationCategoryValueSet (required)
 
 Extension:      CivilServantCategory
@@ -208,7 +208,7 @@ Usage:          #definition
 
 * item[0].item[1].linkId = "Basic.extension[1]"
 * item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-category.value[x]:valueCoding"
-* item[0].item[1].text = "Category"
+* item[0].item[1].text = "Classification Category"
 * item[0].item[1].type = #choice
 * item[0].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/classification-category-valueset"
 * item[0].item[1].required = true
@@ -313,14 +313,14 @@ Usage:          #example
 * extension[section][0].extension[name].valueString = "classificationinformation"
 * extension[section][0].extension[field][0].valueString = "Basic.extension:practitioner"
 * extension[section][0].extension[field][1].valueString = "Basic.extension:grade"
-* extension[section][0].extension[field][2].valueString = "Basic.extension:civil-servant-category"
-* extension[section][0].extension[field][3].valueString = "Basic.extension:contractual-category"
-* extension[section][0].extension[field][4].valueString = "Basic.extension:classification-class"
-* extension[section][0].extension[field][5].valueString = "Basic.extension:echelon"
-* extension[section][0].extension[field][6].valueString = "Basic.extension:date-last-admin-situation"
-* extension[section][0].extension[field][7].valueString = "Basic.extension:reference-echelon"
-* extension[section][0].extension[field][8].valueString = "Basic.extension:integration-date"
-* extension[section][0].extension[field][9].valueString = "Basic.extension:reference-integration-act"
-* extension[section][0].extension[field][10].valueString = "Basic.extension:tenure-date"
-* extension[section][0].extension[field][11].valueString = "Basic.extension:tenure-reference"
-* extension[section][0].extension[field][12].valueString = "Basic.extension:classification-category"
+* extension[section][0].extension[field][2].valueString = "Basic.extension:classification-category"
+* extension[section][0].extension[field][3].valueString = "Basic.extension:civil-servant-category"
+* extension[section][0].extension[field][4].valueString = "Basic.extension:contractual-category"
+* extension[section][0].extension[field][5].valueString = "Basic.extension:classification-class"
+* extension[section][0].extension[field][6].valueString = "Basic.extension:echelon"
+* extension[section][0].extension[field][7].valueString = "Basic.extension:date-last-admin-situation"
+* extension[section][0].extension[field][8].valueString = "Basic.extension:reference-echelon"
+* extension[section][0].extension[field][9].valueString = "Basic.extension:integration-date"
+* extension[section][0].extension[field][10].valueString = "Basic.extension:reference-integration-act"
+* extension[section][0].extension[field][11].valueString = "Basic.extension:tenure-date"
+* extension[section][0].extension[field][12].valueString = "Basic.extension:tenure-reference"

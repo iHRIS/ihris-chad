@@ -2,7 +2,7 @@ const winston = require('winston')
 const ihrissmartrequire = require("ihrissmartrequire")
 const fhirQuestionnaire = ihrissmartrequire('modules/fhir/fhirQuestionnaire')
 
-const classificationWorkflow = {
+const defaultWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.practitioner) {
@@ -54,4 +54,4 @@ const classificationWorkflow = {
   }
 }
  
-module.exports = classificationWorkflow
+module.exports = defaultWorkflow

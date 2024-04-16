@@ -1,12 +1,12 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "classification-category",
-  "url": "http://ihris.org/fhir/StructureDefinition/classification-category",
+  "id": "validated",
+  "url": "http://ihris.org/fhir/StructureDefinition/validated",
   "version": "0.1.0",
-  "name": "ClassificationCategory",
-  "title": "Classification Category",
+  "name": "Validated",
+  "title": "Validated",
   "status": "active",
-  "description": "Classification Category.",
+  "description": "Validated.",
   "fhirVersion": "4.0.1",
   "mapping": [
     {
@@ -20,7 +20,7 @@
   "context": [
     {
       "type": "element",
-      "expression": "Practitioner"
+      "expression": "Basic"
     }
   ],
   "type": "Extension",
@@ -41,8 +41,8 @@
           }
         ],
         "path": "Extension",
-        "short": "Classification Category",
-        "definition": "Classification Category.",
+        "short": "Validated",
+        "definition": "Validated.",
         "min": 0,
         "max": "*",
         "base": {
@@ -203,7 +203,7 @@
             ]
           }
         ],
-        "fixedUri": "http://ihris.org/fhir/StructureDefinition/classification-category",
+        "fixedUri": "http://ihris.org/fhir/StructureDefinition/validated",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -263,7 +263,7 @@
         "id": "Extension.value[x]:valueCoding",
         "path": "Extension.value[x]",
         "sliceName": "valueCoding",
-        "label": "Classification Category",
+        "label": "Validated",
         "short": "Value of extension",
         "definition": "Value of extension - must be one of a constrained set of the data types (see [Extensibility](extensibility.html) for a list).",
         "min": 1,
@@ -293,7 +293,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "http://ihris.org/fhir/ValueSet/classification-category-valueset"
+          "valueSet": "http://ihris.org/fhir/ValueSet/yes-no-valueset"
         },
         "mapping": [
           {
@@ -309,8 +309,8 @@
       {
         "id": "Extension",
         "path": "Extension",
-        "short": "Classification Category",
-        "definition": "Classification Category."
+        "short": "Validated",
+        "definition": "Validated."
       },
       {
         "id": "Extension.extension",
@@ -320,7 +320,7 @@
       {
         "id": "Extension.url",
         "path": "Extension.url",
-        "fixedUri": "http://ihris.org/fhir/StructureDefinition/classification-category"
+        "fixedUri": "http://ihris.org/fhir/StructureDefinition/validated"
       },
       {
         "id": "Extension.value[x]",
@@ -345,13 +345,13 @@
       {
         "id": "Extension.valueCoding",
         "path": "Extension.valueCoding",
-        "label": "Classification Category",
+        "label": "Validated",
         "min": 1,
         "max": "1",
         "mustSupport": true,
         "binding": {
           "strength": "required",
-          "valueSet": "http://ihris.org/fhir/ValueSet/classification-category-valueset"
+          "valueSet": "http://ihris.org/fhir/ValueSet/yes-no-valueset"
         }
       }
     ]

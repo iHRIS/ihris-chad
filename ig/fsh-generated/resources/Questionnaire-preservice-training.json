@@ -17,7 +17,7 @@
       "item": [
         {
           "linkId": "Basic.extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension",
+          "definition": "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training",
           "text": "Details",
           "type": "group",
           "item": [

@@ -1,6 +1,6 @@
 {
   "resourceType": "Basic",
-  "id": "ihris-page-situation",
+  "id": "ihris-page-validation",
   "meta": {
     "profile": [
       "http://ihris.org/fhir/StructureDefinition/ihris-page"
@@ -21,12 +21,12 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "StructureDefinition/situation-profile"
+            "reference": "StructureDefinition/validation-profile"
           }
         },
         {
           "url": "search",
-          "valueString": "Agent Status|extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding"
+          "valueString": "Validated|extension.where(url='http://ihris.org/fhir/StructureDefinition/validated').valueCoding"
         },
         {
           "extension": [
@@ -72,15 +72,15 @@
       "extension": [
         {
           "url": "title",
-          "valueString": "Situation Information"
+          "valueString": "validation Information"
         },
         {
           "url": "description",
-          "valueString": "Situation Information"
+          "valueString": "validation Information"
         },
         {
           "url": "name",
-          "valueString": "situationinformation"
+          "valueString": "validationinformation"
         },
         {
           "url": "field",
@@ -88,27 +88,11 @@
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:agent-status"
+          "valueString": "Basic.extension:validated"
         },
         {
           "url": "field",
-          "valueString": "Basic.extension:qualification"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:function"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:level"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:study-level"
-        },
-        {
-          "url": "field",
-          "valueString": "Basic.extension:specialty"
+          "valueString": "Basic.extension:comment"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"

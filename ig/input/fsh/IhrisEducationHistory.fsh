@@ -305,7 +305,7 @@ Usage:          #definition
 * item[0].type = #group
 
 * item[0].item[0].linkId = "Basic.extension[0]"
-* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension"
+* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training"
 * item[0].item[0].text = "Details"
 * item[0].item[0].type = #group
 

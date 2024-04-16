@@ -324,6 +324,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/validation-profile"
+        },
+        "name": "Validation Information",
+        "description": "Validation Information Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/agent-status"
         },
         "name": "Agent Status",
@@ -416,6 +424,14 @@
         },
         "name": "Classification Class",
         "description": "Classification Class.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/comment"
+        },
+        "name": "Comment",
+        "description": "Comment.",
         "exampleBoolean": false
       },
       {
@@ -907,6 +923,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/organization"
+        },
+        "name": "Organization",
+        "description": "Organization.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/position-departure-reason"
         },
         "name": "Departure Reason",
@@ -993,6 +1017,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/specialty"
+        },
+        "name": "Specialty",
+        "description": "Specialty.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/study-level"
         },
         "name": "Level of Study",
@@ -1020,6 +1052,14 @@
         },
         "name": "Tenure Reference",
         "description": "Tenure Reference.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/validated"
+        },
+        "name": "Validated",
+        "description": "Validated.",
         "exampleBoolean": false
       },
       {
@@ -1416,6 +1456,13 @@
       },
       {
         "reference": {
+          "reference": "ValueSet/organization-valueset"
+        },
+        "name": "Organization ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "ValueSet/performance-score-valueset"
         },
         "name": "Performance Score ValueSet",
@@ -1472,6 +1519,13 @@
           "reference": "ValueSet/specialization-valueset"
         },
         "name": "Specialization ValueSet",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/specialty-valueset"
+        },
+        "name": "Specialty ValueSet",
         "exampleBoolean": false
       },
       {
@@ -1930,6 +1984,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/organization-codesystem"
+        },
+        "name": "Organization Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/organization-type"
         },
         "name": "Organization type",
@@ -1994,6 +2055,13 @@
           "reference": "CodeSystem/specialization-codesystem"
         },
         "name": "Specialization Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/specialty-codesystem"
+        },
+        "name": "Specialty Code System",
         "exampleBoolean": false
       },
       {
@@ -2671,6 +2739,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-validation"
+        },
+        "name": "validation Information Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Questionnaire/ihris-performance"
         },
         "name": "IhrisPractitionerWorkflowPerformance",
@@ -2818,6 +2893,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-add-validation"
+        },
+        "name": "Add Validation",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-all-permissions-to-everything"
         },
         "name": "iHRIS Task With All Permissions To Everything",
@@ -2891,6 +2973,13 @@
           "reference": "Basic/ihris-task-edit-situation"
         },
         "name": "Add Situation",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-edit-validation"
+        },
+        "name": "Edit Validation",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3353,6 +3442,13 @@
           "reference": "Questionnaire/situation"
         },
         "name": "Situation",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/validation"
+        },
+        "name": "Validation",
         "exampleBoolean": false
       }
     ],

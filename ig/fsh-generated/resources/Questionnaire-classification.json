@@ -32,7 +32,7 @@
         {
           "linkId": "Basic.extension[1]",
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:classification-category.value[x]:valueCoding",
-          "text": "Category",
+          "text": "Classification Category",
           "type": "choice",
           "answerValueSet": "http://ihris.org/fhir/ValueSet/classification-category-valueset",
           "required": true,

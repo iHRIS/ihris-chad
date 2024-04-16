@@ -1,0 +1,43 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "validation",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/validation",
+  "title": "iHRIS Validation Information Workflow",
+  "description": "iHRIS workflow to record a Validation Information",
+  "name": "validation",
+  "status": "active",
+  "date": "2020-09-02",
+  "purpose": "Validation information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/validation-profile",
+      "text": "Validation",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/validation-profile#Basic.extension:validated.value[x]:valueCoding",
+          "text": "Validated",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/yes-no-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]#text",
+          "definition": "http://ihris.org/fhir/StructureDefinition/validation-profile#Basic.extension:comment.value[x]:valueString",
+          "text": "Comment",
+          "type": "string",
+          "required": false,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

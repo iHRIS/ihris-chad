@@ -1,23 +1,30 @@
 const winston = require('winston')
 const ihrissmartrequire = require("ihrissmartrequire")
 const fhirQuestionnaire = ihrissmartrequire('modules/fhir/fhirQuestionnaire')
+const moment = require("moment")
 
-const situationWorkflow = {
+const practitionerWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
-      if(!req.query.practitioner) {
-        return reject({message: "Invalid request, no practitioner on the request"})
-      }
-      fhirQuestionnaire.processQuestionnaire(req.body).then((bundle) => {
-        bundle.entry[0].resource.extension.push({
-          url: 'http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference',
-          valueReference: {
-            reference: 'Practitioner/' + req.query.practitioner
+      fhirQuestionnaire.processQuestionnaire( req.body ).then(async(bundle) => {
+        let invalidIssueDate = false
+        for(let identifier of bundle.entry[0].resource.identifier) {
+          let issueDate = identifier.extension.find((ext) => {
+            return ext.url === "http://ihris.org/fhir/StructureDefinition/id-issue-date"
+          })
+          let expireDate = identifier.extension.find((ext) => {
+            return ext.url === "http://ihris.org/fhir/StructureDefinition/id-expire-date"
+          })
+          if(issueDate && expireDate && moment(issueDate.valueDate).isAfter(expireDate.valueDate)) {
+            invalidIssueDate = true
           }
-        })
+        }
+        if(invalidIssueDate) {
+          return reject({message: "Issue date must be before expire date"})
+        }
         return resolve(bundle)
       })
-    })
+    } )
   },
   postProcess: ( req, results ) => {
     return new Promise((resolve, reject) => {
@@ -54,4 +61,4 @@ const situationWorkflow = {
   }
 }
  
-module.exports = situationWorkflow
+module.exports = practitionerWorkflow
