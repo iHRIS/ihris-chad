@@ -28,7 +28,7 @@ const workflowEndJob = {
           })
           let end = endingRole.resource.period.end
           if(moment(role.period.start).isAfter(end)) {
-            return reject({message: "End date is before start date of the position"})
+            return reject({message: "La date de fin est avant la date de début du poste"})
           }
           role.period.end = end
           bundle.entry[0].resource = role
@@ -37,7 +37,7 @@ const workflowEndJob = {
           return resolve(bundle)
         }).catch((err) => {
           console.log(err);
-          return reject({message: "internal error has occured"})
+          return reject({message: "Une erreur interne s'est produite"})
         })
       })
     } )

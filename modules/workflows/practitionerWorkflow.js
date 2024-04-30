@@ -20,7 +20,7 @@ const practitionerWorkflow = {
           }
         }
         if(invalidIssueDate) {
-          return reject({message: "Issue date must be before expire date"})
+          return reject({message: "La date d'émission doit être avant la date d'expiration"})
         }
         return resolve(bundle)
       })

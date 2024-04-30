@@ -10,6 +10,8 @@ Description:    "iHRIS Profile of the Basic resource for Discipline."
 * extension[discipline] ^label = "Discipline Information"
 * extension[discipline].extension[actionType] ^label = "Discipline Action Type"
 * extension[discipline].extension[actionType].valueCoding 1..1 MS
+* extension[discipline].extension[actionTypeOther] ^label = "Other Action Type"
+* extension[discipline].extension[actionTypeOther].valueString MS
 * extension[discipline].extension[givenBy] ^label = "Given By"
 * extension[discipline].extension[givenBy].valueString MS
 * extension[discipline].extension[actionTaken] ^label = "Action Taken"
@@ -26,7 +28,9 @@ Description:    "iHRIS Profile of the Basic resource for Discipline."
 Extension:      IhrisDiscipline
 Id:             ihris-discipline
 Title:          "Discipline details"
-* extension contains actionType 1..1 MS and
+* extension contains
+    actionType 1..1 MS and
+    actionTypeOther 1..1 MS and
     actionTaken 1..1 MS and
     act-reference 1..1 MS and
     givenBy 1..1 MS and
@@ -37,6 +41,9 @@ Title:          "Discipline details"
 * extension[actionType].valueCoding 1..1 MS
 * extension[actionType].valueCoding ^label = "Discipline Action Type"
 * extension[actionType].valueCoding from DisciplinaryActionTypeValueSet (required)
+* extension[actionTypeOther].value[x] only string
+* extension[actionTypeOther].valueString MS
+* extension[actionTypeOther].valueString ^label = "Other Action Type"
 * extension[givenBy].value[x] only string
 * extension[givenBy].valueString MS
 * extension[givenBy].valueString ^label = "Given By"
@@ -86,47 +93,57 @@ Usage:          #definition
 * item[0].item[0].item[0].repeats = false
 
 * item[0].item[0].item[1].linkId = "Basic.extension[0].extension[1]"
-* item[0].item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:givenBy.value[x]:valueString"
-* item[0].item[0].item[1].text = "Given By"
+* item[0].item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionTypeOther.value[x]:valueString"
+* item[0].item[0].item[1].text = "Other Disciplinary Action Type"
 * item[0].item[0].item[1].type = #string
 * item[0].item[0].item[1].required = true
 * item[0].item[0].item[1].repeats = false
+* item[0].item[0].item[1].enableWhen[0].question = "Basic.extension[0].extension[0]"
+* item[0].item[0].item[1].enableWhen[0].operator = #=
+* item[0].item[0].item[1].enableWhen[0].answerCoding = ihris-discipline-action-type-codesystem#other
 
 * item[0].item[0].item[2].linkId = "Basic.extension[0].extension[2]"
-* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionTaken.value[x]:valueCoding"
-* item[0].item[0].item[2].text = "Action Taken"
-* item[0].item[0].item[2].type = #choice
-* item[0].item[0].item[2].answerValueSet = "http://ihris.org/fhir/ValueSet/disciplinary-action-taken-valueset"
+* item[0].item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:givenBy.value[x]:valueString"
+* item[0].item[0].item[2].text = "Given By"
+* item[0].item[0].item[2].type = #string
 * item[0].item[0].item[2].required = true
 * item[0].item[0].item[2].repeats = false
 
 * item[0].item[0].item[3].linkId = "Basic.extension[0].extension[3]"
-* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:act-reference.value[x]:valueString"
-* item[0].item[0].item[3].text = "Reference of the Act"
-* item[0].item[0].item[3].type = #string
+* item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionTaken.value[x]:valueCoding"
+* item[0].item[0].item[3].text = "Action Taken"
+* item[0].item[0].item[3].type = #choice
+* item[0].item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/disciplinary-action-taken-valueset"
 * item[0].item[0].item[3].required = true
 * item[0].item[0].item[3].repeats = false
 
 * item[0].item[0].item[4].linkId = "Basic.extension[0].extension[4]"
-* item[0].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:start-date.value[x]:valueDate"
-* item[0].item[0].item[4].text = "Effective Start date"
-* item[0].item[0].item[4].type = #date
+* item[0].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:act-reference.value[x]:valueString"
+* item[0].item[0].item[4].text = "Reference of the Act"
+* item[0].item[0].item[4].type = #string
 * item[0].item[0].item[4].required = true
 * item[0].item[0].item[4].repeats = false
 
 * item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]"
-* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:end-date.value[x]:valueDate"
-* item[0].item[0].item[5].text = "Effective End Date"
+* item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:start-date.value[x]:valueDate"
+* item[0].item[0].item[5].text = "Effective Start date"
 * item[0].item[0].item[5].type = #date
 * item[0].item[0].item[5].required = true
 * item[0].item[0].item[5].repeats = false
 
 * item[0].item[0].item[6].linkId = "Basic.extension[0].extension[6]"
-* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:patterns.value[x]:valueString"
-* item[0].item[0].item[6].text = "Patterns"
-* item[0].item[0].item[6].type = #string
+* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:end-date.value[x]:valueDate"
+* item[0].item[0].item[6].text = "Effective End Date"
+* item[0].item[0].item[6].type = #date
 * item[0].item[0].item[6].required = true
 * item[0].item[0].item[6].repeats = false
+
+* item[0].item[0].item[7].linkId = "Basic.extension[0].extension[7]"
+* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:patterns.value[x]:valueString"
+* item[0].item[0].item[7].text = "Patterns"
+* item[0].item[0].item[7].type = #string
+* item[0].item[0].item[7].required = true
+* item[0].item[0].item[7].repeats = false
 
 Instance:       ihris-page-discipline
 InstanceOf:     IhrisPage

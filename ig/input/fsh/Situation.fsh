@@ -173,7 +173,7 @@ Usage:          #definition
 * item[0].item[6].text = "Specialty"
 * item[0].item[6].type = #choice
 * item[0].item[6].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
-* item[0].item[6].required = true
+* item[0].item[6].required = false
 * item[0].item[6].repeats = false
 
 Instance:       ihris-page-situation

@@ -200,7 +200,7 @@ Usage:          #example
 * extension[section][7].extension[resource].extension[column][2].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/service-resumption-date').valueDate"
 * extension[section][7].extension[resource].extension[column][3].extension[header].valueString = "Actions"
 * extension[section][7].extension[resource].extension[column][3].extension[field].valueString = "_action"
-* extension[section][7].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/inservice-training/inservice-training-request?practitioner=FHIRID"
+* extension[section][7].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/inservice-training-request/inservice-training-request?practitioner=FHIRID"
 * extension[section][7].extension[resource].extension[action][0].extension[text].valueString = "Add Inservice Training Request"
 * extension[section][7].extension[resource].extension[action][0].extension[row].valueBoolean = false
 * extension[section][7].extension[resource].extension[action][0].extension[emptyDisplay].valueBoolean = true
@@ -442,3 +442,51 @@ Usage:          #example
 * extension[section][15].extension[resource].extension[action][1].extension[row].valueBoolean = true
 * extension[section][15].extension[resource].extension[action][1].extension[class].valueString = "primary"
 * extension[section][15].extension[resource].extension[action][1].extension[task].valueId = "ihris-task-edit-validation"
+* extension[section][16].extension[title].valueString = "Scanned Documents"
+* extension[section][16].extension[description].valueString = "Scanned Documents"
+* extension[section][16].extension[name].valueString = "scanned-documents"
+* extension[section][16].extension[resource].extension[resource].valueReference = Reference(StructureDefinition/scanned-document-profile)
+* extension[section][16].extension[resource].extension[searchfield].valueString = "practitioner"
+* extension[section][16].extension[resource].extension[searchfieldtarget].valueString = "Practitioner"
+* extension[section][16].extension[resource].extension[linkfield].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+* extension[section][16].extension[resource].extension[column][0].extension[header].valueString = "Upload Date"
+* extension[section][16].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/upload-date').valueDate"
+* extension[section][16].extension[resource].extension[column][1].extension[header].valueString = "Document"
+* extension[section][16].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/scanned-document').valueAttachment.title"
+* extension[section][16].extension[resource].extension[column][2].extension[header].valueString = "Actions"
+* extension[section][16].extension[resource].extension[column][2].extension[field].valueString = "_action"
+* extension[section][16].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/scanned-document/scanned-document?practitioner=FHIRID"
+* extension[section][16].extension[resource].extension[action][0].extension[text].valueString = "Add Scanned Document"
+* extension[section][16].extension[resource].extension[action][0].extension[row].valueBoolean = false
+* extension[section][16].extension[resource].extension[action][0].extension[condition].valueString = "Basic.meta.where(profile='http://ihris.org/fhir/StructureDefinition/resume-profile').empty()"
+* extension[section][16].extension[resource].extension[action][0].extension[emptyDisplay].valueBoolean = true
+* extension[section][16].extension[resource].extension[action][0].extension[class].valueString = "secondary"
+* extension[section][16].extension[resource].extension[action][0].extension[task].valueId = "ihris-task-add-scanned-document"
+* extension[section][16].extension[resource].extension[action][1].extension[link].valueString = "/resource/view/scanned-document/ITEMID"
+* extension[section][16].extension[resource].extension[action][1].extension[text].valueString = "View"
+* extension[section][16].extension[resource].extension[action][1].extension[row].valueBoolean = true
+* extension[section][16].extension[resource].extension[action][1].extension[class].valueString = "primary"
+* extension[section][16].extension[resource].extension[action][1].extension[task].valueId = "ihris-task-view-scanned-document"
+* extension[section][17].extension[title].valueString = "Notes"
+* extension[section][17].extension[description].valueString = "Notes"
+* extension[section][17].extension[name].valueString = "notes"
+* extension[section][17].extension[resource].extension[resource].valueReference = Reference(StructureDefinition/notes-profile)
+* extension[section][17].extension[resource].extension[searchfield].valueString = "practitioner"
+* extension[section][17].extension[resource].extension[searchfieldtarget].valueString = "Practitioner"
+* extension[section][17].extension[resource].extension[linkfield].valueString = "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+* extension[section][17].extension[resource].extension[column][0].extension[header].valueString = "Date Added"
+* extension[section][17].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/note-date').valueDate"
+* extension[section][17].extension[resource].extension[column][1].extension[header].valueString = "Amount"
+* extension[section][17].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/note').valueString"
+* extension[section][17].extension[resource].extension[column][2].extension[header].valueString = "Actions"
+* extension[section][17].extension[resource].extension[column][2].extension[field].valueString = "_action"
+* extension[section][17].extension[resource].extension[action][0].extension[link].valueString = "/questionnaire/notes/notes?practitioner=FHIRID"
+* extension[section][17].extension[resource].extension[action][0].extension[text].valueString = "Add Note"
+* extension[section][17].extension[resource].extension[action][0].extension[row].valueBoolean = false
+* extension[section][17].extension[resource].extension[action][0].extension[emptyDisplay].valueBoolean = true
+* extension[section][17].extension[resource].extension[action][0].extension[class].valueString = "primary"
+* extension[section][17].extension[resource].extension[action][0].extension[task].valueId = "ihris-task-add-notes"
+* extension[section][17].extension[resource].extension[action][1].extension[link].valueString = "/questionnaire/notes/notes/ITEMID?practitioner=FHIRID"
+* extension[section][17].extension[resource].extension[action][1].extension[text].valueString = "Edit"
+* extension[section][17].extension[resource].extension[action][1].extension[row].valueBoolean = true
+* extension[section][17].extension[resource].extension[action][1].extension[task].valueId = "ihris-task-edit-notes"

@@ -38,6 +38,46 @@ Title:          "Edit Performance"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-performance"
 
+Instance:       ihris-task-add-scanned-document
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Scanned Document"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-scanned-document"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-scanned-document"
+
+Instance:       ihris-task-view-scanned-document
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "View Scanned Document"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "view-scanned-document"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "view-scanned-document"
+
+Instance:       ihris-task-add-notes
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Notes"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-notes"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-notes"
+
+Instance:       ihris-task-edit-notes
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Notes"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-notes"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-notes"
+
 Instance:       ihris-task-add-leave
 InstanceOf:     IhrisTask
 Usage:          #example

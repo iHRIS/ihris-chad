@@ -8,7 +8,7 @@ const inserviceTrainingWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.request) {
-        return reject({message: "Invalid request, no training request on the request"})
+        return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
       fhirQuestionnaire.processQuestionnaire( req.body ).then( async(bundle) => {
         let practitioner
@@ -29,7 +29,6 @@ const inserviceTrainingWorkflow = {
             reference: 'Basic/' + req.query.request
           }
         })
-        let today = moment().format("YYYY")
         let education = bundle.entry[0].resource.extension.find((ext) => {
           return ext.url === "http://ihris.org/fhir/StructureDefinition/inservice-training"
         })
@@ -46,15 +45,12 @@ const inserviceTrainingWorkflow = {
           return ext.url === "specialization"
         })
         if(specialized === "yes" && (!specialization || !specialization.valueCoding)) {
-          return reject({message: "Specialization is required"})
-        } else if(specialized === "no" && specialization && specialization.valueCoding) {
-          return reject({message: "Specialization is not required"})
-        }
-        if(graduation && moment(graduation.valueDate).isAfter(today)) {
-          return reject({message: "Graduation year must be before today"})
+          return reject({message: "La spécialisation est obligatoire"})
+        } else if(specialized === "no" && specialization && specialization.valueCoding && specialization.valueCoding.code) {
+          return reject({message: "La spécialisation n'est pas Obligatoire"})
         }
         if(startYear && moment(startYear.valueDate).isAfter(graduation.valueDate)) {
-          return reject({message: "Start year must be before Graduation"})
+          return reject({message: "L'année de début doit être avant l'obtention du diplôme"})
         }
         return resolve(bundle)
       })

@@ -37,6 +37,24 @@
             },
             {
               "linkId": "Basic.extension[0].extension[1]",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionTypeOther.value[x]:valueString",
+              "text": "Other Disciplinary Action Type",
+              "type": "string",
+              "required": true,
+              "repeats": false,
+              "enableWhen": [
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "other",
+                    "system": "http://ihris.org/fhir/CodeSystem/ihris-discipline-action-type-codesystem"
+                  }
+                }
+              ]
+            },
+            {
+              "linkId": "Basic.extension[0].extension[2]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:givenBy.value[x]:valueString",
               "text": "Given By",
               "type": "string",
@@ -44,7 +62,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[2]",
+              "linkId": "Basic.extension[0].extension[3]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:actionTaken.value[x]:valueCoding",
               "text": "Action Taken",
               "type": "choice",
@@ -53,7 +71,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[3]",
+              "linkId": "Basic.extension[0].extension[4]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:act-reference.value[x]:valueString",
               "text": "Reference of the Act",
               "type": "string",
@@ -61,7 +79,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[4]",
+              "linkId": "Basic.extension[0].extension[5]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:start-date.value[x]:valueDate",
               "text": "Effective Start date",
               "type": "date",
@@ -69,7 +87,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[5]",
+              "linkId": "Basic.extension[0].extension[6]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:end-date.value[x]:valueDate",
               "text": "Effective End Date",
               "type": "date",
@@ -77,7 +95,7 @@
               "repeats": false
             },
             {
-              "linkId": "Basic.extension[0].extension[6]",
+              "linkId": "Basic.extension[0].extension[7]",
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-discipline#Basic.extension:discipline.extension:patterns.value[x]:valueString",
               "text": "Patterns",
               "type": "string",

@@ -7,7 +7,7 @@ const disciplineWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.practitioner) {
-        return reject({message: "Invalid request, no practitioner on the request"})
+        return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
       fhirQuestionnaire.processQuestionnaire( req.body ).then(async(bundle) => {
         bundle.entry[0].resource.extension.push({
@@ -26,7 +26,7 @@ const disciplineWorkflow = {
           return ext.url === "end-date"
         })
         if(startDate && endDate && moment(startDate.valueDate).isAfter(endDate.valueDate)) {
-          return reject({message: "End date must be after start date"})
+          return reject({message: "La date de fin doit être après la date de début"})
         }
         return resolve(bundle)
       })

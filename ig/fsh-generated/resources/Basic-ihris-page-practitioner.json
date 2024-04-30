@@ -1093,7 +1093,7 @@
               "extension": [
                 {
                   "url": "link",
-                  "valueString": "/questionnaire/inservice-training/inservice-training-request?practitioner=FHIRID"
+                  "valueString": "/questionnaire/inservice-training-request/inservice-training-request?practitioner=FHIRID"
                 },
                 {
                   "url": "text",
@@ -2464,6 +2464,272 @@
                 {
                   "url": "task",
                   "valueId": "ihris-task-edit-validation"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Scanned Documents"
+        },
+        {
+          "url": "description",
+          "valueString": "Scanned Documents"
+        },
+        {
+          "url": "name",
+          "valueString": "scanned-documents"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/scanned-document-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Upload Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/upload-date').valueDate"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "url": "searchfieldtarget",
+              "valueString": "Practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Document"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/scanned-document').valueAttachment.title"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/scanned-document/scanned-document?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Scanned Document"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "condition",
+                  "valueString": "Basic.meta.where(profile='http://ihris.org/fhir/StructureDefinition/resume-profile').empty()"
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "secondary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-scanned-document"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/resource/view/scanned-document/ITEMID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "View"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-view-scanned-document"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Notes"
+        },
+        {
+          "url": "description",
+          "valueString": "Notes"
+        },
+        {
+          "url": "name",
+          "valueString": "notes"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/notes-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Date Added"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/note-date').valueDate"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "url": "searchfieldtarget",
+              "valueString": "Practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Amount"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/note').valueString"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/notes/notes?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Note"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-notes"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/notes/notes/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-notes"
                 }
               ],
               "url": "action"

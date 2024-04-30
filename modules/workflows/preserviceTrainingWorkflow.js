@@ -7,7 +7,7 @@ const preserviceTrainingWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.practitioner) {
-        return reject({message: "Invalid request, no practitioner on the request"})
+        return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
       fhirQuestionnaire.processQuestionnaire( req.body ).then( async(bundle) => {
         bundle.entry[0].resource.extension.push({
@@ -33,15 +33,15 @@ const preserviceTrainingWorkflow = {
           return ext.url === "specialization"
         })
         if(specialized === "yes" && (!specialization || !specialization.valueCoding)) {
-          return reject({message: "Specialization is required"})
-        } else if(specialized === "no" && specialization && specialization.valueCoding) {
-          return reject({message: "Specialization is not required"})
+          return reject({message: "La spécialisation est obligatoire"})
+        } else if(specialized === "no" && specialization && specialization.valueCoding && specialization.valueCoding.code) {
+          return reject({message: "La spécialisation n'est pas Obligatoire"})
         }
         if(graduation && moment(graduation.valueDate).isAfter(today)) {
-          return reject({message: "Graduation year must be before today"})
+          return reject({message: "L'année d'obtention du diplôme doit être avant aujourd'hui"})
         }
         if(startYear && moment(startYear.valueDate).isAfter(graduation.valueDate)) {
-          return reject({message: "Start year must be before Graduation"})
+          return reject({message: "L'année de début doit être avant l'obtention du diplôme"})
         }
         return resolve(bundle)
       })

@@ -8,8 +8,8 @@ Description:    "iHRIS Profile of the Basic resource for Preservice Training."
 * extension contains
     PreserviceTraining named preservice-training 1..1 MS
 * extension[preservice-training].extension[sector] ^label = "Institution Location"
-* extension[preservice-training].extension[sector].valueCoding 1..1 MS
-* extension[preservice-training].extension[sector].valueCoding ^label = "Sector"
+* extension[preservice-training].extension[sector].valueString 1..1 MS
+* extension[preservice-training].extension[sector].valueString ^label = "Sector"
 * extension[preservice-training].extension[institution] ^label = "Training Institution"
 * extension[preservice-training].extension[institution].valueString 1..1 MS
 * extension[preservice-training].extension[institution].valueString ^label = "Training Institution"
@@ -25,6 +25,9 @@ Description:    "iHRIS Profile of the Basic resource for Preservice Training."
 * extension[preservice-training].extension[degree] ^label = "Degree"
 * extension[preservice-training].extension[degree].valueReference ^label = "Degree"
 * extension[preservice-training].extension[degree].valueReference 1..1 MS
+* extension[preservice-training].extension[degree-name] ^label = "Degree Name"
+* extension[preservice-training].extension[degree-name].valueString ^label = "Degree Name"
+* extension[preservice-training].extension[degree-name].valueString 1..1 MS
 * extension[preservice-training].extension[specialized] ^label = "Specialized"
 * extension[preservice-training].extension[specialized].valueCoding ^label = "Specialized"
 * extension[preservice-training].extension[specialized].valueCoding 0..1 MS
@@ -37,6 +40,9 @@ Description:    "iHRIS Profile of the Basic resource for Preservice Training."
 * extension[preservice-training].extension[training-fund] ^label = "Training Fund"
 * extension[preservice-training].extension[training-fund].valueCoding ^label = "Training Fund"
 * extension[preservice-training].extension[training-fund].valueCoding MS
+* extension[preservice-training].extension[training-fund-other] ^label = "Other Training Fund"
+* extension[preservice-training].extension[training-fund-other].valueString ^label = "Other Training Fund"
+* extension[preservice-training].extension[training-fund-other].valueString MS
 
 Profile:        InserviceTrainingProfile
 Parent:         IhrisPractitionerBasic
@@ -49,8 +55,8 @@ Description:    "iHRIS Profile of the Basic resource for Inservice Training."
     InserviceTrainingRequestReference named inservice-training-request-reference 1..1 MS and
     InserviceTraining named inservice-training 1..1 MS
 * extension[inservice-training].extension[sector] ^label = "Institution Location"
-* extension[inservice-training].extension[sector].valueCoding 1..1 MS
-* extension[inservice-training].extension[sector].valueCoding ^label = "Sector"
+* extension[inservice-training].extension[sector].valueString 1..1 MS
+* extension[inservice-training].extension[sector].valueString ^label = "Sector"
 * extension[inservice-training].extension[institution] ^label = "Training Institution"
 * extension[inservice-training].extension[institution].valueString 1..1 MS
 * extension[inservice-training].extension[institution].valueString ^label = "Training Institution"
@@ -66,6 +72,9 @@ Description:    "iHRIS Profile of the Basic resource for Inservice Training."
 * extension[inservice-training].extension[degree] ^label = "Degree"
 * extension[inservice-training].extension[degree].valueReference ^label = "Degree"
 * extension[inservice-training].extension[degree].valueReference 1..1 MS
+* extension[inservice-training].extension[degree-name] ^label = "Degree Name"
+* extension[inservice-training].extension[degree-name].valueString ^label = "Degree Name"
+* extension[inservice-training].extension[degree-name].valueString 1..1 MS
 * extension[inservice-training].extension[specialized] ^label = "Specialized"
 * extension[inservice-training].extension[specialized].valueCoding ^label = "Specialized"
 * extension[inservice-training].extension[specialized].valueCoding 0..1 MS
@@ -78,6 +87,9 @@ Description:    "iHRIS Profile of the Basic resource for Inservice Training."
 * extension[inservice-training].extension[training-fund] 1..1 MS
 * extension[inservice-training].extension[training-fund] ^label = "Training Fund"
 * extension[inservice-training].extension[training-fund].valueCoding MS
+* extension[inservice-training].extension[training-fund-other] ^label = "Other Training Fund"
+* extension[inservice-training].extension[training-fund-other].valueString ^label = "Other Training Fund"
+* extension[inservice-training].extension[training-fund-other].valueString MS
 * extension[inservice-training].extension[observation] ^label = "Observation"
 * extension[inservice-training].extension[observation].valueString 1..1 MS
 * extension[inservice-training].extension[observation].valueString ^label = "Observation"
@@ -129,14 +141,15 @@ Title:          "Preservice Training details"
       start-year 1..1 MS and
       end-year 1..1 MS and
       degree 1..1 MS and
+      degree-name 1..1 MS and
       specialized 1..1 MS and
       specialization 0..1 MS and
       training-mode 0..1 MS and
       training-fund 0..1 MS and
+      training-fund-other 0..1 MS and
       observation 0..1 MS
-* extension[sector].value[x] only Coding
-* extension[sector].valueCoding ^label = "Sector"
-* extension[sector].valueCoding from EducationSectorValueSet (required)
+* extension[sector].value[x] only string
+* extension[sector].valueString ^label = "Sector"
 * extension[institution].value[x] only string
 * extension[institution].valueString ^label = "Institution Name"
 * extension[country].value[x] only Coding
@@ -146,20 +159,24 @@ Title:          "Preservice Training details"
 * extension[start-year].valueDate ^label = "Year of training start"
 * extension[end-year].value[x] only date
 * extension[end-year].valueDate ^label = "Year of training end"
-* extension[degree].value[x] only Reference(TDDegreeProfile)
+* extension[degree].value[x] only Reference(TDEducationTypeProfile)
 * extension[degree].valueReference ^label = "Degree"
+* extension[degree-name].value[x] only string
+* extension[degree-name].valueString ^label = "Degree Name"
 * extension[specialized].value[x] only Coding
 * extension[specialized].valueCoding ^label = "Specialized"
 * extension[specialized].valueCoding from http://ihris.org/fhir/ValueSet/yes-no-valueset (required)
 * extension[specialization].value[x] only Coding
 * extension[specialization].valueCoding ^label = "Specialization"
-* extension[specialization].valueCoding from http://ihris.org/fhir/ValueSet/specialization-valueset (required)
+* extension[specialization].valueCoding from http://ihris.org/fhir/ValueSet/specialty-valueset (required)
 * extension[training-mode].value[x] only Coding
 * extension[training-mode].valueCoding ^label = "Training Mode"
 * extension[training-mode].valueCoding from http://ihris.org/fhir/ValueSet/training-mode-valueset (required)
 * extension[training-fund].value[x] only Coding
 * extension[training-fund].valueCoding ^label = "Training Fund"
 * extension[training-fund].valueCoding from http://ihris.org/fhir/ValueSet/training-fund-valueset (required)
+* extension[training-fund-other].value[x] only string
+* extension[training-fund-other].valueString ^label = "Other Training Fund"
 * extension[observation].value[x] only string
 * extension[observation].valueString ^label = "Observation"
 
@@ -173,14 +190,16 @@ Title:          "Inservice Training details"
       start-year 1..1 MS and
       end-year 1..1 MS and
       degree 1..1 MS and
+      degree-name 1..1 MS and
       specialized 1..1 MS and
       specialization 0..1 MS and
       training-mode 0..1 MS and
       training-fund 1..1 MS and
+      training-fund-other 1..1 MS and
       observation 0..1 MS
-* extension[sector].value[x] only Coding
-* extension[sector].valueCoding ^label = "Sector"
-* extension[sector].valueCoding from EducationSectorValueSet (required)
+* extension[sector].value[x] only string
+* extension[sector].valueString ^label = "Sector"
+* extension[sector].valueString from EducationSectorValueSet (required)
 * extension[institution].value[x] only string
 * extension[institution].valueString ^label = "Institution Name"
 * extension[country].value[x] only Coding
@@ -190,20 +209,24 @@ Title:          "Inservice Training details"
 * extension[start-year].valueDate ^label = "Year of training start"
 * extension[end-year].value[x] only date
 * extension[end-year].valueDate ^label = "Year of training end"
-* extension[degree].value[x] only Reference(TDDegreeProfile)
+* extension[degree].value[x] only Reference(TDEducationTypeProfile)
 * extension[degree].valueReference ^label = "Degree"
+* extension[degree-name].value[x] only string
+* extension[degree-name].valueString ^label = "Degree Name"
 * extension[specialized].value[x] only Coding
 * extension[specialized].valueCoding ^label = "Specialized"
 * extension[specialized].valueCoding from http://ihris.org/fhir/ValueSet/yes-no-valueset (required)
 * extension[specialization].value[x] only Coding
 * extension[specialization].valueCoding ^label = "Specialization"
-* extension[specialization].valueCoding from http://ihris.org/fhir/ValueSet/specialization-valueset (required)
+* extension[specialization].valueCoding from http://ihris.org/fhir/ValueSet/specialty-valueset (required)
 * extension[training-mode].value[x] only Coding
 * extension[training-mode].valueCoding ^label = "Training Mode"
 * extension[training-mode].valueCoding from http://ihris.org/fhir/ValueSet/training-mode-valueset (required)
 * extension[training-fund].value[x] only Coding
 * extension[training-fund].valueCoding ^label = "Training Fund"
 * extension[training-fund].valueCoding from http://ihris.org/fhir/ValueSet/training-fund-valueset (required)
+* extension[training-fund-other].value[x] only string
+* extension[training-fund-other].valueString ^label = "Other Training Fund"
 * extension[observation].value[x] only string
 * extension[observation].valueString ^label = "Observation"
 
@@ -310,10 +333,9 @@ Usage:          #definition
 * item[0].item[0].type = #group
 
 * item[0].item[0].item[0].linkId = "Basic.extension[0].extension[0]"
-* item[0].item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:sector.value[x]:valueCoding"
+* item[0].item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:sector.value[x]:valueString"
 * item[0].item[0].item[0].text = "Sector"
-* item[0].item[0].item[0].type = #choice
-* item[0].item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/education-sector-valueset"
+* item[0].item[0].item[0].type = #string
 * item[0].item[0].item[0].required = true
 * item[0].item[0].item[0].repeats = false
 
@@ -346,7 +368,7 @@ Usage:          #definition
 * item[0].item[0].item[4].required = true
 * item[0].item[0].item[4].repeats = false
 
-* item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]"
+* item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]#preloaded"
 * item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:degree.value[x]:valueReference"
 * item[0].item[0].item[5].text = "Diploma"
 * item[0].item[0].item[5].type = #reference
@@ -354,43 +376,63 @@ Usage:          #definition
 * item[0].item[0].item[5].repeats = false
 
 * item[0].item[0].item[6].linkId = "Basic.extension[0].extension[6]"
-* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:specialized.value[x]:valueCoding"
-* item[0].item[0].item[6].text = "Specialized"
-* item[0].item[0].item[6].type = #choice
-* item[0].item[0].item[6].answerValueSet = "http://ihris.org/fhir/ValueSet/yes-no-valueset"
+* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:degree-name.value[x]:valueString"
+* item[0].item[0].item[6].text = "Diploma Name"
+* item[0].item[0].item[6].type = #string
 * item[0].item[0].item[6].required = true
 * item[0].item[0].item[6].repeats = false
 
 * item[0].item[0].item[7].linkId = "Basic.extension[0].extension[7]"
-* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:specialization.value[x]:valueCoding"
-* item[0].item[0].item[7].text = "Specialization (If Applicable)"
+* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:specialized.value[x]:valueCoding"
+* item[0].item[0].item[7].text = "Specialized"
 * item[0].item[0].item[7].type = #choice
-* item[0].item[0].item[7].answerValueSet = "http://ihris.org/fhir/ValueSet/specialization-valueset"
-* item[0].item[0].item[7].required = false
+* item[0].item[0].item[7].answerValueSet = "http://ihris.org/fhir/ValueSet/yes-no-valueset"
+* item[0].item[0].item[7].required = true
 * item[0].item[0].item[7].repeats = false
 
 * item[0].item[0].item[8].linkId = "Basic.extension[0].extension[8]"
-* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:training-mode.value[x]:valueCoding"
-* item[0].item[0].item[8].text = "Training Mode"
+* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:specialization.value[x]:valueCoding"
+* item[0].item[0].item[8].text = "Specialization"
 * item[0].item[0].item[8].type = #choice
-* item[0].item[0].item[8].answerValueSet = "http://ihris.org/fhir/ValueSet/training-mode-valueset"
+* item[0].item[0].item[8].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
 * item[0].item[0].item[8].required = false
 * item[0].item[0].item[8].repeats = false
+* item[0].item[0].item[8].enableWhen[0].question = "Basic.extension[0].extension[7]"
+* item[0].item[0].item[8].enableWhen[0].operator = #=
+* item[0].item[0].item[8].enableWhen[0].answerCoding = yes-no-codesystem#yes
 
 * item[0].item[0].item[9].linkId = "Basic.extension[0].extension[9]"
-* item[0].item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:training-fund.value[x]:valueCoding"
-* item[0].item[0].item[9].text = "Funding"
+* item[0].item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:training-mode.value[x]:valueCoding"
+* item[0].item[0].item[9].text = "Training Mode"
 * item[0].item[0].item[9].type = #choice
-* item[0].item[0].item[9].answerValueSet = "http://ihris.org/fhir/ValueSet/training-fund-valueset"
+* item[0].item[0].item[9].answerValueSet = "http://ihris.org/fhir/ValueSet/training-mode-valueset"
 * item[0].item[0].item[9].required = false
 * item[0].item[0].item[9].repeats = false
 
 * item[0].item[0].item[10].linkId = "Basic.extension[0].extension[10]"
-* item[0].item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:observation.value[x]:valueString"
-* item[0].item[0].item[10].text = "Observation"
-* item[0].item[0].item[10].type = #string
+* item[0].item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:training-fund.value[x]:valueCoding"
+* item[0].item[0].item[10].text = "Funding"
+* item[0].item[0].item[10].type = #choice
+* item[0].item[0].item[10].answerValueSet = "http://ihris.org/fhir/ValueSet/training-fund-valueset"
 * item[0].item[0].item[10].required = false
 * item[0].item[0].item[10].repeats = false
+
+* item[0].item[0].item[11].linkId = "Basic.extension[0].extension[11]"
+* item[0].item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:training-fund-other.value[x]:valueString"
+* item[0].item[0].item[11].text = "Other Funding"
+* item[0].item[0].item[11].type = #string
+* item[0].item[0].item[11].required = true
+* item[0].item[0].item[11].repeats = false
+* item[0].item[0].item[11].enableWhen[0].question = "Basic.extension[0].extension[10]"
+* item[0].item[0].item[11].enableWhen[0].operator = #=
+* item[0].item[0].item[11].enableWhen[0].answerCoding = training-fund-codesystem#other
+
+* item[0].item[0].item[12].linkId = "Basic.extension[0].extension[12]"
+* item[0].item[0].item[12].definition = "http://ihris.org/fhir/StructureDefinition/preservice-training-profile#Basic.extension:preservice-training.extension:observation.value[x]:valueString"
+* item[0].item[0].item[12].text = "Observation"
+* item[0].item[0].item[12].type = #string
+* item[0].item[0].item[12].required = false
+* item[0].item[0].item[12].repeats = false
 
 Instance:       InserviceTraining
 InstanceOf:      Questionnaire
@@ -415,10 +457,9 @@ Usage:          #definition
 * item[0].item[0].type = #group
 
 * item[0].item[0].item[0].linkId = "Basic.extension[0].extension[0]"
-* item[0].item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:sector.value[x]:valueCoding"
+* item[0].item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:sector.value[x]:valueString"
 * item[0].item[0].item[0].text = "Sector"
-* item[0].item[0].item[0].type = #choice
-* item[0].item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/education-sector-valueset"
+* item[0].item[0].item[0].type = #string
 * item[0].item[0].item[0].required = true
 * item[0].item[0].item[0].repeats = false
 
@@ -451,7 +492,7 @@ Usage:          #definition
 * item[0].item[0].item[4].required = true
 * item[0].item[0].item[4].repeats = false
 
-* item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]"
+* item[0].item[0].item[5].linkId = "Basic.extension[0].extension[5]#preloaded"
 * item[0].item[0].item[5].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree.value[x]:valueReference"
 * item[0].item[0].item[5].text = "Diploma"
 * item[0].item[0].item[5].type = #reference
@@ -459,43 +500,63 @@ Usage:          #definition
 * item[0].item[0].item[5].repeats = false
 
 * item[0].item[0].item[6].linkId = "Basic.extension[0].extension[6]"
-* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:specialized.value[x]:valueCoding"
-* item[0].item[0].item[6].text = "Specialized"
-* item[0].item[0].item[6].type = #choice
-* item[0].item[0].item[6].answerValueSet = "http://ihris.org/fhir/ValueSet/yes-no-valueset"
+* item[0].item[0].item[6].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:degree-name.value[x]:valueString"
+* item[0].item[0].item[6].text = "Diploma Name"
+* item[0].item[0].item[6].type = #string
 * item[0].item[0].item[6].required = true
 * item[0].item[0].item[6].repeats = false
 
 * item[0].item[0].item[7].linkId = "Basic.extension[0].extension[7]"
-* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:specialization.value[x]:valueCoding"
-* item[0].item[0].item[7].text = "Specialization (If Applicable)"
+* item[0].item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:specialized.value[x]:valueCoding"
+* item[0].item[0].item[7].text = "Specialized"
 * item[0].item[0].item[7].type = #choice
-* item[0].item[0].item[7].answerValueSet = "http://ihris.org/fhir/ValueSet/specialization-valueset"
-* item[0].item[0].item[7].required = false
+* item[0].item[0].item[7].answerValueSet = "http://ihris.org/fhir/ValueSet/yes-no-valueset"
+* item[0].item[0].item[7].required = true
 * item[0].item[0].item[7].repeats = false
 
 * item[0].item[0].item[8].linkId = "Basic.extension[0].extension[8]"
-* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-mode.value[x]:valueCoding"
-* item[0].item[0].item[8].text = "Training Mode"
+* item[0].item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:specialization.value[x]:valueCoding"
+* item[0].item[0].item[8].text = "Specialization"
 * item[0].item[0].item[8].type = #choice
-* item[0].item[0].item[8].answerValueSet = "http://ihris.org/fhir/ValueSet/training-mode-valueset"
+* item[0].item[0].item[8].answerValueSet = "http://ihris.org/fhir/ValueSet/specialty-valueset"
 * item[0].item[0].item[8].required = false
 * item[0].item[0].item[8].repeats = false
+* item[0].item[0].item[8].enableWhen[0].question = "Basic.extension[0].extension[7]"
+* item[0].item[0].item[8].enableWhen[0].operator = #=
+* item[0].item[0].item[8].enableWhen[0].answerCoding = yes-no-codesystem#yes
 
 * item[0].item[0].item[9].linkId = "Basic.extension[0].extension[9]"
-* item[0].item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-fund.value[x]:valueCoding"
-* item[0].item[0].item[9].text = "Funding"
+* item[0].item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-mode.value[x]:valueCoding"
+* item[0].item[0].item[9].text = "Training Mode"
 * item[0].item[0].item[9].type = #choice
-* item[0].item[0].item[9].answerValueSet = "http://ihris.org/fhir/ValueSet/training-fund-valueset"
-* item[0].item[0].item[9].required = true
+* item[0].item[0].item[9].answerValueSet = "http://ihris.org/fhir/ValueSet/training-mode-valueset"
+* item[0].item[0].item[9].required = false
 * item[0].item[0].item[9].repeats = false
 
 * item[0].item[0].item[10].linkId = "Basic.extension[0].extension[10]"
-* item[0].item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:observation.value[x]:valueString"
-* item[0].item[0].item[10].text = "Observation"
-* item[0].item[0].item[10].type = #string
-* item[0].item[0].item[10].required = false
+* item[0].item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-fund.value[x]:valueCoding"
+* item[0].item[0].item[10].text = "Funding"
+* item[0].item[0].item[10].type = #choice
+* item[0].item[0].item[10].answerValueSet = "http://ihris.org/fhir/ValueSet/training-fund-valueset"
+* item[0].item[0].item[10].required = true
 * item[0].item[0].item[10].repeats = false
+
+* item[0].item[0].item[11].linkId = "Basic.extension[0].extension[11]"
+* item[0].item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:training-fund-other.value[x]:valueString"
+* item[0].item[0].item[11].text = "Other Funding"
+* item[0].item[0].item[11].type = #string
+* item[0].item[0].item[11].required = true
+* item[0].item[0].item[11].repeats = false
+* item[0].item[0].item[11].enableWhen[0].question = "Basic.extension[0].extension[10]"
+* item[0].item[0].item[11].enableWhen[0].operator = #=
+* item[0].item[0].item[11].enableWhen[0].answerCoding = training-fund-codesystem#other
+
+* item[0].item[0].item[12].linkId = "Basic.extension[0].extension[12]"
+* item[0].item[0].item[12].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:observation.value[x]:valueString"
+* item[0].item[0].item[12].text = "Observation"
+* item[0].item[0].item[12].type = #string
+* item[0].item[0].item[12].required = false
+* item[0].item[0].item[12].repeats = false
 
 Instance:       InserviceTrainingRequest
 InstanceOf:      Questionnaire
@@ -592,7 +653,8 @@ Usage:          #example
 * extension[section][0].extension[field][6].valueString = "Basic.extension:preservice-training.extension:specialization"
 * extension[section][0].extension[field][7].valueString = "Basic.extension:preservice-training.extension:training-mode"
 * extension[section][0].extension[field][8].valueString = "Basic.extension:preservice-training.extension:training-fund"
-* extension[section][0].extension[field][9].valueString = "Basic.extension:preservice-training.extension:observation"
+* extension[section][0].extension[field][9].valueString = "Basic.extension:preservice-training.extension:training-fund-other"
+* extension[section][0].extension[field][10].valueString = "Basic.extension:preservice-training.extension:observation"
 
 Instance:       ihris-page-inservice-training
 InstanceOf:     IhrisPage
@@ -628,7 +690,8 @@ Usage:          #example
 * extension[section][0].extension[field][6].valueString = "Basic.extension:inservice-training.extension:specialization"
 * extension[section][0].extension[field][7].valueString = "Basic.extension:inservice-training.extension:training-mode"
 * extension[section][0].extension[field][8].valueString = "Basic.extension:inservice-training.extension:training-fund"
-* extension[section][0].extension[field][9].valueString = "Basic.extension:inservice-training.extension:observation"
+* extension[section][0].extension[field][9].valueString = "Basic.extension:inservice-training.extension:training-fund-other"
+* extension[section][0].extension[field][10].valueString = "Basic.extension:inservice-training.extension:observation"
 
 Instance:       ihris-page-inservice-training-request
 InstanceOf:     IhrisPage

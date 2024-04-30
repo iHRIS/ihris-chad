@@ -19,7 +19,7 @@ const workflowChangeJob = {
               return entry.resource.resourceType === "PractitionerRole"
             })
             if(moment(prevRole.period.start).isAfter(currentRole.resource.period.start)) {
-              return reject({message: "Start date of current role must be after start date of previsous role"})
+              return reject({message: "La date de début du rôle actuel doit être après la date de début du rôle précédent"})
             }
             prevRole.period.end = currentRole.resource.period.start
             let departureDetails = bundle.entry.find((entry) => {
@@ -53,10 +53,10 @@ const workflowChangeJob = {
             })
             return resolve(bundle)
           } else {
-            return reject({message: "Internal server error"})
+            return reject({message: "Une erreur interne s'est produite"})
           }
         }).catch(() => {
-          return reject({message: "Internal server error"})
+          return reject({message: "Une erreur interne s'est produite"})
         })
       })
     } )

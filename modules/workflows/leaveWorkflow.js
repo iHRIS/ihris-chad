@@ -7,7 +7,7 @@ const leaveWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.practitioner) {
-        return reject({message: "Invalid request, no practitioner on the request"})
+        return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
       fhirQuestionnaire.processQuestionnaire( req.body ).then( async(bundle) => {
         bundle.entry[0].resource.extension.push({
@@ -26,7 +26,7 @@ const leaveWorkflow = {
           return ext.url === "end-date"
         })
         if(startDate && endDate && moment(startDate.valueDate).isAfter(endDate.valueDate)) {
-          return reject({message: "End date must be after start date"})
+          return reject({message: "La date de fin doit être après la date de début"})
         }
         let terminationDate = leave.extension.find((ext) => {
           return ext.url === "effective-termination-date"
@@ -35,7 +35,7 @@ const leaveWorkflow = {
           return ext.url === "effective-resumption-date"
         })
         if(terminationDate && resumptionDate && moment(terminationDate.valueDate).isAfter(resumptionDate.valueDate)) {
-          return reject({message: "Effective resumption date must be after effective termination date"})
+          return reject({message: "La date de reprise effective doit être après la date de cessation effective"})
         }
         return resolve(bundle)
       })

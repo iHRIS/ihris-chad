@@ -19,13 +19,13 @@ const workflowChangeJob = {
         let serviceStartDate = bundle.entry[0].resource.period.start
         let serviceEndDate = bundle.entry[0].resource.period.end
         if(appointmentDate && serviceStartDate && moment(appointmentDate.valueDate).isAfter(serviceStartDate)) {
-          return reject({message: "Appointment date must be before service start date"})
+          return reject({message: "La date de nomination/affectation doit être avant la date de début du service"})
         }
         if(presenceDate && serviceStartDate && moment(serviceStartDate).isAfter(presenceDate.valueDate)) {
-          return reject({message: "Service start date must be before date of effective presence"})
+          return reject({message: "La date de début du service doit être avant la date de présence effective"})
         }
         if(presenceDate && serviceEndDate && moment(presenceDate.valueDate).isAfter(serviceEndDate)) {
-          return reject({message: "Date of effective presence must be before service end date"})
+          return reject({message: "La date de présence effective doit être avant la date de fin de service"})
         }
         return resolve(bundle)
       })

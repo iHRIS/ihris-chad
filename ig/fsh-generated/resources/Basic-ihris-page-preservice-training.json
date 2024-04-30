@@ -170,6 +170,10 @@
         },
         {
           "url": "field",
+          "valueString": "Basic.extension:preservice-training.extension:training-fund-other"
+        },
+        {
+          "url": "field",
           "valueString": "Basic.extension:preservice-training.extension:observation"
         }
       ],

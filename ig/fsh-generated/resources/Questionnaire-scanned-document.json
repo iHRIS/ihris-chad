@@ -1,0 +1,42 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "scanned-document",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/scanned-document",
+  "title": "iHRIS Scanned Document Information Workflow",
+  "description": "iHRIS workflow to record a Scanned Document Information",
+  "name": "scanned-document",
+  "status": "active",
+  "date": "2024-02-29",
+  "purpose": "Scanned Document information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/scanned-document-profile",
+      "text": "Scanned Document",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:upload-date.value[x]:valueDate",
+          "text": "Date Uploaded",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:scanned-document.value[x]:valueAttachment",
+          "text": "Document",
+          "type": "attachment",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

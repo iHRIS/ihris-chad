@@ -33,6 +33,22 @@ Description:    "Education Type"
 * valueReference 1..1 MS
 * valueReference ^label = "Education Type"
 
+Instance:       ihris-page-agent-status
+InstanceOf:     IhrisPage
+Title:          "Agent Status Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(CodeSystem/agent-status-codesystem)
+* extension[display].extension[search][0].valueString = "Display|display"
+* extension[display].extension[search][1].valueString = "Code|code"
+* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
+* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
+* extension[section][0].extension[title].valueString = "Agent Status"
+* extension[section][0].extension[description].valueString = "Agent Status"
+* extension[section][0].extension[name].valueString = "CodeSystem"
+* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
+* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
+
 Instance:       ihris-page-education-type
 InstanceOf:     IhrisPage
 Title:          "Education Type Page"

@@ -90,7 +90,7 @@
           "text": "Specialty",
           "type": "choice",
           "answerValueSet": "http://ihris.org/fhir/ValueSet/specialty-valueset",
-          "required": true,
+          "required": false,
           "repeats": false
         }
       ]

@@ -25,7 +25,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.code",
           "text": "Job Title",
           "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/ihris-job",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/chad-job-valueset",
           "required": true,
           "repeats": false
         },

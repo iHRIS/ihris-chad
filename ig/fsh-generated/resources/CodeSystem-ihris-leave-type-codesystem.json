@@ -10,18 +10,15 @@
   "concept": [
     {
       "code": "annual",
-      "display": "Annual Leave",
-      "definition": "Annual Leave"
-    },
-    {
-      "code": "maternity",
-      "display": "Maternity Leave",
-      "definition": "Maternity Leave"
+      "display": "Congé annuel regulier"
     },
     {
       "code": "sick",
-      "display": "Sick Leave",
-      "definition": "Sick Leave"
+      "display": "congé maladie"
+    },
+    {
+      "code": "maternity",
+      "display": "congé maternité"
     }
   ],
   "count": 3

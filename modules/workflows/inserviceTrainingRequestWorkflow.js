@@ -7,7 +7,7 @@ const inserviceTrainingRequestWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.practitioner) {
-        return reject({message: "Invalid request, no practitioner on the request"})
+        return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
       fhirQuestionnaire.processQuestionnaire( req.body ).then( async(bundle) => {
         bundle.entry[0].resource.extension.push({
@@ -23,7 +23,7 @@ const inserviceTrainingRequestWorkflow = {
           return ext.url === "http://ihris.org/fhir/StructureDefinition/service-resumption-date"
         })?.valueDate
         if(serviceResumptionDate && serviceEndDate && moment(serviceEndDate).isAfter(serviceResumptionDate)) {
-          return reject({message: "Service resumption date must after service end date"})
+          return reject({message: "La date de reprise du service doit être après la date de fin du service"})
         }
         return resolve(bundle)
       })

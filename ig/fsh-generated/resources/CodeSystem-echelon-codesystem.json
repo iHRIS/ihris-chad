@@ -9,6 +9,10 @@
   "url": "http://ihris.org/fhir/CodeSystem/echelon-codesystem",
   "concept": [
     {
+      "code": "0",
+      "display": "0"
+    },
+    {
       "code": "1",
       "display": "1"
     },
@@ -54,5 +58,5 @@
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 11
+  "count": 12
 }

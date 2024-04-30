@@ -1,0 +1,42 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "notes",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/notes",
+  "title": "iHRIS Note Information Workflow",
+  "description": "iHRIS workflow to record a Note Information",
+  "name": "notes",
+  "status": "active",
+  "date": "2024-02-29",
+  "purpose": "Note information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/notes-profile",
+      "text": "Note",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/notes-profile#Basic.extension:note-date.value[x]:valueDate",
+          "text": "Date Added",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]#text",
+          "definition": "http://ihris.org/fhir/StructureDefinition/notes-profile#Basic.extension:note.value[x]:valueString",
+          "text": "Note",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        }
+      ]
+    }
+  ]
+}

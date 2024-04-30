@@ -6,7 +6,7 @@ const defaultWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.practitioner) {
-        return reject({message: "Invalid request, no practitioner on the request"})
+        return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
       fhirQuestionnaire.processQuestionnaire(req.body).then((bundle) => {
         bundle.entry[0].resource.extension.push({

@@ -456,7 +456,7 @@ Usage:          #definition
 * item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.code"
 * item[0].item[0].text = "Job Title"
 * item[0].item[0].type = #choice
-* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/ihris-job"
+* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/chad-job-valueset"
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 
@@ -551,7 +551,7 @@ Usage:          #definition
 * item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.code"
 * item[0].item[0].text = "Job Title"
 * item[0].item[0].type = #choice
-* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/ihris-job"
+* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/chad-job-valueset"
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 

@@ -12,15 +12,15 @@
       "valueSignature": {
         "type": [
           {
-            "system": "urn:iso-astm:E1762-95:2013",
-            "code": "1.2.840.10065.1.12.1.14"
+            "code": "1.2.840.10065.1.12.1.14",
+            "system": "urn:iso-astm:E1762-95:2013"
           }
         ],
-        "when": "2024-04-16T08:17:00.243Z",
+        "when": "2022-06-21T09:31:16.469Z",
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "Nxy64IeRwuAL+kSMRCCZKkkuWXmtzLIYcjgNSj3nwU8rZbkYW5X5nLgiqlT/Ov3xICEslnHy1b6gMYCj3Qe6KA3P99RwrvOO8JWaixLo5MWyEGsfA7f7xQfQ01qyNjZ8PiCFZhOwSWVjeLoZh5krXUu0q83of8zjSOsERXqQ9VA="
+        "data": "HUryAnyzPVvtEIkK54xTH+yZ8zkHsL9sLQGdkcqKVfYaiovQ6qwGiwOqnZiuxGsCZkPma2Rk89TS68LN8wYdtjH+J2NanXN5paDOEP38Ke/DxPK5tUVV+WgcXWXQgQjGyu3b00o0UBqh8xw0cZ0nWI5o3i0EnuPZVciLxXxeX4U="
       }
     },
     {
@@ -719,6 +719,18 @@
           "valueString": "4"
         },
         {
+          "name": "site:nav:menu:database:menu:situation:menu:agent-status:text",
+          "valueString": "Agent Status"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:agent-status:url",
+          "valueString": "/resource/search/agent-status"
+        },
+        {
+          "name": "site:nav:menu:database:menu:situation:menu:agent-status:order",
+          "valueString": "5"
+        },
+        {
           "name": "site:nav:menu:database:menu:classification:text",
           "valueString": "Classification Lists"
         },
@@ -808,7 +820,7 @@
         },
         {
           "name": "site:nav:menu:database:menu:geography:menu:country:url",
-          "valueString": "/resource/search/country"
+          "valueString": "/resource/search/td-country"
         },
         {
           "name": "site:nav:menu:database:menu:geography:menu:country:order",
@@ -979,6 +991,18 @@
           "valueString": "5"
         },
         {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:performance:text",
+          "valueString": "Performance Evaluation"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:performance:url",
+          "valueString": "/report/ihris-es-report-performance"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:performance:order",
+          "valueString": "6"
+        },
+        {
           "name": "site:nav:menu:users:text",
           "valueString": "System Users"
         },
@@ -1105,6 +1129,10 @@
         {
           "name": "shortname:CodeSystem:paths:name:fhirpath",
           "valueString": "CodeSystem.where(id='ihris-job').display"
+        },
+        {
+          "name": "defaults:format:date",
+          "valueString": "DD-MM-YYYY"
         },
         {
           "name": "defaults:fields:PractitionerRole.location:type",
@@ -1315,6 +1343,14 @@
           "valueString": "http://ihris.org/fhir/Questionnaire/ihris-user"
         },
         {
+          "name": "workflow:processor:scanned-document:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:scanned-document:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/scanned-document"
+        },
+        {
           "name": "defaults:components:date-time:minValueDateTime",
           "valueString": "1920-01-01"
         },
@@ -1413,18 +1449,6 @@
         {
           "name": "defaults:fields:Person.extension:practitioner.value[x]:valueReference:referenceDisplayPath",
           "valueString": "name.where(use='official').given.first() + ' ' + name.where(use='official').family"
-        },
-        {
-          "name": "defaults:fields:Basic.extension:preservice-training.extension:degree.value[x]:valueReference:searchParameter",
-          "valueString": "educationtype"
-        },
-        {
-          "name": "defaults:fields:Basic.extension:preservice-training.extension:degree.value[x]:valueReference:type",
-          "valueString": "tree"
-        },
-        {
-          "name": "defaults:fields:Basic.extension:preservice-training.extension:degree.value[x]:valueReference:initialProfile",
-          "valueString": "http://ihris.org/fhir/StructureDefinition/td-education-type-profile"
         },
         {
           "name": "defaults:page:td-district:fields:Location.partOf:initialValue",

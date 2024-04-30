@@ -54,20 +54,6 @@ Title:          "Leave details"
 * extension[effective-resumption-date].value[x] only date
 * extension[effective-resumption-date].valueDate ^label = "Effective Resumption Date"
 
-CodeSystem:      IhrisLeaveTypeCodeSystem
-Id:              ihris-leave-type-codesystem
-Title:           "Leave Type"
-* ^version = "0.2.0"
-* #annual "Annual Leave" "Annual Leave"
-* #maternity "Maternity Leave" "Maternity Leave"
-* #sick  "Sick Leave" "Sick Leave"
-
-ValueSet:         IhrisLeaveTypeValueSet
-Id:               ihris-leave-type-valueset
-Title:            "iHRIS leave Type ValueSet"
-* ^version = "0.2.0"
-* codes from system IhrisLeaveTypeCodeSystem
-
 Instance:       IhrisPractitionerWorkflowLeave
 InstanceOf:     IhrisQuestionnaire
 Usage:          #definition

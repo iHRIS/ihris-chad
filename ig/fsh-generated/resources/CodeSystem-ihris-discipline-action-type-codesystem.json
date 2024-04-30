@@ -13,14 +13,18 @@
       "display": "Avertissement"
     },
     {
-      "code": "layoff",
-      "display": "Licenciement"
-    },
-    {
       "code": "blame",
       "display": "Blâme"
+    },
+    {
+      "code": "layoff",
+      "display": "Mise à pied"
+    },
+    {
+      "code": "other",
+      "display": "Other"
     }
   ],
   "date": "2020-11-10T08:41:04.362Z",
-  "count": 3
+  "count": 4
 }

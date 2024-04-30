@@ -252,6 +252,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/notes-profile"
+        },
+        "name": "Notes Information",
+        "description": "Notes Information Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/preservice-training-profile"
         },
         "name": "Preservice Training Information",
@@ -264,6 +272,14 @@
         },
         "name": "Role Departure Details",
         "description": "Role Departure Details.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/scanned-document-profile"
+        },
+        "name": "Scanned Document Information",
+        "description": "Scanned Document Information Profile.",
         "exampleBoolean": false
       },
       {
@@ -915,6 +931,21 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/note"
+        },
+        "name": "Note",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/note-date"
+        },
+        "name": "Note Date",
+        "description": "Note Date.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/old-password"
         },
         "name": "Old Password",
@@ -981,6 +1012,13 @@
         },
         "name": "Registration Number",
         "description": "Registration Number",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/scanned-document"
+        },
+        "name": "Document",
         "exampleBoolean": false
       },
       {
@@ -1052,6 +1090,14 @@
         },
         "name": "Tenure Reference",
         "description": "Tenure Reference.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/upload-date"
+        },
+        "name": "Upload Date",
+        "description": "Upload Date.",
         "exampleBoolean": false
       },
       {
@@ -2319,6 +2365,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-agent-status"
+        },
+        "name": "Agent Status Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-auditevent"
         },
         "name": "AuditEvent",
@@ -2543,6 +2596,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-page-notes"
+        },
+        "name": "Note Information Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-page-performance"
         },
         "name": "iHRIS Basic Performance Page",
@@ -2637,6 +2697,13 @@
           "reference": "Basic/ihris-page-salary-step"
         },
         "name": "iHRIS Salary Step CodeSystem Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-scanned-document"
+        },
+        "name": "Scanned Document Information Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2872,6 +2939,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-add-notes"
+        },
+        "name": "Add Notes",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-add-performance"
         },
         "name": "Add Performance",
@@ -2882,6 +2956,13 @@
           "reference": "Basic/ihris-task-add-preservice-training"
         },
         "name": "Add Education",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-add-scanned-document"
+        },
+        "name": "Add Scanned Document",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -2952,6 +3033,13 @@
           "reference": "Basic/ihris-task-edit-leave"
         },
         "name": "Edit Leave",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-edit-notes"
+        },
+        "name": "Edit Notes",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3166,6 +3254,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-view-scanned-document"
+        },
+        "name": "View Scanned Document",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-write-basic-resource"
         },
         "name": "iHRIS Task To Write Basic resource",
@@ -3348,6 +3443,13 @@
       },
       {
         "reference": {
+          "reference": "Questionnaire/notes"
+        },
+        "name": "Note",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "DocumentReference/page-about"
         },
         "name": "iHRIS About Page",
@@ -3435,6 +3537,13 @@
           "reference": "Questionnaire/preservice-training"
         },
         "name": "PreserviceTraining",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/scanned-document"
+        },
+        "name": "ScannedDocument",
         "exampleBoolean": false
       },
       {

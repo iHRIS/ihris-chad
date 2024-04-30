@@ -7,7 +7,7 @@ const performanceWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       if(!req.query.practitioner) {
-        return reject({message: "Invalid request, no practitioner on the request"})
+        return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
       fhirQuestionnaire.processQuestionnaire( req.body ).then( async(bundle) => {
         bundle.entry[0].resource.extension.push({
@@ -26,7 +26,7 @@ const performanceWorkflow = {
           return ext.url === "end-date"
         })
         if(startDate && endDate && moment(startDate.valueDate).isAfter(endDate.valueDate)) {
-          return reject({message: "End date must be after start date"})
+          return reject({message: "La date de fin doit être après la date de début"})
         }
         let generalKnowledge  = performance.extension.find((ext) => {
           return ext.url === "general-knowledge"
@@ -44,22 +44,19 @@ const performanceWorkflow = {
           return ext.url === "manner"
         })
         if(generalKnowledge && generalKnowledge.valueInteger && (generalKnowledge.valueInteger < 0 || generalKnowledge.valueInteger > 5)) {
-          return reject({message: "General knowledge must be between 0 and 5"})
+          return reject({message: "Les connaissances générales doivent être comprises entre 0 et 5"})
         }
         if(professionalCulture && professionalCulture.valueInteger && (professionalCulture.valueInteger < 0 || professionalCulture.valueInteger > 5)) {
-          return reject({message: "Professional Culture must be between 0 and 5"})
-        }
-        if(generalKnowledge && generalKnowledge.valueInteger && (generalKnowledge.valueInteger < 0 || generalKnowledge.valueInteger > 5)) {
-          return reject({message: "General knowledge must be between 0 and 5"})
+          return reject({message: "La culture professionnelle doit être comprise entre 0 et 5"})
         }
         if(effectiveness && effectiveness.valueInteger && (effectiveness.valueInteger < 0 || effectiveness.valueInteger > 5)) {
-          return reject({message: "Effectiveness in carrying out duties must be between 0 and 5"})
+          return reject({message: "L'efficacité dans l'exercice des fonctions doit être comprise entre 0 et 5"})
         }
         if(aptitude && aptitude.valueInteger && (aptitude.valueInteger < 0 || aptitude.valueInteger > 5)) {
-          return reject({message: "Aptitude for command functions must be between 0 and 5"})
+          return reject({message: "L'aptitude aux fonctions de commandement doit être comprise entre 0 et 5"})
         }
         if(manner && manner.valueInteger && (manner.valueInteger < 0 || manner.valueInteger > 5)) {
-          return reject({message: "Manner of carrying out its functions must be between 0 and 5"})
+          return reject({message: "La manière d'exercer ses fonctions doit être comprise entre 0 et 5"})
         }
         return resolve(bundle)
       })

@@ -10,9 +10,21 @@
   "concept": [
     {
       "code": "government",
-      "display": "Gouvernement"
+      "display": "Gouvernement / transformation des salaires en bourses"
+    },
+    {
+      "code": "internationaldung",
+      "display": "Bouse Internationale"
+    },
+    {
+      "code": "staff",
+      "display": "Personnel"
+    },
+    {
+      "code": "other",
+      "display": "Autres à preciser"
     }
   ],
   "date": "2024-02-02T08:14:00.000Z",
-  "count": 1
+  "count": 4
 }

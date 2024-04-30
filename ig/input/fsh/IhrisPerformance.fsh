@@ -21,7 +21,7 @@ Description:    "iHRIS Profile of the Basic resource for Performance."
 * extension[performance].extension[effectiveness].valueInteger MS
 * extension[performance].extension[aptitude] ^label = "Criteria 4: Aptitude for command functions /5"
 * extension[performance].extension[aptitude].valueInteger MS
-* extension[performance].extension[manner] ^label = "Criteria 4: Manner of carrying out its functions /5"
+* extension[performance].extension[manner] ^label = "Criteria 5: Manner of carrying out its functions /5"
 * extension[performance].extension[manner].valueInteger MS
 * extension[performance].extension[score] ^label = "Score"
 * extension[performance].extension[score].valueCoding MS
