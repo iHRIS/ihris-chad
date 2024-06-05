@@ -107,7 +107,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-echelon.value[x]:valueString",
           "text": "Reference Echelon",
           "type": "string",
-          "required": true,
+          "required": false,
           "repeats": false
         },
         {
@@ -131,7 +131,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-date.value[x]:valueDate",
           "text": "Date of Tenure",
           "type": "date",
-          "required": true,
+          "required": false,
           "repeats": false
         },
         {
@@ -139,7 +139,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-reference.value[x]:valueString",
           "text": "Reference of the Tenure",
           "type": "string",
-          "required": true,
+          "required": false,
           "repeats": false
         }
       ]

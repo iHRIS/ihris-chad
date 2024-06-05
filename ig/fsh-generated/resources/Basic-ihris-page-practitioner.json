@@ -26,6 +26,10 @@
         },
         {
           "url": "search",
+          "valueString": "Registration Number|Practitioner.extension.where(url='http://ihris.org/fhir/StructureDefinition/registration-number').valueString"
+        },
+        {
+          "url": "search",
           "valueString": "Surname|Practitioner.name.where(use='official').family"
         },
         {
@@ -41,8 +45,8 @@
           "valueString": "Gender|Practitioner.gender|http://ihris.org/fhir/ValueSet/td-gender-valueset"
         },
         {
-          "url": "search",
-          "valueString": "Registration Number|Practitioner.extension.where(url='http://ihris.org/fhir/StructureDefinition/registration-number').valueString"
+          "url": "filter",
+          "valueString": "Registration Number|regnum"
         },
         {
           "url": "filter",
@@ -51,10 +55,6 @@
         {
           "url": "filter",
           "valueString": "Gender|gender|http://ihris.org/fhir/ValueSet/td-gender-valueset"
-        },
-        {
-          "url": "filter",
-          "valueString": "Registration Number|regnum"
         },
         {
           "extension": [
@@ -2505,11 +2505,11 @@
               "extension": [
                 {
                   "url": "header",
-                  "valueString": "Upload Date"
+                  "valueString": "Name"
                 },
                 {
                   "url": "field",
-                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/upload-date').valueDate"
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-basic-name').valueString"
                 }
               ]
             },
@@ -2520,6 +2520,19 @@
             {
               "url": "searchfieldtarget",
               "valueString": "Practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Upload Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/upload-date').valueDate"
+                }
+              ],
+              "url": "column"
             },
             {
               "extension": [

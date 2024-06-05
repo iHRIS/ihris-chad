@@ -24,6 +24,24 @@
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
+          "url": "name",
+          "valueString": "practitionerid"
+        }, {
+          "url": "fhirpath",
+          "valueString": "id"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 20
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
           "url": "display",
           "valueString": "Fullname"
         }, {
@@ -55,7 +73,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 0
+          "valueInteger": 1
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -76,7 +94,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 1
+          "valueInteger": 2
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -97,7 +115,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 2
+          "valueInteger": 3
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -121,7 +139,49 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 3
+          "valueInteger": 4
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "name",
+          "valueString": "classificationcatcategory"
+        }, {
+          "url": "function",
+          "valueString": "esfunctions.classificationcategory({practitionerid})"
+        }, {
+          "url": "parameters",
+          "valueString": "practitionerid"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 20
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "name",
+          "valueString": "classificationcatcategory"
+        }, {
+          "url": "function",
+          "valueString": "esfunctions.classificationcategory({practitionerid})"
+        }, {
+          "url": "parameters",
+          "valueString": "practitionerid"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 20
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -145,7 +205,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 4
+          "valueInteger": 5
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -163,7 +223,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 5
+          "valueInteger": 6
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -184,7 +244,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 6
+          "valueInteger": 0
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -206,24 +266,6 @@
         }, {
           "url": "order",
           "valueInteger": 7
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "name",
-          "valueString": "practitionerid"
-        }, {
-          "url": "fhirpath",
-          "valueString": "id"
-        }, {
-          "url": "filter",
-          "valueBoolean": false
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": false
-        }, {
-          "url": "order",
-          "valueInteger": 20
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

@@ -1,6 +1,6 @@
 {
   "resourceType": "Basic",
-  "id": "ihris-es-report-staff-directorate",
+  "id": "ihris-es-report-chad-staff-directorate",
   "extension": [{
       "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportDetails",
       "extension": [{
@@ -11,7 +11,7 @@
         "valueBoolean": false
       }, {
         "url": "name",
-        "valueString": "staffdirectorate"
+        "valueString": "chadstaffdirectorate"
       }, {
         "url": "locationBasedConstraint",
         "valueBoolean": true
@@ -33,7 +33,7 @@
           "url": "displayformat",
           "extension": [{
             "url": "format",
-            "valueString": "%s, %s"
+            "valueString": "%s %s"
           }, {
             "url": "order",
             "valueString": "given, family"
@@ -55,7 +55,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 0
+          "valueInteger": 1
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -76,7 +76,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 1
+          "valueInteger": 2
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -97,7 +97,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 2
+          "valueInteger": 3
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -126,6 +126,45 @@
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
+          "url": "name",
+          "valueString": "practitionerid"
+        }, {
+          "url": "fhirpath",
+          "valueString": "id"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 20
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "name",
+          "valueString": "classificationcatcategory"
+        }, {
+          "url": "function",
+          "valueString": "esfunctions.classificationcategory({practitionerid})"
+        }, {
+          "url": "parameters",
+          "valueString": "practitionerid"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 20
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
           "url": "display",
           "valueString": "Retirement Date"
         }, {
@@ -145,25 +184,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 4
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Phone Number"
-        }, {
-          "url": "name",
-          "valueString": "phone"
-        }, {
-          "url": "fhirpath",
-          "valueString": "telecom.where(system='phone').value"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
-          "valueInteger": 5
+          "valueInteger": 14
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -184,19 +205,184 @@
           "valueBoolean": false
         }, {
           "url": "order",
+          "valueInteger": 0
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "name",
+          "valueString": "practitionerid"
+        }, {
+          "url": "fhirpath",
+          "valueString": "id"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 20
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "name",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.populate({practitionerid})"
+        }, {
+          "url": "parameters",
+          "valueString": "practitionerid"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 21
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Qualification"
+        }, {
+          "url": "name",
+          "valueString": "qualification"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.qualification({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 4
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Specialty"
+        }, {
+          "url": "name",
+          "valueString": "specialty"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.specialty({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 5
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Civil Servant Category"
+        }, {
+          "url": "name",
+          "valueString": "civilcategory"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.civilservcategory({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
           "valueInteger": 6
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "National Id"
+          "valueString": "Contractual Category"
         }, {
           "url": "name",
-          "valueString": "nationalid"
+          "valueString": "contractualcategory"
         }, {
-          "url": "fhirpath",
-          "valueString": "identifier.where(type.coding.code='nni').value"
+          "url": "function",
+          "valueString": "staffdirectorate.contractualcategory({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 7
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Job Title"
+        }, {
+          "url": "name",
+          "valueString": "job"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.jobtitle({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 9
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Appointment Date"
+        }, {
+          "url": "name",
+          "valueString": "appointmentdate"
+        }, {
+          "url": "type",
+          "valueString": "date"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.appointmentdate({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
         }, {
           "url": "filter",
           "valueBoolean": true
@@ -205,7 +391,112 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 7
+          "valueInteger": 11
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Integration Date"
+        }, {
+          "url": "name",
+          "valueString": "integrationdate"
+        }, {
+          "url": "type",
+          "valueString": "date"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.integrationdate({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 10
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Service Start Date"
+        }, {
+          "url": "name",
+          "valueString": "servicestartdate"
+        }, {
+          "url": "type",
+          "valueString": "date"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.servicestartdate({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 12
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Effective Presence Date"
+        }, {
+          "url": "name",
+          "valueString": "effectivepresdate"
+        }, {
+          "url": "type",
+          "valueString": "date"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.effectivepresdate({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 13
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Place of Assignment"
+        }, {
+          "url": "name",
+          "valueString": "location"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.location({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 8
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -217,56 +508,6 @@
           "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-related-group').extension.where(url='location').valueString"
         }]
       }]
-    },
-    {
-      "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportLink",
-      "extension": [{
-          "url": "name",
-          "valueString": "role"
-        },
-        {
-          "url": "resource",
-          "valueString": "PractitionerRole"
-        },
-        {
-          "url": "linkElement",
-          "valueString": "PractitionerRole.practitioner.reference"
-        },
-        {
-          "url": "linkTo",
-          "valueString": "staffdirectorate"
-        },
-        {
-          "url": "linkElementSearchParameter",
-          "valueString": "practitioner"
-        },
-        {
-          "url": "multiple",
-          "valueBoolean": false
-        },
-        {
-          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-          "extension": [{
-            "url": "display",
-            "valueString": "Job Title"
-          }, {
-            "url": "name",
-            "valueString": "job"
-          }, {
-            "url": "fhirpath",
-            "valueString": "PractitionerRole.code.coding.display"
-          }, {
-            "url": "filter",
-            "valueBoolean": true
-          }, {
-            "url": "dropDownFilter",
-            "valueBoolean": true
-          }, {
-            "url": "order",
-            "valueInteger": 8
-          }]
-        }
-      ]
     }
   ],
   "code": {

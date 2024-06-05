@@ -81,8 +81,48 @@ Description:    "Profile of Locations to manage facilities."
 * position.latitude 1..1 MS
 * position.latitude ^label = "Latitude"
 * partOf 1..1 MS 
-* partOf only Reference(TDDistrict)
+* partOf only Reference(TDDistrict or TDRegion or TDCountry)
 * partOf ^label = "Location"
+
+Profile:        TDDepartment
+Parent:         Location
+Id:             td-department
+Title:          "Department"
+Description:    "Profile of Locations to manage department."
+* identifier 0..1 MS
+* identifier ^label = "Identifier"
+* identifier.value MS
+* identifier.value ^label = "Department Code"
+* name 1..1 MS
+* name ^label = "Name"
+* status 1..1 MS
+* status ^label = "Status"
+* partOf 1..1 MS 
+* partOf only Reference(TDFacility)
+* partOf ^label = "Location"
+
+Instance:       ihris-page-td-department
+InstanceOf:     IhrisPage
+Title:          "District Page"
+Usage:          #example
+* code = IhrisResourceCodeSystem#page
+* extension[display].extension[resource].valueReference = Reference(StructureDefinition/td-department)
+* extension[display].extension[search][0].valueString = "Name|name"
+* extension[display].extension[filter][0].valueString = "Name|name:contains"
+* extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/td-department/FIELD?edit=true"
+* extension[display].extension[link][0].extension[field].valueString = "Location.id"
+* extension[display].extension[link][0].extension[text].valueString = "Edit"
+* extension[display].extension[link][0].extension[button].valueBoolean = true
+* extension[display].extension[link][0].extension[icon].valueString = "mdi-pencil"
+* extension[display].extension[link][0].extension[class].valueString = "primary"
+* extension[section][0].extension[title].valueString = "Department"
+* extension[section][0].extension[description].valueString = "Department"
+* extension[section][0].extension[name].valueString = "Department"
+* extension[section][0].extension[field][0].valueString = "Location.name"
+* extension[section][0].extension[field][1].valueString = "Location.type"
+* extension[section][0].extension[field][2].valueString = "Location.identifier"
+* extension[section][0].extension[field][3].valueString = "Location.partOf"
+* extension[section][0].extension[field][4].valueString = "Location.status"
 
 
 Instance:       ihris-page-td-facility

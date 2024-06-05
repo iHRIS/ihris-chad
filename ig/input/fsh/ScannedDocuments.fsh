@@ -6,8 +6,12 @@ Description:    "Scanned Document Information Profile."
 * extension[practitioner].valueReference 1..1 MS
 * extension[practitioner].valueReference ^label = "Health Practitioner"
 * extension contains
+    IhrisBasicName named name 1..1 MS and
     UploadDate named upload-date 1..1 MS and
     ScannedDocument named scanned-document 1..1 MS
+* extension[name]  1..1 MS
+* extension[name]  ^label = "Name"
+* extension[name].valueString MS
 * extension[upload-date]  1..1 MS
 * extension[upload-date]  ^label = "Date Uploaded"
 * extension[upload-date].valueDate MS
@@ -50,18 +54,25 @@ Usage:          #definition
 * item[0].type = #group
 
 * item[0].item[0].linkId = "Basic.extension[0]"
-* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:upload-date.value[x]:valueDate"
-* item[0].item[0].text = "Date Uploaded"
-* item[0].item[0].type = #date
+* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:name.value[x]:valueString"
+* item[0].item[0].text = "Attachment Name"
+* item[0].item[0].type = #string
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 
 * item[0].item[1].linkId = "Basic.extension[1]"
-* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:scanned-document.value[x]:valueAttachment"
-* item[0].item[1].text = "Document"
-* item[0].item[1].type = #attachment
+* item[0].item[1].definition = "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:upload-date.value[x]:valueDate"
+* item[0].item[1].text = "Date Uploaded"
+* item[0].item[1].type = #date
 * item[0].item[1].required = true
 * item[0].item[1].repeats = false
+
+* item[0].item[2].linkId = "Basic.extension[2]"
+* item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:scanned-document.value[x]:valueAttachment"
+* item[0].item[2].text = "Document"
+* item[0].item[2].type = #attachment
+* item[0].item[2].required = true
+* item[0].item[2].repeats = false
 
 Instance:       ihris-page-scanned-document
 InstanceOf:     IhrisPage
@@ -81,5 +92,6 @@ Usage:          #example
 * extension[section][0].extension[description].valueString = "Scanned Document Information"
 * extension[section][0].extension[name].valueString = "scanneddocumentinformation"
 * extension[section][0].extension[field][0].valueString = "Basic.extension:practitioner"
-* extension[section][0].extension[field][1].valueString = "Basic.extension:upload-date"
-* extension[section][0].extension[field][2].valueString = "Basic.extension:scanned-document"
+* extension[section][0].extension[field][1].valueString = "Basic.extension:name"
+* extension[section][0].extension[field][2].valueString = "Basic.extension:upload-date"
+* extension[section][0].extension[field][3].valueString = "Basic.extension:scanned-document"

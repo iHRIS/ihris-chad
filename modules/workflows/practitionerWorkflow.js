@@ -2,11 +2,27 @@ const winston = require('winston')
 const ihrissmartrequire = require("ihrissmartrequire")
 const fhirQuestionnaire = ihrissmartrequire('modules/fhir/fhirQuestionnaire')
 const moment = require("moment")
+const fhirAxios = require("../../../modules/fhir/fhirAxios")
 
 const practitionerWorkflow = {
   process: ( req ) => {
     return new Promise( (resolve, reject) => {
       fhirQuestionnaire.processQuestionnaire( req.body ).then(async(bundle) => {
+        let regnum = bundle.entry[0].resource.extension.find((ext) => {
+          return ext.url === "http://ihris.org/fhir/StructureDefinition/registration-number"
+        }).valueString
+        let params = {
+          regnum
+        }
+        if(req.query.editing) {
+          let editingResources = JSON.parse(req.query.editingResources)
+          params["_id:not"] = editingResources[0].id
+        }
+        await fhirAxios.search("Practitioner", params).then((response) => {
+          if(response && response.entry && response.entry.length) {
+            return reject({message: "Another health worker has this registration number"})
+          }
+        })
         let invalidIssueDate = false
         for(let identifier of bundle.entry[0].resource.identifier) {
           let issueDate = identifier.extension.find((ext) => {

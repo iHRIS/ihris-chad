@@ -4421,7 +4421,8 @@
             "targetProfile": [
               "http://ihris.org/fhir/StructureDefinition/td-region",
               "http://ihris.org/fhir/StructureDefinition/td-district",
-              "http://ihris.org/fhir/StructureDefinition/td-facility"
+              "http://ihris.org/fhir/StructureDefinition/td-facility",
+              "http://ihris.org/fhir/StructureDefinition/td-department"
             ]
           }
         ],
@@ -5482,7 +5483,8 @@
             "targetProfile": [
               "http://ihris.org/fhir/StructureDefinition/td-region",
               "http://ihris.org/fhir/StructureDefinition/td-district",
-              "http://ihris.org/fhir/StructureDefinition/td-facility"
+              "http://ihris.org/fhir/StructureDefinition/td-facility",
+              "http://ihris.org/fhir/StructureDefinition/td-department"
             ]
           }
         ],

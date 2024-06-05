@@ -2,6 +2,38 @@ const ihrissmartrequire = require('ihrissmartrequire')
 const fhirAxios = ihrissmartrequire("modules/fhir/fhirAxios");
 const fhirpath = require('fhirpath')
 
+const getFirstRole = (practitioner, excludeRole) => {
+  return new Promise((resolve, reject) => {
+    let params = {
+      practitioner,
+      _count: 200,
+      _sort: "_id"
+    }
+    if(excludeRole) {
+      params["_id:not"] = excludeRole
+    }
+    let role
+    fhirAxios.search("PractitionerRole", params).then((response) => {
+      if(response && response.entry && response.entry.length) {
+        for(let entry of response.entry) {
+          if(!role && entry.resource.period && entry.resource.period.start) {
+            role = entry
+          } else if(entry.resource.period && entry.resource.period.start && moment(entry.resource.period.start).isBefore(role.resource.period.start)) {
+            role = entry
+          }
+        }
+      }
+      if(role) {
+        return resolve(role.resource)
+      } else {
+        return resolve()
+      }
+    }).catch((err) => {
+      console.log(err);
+      return reject()
+    })
+  })
+}
 
 const getLatestResourceById = ({resource, params, ignorefhirpath, total = 1}) => {
   return new Promise((resolve, reject) => {
@@ -70,5 +102,6 @@ const getLatestResourceById = ({resource, params, ignorefhirpath, total = 1}) =>
 }
 
 module.exports = {
-  getLatestResourceById
+  getLatestResourceById,
+  getFirstRole
 }

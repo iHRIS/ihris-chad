@@ -263,7 +263,7 @@ Usage:          #definition
 * item[0].item[7].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-echelon.value[x]:valueString"
 * item[0].item[7].text = "Reference Echelon"
 * item[0].item[7].type = #string
-* item[0].item[7].required = true
+* item[0].item[7].required = false
 * item[0].item[7].repeats = false
 
 * item[0].item[8].linkId = "Basic.extension[8]"
@@ -284,14 +284,14 @@ Usage:          #definition
 * item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-date.value[x]:valueDate"
 * item[0].item[10].text = "Date of Tenure"
 * item[0].item[10].type = #date
-* item[0].item[10].required = true
+* item[0].item[10].required = false
 * item[0].item[10].repeats = false
 
 * item[0].item[11].linkId = "Basic.extension[11]"
 * item[0].item[11].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:tenure-reference.value[x]:valueString"
 * item[0].item[11].text = "Reference of the Tenure"
 * item[0].item[11].type = #string
-* item[0].item[11].required = true
+* item[0].item[11].required = false
 * item[0].item[11].repeats = false
 
 Instance:       ihris-page-classification

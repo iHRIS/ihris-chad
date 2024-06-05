@@ -161,10 +161,10 @@ Usage:          #definition
 * item[1].item[0].item[3].required = false
 * item[1].item[0].item[3].repeats = false
 
-* item[1].item[0].item[4].linkId = "Practitioner.address[0].district"
-* item[1].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.district"
+* item[1].item[0].item[4].linkId = "Practitioner.address[0].extension[0]#tree"
+* item[1].item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.address.extension:district.value[x]:valueReference"
 * item[1].item[0].item[4].text = "District"
-* item[1].item[0].item[4].type = #string
+* item[1].item[0].item[4].type = #reference
 * item[1].item[0].item[4].required = false
 * item[1].item[0].item[4].repeats = false
 
@@ -189,59 +189,38 @@ Usage:          #definition
 * item[1].item[0].item[7].required = false
 * item[1].item[0].item[7].repeats = false
 
-* item[1].item[1].linkId = "Practitioner.telecom[0].use"
-* item[1].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.use"
-* item[1].item[1].text = "Telecom Use"
-* item[1].item[1].type = #choice
+* item[1].item[1].linkId = "Practitioner.telecom[0]"
+* item[1].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom"
+* item[1].item[1].text = "Telecom"
+* item[1].item[1].type = #group
+* item[1].item[1].repeats = true
 * item[1].item[1].required = true
-* item[1].item[1].repeats = false
-* item[1].item[1].readOnly = true
-* item[1].item[1].answerOption.valueCoding = http://hl7.org/fhir/contact-point-use#mobile
-* item[1].item[1].answerOption.initialSelected = true
 
-* item[1].item[2].linkId = "Practitioner.telecom[0].system"
-* item[1].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.system"
-* item[1].item[2].text = "Telecom System"
-* item[1].item[2].type = #choice
-* item[1].item[2].required = true
-* item[1].item[2].repeats = false
-* item[1].item[2].readOnly = true
-* item[1].item[2].answerOption.valueCoding = http://ihris.org/fhir/ValueSet/contact-type-codesystem#phone
-* item[1].item[2].answerOption.initialSelected = true
+* item[1].item[1].item[0].linkId = "Practitioner.telecom[0].use"
+* item[1].item[1].item[0].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.use"
+* item[1].item[1].item[0].text = "Telecom Use"
+* item[1].item[1].item[0].type = #choice
+* item[1].item[1].item[0].answerValueSet = "http://hl7.org/fhir/contact-point-use"
+* item[1].item[1].item[0].required = true
+* item[1].item[1].item[0].repeats = false
+* item[1].item[1].item[0].readOnly = true
+* item[1].item[1].item[0].answerOption.valueCoding = http://hl7.org/fhir/contact-point-use#mobile
+* item[1].item[1].item[0].answerOption.initialSelected = true
 
-* item[1].item[3].linkId = "Practitioner.telecom[0].value"
-* item[1].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.value"
-* item[1].item[3].text = "Mobile Phone"
-* item[1].item[3].type = #string
-* item[1].item[3].required = true
-* item[1].item[3].repeats = false
+* item[1].item[1].item[1].linkId = "Practitioner.telecom[0].system"
+* item[1].item[1].item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.system"
+* item[1].item[1].item[1].text = "Telecom Type"
+* item[1].item[1].item[1].type = #choice
+* item[1].item[1].item[1].answerValueSet = "http://ihris.org/fhir/ValueSet/contact-type-valueset"
+* item[1].item[1].item[1].required = true
+* item[1].item[1].item[1].repeats = false
 
-* item[1].item[4].linkId = "Practitioner.telecom[1].use"
-* item[1].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.use"
-* item[1].item[4].text = "Telecom Use"
-* item[1].item[4].type = #choice
-* item[1].item[4].required = true
-* item[1].item[4].repeats = false
-* item[1].item[4].readOnly = true
-* item[1].item[4].answerOption.valueCoding = http://hl7.org/fhir/contact-point-use#work
-* item[1].item[4].answerOption.initialSelected = true
-
-* item[1].item[5].linkId = "Practitioner.telecom[1].system"
-* item[1].item[5].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.system"
-* item[1].item[5].text = "Telecom System"
-* item[1].item[5].type = #choice
-* item[1].item[5].required = true
-* item[1].item[5].repeats = false
-* item[1].item[5].readOnly = true
-* item[1].item[5].answerOption.valueCoding = http://hl7.org/fhir/contact-point-system#email
-* item[1].item[5].answerOption.initialSelected = true
-
-* item[1].item[6].linkId = "Practitioner.telecom[1].value"
-* item[1].item[6].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.value"
-* item[1].item[6].text = "Work Email"
-* item[1].item[6].type = #string
-* item[1].item[6].required = false
-* item[1].item[6].repeats = false
+* item[1].item[1].item[2].linkId = "Practitioner.telecom[0].value"
+* item[1].item[1].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.telecom.value"
+* item[1].item[1].item[2].text = "Value"
+* item[1].item[1].item[2].type = #string
+* item[1].item[1].item[2].required = true
+* item[1].item[1].item[2].repeats = false
 
 * item[2].linkId = "Practitioner.identifier"
 * item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.identifier"

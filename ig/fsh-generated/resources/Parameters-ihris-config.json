@@ -144,7 +144,7 @@
         },
         {
           "name": "site:nav:menu:dashboard:url",
-          "valueString": "/ihrisapp/ihris-dashboard/index.html#/dashBuilder"
+          "valueString": "/ihrisapp/ihris-data-visualizer/index.html#/dashBuilder/7136"
         },
         {
           "name": "site:nav:menu:dashboard:external",
@@ -895,6 +895,18 @@
           "valueString": "1"
         },
         {
+          "name": "site:nav:menu:database:menu:facility-data:menu:department:text",
+          "valueString": "Department"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:department:url",
+          "valueString": "/resource/search/td-department"
+        },
+        {
+          "name": "site:nav:menu:database:menu:facility-data:menu:department:order",
+          "valueString": "1"
+        },
+        {
           "name": "site:nav:menu:reports:text",
           "valueString": "Reports"
         },
@@ -924,7 +936,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:staff-directorate:url",
-          "valueString": "/report/ihris-es-report-staff-directorate"
+          "valueString": "/report/ihris-es-report-chad-staff-directorate"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:staff-directorate:order",
@@ -1351,6 +1363,14 @@
           "valueString": "http://ihris.org/fhir/Questionnaire/scanned-document"
         },
         {
+          "name": "workflow:processor:notes:file",
+          "valueString": "defaultWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:notes:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/notes"
+        },
+        {
           "name": "defaults:components:date-time:minValueDateTime",
           "valueString": "1920-01-01"
         },
@@ -1459,8 +1479,32 @@
           "valueString": "Location/countrytd"
         },
         {
+          "name": "defaults:page:td-department:fields:Location.partOf:initialValue",
+          "valueString": "Location/countrytd"
+        },
+        {
           "name": "defaults:page:employment-history:fields:Basic.extension:employmentHistory.extension:location.value[x]:valueReference:initialValue",
           "valueString": "Location/countrytd"
+        },
+        {
+          "name": "defaults:components:attachment:maxValueAttachment",
+          "valueString": "512KB"
+        },
+        {
+          "name": "defaults:components:date:date-format",
+          "valueString": "DD-MM-YYYY"
+        },
+        {
+          "name": "defaults:components:date-time:date-format",
+          "valueString": "DD-MM-YYYY"
+        },
+        {
+          "name": "defaults:components:ihris-search:date-format",
+          "valueString": "DD-MM-YYYY"
+        },
+        {
+          "name": "defaults:components:ihris-secondary:date-format",
+          "valueString": "DD-MM-YYYY"
         }
       ]
     }

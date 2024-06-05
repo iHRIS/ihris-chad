@@ -49,15 +49,15 @@
           "linkId": "PractitionerRole.period.start",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.start",
           "text": "Service Start Date",
-          "type": "dateTime",
-          "required": true,
+          "type": "date",
+          "required": false,
           "repeats": false
         },
         {
           "linkId": "PractitionerRole.period.end",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.end",
           "text": "Service End Date",
-          "type": "dateTime",
+          "type": "date",
           "required": false,
           "repeats": false
         },

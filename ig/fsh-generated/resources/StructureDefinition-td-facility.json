@@ -1858,7 +1858,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/td-district"
+              "http://ihris.org/fhir/StructureDefinition/td-district",
+              "http://ihris.org/fhir/StructureDefinition/td-region",
+              "http://ihris.org/fhir/StructureDefinition/td-country"
             ],
             "extension": [
               {
@@ -2370,7 +2372,9 @@
           {
             "code": "Reference",
             "targetProfile": [
-              "http://ihris.org/fhir/StructureDefinition/td-district"
+              "http://ihris.org/fhir/StructureDefinition/td-district",
+              "http://ihris.org/fhir/StructureDefinition/td-region",
+              "http://ihris.org/fhir/StructureDefinition/td-country"
             ],
             "extension": [
               {

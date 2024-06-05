@@ -88,6 +88,10 @@
         },
         {
           "url": "field",
+          "valueString": "Basic.extension:name"
+        },
+        {
+          "url": "field",
           "valueString": "Basic.extension:upload-date"
         },
         {

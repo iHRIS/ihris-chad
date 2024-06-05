@@ -93,6 +93,9 @@ Description:    "iHRIS Profile of the Basic resource for Inservice Training."
 * extension[inservice-training].extension[observation] ^label = "Observation"
 * extension[inservice-training].extension[observation].valueString 1..1 MS
 * extension[inservice-training].extension[observation].valueString ^label = "Observation"
+* extension[inservice-training].extension[completed] 1..1 MS
+* extension[inservice-training].extension[completed] ^label = "Training Completed"
+* extension[inservice-training].extension[completed].valueCoding MS
 
 Profile:        InserviceTrainingRequestProfile
 Parent:         IhrisPractitionerBasic
@@ -108,7 +111,7 @@ Description:    "Inservice Training Request Information Profile."
     ServiceEndDate named service-end-date 0..1 MS and
     EndServiceReference named end-service-reference 0..1 MS and
     ServiceResumptionDate named service-resumption-date 1..1 MS and
-    ServiceResumptionReference named service-resumption-reference 1..1
+    ServiceResumptionReference named service-resumption-reference 1..1 MS
 * extension[authorization-letter]  1..1 MS
 * extension[authorization-letter]  ^label = "Authorization Letter"
 * extension[authorization-letter].valueAttachment MS
@@ -196,7 +199,8 @@ Title:          "Inservice Training details"
       training-mode 0..1 MS and
       training-fund 1..1 MS and
       training-fund-other 1..1 MS and
-      observation 0..1 MS
+      observation 0..1 MS and
+      completed 1..1 MS
 * extension[sector].value[x] only string
 * extension[sector].valueString ^label = "Sector"
 * extension[sector].valueString from EducationSectorValueSet (required)
@@ -229,6 +233,9 @@ Title:          "Inservice Training details"
 * extension[training-fund-other].valueString ^label = "Other Training Fund"
 * extension[observation].value[x] only string
 * extension[observation].valueString ^label = "Observation"
+* extension[completed].value[x] only Coding
+* extension[completed].valueCoding ^label = "Training Completed"
+* extension[completed].valueCoding from http://ihris.org/fhir/ValueSet/yes-no-valueset (required)
 
 Extension:      InserviceTrainingRequestReference
 Id:             inservice-training-request-reference
@@ -557,6 +564,14 @@ Usage:          #definition
 * item[0].item[0].item[12].type = #string
 * item[0].item[0].item[12].required = false
 * item[0].item[0].item[12].repeats = false
+
+* item[0].item[0].item[13].linkId = "Basic.extension[0].extension[13]"
+* item[0].item[0].item[13].definition = "http://ihris.org/fhir/StructureDefinition/inservice-training-profile#Basic.extension:inservice-training.extension:completed.value[x]:valueCoding"
+* item[0].item[0].item[13].text = "Training Completed"
+* item[0].item[0].item[13].type = #choice
+* item[0].item[0].item[13].answerValueSet = "http://ihris.org/fhir/ValueSet/yes-no-valueset"
+* item[0].item[0].item[13].required = true
+* item[0].item[0].item[13].repeats = false
 
 Instance:       InserviceTrainingRequest
 InstanceOf:      Questionnaire

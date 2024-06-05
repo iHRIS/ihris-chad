@@ -22,6 +22,14 @@
       "item": [
         {
           "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:name.value[x]:valueString",
+          "text": "Attachment Name",
+          "type": "string",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]",
           "definition": "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:upload-date.value[x]:valueDate",
           "text": "Date Uploaded",
           "type": "date",
@@ -29,7 +37,7 @@
           "repeats": false
         },
         {
-          "linkId": "Basic.extension[1]",
+          "linkId": "Basic.extension[2]",
           "definition": "http://ihris.org/fhir/StructureDefinition/scanned-document-profile#Basic.extension:scanned-document.value[x]:valueAttachment",
           "text": "Document",
           "type": "attachment",

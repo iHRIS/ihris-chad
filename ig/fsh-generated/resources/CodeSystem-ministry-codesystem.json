@@ -133,19 +133,11 @@
       "display": "Ministère de l'Eau et de l'Assainissement"
     },
     {
-      "code": "ministry32",
-      "display": "Ministère de l'Eau et de l'Assainissement"
-    },
-    {
       "code": "ministry33",
       "display": "Ministère de l'Economie et de la Planification du Développement"
     },
     {
       "code": "ministry34",
-      "display": "Ministère de l'Education Nationale et de la Promotion Civique"
-    },
-    {
-      "code": "ministry35",
       "display": "Ministère de l'Education Nationale et de la Promotion Civique"
     },
     {
@@ -230,5 +222,5 @@
     }
   ],
   "date": "2024-02-07T08:12:00.000Z",
-  "count": 55
+  "count": 53
 }

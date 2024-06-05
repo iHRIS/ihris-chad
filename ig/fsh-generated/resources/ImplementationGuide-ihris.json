@@ -308,6 +308,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/td-department"
+        },
+        "name": "Department",
+        "description": "Profile of Locations to manage department.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/td-district"
         },
         "name": "District",
@@ -344,6 +352,14 @@
         },
         "name": "Validation Information",
         "description": "Validation Information Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/address-district"
+        },
+        "name": "District Address",
+        "description": "District Address.",
         "exampleBoolean": false
       },
       {
@@ -2744,6 +2760,13 @@
       {
         "reference": {
           "reference": "Basic/ihris-page-td-country"
+        },
+        "name": "District Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-td-department"
         },
         "name": "District Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"

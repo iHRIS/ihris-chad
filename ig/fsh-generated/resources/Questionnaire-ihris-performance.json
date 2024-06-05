@@ -47,51 +47,47 @@
             },
             {
               "linkId": "Basic.extension[0].extension[3]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:general-knowledge.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:general-knowledge.value[x]:valueCoding",
               "text": "Criteria 1: General Knowledge /5",
-              "type": "integer",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/performance-score-valueset",
               "required": true,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[4]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:professional-culture.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:professional-culture.value[x]:valueCoding",
               "text": "Criteria 2: Professional Culture /5",
-              "type": "integer",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/performance-score-valueset",
               "required": true,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[5]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:effectiveness.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:effectiveness.value[x]:valueCoding",
               "text": "Criteria 3: Effectiveness in carrying out duties/5",
-              "type": "integer",
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/performance-score-valueset",
               "required": true,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[6]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:aptitude.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:aptitude.value[x]:valueCoding",
               "text": "Criteria 4: Aptitude for command functions /5",
-              "type": "integer",
-              "required": true,
+              "type": "choice",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/performance-score-valueset",
+              "required": false,
               "repeats": false
             },
             {
               "linkId": "Basic.extension[0].extension[7]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:manner.value[x]:valueInteger",
+              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:manner.value[x]:valueCoding",
               "text": "Criteria 4: Manner of carrying out its functions /5",
-              "type": "integer",
-              "required": true,
-              "repeats": false
-            },
-            {
-              "linkId": "Basic.extension[0].extension[8]",
-              "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-performance#Basic.extension:performance.extension:score.value[x]:valueCoding",
-              "text": "Score Attained",
               "type": "choice",
               "answerValueSet": "http://ihris.org/fhir/ValueSet/performance-score-valueset",
-              "required": true,
+              "required": false,
               "repeats": false
             }
           ]

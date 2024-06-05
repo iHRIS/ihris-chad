@@ -1,6 +1,7 @@
 const winston = require('winston')
 const ihrissmartrequire = require("ihrissmartrequire")
 const fhirQuestionnaire = ihrissmartrequire('modules/fhir/fhirQuestionnaire')
+const fhirAxios = require("../../../modules/fhir/fhirAxios")
 
 const defaultWorkflow = {
   process: ( req ) => {
@@ -8,7 +9,30 @@ const defaultWorkflow = {
       if(!req.query.practitioner) {
         return reject({message: "Demande invalide, aucun Agent trouvé"})
       }
-      fhirQuestionnaire.processQuestionnaire(req.body).then((bundle) => {
+      fhirQuestionnaire.processQuestionnaire(req.body).then(async(bundle) => {
+        await fhirAxios.read("Practitioner", req.query.practitioner).then((practitioner) => {
+          let counterindex = practitioner.extension.findIndex((ext) => {
+            return ext.url === "http://ihris.org/fhir/StructureDefinition/counter"
+          })
+          let counter = 1
+          if(counterindex === -1) {
+            counterindex = practitioner.extension.length
+          } else {
+            counter = practitioner.extension[counterindex].valueInteger
+            counter = parseInt(counter) + 1
+          }
+          practitioner.extension[counterindex] = {
+            url: "http://ihris.org/fhir/StructureDefinition/counter",
+            valueInteger: counter
+          }
+          bundle.entry.push({
+            resource: practitioner,
+            request: {
+              method: "PUT",
+              url: "Practitioner/" + practitioner.id
+            }
+          })
+        })
         bundle.entry[0].resource.extension.push({
           url: 'http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference',
           valueReference: {

@@ -47,7 +47,7 @@ Description:    "iHRIS profile of Practitioner Role."
 * specialty.coding ^label = "Specialty"
 * location 1..1 MS 
 * location ^label = "Facility"
-* location only Reference(TDRegion or TDDistrict or TDFacility)
+* location only Reference(TDRegion or TDDistrict or TDFacility or TDDepartment)
 * extension contains
     IhrisPractitionerRolePositionStatus named positionStatus 1..1 MS and
     AppointmentDate named appointment-date 1..1 MS and
@@ -477,14 +477,14 @@ Usage:          #definition
 * item[0].item[3].linkId = "PractitionerRole.period.start"
 * item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.start"
 * item[0].item[3].text = "Service Start Date"
-* item[0].item[3].type = #dateTime
-* item[0].item[3].required = true
+* item[0].item[3].type = #date
+* item[0].item[3].required = false
 * item[0].item[3].repeats = false
 
 * item[0].item[4].linkId = "PractitionerRole.period.end"
 * item[0].item[4].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner-role#PractitionerRole.period.end"
 * item[0].item[4].text = "Service End Date"
-* item[0].item[4].type = #dateTime
+* item[0].item[4].type = #date
 * item[0].item[4].required = false
 * item[0].item[4].repeats = false
 

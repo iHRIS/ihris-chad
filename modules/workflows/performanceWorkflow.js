@@ -2,6 +2,7 @@ const winston = require('winston')
 const ihrissmartrequire = require("ihrissmartrequire")
 const fhirQuestionnaire = ihrissmartrequire('modules/fhir/fhirQuestionnaire')
 const moment = require("moment")
+const utils = require("../utils")
 
 const performanceWorkflow = {
   process: ( req ) => {
@@ -43,20 +44,71 @@ const performanceWorkflow = {
         let manner  = performance.extension.find((ext) => {
           return ext.url === "manner"
         })
-        if(generalKnowledge && generalKnowledge.valueInteger && (generalKnowledge.valueInteger < 0 || generalKnowledge.valueInteger > 5)) {
-          return reject({message: "Les connaissances générales doivent être comprises entre 0 et 5"})
+        let params = {
+          _profile: "http://ihris.org/fhir/StructureDefinition/situation-profile",
+          practitioner: 'Practitioner/' + req.query.practitioner
         }
-        if(professionalCulture && professionalCulture.valueInteger && (professionalCulture.valueInteger < 0 || professionalCulture.valueInteger > 5)) {
-          return reject({message: "La culture professionnelle doit être comprise entre 0 et 5"})
+        let situationstatus
+        await utils.getLatestResourceById({resource: "Basic", params, total: 1}).then((response) => {
+          if(!response.entry.length) {
+            return reject({message: "Add situation before adding performance"})
+          }
+          situationstatus = response.entry[0].resource.extension.find((ext) => {
+            return ext.url === "http://ihris.org/fhir/StructureDefinition/agent-status"
+          }).valueCoding.code
+        })
+        function isContractual() {
+          if(situationstatus === 'contractual' || situationstatus === 'costreccontr' || situationstatus === 'contractualpartners') {
+            return true
+          }
+          return false
         }
-        if(effectiveness && effectiveness.valueInteger && (effectiveness.valueInteger < 0 || effectiveness.valueInteger > 5)) {
-          return reject({message: "L'efficacité dans l'exercice des fonctions doit être comprise entre 0 et 5"})
+        function isCivilServant() {
+          if(situationstatus === 'regularcivilservant' || situationstatus === 'traineecivilservant') {
+            return true
+          }
+          return false
         }
-        if(aptitude && aptitude.valueInteger && (aptitude.valueInteger < 0 || aptitude.valueInteger > 5)) {
-          return reject({message: "L'aptitude aux fonctions de commandement doit être comprise entre 0 et 5"})
+        if(isContractual() && aptitude?.valueCoding) {
+          return reject({message: "Contract staffs dont have criteria aptitude for command functions"})
         }
-        if(manner && manner.valueInteger && (manner.valueInteger < 0 || manner.valueInteger > 5)) {
-          return reject({message: "La manière d'exercer ses fonctions doit être comprise entre 0 et 5"})
+        if(isContractual() && (!manner || !manner?.valueCoding)) {
+          return reject({message: "Contract staffs must have criteria manner of carrying out its function"})
+        }
+        if(isCivilServant() && (!aptitude || !aptitude?.valueCoding)) {
+          return reject({message: "Civil servant staffs must have criteria aptitude for command functions"})
+        }
+        if(isCivilServant() && manner?.valueCoding) {
+          return reject({message: "Civil servant staffs dont have criteria manner of carrying out its function"})
+        }
+        let score = 0
+        if(generalKnowledge && generalKnowledge.valueCoding?.code) {
+          score += parseInt(generalKnowledge.valueCoding?.code)
+        }
+        if(professionalCulture && professionalCulture.valueCoding?.code) {
+          score += parseInt(professionalCulture.valueCoding?.code)
+        }
+        if(effectiveness && effectiveness.valueCoding?.code) {
+          score += parseInt(effectiveness.valueCoding?.code)
+        }
+        if(aptitude && aptitude.valueCoding?.code) {
+          score += parseInt(aptitude.valueCoding?.code)
+        }
+        if(manner && manner.valueCoding?.code) {
+          score += parseInt(manner.valueCoding?.code)
+        }
+        if(score > 20) {
+          return reject({message: "Score must not exceed 20"})
+        }
+        let scoreindex = performance.extension.findIndex((ext) => {
+          return ext.url === "score"
+        })
+        if(scoreindex === -1) {
+          scoreindex = performance.extension.length
+        }
+        performance.extension[scoreindex] = {
+          url: "score",
+          valueInteger: score
         }
         return resolve(bundle)
       })

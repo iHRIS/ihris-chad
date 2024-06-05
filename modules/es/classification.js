@@ -19,12 +19,21 @@ const classification = {
           let classificationcategory = response.entry[0].resource.extension.find((ext) => {
             return ext.url === 'http://ihris.org/fhir/StructureDefinition/classification-category'
           })?.valueCoding?.display
+          let classificationcategorycode = response.entry[0].resource.extension.find((ext) => {
+            return ext.url === 'http://ihris.org/fhir/StructureDefinition/classification-category'
+          })?.valueCoding?.code
           let civilservcategory = response.entry[0].resource.extension.find((ext) => {
             return ext.url === 'http://ihris.org/fhir/StructureDefinition/civil-servant-category'
           })?.valueCoding?.display
+          let civilservcategorycode = response.entry[0].resource.extension.find((ext) => {
+            return ext.url === 'http://ihris.org/fhir/StructureDefinition/civil-servant-category'
+          })?.valueCoding?.code
           let contractualcategory = response.entry[0].resource.extension.find((ext) => {
             return ext.url === 'http://ihris.org/fhir/StructureDefinition/contractual-category'
           })?.valueCoding?.display
+          let contractualcategorycode = response.entry[0].resource.extension.find((ext) => {
+            return ext.url === 'http://ihris.org/fhir/StructureDefinition/contractual-category'
+          })?.valueCoding?.code
           let classificationclass = response.entry[0].resource.extension.find((ext) => {
             return ext.url === 'http://ihris.org/fhir/StructureDefinition/classification-class'
           })?.valueCoding?.display
@@ -67,7 +76,13 @@ const classification = {
           if(!tenuredate) {
             tenuredate = ""
           }
-          let value = grade +"-^-"+ classificationcategory +"-^-"+ civilservcategory +"-^-" + contractualcategory +"-^-" + classificationclass +"-^-" + echelon +"-^-" + lastadminsituation +"-^-" + integrationdate +"-^-" + tenuredate
+          let classificationcatcategory = classificationcategorycode
+          if(civilservcategorycode) {
+            classificationcatcategory += ":" + civilservcategorycode
+          } else if(contractualcategorycode) {
+            classificationcatcategory += ":" + contractualcategorycode
+          }
+          let value = grade +"-^-"+ classificationcategory +"-^-"+ civilservcategory +"-^-" + contractualcategory +"-^-" + classificationclass +"-^-" + echelon +"-^-" + lastadminsituation +"-^-" + integrationdate +"-^-" + tenuredate +"-^-" + classificationcatcategory
           resolve(value)
         } else {
           return resolve()
@@ -112,6 +127,15 @@ const classification = {
       }
       let classification = fields.classificationdata.split("-^-")
       resolve(classification[3])
+    })
+  },
+  classificationcatcategory: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.classificationdata) {
+        resolve()
+      }
+      let classification = fields.classificationdata.split("-^-")
+      resolve(classification[9])
     })
   },
   classificationclass: (fields) => {

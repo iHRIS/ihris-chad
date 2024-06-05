@@ -77,7 +77,7 @@
               "definition": "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:country.value[x]:valueCoding",
               "text": "Country",
               "type": "choice",
-              "answerValueSet": "http://hl7.org/fhir/ValueSet/iso3166-1-2",
+              "answerValueSet": "http://ihris.org/fhir/ValueSet/country-valueset",
               "required": true,
               "repeats": false
             },

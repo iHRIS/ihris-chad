@@ -127,7 +127,7 @@ Usage:          #definition
 * item[0].item[0].item[3].definition = "http://ihris.org/fhir/StructureDefinition/ihris-basic-employment-history#Basic.extension:employmentHistory.extension:country.value[x]:valueCoding"
 * item[0].item[0].item[3].text = "Country"
 * item[0].item[0].item[3].type = #choice
-* item[0].item[0].item[3].answerValueSet = "http://hl7.org/fhir/ValueSet/iso3166-1-2"
+* item[0].item[0].item[3].answerValueSet = "http://ihris.org/fhir/ValueSet/country-valueset"
 * item[0].item[0].item[3].required = true
 * item[0].item[0].item[3].repeats = false
 

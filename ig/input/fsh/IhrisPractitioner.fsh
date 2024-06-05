@@ -86,6 +86,11 @@ Description:    "iHRIS profile of Practitioner."
 * address.postalCode ^label = "Postal Code"
 * address.country MS
 * address.country ^label = "Country"
+* address.extension contains
+    AddressDistrict named district 0..1 MS
+* address.extension[district] MS
+* address.extension[district] ^label = "District"
+* address.extension[district].valueReference MS
 * gender 1..1 MS
 * gender ^label = "Gender"
 * birthDate MS
@@ -127,6 +132,16 @@ Description:    "iHRIS profile of Practitioner."
 * extension[registrationNumber].valueString ^label = "Registration Number"
 * active 1..1 MS
 * active ^label = "Active"
+
+Extension:      AddressDistrict
+Id:             address-district
+Title:          "District Address"
+Description:    "District Address."
+* ^context[0].type = #element
+* ^context[0].expression = "Basic"
+* value[x] only Reference 
+* valueReference only Reference(TDDistrict)
+* valueReference ^label = "District"
 
 Extension:      RegistrationNumber
 Id:             registration-number
