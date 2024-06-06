@@ -16,11 +16,11 @@
             "code": "1.2.840.10065.1.12.1.14"
           }
         ],
-        "when": "2024-06-05T15:31:27.121Z",
+        "when": "2024-06-06T03:46:59.000Z",
         "who": {
           "reference": "http://ihris.org/fhir/Organization/ihris"
         },
-        "data": "yCl2L5nku/uLZSdWiq9Ll9hXOc7Ajd4W97boA+ivunj5wlnNmTiawYC2fpYOj/vNZTxI+FLrBJ5COX0F5mRP/gnrjI5LNi6SbCnBR1yasmkOoXo23WbmXVxZmKN7HDD/jOHv25lj3KSlil7VypGpV1PBNeXFrburv5MgXn8+fQc="
+        "data": "e99XYdQd/GTg7mel/Zfow8j9OURoSu7sSisoILusFsifX/lejCSzPOuYYEAmre0YzZH56Sx3beHu+YGtkjLtLe6lIWwvQ1xTUR7CoU4qAFDoiUmHTPHKJVV8I4QFCLFsUaCVj0g7E3BjtujgMfbCvnJZg2O05MDBaVNIRjiKWYc="
       }
     },
     {
@@ -641,6 +641,18 @@
         {
           "name": "site:nav:menu:database:menu:otherLists:menu:service:order",
           "valueString": "7"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:relation:text",
+          "valueString": "Relation"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:relation:url",
+          "valueString": "/resource/search/relation"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:relation:order",
+          "valueString": "8"
         },
         {
           "name": "site:nav:menu:database:menu:situation:text",

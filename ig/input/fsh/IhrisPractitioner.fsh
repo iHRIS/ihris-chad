@@ -297,42 +297,6 @@ Description:    "iHRIS extension for Practitioner number of children."
 * valueInteger 1..1 MS
 * valueInteger ^label = "Number of Children"
 
-CodeSystem:      IhrisRelationCodesystem
-Id:              ihris-relation-codesystem
-Title:           "Relationship"
-* ^date = "2020-10-29T08:41:04.362Z"
-* ^version = "0.2.0"
-* #spouse "Spouse" "Spouse"
-* #mother "Mother" "Mother"
-* #father "Father" "Father"
-* #adoptedchild "Adopted Child" "Adopted Child"
-* #bilogicalChild "Biological Child" "Biological Child"
-* #other "other" "other"
-
-ValueSet:         IhrisRelationValueSet
-Id:               ihris-relation-valueset
-Title:            "iHRIS Relationship ValueSet"
-* ^date = "2020-10-29T08:41:04.362Z"
-* ^version = "0.2.0"
-* codes from system IhrisRelationCodesystem
-
-Instance:       ihris-page-relation
-InstanceOf:     IhrisPage
-Title:          "iHRIS relationship type CodeSystem Page"
-Usage:          #example
-* code = IhrisResourceCodeSystem#page
-* extension[display].extension[resource].valueReference = Reference(CodeSystem/ihris-relation-codesystem)
-* extension[display].extension[search][0].valueString = "Code|code"
-* extension[display].extension[search][1].valueString = "Display|display"
-* extension[display].extension[field][0].extension[path].valueString = "CodeSystem.code"
-* extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
-* extension[section][0].extension[title].valueString = "Relationship Type"
-* extension[section][0].extension[description].valueString = "Relationship Type"
-* extension[section][0].extension[name].valueString = "CodeSystem"
-* extension[section][0].extension[field][0].valueString = "CodeSystem.display"
-* extension[section][0].extension[field][1].valueString = "CodeSystem.code"
-* extension[section][0].extension[field][2].valueString = "CodeSystem.definition"
-
 Instance:       ihris-search-registration-number
 InstanceOf:     SearchParameter
 Title:          "search parameter for registration Number"

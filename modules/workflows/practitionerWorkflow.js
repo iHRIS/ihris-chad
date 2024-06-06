@@ -20,7 +20,7 @@ const practitionerWorkflow = {
         }
         await fhirAxios.search("Practitioner", params).then((response) => {
           if(response && response.entry && response.entry.length) {
-            return reject({message: "Another health worker has this registration number"})
+            return reject({message: "Un autre agent de santé a ce numéro de matricule"})
           }
         })
         let invalidIssueDate = false

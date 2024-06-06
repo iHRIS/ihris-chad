@@ -30,6 +30,46 @@ Title:             "Identifier Types ValueSet"
 * ^version = "0.1.0"
 * codes from system TDIDTypeCodeSystem
 
+CodeSystem:      IhrisRelationCodesystem
+Id:              ihris-relation-codesystem
+Title:           "Relationship"
+* ^date = "2020-10-29T08:41:04.362Z"
+* ^version = "0.2.0"
+* #spouse "Spouse" "Spouse"
+* #mother "Mother" "Mother"
+* #father "Father" "Father"
+* #adoptedchild "Adopted Child" "Adopted Child"
+* #bilogicalChild "Biological Child" "Biological Child"
+* #other "other" "other"
+
+ValueSet:         IhrisRelationValueSet
+Id:               ihris-relation-valueset
+Title:            "iHRIS Relationship ValueSet"
+* ^date = "2020-10-29T08:41:04.362Z"
+* ^version = "0.2.0"
+* codes from system IhrisRelationCodesystem
+
+CodeSystem:      PositionDepartureReasonCodeSystem
+Id:              position-departure-reason-codesystem
+Title:           "Reason For Change/Departure"
+* ^date = "2020-11-14T08:41:04.362Z"
+* ^version = "0.3.0"
+* #transfer "Transfer" "Transfer"
+* #death "Death" "death"
+* #redeployment  "Redeployment" "Redeployment"
+* #earlyRetirement "Early Retirement" "Early Retirement"
+* #mandatoryRetirement "Mandatory Retirement" "Mandatory Retirement"
+* #resignation "Resignation" "Resignation"
+* #health "Health Related" "Health Related"
+* #quit "Quit" "Quit"
+
+ValueSet:         PositionDepartureReasonValueSet
+Id:               position-departure-reason-valueset
+Title:            "iHRIS Reason Departure ValueSet"
+* ^date = "2020-11-14T08:41:04.362Z"
+* ^version = "0.3.0"
+* codes from system PositionDepartureReasonCodeSystem
+
 ValueSet:         TDGenderValueSet
 Id:               td-gender-valueset
 Title:            "TD Gender ValueSet"

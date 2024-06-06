@@ -51,7 +51,7 @@ const performanceWorkflow = {
         let situationstatus
         await utils.getLatestResourceById({resource: "Basic", params, total: 1}).then((response) => {
           if(!response.entry.length) {
-            return reject({message: "Add situation before adding performance"})
+            return reject({message: "Ajouter la Situation avant d'ajouter la performance"})
           }
           situationstatus = response.entry[0].resource.extension.find((ext) => {
             return ext.url === "http://ihris.org/fhir/StructureDefinition/agent-status"
@@ -70,16 +70,16 @@ const performanceWorkflow = {
           return false
         }
         if(isContractual() && aptitude?.valueCoding) {
-          return reject({message: "Contract staffs dont have criteria aptitude for command functions"})
+          return reject({message: "Le personnel contractuel n'a pas de critères d'aptitude aux fonctions de commandement"})
         }
         if(isContractual() && (!manner || !manner?.valueCoding)) {
-          return reject({message: "Contract staffs must have criteria manner of carrying out its function"})
+          return reject({message: "Le personnel contractuel doit avoir des critères pour exercer sa fonction"})
         }
         if(isCivilServant() && (!aptitude || !aptitude?.valueCoding)) {
-          return reject({message: "Civil servant staffs must have criteria aptitude for command functions"})
+          return reject({message: "Les fonctionnaires doivent avoir des critères d'aptitude aux fonctions de commandement"})
         }
         if(isCivilServant() && manner?.valueCoding) {
-          return reject({message: "Civil servant staffs dont have criteria manner of carrying out its function"})
+          return reject({message: "Les fonctionnaires n'ont pas de critères pour exercer leur fonction"})
         }
         let score = 0
         if(generalKnowledge && generalKnowledge.valueCoding?.code) {
@@ -96,9 +96,6 @@ const performanceWorkflow = {
         }
         if(manner && manner.valueCoding?.code) {
           score += parseInt(manner.valueCoding?.code)
-        }
-        if(score > 20) {
-          return reject({message: "Score must not exceed 20"})
         }
         let scoreindex = performance.extension.findIndex((ext) => {
           return ext.url === "score"
