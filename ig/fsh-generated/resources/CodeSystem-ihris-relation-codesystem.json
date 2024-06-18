@@ -10,33 +10,27 @@
   "concept": [
     {
       "code": "spouse",
-      "display": "Spouse",
-      "definition": "Spouse"
+      "display": "Époux/Epouse"
     },
     {
       "code": "mother",
-      "display": "Mother",
-      "definition": "Mother"
+      "display": "Mère"
     },
     {
       "code": "father",
-      "display": "Father",
-      "definition": "Father"
+      "display": "Père"
     },
     {
       "code": "adoptedchild",
-      "display": "Adopted Child",
-      "definition": "Adopted Child"
+      "display": "Enfant adoptif"
     },
     {
       "code": "bilogicalChild",
-      "display": "Biological Child",
-      "definition": "Biological Child"
+      "display": "Enfant biologique"
     },
     {
       "code": "other",
-      "display": "other",
-      "definition": "other"
+      "display": "Autres"
     }
   ],
   "date": "2020-10-29T08:41:04.362Z",

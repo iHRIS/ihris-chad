@@ -35,12 +35,12 @@ Id:              ihris-relation-codesystem
 Title:           "Relationship"
 * ^date = "2020-10-29T08:41:04.362Z"
 * ^version = "0.2.0"
-* #spouse "Spouse" "Spouse"
-* #mother "Mother" "Mother"
-* #father "Father" "Father"
-* #adoptedchild "Adopted Child" "Adopted Child"
-* #bilogicalChild "Biological Child" "Biological Child"
-* #other "other" "other"
+* #spouse "Époux/Epouse"
+* #mother "Mère"
+* #father "Père"
+* #adoptedchild "Enfant adoptif"
+* #bilogicalChild "Enfant biologique"
+* #other "Autres"
 
 ValueSet:         IhrisRelationValueSet
 Id:               ihris-relation-valueset
@@ -54,14 +54,14 @@ Id:              position-departure-reason-codesystem
 Title:           "Reason For Change/Departure"
 * ^date = "2020-11-14T08:41:04.362Z"
 * ^version = "0.3.0"
-* #transfer "Transfer" "Transfer"
-* #death "Death" "death"
-* #redeployment  "Redeployment" "Redeployment"
-* #earlyRetirement "Early Retirement" "Early Retirement"
-* #mandatoryRetirement "Mandatory Retirement" "Mandatory Retirement"
-* #resignation "Resignation" "Resignation"
-* #health "Health Related" "Health Related"
-* #quit "Quit" "Quit"
+* #transfer "Affectation"
+* #death "Mort"
+* #redeployment  "Mutation"
+* #earlyRetirement "Retraite anticipée"
+* #mandatoryRetirement "Retraite obligatoire"
+* #resignation "Démission"
+* #health "Cause de maladie"
+* #quit "Abandon de poste"
 
 ValueSet:         PositionDepartureReasonValueSet
 Id:               position-departure-reason-valueset

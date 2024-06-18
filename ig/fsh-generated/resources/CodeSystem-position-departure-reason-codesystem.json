@@ -10,43 +10,35 @@
   "concept": [
     {
       "code": "transfer",
-      "display": "Transfer",
-      "definition": "Transfer"
+      "display": "Affectation"
     },
     {
       "code": "death",
-      "display": "Death",
-      "definition": "death"
+      "display": "Mort"
     },
     {
       "code": "redeployment",
-      "display": "Redeployment",
-      "definition": "Redeployment"
+      "display": "Mutation"
     },
     {
       "code": "earlyRetirement",
-      "display": "Early Retirement",
-      "definition": "Early Retirement"
+      "display": "Retraite anticipée"
     },
     {
       "code": "mandatoryRetirement",
-      "display": "Mandatory Retirement",
-      "definition": "Mandatory Retirement"
+      "display": "Retraite obligatoire"
     },
     {
       "code": "resignation",
-      "display": "Resignation",
-      "definition": "Resignation"
+      "display": "Démission"
     },
     {
       "code": "health",
-      "display": "Health Related",
-      "definition": "Health Related"
+      "display": "Cause de maladie"
     },
     {
       "code": "quit",
-      "display": "Quit",
-      "definition": "Quit"
+      "display": "Abandon de poste"
     }
   ],
   "date": "2020-11-14T08:41:04.362Z",

@@ -94,7 +94,9 @@
       "Pre-service Information": "Informations Formation Initiale",
       "In-service Information": "Information Formation Continue",
       "Work Experience": "L'expérience professionnelle",
-      "Performance Evaluation": "Evaluation de la Performance"
+      "Performance Evaluation": "Evaluation de la Performance",
+      "Visualizations": "",
+      "Relation": ""
     },
     "intro": {
       "Summary": "Résumé",
@@ -170,7 +172,8 @@
       "Appointment Date": "Date d'Affectation",
       "Service Start Date": "Date de Prise de Service",
       "Effective Presence Date": "Date de Présence effective",
-      "Place of Assignment": "Structure"
+      "Place of Assignment": "Structure",
+      "preservicetraining Information": ""
     },
     "ihris-codesystem": {},
     "ihris-search": {},
@@ -746,9 +749,18 @@
       "Add Scanned Document": "Ajouter un Document",
       "Notes": "Commentaires",
       "Add Note": "Ajouter",
-      "Amount": "Montant"
+      "Amount": "Montant",
+      "Telecom Type": "",
+      "Criteria 1: General Knowledge": "",
+      "Criteria 2: Professional Culture": "",
+      "Criteria 3: Effectiveness in carrying out duties": "",
+      "Criteria 4: Aptitude for command functions": "",
+      "Criteria 5: Manner of carrying out its functions": "",
+      "Criteria 4: Manner of carrying out its functions": ""
     },
     "hardcoded-texts": {
+      "Visualization": "Visualization",
+      "Dashboards": "Dashboards",
       "Installed Apps": "Applications installées",
       "Install": "Installer",
       "Install New iHRIS App": "Installer une nouvelle application IHRIS",
@@ -825,7 +837,8 @@
       "Customize Report": "Personnaliser le rapport",
       "Please fill in all fields": "Merci de remplir tous les champs",
       "what_is_ihris": "IHRIS est un logiciel gratuit et open source d'Intrahealth International qui aide les pays du monde à suivre et à gérer leurs données des agent de santé pour améliorer l'accès aux services. Les pays l'utilisent pour capturer et maintenir des informations de haute qualité pour la planification, la gestion, la réglementation et la formation des effectifs de la santé.",
-      "Filters": "Filtres"
+      "Filters": "Filtres",
+      "Print": ""
     }
   }
 }
