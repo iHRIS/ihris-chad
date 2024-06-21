@@ -1922,6 +1922,7 @@ Title:            "Civil Servant Category Code System"
 * #A "A"
 * #B "B"
 * #C "C"
+* #D "D"
 
 ValueSet:          CivilServantCategoryValueSet
 Id:                civil-servant-category-valueset
@@ -1938,6 +1939,9 @@ Title:            "Contractual Category Code System"
 * #I "I"
 * #II "II"
 * #III "III"
+* #IV "IV"
+* #V "V"
+* #VI "VI"
 
 ValueSet:          ContractualCategoryValueSet
 Id:                contractual-category-valueset
@@ -1956,6 +1960,9 @@ Title:            "Classification Class Code System"
 * #3 "3"
 * #4 "4"
 * #5 "5"
+* #6 "6"
+* #7 "7"
+* #8 "8"
 
 ValueSet:          ClassificationClassValueSet
 Id:                classification-class-valueset

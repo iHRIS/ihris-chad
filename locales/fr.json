@@ -759,6 +759,13 @@
       "Criteria 4: Manner of carrying out its functions": ""
     },
     "hardcoded-texts": {
+      "must be an integer": "must be an integer",
+      "must be an unsigned integer": "must be an unsigned integer",
+      "must be a positive integer": "must be a positive integer",
+      "must be a number": "must be a number",
+      "must be a Decimal": "must be a Decimal",
+      "is more than": "is more than",
+      "is required": "is required",
       "Visualization": "Visualization",
       "Dashboards": "Dashboards",
       "Installed Apps": "Applications installées",

@@ -50,8 +50,17 @@
                     "code": "organization",
                     "system": "http://ihris.org/fhir/CodeSystem/institution-type-codesystem"
                   }
+                },
+                {
+                  "question": "Basic.extension[0].extension[0]",
+                  "operator": "=",
+                  "answerCoding": {
+                    "code": "ministry",
+                    "system": "http://ihris.org/fhir/CodeSystem/institution-type-codesystem"
+                  }
                 }
-              ]
+              ],
+              "enableBehavior": "any"
             },
             {
               "linkId": "Basic.extension[0].extension[2]",

@@ -148,6 +148,10 @@
       "valueString": "Location/countrytd"
     },
     {
+      "name": "defaults:fields:Practitioner.address.extension:district.value[x]:valueReference:initialValue",
+      "valueString": "Location/countrytd"
+    },
+    {
       "name": "auth:signup:enabled",
       "valueBoolean": true
     },
