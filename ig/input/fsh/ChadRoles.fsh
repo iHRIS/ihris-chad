@@ -1,3 +1,49 @@
+Instance:       tgo-hr-manager
+InstanceOf:     IhrisRole
+Title:          "HR Manager"
+Usage:          #example
+* extension[name].valueString = "HR Manager"
+* extension[primary].valueBoolean = true
+* extension[task][0].valueReference = Reference(Basic/ihris-task-read-questionnaire-resource)
+* extension[task][1].valueReference = Reference(Basic/ihris-task-navigation-password)
+* extension[task][2].valueReference = Reference(Basic/ihris-task-read-ihris-page-practitioner)
+* extension[task][3].valueReference = Reference(Basic/ihris-task-read-ihris-page-practitioner-role)
+* extension[task][4].valueReference = Reference(Basic/ihris-task-read-code-system)
+* extension[task][5].valueReference = Reference(Basic/ihris-task-read-value-set)
+* extension[task][6].valueReference = Reference(Basic/ihris-task-read-location-resource)
+* extension[task][7].valueReference = Reference(Basic/ihris-task-read-practitioner-resource)
+* extension[task][8].valueReference = Reference(Basic/ihris-task-read-practitioner-role-resource)
+* extension[task][9].valueReference = Reference(Basic/ihris-task-read-questionnaire-response-resource)
+* extension[task][10].valueReference = Reference(Basic/ihris-task-read-basic-resource)
+* extension[task][11].valueReference = Reference(Basic/ihris-task-write-questionnaire-response-resource)
+* extension[task][12].valueReference = Reference(Basic/ihris-task-write-practitioner-resource)
+* extension[task][13].valueReference = Reference(Basic/ihris-task-write-practitioner-role-resource)
+* extension[task][14].valueReference = Reference(Basic/ihris-task-all-permissions-to-everything)
+* extension[role][0].valueReference = Reference(Basic/ihris-role-open)
+
+Instance:       tgo-hr-staff
+InstanceOf:     IhrisRole
+Title:          "HR Staff"
+Usage:          #example
+
+* extension[name].valueString = "HR Staff"
+* extension[primary].valueBoolean = true
+* extension[task][0].valueReference = Reference(Basic/ihris-task-read-questionnaire-resource)
+* extension[task][1].valueReference = Reference(Basic/ihris-task-navigation-password)
+* extension[task][2].valueReference = Reference(Basic/ihris-task-read-ihris-page-practitioner)
+* extension[task][3].valueReference = Reference(Basic/ihris-task-read-ihris-page-practitioner-role)
+* extension[task][4].valueReference = Reference(Basic/ihris-task-read-code-system)
+* extension[task][5].valueReference = Reference(Basic/ihris-task-read-value-set)
+* extension[task][6].valueReference = Reference(Basic/ihris-task-read-location-resource)
+* extension[task][7].valueReference = Reference(Basic/ihris-task-read-practitioner-resource)
+* extension[task][8].valueReference = Reference(Basic/ihris-task-read-practitioner-role-resource)
+* extension[task][9].valueReference = Reference(Basic/ihris-task-read-questionnaire-response-resource)
+* extension[task][10].valueReference = Reference(Basic/ihris-task-read-basic-resource)
+* extension[task][11].valueReference = Reference(Basic/ihris-task-write-questionnaire-response-resource)
+* extension[task][12].valueReference = Reference(Basic/ihris-task-write-practitioner-resource)
+* extension[task][13].valueReference = Reference(Basic/ihris-task-write-practitioner-role-resource)
+* extension[task][14].valueReference = Reference(Basic/ihris-task-all-permissions-to-everything)
+
 Instance:       ihris-task-add-situation
 InstanceOf:     IhrisTask
 Usage:          #example

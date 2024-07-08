@@ -13,8 +13,8 @@ Description:    "Classification Information Profile."
     Echelon named echelon 1..1 MS and
     DateLastAdminSituation named date-last-admin-situation 0..1 MS and
     ReferenceEchelon named reference-echelon 1..1 MS and
-    IntegrationDate named integration-date 1..1 MS and
-    ReferenceIntegrationAct named reference-integration-act 1..1 MS and
+    IntegrationDate named integration-date 0..1 MS and
+    ReferenceIntegrationAct named reference-integration-act 0..1 MS and
     TenureDate named tenure-date 1..1 MS and
     TenureReference named tenure-reference 1..1 MS and
     ClassificationCategory named classification-category 1..1 MS
@@ -270,14 +270,14 @@ Usage:          #definition
 * item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:integration-date.value[x]:valueDate"
 * item[0].item[8].text = "Integration Date"
 * item[0].item[8].type = #date
-* item[0].item[8].required = true
+* item[0].item[8].required = false
 * item[0].item[8].repeats = false
 
 * item[0].item[9].linkId = "Basic.extension[9]"
 * item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-integration-act.value[x]:valueString"
 * item[0].item[9].text = "Reference Act of Integration"
 * item[0].item[9].type = #string
-* item[0].item[9].required = true
+* item[0].item[9].required = false
 * item[0].item[9].repeats = false
 
 * item[0].item[10].linkId = "Basic.extension[10]"

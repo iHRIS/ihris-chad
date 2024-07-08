@@ -13,24 +13,18 @@ const workflowChangeJob = {
           resource: "PractitionerRole",
           params: {practitioner: "Practitioner/" + req.query.practitioner}
         }).then((response) => {
-          console.error(JSON.stringify(response, 0, 2));
           if(response.entry.length) {
             let prevRole = response.entry[0].resource
             let currentRole = bundle.entry.find((entry) => {
               return entry.resource.resourceType === "PractitionerRole"
             })
-            console.log('here1');
-            console.error(JSON.stringify(prevRole, 0, 2));
             if(moment(prevRole.period.start).isAfter(currentRole.resource.period.start)) {
               return reject({message: "La date de début du rôle actuel doit être après la date de début du rôle précédent"})
             }
-            console.log('here0');
             prevRole.period.end = currentRole.resource.period.start
-            console.log('here0.1');
             let departureDetails = bundle.entry.find((entry) => {
               return entry.resource.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/role-departure-profile")
             })
-            console.log('here2');
             departureDetails.resource.extension.push({
               url: "http://ihris.org/fhir/StructureDefinition/departure-date",
               valueDate: currentRole.resource.period.start
@@ -57,7 +51,6 @@ const workflowChangeJob = {
                 url: "PractitionerRole/" + prevRole.id
               }
             })
-            console.log('here3');
             return resolve(bundle)
           } else {
             return reject({message: "Une erreur interne s'est produite"})

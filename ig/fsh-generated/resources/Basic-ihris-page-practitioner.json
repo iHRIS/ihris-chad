@@ -640,6 +640,19 @@
               "extension": [
                 {
                   "url": "header",
+                  "valueString": "Facility"
+                },
+                {
+                  "url": "field",
+                  "valueString": "PractitionerRole.location"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
                   "valueString": "Start Date"
                 },
                 {

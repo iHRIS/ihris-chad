@@ -26,7 +26,9 @@ const staffdirectorate = {
           total: 1
         }).then(async(response) => {
           if(response && response.entry && response.entry.length) {
-            jobtitle = response.entry[0].resource?.code[0]?.coding[0]?.display
+            if(response.entry[0].resource && response.entry[0].resource.code && response.entry[0].resource?.code[0]?.coding) {
+              jobtitle = response.entry[0].resource?.code[0]?.coding[0]?.display
+            }
             if(!jobtitle) {
               jobtitle = ""
             }

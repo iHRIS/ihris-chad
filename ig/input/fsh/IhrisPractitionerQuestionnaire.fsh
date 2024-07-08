@@ -63,7 +63,7 @@ Usage:          #definition
 * item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.photo"
 * item[0].item[2].text = "Photo"
 * item[0].item[2].type = #attachment
-* item[0].item[2].required = true
+* item[0].item[2].required = false
 * item[0].item[2].repeats = false
 
 * item[0].item[3].linkId = "Practitioner.gender"

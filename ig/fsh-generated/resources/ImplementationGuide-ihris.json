@@ -3578,6 +3578,20 @@
       },
       {
         "reference": {
+          "reference": "Basic/tgo-hr-manager"
+        },
+        "name": "HR Manager",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-role"
+      },
+      {
+        "reference": {
+          "reference": "Basic/tgo-hr-staff"
+        },
+        "name": "HR Staff",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-role"
+      },
+      {
+        "reference": {
           "reference": "Questionnaire/validation"
         },
         "name": "Validation",

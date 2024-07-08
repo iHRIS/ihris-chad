@@ -40,6 +40,18 @@
       "valueString": "fhir.js"
     },
     {
+      "name": "app:site:routes:testroute:mount",
+      "valueString": "/site/testroute"
+    },
+    {
+      "name": "app:site:routes:testroute:path",
+      "valueString": "testroute.js"
+    },
+    {
+      "name": "app:site:routes:testroute:authenticate",
+      "valueString": "false"
+    },
+    {
       "name": "builtFSHFIles",
       "valueString": "ig/fsh-generated/resources"
     },
