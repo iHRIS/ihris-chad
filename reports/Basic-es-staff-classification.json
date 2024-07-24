@@ -486,6 +486,78 @@
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
+          "url": "display",
+          "valueString": "Facility"
+        }, {
+          "url": "name",
+          "valueString": "facility"
+        }, {
+          "url": "function",
+          "valueString": "classification.facility({classificationdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "classificationdata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 17
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "District"
+        }, {
+          "url": "name",
+          "valueString": "district"
+        }, {
+          "url": "function",
+          "valueString": "classification.district({classificationdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "classificationdata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 18
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Province"
+        }, {
+          "url": "name",
+          "valueString": "region"
+        }, {
+          "url": "function",
+          "valueString": "classification.region({classificationdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "classificationdata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 19
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
           "url": "name",
           "valueString": "ihris-related-group"
         }, {

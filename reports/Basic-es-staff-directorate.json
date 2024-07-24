@@ -184,7 +184,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 14
+          "valueInteger": 16
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -364,7 +364,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 9
+          "valueInteger": 11
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -391,7 +391,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 11
+          "valueInteger": 13
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -418,7 +418,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 10
+          "valueInteger": 12
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -445,7 +445,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 12
+          "valueInteger": 14
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -472,19 +472,19 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 13
+          "valueInteger": 15
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Place of Assignment"
+          "valueString": "Facility"
         }, {
           "url": "name",
-          "valueString": "location"
+          "valueString": "facility"
         }, {
           "url": "function",
-          "valueString": "staffdirectorate.location({staffdirectoratedata})"
+          "valueString": "staffdirectorate.facility({staffdirectoratedata})"
         }, {
           "url": "parameters",
           "valueString": "staffdirectoratedata"
@@ -493,10 +493,58 @@
           "valueBoolean": true
         }, {
           "url": "dropDownFilter",
-          "valueBoolean": false
+          "valueBoolean": true
         }, {
           "url": "order",
           "valueInteger": 8
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "District"
+        }, {
+          "url": "name",
+          "valueString": "district"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.district({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 9
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Province"
+        }, {
+          "url": "name",
+          "valueString": "region"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.region({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 10
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

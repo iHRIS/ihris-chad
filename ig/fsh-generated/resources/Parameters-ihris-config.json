@@ -211,34 +211,6 @@
           "valueString": "/resource/add/practitionerrole"
         },
         {
-          "name": "site:nav:menu:location:text",
-          "valueString": "Locations and Facilities"
-        },
-        {
-          "name": "site:nav:menu:location:order",
-          "valueString": "6"
-        },
-        {
-          "name": "site:nav:menu:location:icon",
-          "valueString": "mdi-map-marker-multiple"
-        },
-        {
-          "name": "site:nav:menu:location:menu:location_search:text",
-          "valueString": "Locations"
-        },
-        {
-          "name": "site:nav:menu:location:menu:location_search:url",
-          "valueString": "/resource/search/location"
-        },
-        {
-          "name": "site:nav:menu:location:menu:facility_search:text",
-          "valueString": "Facilities"
-        },
-        {
-          "name": "site:nav:menu:location:menu:facility_search:url",
-          "valueString": "/resource/search/facility"
-        },
-        {
           "name": "site:nav:menu:database:text",
           "valueString": "Database"
         },

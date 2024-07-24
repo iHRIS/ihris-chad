@@ -115,7 +115,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:integration-date.value[x]:valueDate",
           "text": "Integration Date",
           "type": "date",
-          "required": true,
+          "required": false,
           "repeats": false
         },
         {
@@ -123,7 +123,7 @@
           "definition": "http://ihris.org/fhir/StructureDefinition/classification-profile#Basic.extension:reference-integration-act.value[x]:valueString",
           "text": "Reference Act of Integration",
           "type": "string",
-          "required": true,
+          "required": false,
           "repeats": false
         },
         {

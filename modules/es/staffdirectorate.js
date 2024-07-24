@@ -14,7 +14,9 @@ const staffdirectorate = {
       let servicestartdate = ""
       let integrationdate = ""
       let effectivepresdate = ""
-      let location = ""
+      let facility = ""
+      let district = ""
+      let region = ""
       const job = new Promise((resolve, reject) => {
         let params = {
           practitioner: fields.practitionerid,
@@ -57,14 +59,49 @@ const staffdirectorate = {
               effectivepresdate = ""
             }
             if(response.entry[0].resource?.location) {
-              location = response.entry[0].resource?.location[0]?.reference
-              await fhirAxios.read("Location", location.split("/")[1]).then((loc) => {
-                location = loc.name
+              let location = response.entry[0].resource?.location[0]?.reference
+              await fhirAxios.read("Location", location.split("/")[1]).then(async(loc) => {
+                if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-facility")) {
+                  facility = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-district")) {
+                  district = loc.name
+                } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
+                  region = loc.name
+                }
+                if(loc.partOf && loc.partOf.reference) {
+                  await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
+                    if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-facility")) {
+                      facility = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-district")) {
+                      district = loc.name
+                    } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
+                      region = loc.name
+                    }
+                    if(loc.partOf && loc.partOf.reference) {
+                      await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
+                        if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-facility")) {
+                          facility = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-district")) {
+                          district = loc.name
+                        } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
+                          region = loc.name
+                        }
+                        resolve()
+                      })
+                    } else {
+                      resolve()
+                    }
+                  })
+                } else {
+                  resolve()
+                }
               })
+            } else {
+              resolve()
             }
-
+          } else {
+            resolve()
           }
-          resolve()
         }).catch((err) => {
           console.log(err);
           reject()
@@ -207,7 +244,7 @@ const staffdirectorate = {
         })
       })
       Promise.all([job, situation, specialty, classification]).then(() => {
-        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory +"-^-" + contractualcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + location
+        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory +"-^-" + contractualcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region
         resolve(value)
       })
     })
@@ -293,13 +330,31 @@ const staffdirectorate = {
       resolve(values[8])
     })
   },
-  location: (fields) => {
+  facility: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
       resolve(values[9])
+    })
+  },
+  district: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[10])
+    })
+  },
+  region: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[11])
     })
   }
 }

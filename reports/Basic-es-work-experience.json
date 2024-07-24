@@ -454,7 +454,79 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 14
+          "valueInteger": 15
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Facility"
+        }, {
+          "url": "name",
+          "valueString": "facility"
+        }, {
+          "url": "function",
+          "valueString": "workexperience.facility({workexperiencedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "workexperiencedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 16
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "District"
+        }, {
+          "url": "name",
+          "valueString": "district"
+        }, {
+          "url": "function",
+          "valueString": "workexperience.district({workexperiencedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "workexperiencedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 17
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Province"
+        }, {
+          "url": "name",
+          "valueString": "region"
+        }, {
+          "url": "function",
+          "valueString": "workexperience.region({workexperiencedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "workexperiencedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 18
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

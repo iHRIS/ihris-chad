@@ -30,6 +30,24 @@
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
+          "url": "name",
+          "valueString": "practitionerid"
+        }, {
+          "url": "fhirpath",
+          "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+        }, {
+          "url": "filter",
+          "valueBoolean": false
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": false
+        }, {
+          "url": "order",
+          "valueInteger": 20
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
           "url": "display",
           "valueString": "Reviewer"
         }, {
@@ -454,6 +472,99 @@
           }, {
             "url": "order",
             "valueInteger": 16
+          }]
+        }, {
+          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+          "extension": [{
+            "url": "name",
+            "valueString": "performancedata"
+          }, {
+            "url": "function",
+            "valueString": "performance.populate({practitionerid})"
+          }, {
+            "url": "parameters",
+            "valueString": "practitionerid"
+          }, {
+            "url": "filter",
+            "valueBoolean": false
+          }, {
+            "url": "dropDownFilter",
+            "valueBoolean": false
+          }, {
+            "url": "order",
+            "valueInteger": 21
+          }]
+        }, {
+          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+          "extension": [{
+            "url": "display",
+            "valueString": "Facility"
+          }, {
+            "url": "name",
+            "valueString": "facility"
+          }, {
+            "url": "function",
+            "valueString": "performance.facility({performancedata})"
+          }, {
+            "url": "parameters",
+            "valueString": "performancedata"
+          }, {
+            "url": "filter",
+            "valueBoolean": true
+          }, {
+            "url": "dropDownFilter",
+            "valueBoolean": true
+          }, {
+            "url": "order",
+            "valueInteger": 17
+          }]
+        }, {
+          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+          "extension": [{
+            "url": "display",
+            "valueString": "District"
+          }, {
+            "url": "name",
+            "valueString": "district"
+          }, {
+            "url": "function",
+            "valueString": "performance.district({performancedata})"
+          }, {
+            "url": "parameters",
+            "valueString": "performancedata"
+          }, {
+            "url": "filter",
+            "valueBoolean": true
+          }, {
+            "url": "dropDownFilter",
+            "valueBoolean": true
+          }, {
+            "url": "order",
+            "valueInteger": 18
+          }]
+        }, {
+          "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+          "extension": [{
+            "url": "display",
+            "valueString": "Province"
+          }, {
+            "url": "name",
+            "valueString": "region"
+          }, {
+            "url": "function",
+            "valueString": "performance.region({performancedata})"
+          }, {
+            "url": "parameters",
+            "valueString": "performancedata"
+          }, {
+            "url": "filter",
+            "valueBoolean": true
+          }, {
+            "url": "dropDownFilter",
+            "valueBoolean": true
+          }, {
+            "url": "order",
+            "valueInteger": 19
           }]
         }, {
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
