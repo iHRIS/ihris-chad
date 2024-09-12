@@ -1,0 +1,16 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "NAResourceValueSet",
+  "id": "na-resource-valueset",
+  "title": "Value Set for iHRIS Namibia Basic Resources.",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/na-resource-valueset",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/na-resource-codesystem"
+      }
+    ]
+  }
+}

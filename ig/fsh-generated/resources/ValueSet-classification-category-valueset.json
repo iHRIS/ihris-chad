@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "ClassificationCategoryValueSet",
+  "id": "classification-category-valueset",
+  "title": "Classification Category ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/classification-category-valueset",
+  "date": "2024-02-02T08:14:00.000Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/classification-category-codesystem"
+      }
+    ]
+  }
+}

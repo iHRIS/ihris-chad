@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "TDGenderValueSet",
+  "id": "td-gender-valueset",
+  "title": "TD Gender ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/td-gender-valueset",
+  "date": "2023-03-28T05:55:04.362Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://hl7.org/fhir/administrative-gender",
+        "concept": [
+          {
+            "code": "male",
+            "display": "Masculin"
+          },
+          {
+            "code": "female",
+            "display": "Féminin"
+          }
+        ]
+      }
+    ]
+  }
+}

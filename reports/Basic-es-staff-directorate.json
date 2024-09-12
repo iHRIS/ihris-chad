@@ -22,6 +22,9 @@
         "url": "resourcePage",
         "valueString": "practitioner"
       }, {
+        "url": "postRun",
+        "valueString": "agerange.run()"
+      }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
@@ -115,7 +118,7 @@
           "valueString": "dob"
         }, {
           "url": "filter",
-          "valueBoolean": false
+          "valueBoolean": true
         }, {
           "url": "dropDownFilter",
           "valueBoolean": false

@@ -1,0 +1,3286 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "WorkServiceCodeSystem",
+  "id": "work-service-codesystem",
+  "title": "Service Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/work-service-codesystem",
+  "concept": [
+    {
+      "code": "service1",
+      "display": "CS LARMANAYE"
+    },
+    {
+      "code": "service2",
+      "display": "ADMINISTRATION"
+    },
+    {
+      "code": "service3",
+      "display": "ANAPATH"
+    },
+    {
+      "code": "service4",
+      "display": "ANESTHESIE"
+    },
+    {
+      "code": "service5",
+      "display": "ANESTHESIE-REANIMATION"
+    },
+    {
+      "code": "service6",
+      "display": "ASSAINISSEMENT"
+    },
+    {
+      "code": "service7",
+      "display": "ASTBEF"
+    },
+    {
+      "code": "service8",
+      "display": "AVANCEMENT"
+    },
+    {
+      "code": "service9",
+      "display": "BIOMEDICAL"
+    },
+    {
+      "code": "service10",
+      "display": "BLOC OPERATOIRE"
+    },
+    {
+      "code": "service11",
+      "display": "BLOC-REANIMATION"
+    },
+    {
+      "code": "service12",
+      "display": "BOI BESSAO"
+    },
+    {
+      "code": "service13",
+      "display": "BOKORO I"
+    },
+    {
+      "code": "service14",
+      "display": "BOKORO II"
+    },
+    {
+      "code": "service15",
+      "display": "CAISSE"
+    },
+    {
+      "code": "service16",
+      "display": "CARDIOLOGIE"
+    },
+    {
+      "code": "service17",
+      "display": "CENTRE BAPTIST HOSPITALIER KOUMRA"
+    },
+    {
+      "code": "service18",
+      "display": "CENTRE DE SANTÉ(CS)"
+    },
+    {
+      "code": "service19",
+      "display": "CHARGÉ DE FORMATION COORDINATION DES SOINS"
+    },
+    {
+      "code": "service20",
+      "display": "CHIRURGIE"
+    },
+    {
+      "code": "service21",
+      "display": "COMPTABILITE"
+    },
+    {
+      "code": "service22",
+      "display": "CONSULTATION"
+    },
+    {
+      "code": "service23",
+      "display": "CONSULTATION PRÈS NATAL( CPN)"
+    },
+    {
+      "code": "service24",
+      "display": "CONTRÔLE"
+    },
+    {
+      "code": "service25",
+      "display": "COORDINATION DE SOINS"
+    },
+    {
+      "code": "service26",
+      "display": "COURRIER"
+    },
+    {
+      "code": "service27",
+      "display": "CS ABOUNABACK"
+    },
+    {
+      "code": "service28",
+      "display": "CS BACTOUIN"
+    },
+    {
+      "code": "service29",
+      "display": "CS BARO PUBLIC"
+    },
+    {
+      "code": "service30",
+      "display": "CS DEREM"
+    },
+    {
+      "code": "service31",
+      "display": "CS DJEDDA"
+    },
+    {
+      "code": "service32",
+      "display": "CS DOLOCK"
+    },
+    {
+      "code": "service33",
+      "display": "CS DOROTI"
+    },
+    {
+      "code": "service34",
+      "display": "CS GOZ-BEIDA-URBAIN"
+    },
+    {
+      "code": "service35",
+      "display": "CS KABBI"
+    },
+    {
+      "code": "service36",
+      "display": "CS KORO"
+    },
+    {
+      "code": "service37",
+      "display": "CS KOUTOU BETI"
+    },
+    {
+      "code": "service38",
+      "display": "CS MANDE"
+    },
+    {
+      "code": "service39",
+      "display": "CS MANGALME URBAIN"
+    },
+    {
+      "code": "service40",
+      "display": "CS MEDE"
+    },
+    {
+      "code": "service41",
+      "display": "CS RIG-RIG"
+    },
+    {
+      "code": "service42",
+      "display": "CS SATEGUI"
+    },
+    {
+      "code": "service43",
+      "display": "CS TCHOUA"
+    },
+    {
+      "code": "service44",
+      "display": "CS 15 ANS"
+    },
+    {
+      "code": "service45",
+      "display": "CS A.E.BEDAWI"
+    },
+    {
+      "code": "service46",
+      "display": "CS ABENA"
+    },
+    {
+      "code": "service47",
+      "display": "CS ABGAOUYE"
+    },
+    {
+      "code": "service48",
+      "display": "CS ABGAR"
+    },
+    {
+      "code": "service49",
+      "display": "CS ABGARGA"
+    },
+    {
+      "code": "service50",
+      "display": "CS ABGODE"
+    },
+    {
+      "code": "service51",
+      "display": "CS ABGUE"
+    },
+    {
+      "code": "service52",
+      "display": "CS ABIREBI"
+    },
+    {
+      "code": "service53",
+      "display": "CS ABLELAYE"
+    },
+    {
+      "code": "service54",
+      "display": "CS ABLONG"
+    },
+    {
+      "code": "service55",
+      "display": "CS ABOUDEIA"
+    },
+    {
+      "code": "service56",
+      "display": "CS ABOUHIDJILIDJ"
+    },
+    {
+      "code": "service57",
+      "display": "CS ABOURDAH"
+    },
+    {
+      "code": "service58",
+      "display": "CS ABRAGNA BREKA"
+    },
+    {
+      "code": "service59",
+      "display": "CS ABRAGNA DJIRA"
+    },
+    {
+      "code": "service60",
+      "display": "CS ABRAYE"
+    },
+    {
+      "code": "service61",
+      "display": "CS ABREY"
+    },
+    {
+      "code": "service62",
+      "display": "CS ABTOUYOUR"
+    },
+    {
+      "code": "service63",
+      "display": "CS ACHERIF KASSER"
+    },
+    {
+      "code": "service64",
+      "display": "CS ADDANE"
+    },
+    {
+      "code": "service65",
+      "display": "CS ADE"
+    },
+    {
+      "code": "service66",
+      "display": "CS AGRAB"
+    },
+    {
+      "code": "service67",
+      "display": "CS AKONGO"
+    },
+    {
+      "code": "service68",
+      "display": "CS ALAYE"
+    },
+    {
+      "code": "service69",
+      "display": "CS ALBIR"
+    },
+    {
+      "code": "service70",
+      "display": "CS ALGALI TAHIR"
+    },
+    {
+      "code": "service71",
+      "display": "CS ALI GARGA"
+    },
+    {
+      "code": "service72",
+      "display": "CS ALIFA"
+    },
+    {
+      "code": "service73",
+      "display": "CS ALMASSOUINE"
+    },
+    {
+      "code": "service74",
+      "display": "CS ALMOUDODIL"
+    },
+    {
+      "code": "service75",
+      "display": "CS AMBASSATNA"
+    },
+    {
+      "code": "service76",
+      "display": "CS AMBATTA 2"
+    },
+    {
+      "code": "service77",
+      "display": "CS AMCHALLOUBA"
+    },
+    {
+      "code": "service78",
+      "display": "CS AMDJABIR"
+    },
+    {
+      "code": "service79",
+      "display": "CS AMDJARASS URBAIN"
+    },
+    {
+      "code": "service80",
+      "display": "CS AMDJOUFOUR"
+    },
+    {
+      "code": "service81",
+      "display": "CS AMDOUURMAN"
+    },
+    {
+      "code": "service82",
+      "display": "CS AMGUIFIRI"
+    },
+    {
+      "code": "service83",
+      "display": "CS AMHABILE"
+    },
+    {
+      "code": "service84",
+      "display": "CS AMKAROUMA"
+    },
+    {
+      "code": "service85",
+      "display": "CS AMKOUA"
+    },
+    {
+      "code": "service86",
+      "display": "CS AMLEYOUNA"
+    },
+    {
+      "code": "service87",
+      "display": "CS AMSACK"
+    },
+    {
+      "code": "service88",
+      "display": "CS AMSILEP"
+    },
+    {
+      "code": "service89",
+      "display": "CS AMSINENE"
+    },
+    {
+      "code": "service90",
+      "display": "CS AMTABANE"
+    },
+    {
+      "code": "service91",
+      "display": "CS AM-TIMAN NORD"
+    },
+    {
+      "code": "service92",
+      "display": "CS AM-TIMAN SUD"
+    },
+    {
+      "code": "service93",
+      "display": "CS AMZOER"
+    },
+    {
+      "code": "service94",
+      "display": "CS ANDOU"
+    },
+    {
+      "code": "service95",
+      "display": "CS ANDOUM"
+    },
+    {
+      "code": "service96",
+      "display": "CS ANKASIRE"
+    },
+    {
+      "code": "service97",
+      "display": "CS AOUL"
+    },
+    {
+      "code": "service98",
+      "display": "CS ARADIP"
+    },
+    {
+      "code": "service99",
+      "display": "CS ARBOUTCHATAK"
+    },
+    {
+      "code": "service100",
+      "display": "CS ARDO"
+    },
+    {
+      "code": "service101",
+      "display": "CS ASSARTINI"
+    },
+    {
+      "code": "service102",
+      "display": "CS ATI EST"
+    },
+    {
+      "code": "service103",
+      "display": "CS ATI NORD"
+    },
+    {
+      "code": "service104",
+      "display": "CS ATRONE"
+    },
+    {
+      "code": "service105",
+      "display": "CS BADINA"
+    },
+    {
+      "code": "service106",
+      "display": "CS BADJE"
+    },
+    {
+      "code": "service107",
+      "display": "CS BADOUANG"
+    },
+    {
+      "code": "service108",
+      "display": "CS BAFOU"
+    },
+    {
+      "code": "service109",
+      "display": "CS BAGAYE GUIYA"
+    },
+    {
+      "code": "service110",
+      "display": "CS BAGAYE IBLÉ"
+    },
+    {
+      "code": "service111",
+      "display": "CS BAGOUA"
+    },
+    {
+      "code": "service112",
+      "display": "CS BAGOURFOU"
+    },
+    {
+      "code": "service113",
+      "display": "CS BAH"
+    },
+    {
+      "code": "service114",
+      "display": "CS BAHAI"
+    },
+    {
+      "code": "service115",
+      "display": "CS BAIBOKOUM"
+    },
+    {
+      "code": "service116",
+      "display": "CS BAIKORO"
+    },
+    {
+      "code": "service117",
+      "display": "CS BAILA LAOUTAYE"
+    },
+    {
+      "code": "service118",
+      "display": "CS BA-ILLI I"
+    },
+    {
+      "code": "service119",
+      "display": "CS BAKAORE"
+    },
+    {
+      "code": "service120",
+      "display": "CS BAKE"
+    },
+    {
+      "code": "service121",
+      "display": "CS BAKTCHORO"
+    },
+    {
+      "code": "service122",
+      "display": "CS BALIMBA"
+    },
+    {
+      "code": "service123",
+      "display": "CS BALMANI"
+    },
+    {
+      "code": "service124",
+      "display": "CS BALTOUBAYE"
+    },
+    {
+      "code": "service125",
+      "display": "CS BANALA"
+    },
+    {
+      "code": "service126",
+      "display": "CS BANDA CANTON"
+    },
+    {
+      "code": "service127",
+      "display": "CS BANDA QUARTIER"
+    },
+    {
+      "code": "service128",
+      "display": "CS BANDIKAO"
+    },
+    {
+      "code": "service129",
+      "display": "CS BANTAR"
+    },
+    {
+      "code": "service130",
+      "display": "CS BAO"
+    },
+    {
+      "code": "service131",
+      "display": "CS BARA"
+    },
+    {
+      "code": "service132",
+      "display": "CS BARBEZA"
+    },
+    {
+      "code": "service133",
+      "display": "CS BARO PRIVE"
+    },
+    {
+      "code": "service134",
+      "display": "CS BARRAH"
+    },
+    {
+      "code": "service135",
+      "display": "CS BATADJENE"
+    },
+    {
+      "code": "service136",
+      "display": "CS BAYAKA"
+    },
+    {
+      "code": "service137",
+      "display": "CS BEBALOUM PUBLIC"
+    },
+    {
+      "code": "service138",
+      "display": "CS BEBEDJIA BELACD"
+    },
+    {
+      "code": "service139",
+      "display": "CS BEBEDJIA PUBLIQUE"
+    },
+    {
+      "code": "service140",
+      "display": "CS BEBORO"
+    },
+    {
+      "code": "service141",
+      "display": "CS BEBOTO PUBLIQUE"
+    },
+    {
+      "code": "service142",
+      "display": "CS BEBOUNGAYE"
+    },
+    {
+      "code": "service143",
+      "display": "CS BEDAYA"
+    },
+    {
+      "code": "service144",
+      "display": "CS BEDIGRI"
+    },
+    {
+      "code": "service145",
+      "display": "CS BEDJO"
+    },
+    {
+      "code": "service146",
+      "display": "CS BEDJONDO OUEST"
+    },
+    {
+      "code": "service147",
+      "display": "CS BEDJONDO SUD"
+    },
+    {
+      "code": "service148",
+      "display": "CS BEDOGO"
+    },
+    {
+      "code": "service149",
+      "display": "CS BEDOUADA"
+    },
+    {
+      "code": "service150",
+      "display": "CS BEGARA"
+    },
+    {
+      "code": "service151",
+      "display": "CS BEGU"
+    },
+    {
+      "code": "service152",
+      "display": "CS BEINAMAR OUEST"
+    },
+    {
+      "code": "service153",
+      "display": "CS BEKIBI"
+    },
+    {
+      "code": "service154",
+      "display": "CS BEKIRI"
+    },
+    {
+      "code": "service155",
+      "display": "CS BEKONDJO"
+    },
+    {
+      "code": "service156",
+      "display": "CS BEKOURA"
+    },
+    {
+      "code": "service157",
+      "display": "CS BELOM"
+    },
+    {
+      "code": "service158",
+      "display": "CS BEMADJI SIDO OUEST"
+    },
+    {
+      "code": "service159",
+      "display": "CS BEMOULI"
+    },
+    {
+      "code": "service160",
+      "display": "CS BENDI"
+    },
+    {
+      "code": "service161",
+      "display": "CS BENGORORO"
+    },
+    {
+      "code": "service162",
+      "display": "CS BENOYE URBAIN"
+    },
+    {
+      "code": "service163",
+      "display": "CS BERE PU"
+    },
+    {
+      "code": "service164",
+      "display": "CS BEREM"
+    },
+    {
+      "code": "service165",
+      "display": "CS BERIGUI"
+    },
+    {
+      "code": "service166",
+      "display": "CS BERLET"
+    },
+    {
+      "code": "service167",
+      "display": "CS BERO"
+    },
+    {
+      "code": "service168",
+      "display": "CS BERTE"
+    },
+    {
+      "code": "service169",
+      "display": "CS BESSA"
+    },
+    {
+      "code": "service170",
+      "display": "CS BESSADA"
+    },
+    {
+      "code": "service171",
+      "display": "CS BESSAO MSP"
+    },
+    {
+      "code": "service172",
+      "display": "CS BESSEYE"
+    },
+    {
+      "code": "service173",
+      "display": "CS BETHSAIDA"
+    },
+    {
+      "code": "service174",
+      "display": "CS BEUREUH"
+    },
+    {
+      "code": "service175",
+      "display": "CS BEWALA 2"
+    },
+    {
+      "code": "service176",
+      "display": "CS BEYAMA"
+    },
+    {
+      "code": "service177",
+      "display": "CS BIANG"
+    },
+    {
+      "code": "service178",
+      "display": "CS BILIGONI"
+    },
+    {
+      "code": "service179",
+      "display": "CS BILLY"
+    },
+    {
+      "code": "service180",
+      "display": "CS BILTINE EST"
+    },
+    {
+      "code": "service181",
+      "display": "CS BILTINE OUEST"
+    },
+    {
+      "code": "service182",
+      "display": "CS BINDA"
+    },
+    {
+      "code": "service183",
+      "display": "CS BIPARE"
+    },
+    {
+      "code": "service184",
+      "display": "CS BIRACK"
+    },
+    {
+      "code": "service185",
+      "display": "CS BIRBASSAR"
+    },
+    {
+      "code": "service186",
+      "display": "CS BIRI"
+    },
+    {
+      "code": "service187",
+      "display": "CS BIRNY"
+    },
+    {
+      "code": "service188",
+      "display": "CS BISSI KEDA II"
+    },
+    {
+      "code": "service189",
+      "display": "CS BITCHOTCHI"
+    },
+    {
+      "code": "service190",
+      "display": "CS BITKINE NORD"
+    },
+    {
+      "code": "service191",
+      "display": "CS BLAGOUDOURNA"
+    },
+    {
+      "code": "service192",
+      "display": "CS BLATOUKOULI"
+    },
+    {
+      "code": "service193",
+      "display": "CS BOBOK"
+    },
+    {
+      "code": "service194",
+      "display": "CS BODO MSP"
+    },
+    {
+      "code": "service195",
+      "display": "CS BODORO"
+    },
+    {
+      "code": "service196",
+      "display": "CS BOGO NDARANGUÉ"
+    },
+    {
+      "code": "service197",
+      "display": "CS BOGOLETAGA"
+    },
+    {
+      "code": "service198",
+      "display": "CS BOHOBE"
+    },
+    {
+      "code": "service199",
+      "display": "CS BOLO"
+    },
+    {
+      "code": "service200",
+      "display": "CS BOLOLO"
+    },
+    {
+      "code": "service201",
+      "display": "CS BOLONG"
+    },
+    {
+      "code": "service202",
+      "display": "CS BONGMARA"
+    },
+    {
+      "code": "service203",
+      "display": "CS BONGOR HAN"
+    },
+    {
+      "code": "service204",
+      "display": "CS BONGOR URBAIN I"
+    },
+    {
+      "code": "service205",
+      "display": "CS BONGOR URBAIN II"
+    },
+    {
+      "code": "service206",
+      "display": "CS BONGOR URBAIN III"
+    },
+    {
+      "code": "service207",
+      "display": "CS BORO"
+    },
+    {
+      "code": "service208",
+      "display": "CS BOUDOUGOUDOU"
+    },
+    {
+      "code": "service209",
+      "display": "CS BOUGAIRE"
+    },
+    {
+      "code": "service210",
+      "display": "CS BOUGOULOU"
+    },
+    {
+      "code": "service211",
+      "display": "CS BOUGOUMNE"
+    },
+    {
+      "code": "service212",
+      "display": "CS BOUGOURMARI"
+    },
+    {
+      "code": "service213",
+      "display": "CS BOUM-KEBIR"
+    },
+    {
+      "code": "service214",
+      "display": "CS BOUROU PUBLIC"
+    },
+    {
+      "code": "service215",
+      "display": "CS BOUROUDOU"
+    },
+    {
+      "code": "service216",
+      "display": "CS BOUTALBAGARA.2"
+    },
+    {
+      "code": "service217",
+      "display": "CS BOUTALBAGARA.3"
+    },
+    {
+      "code": "service218",
+      "display": "CS BOUTELFIL"
+    },
+    {
+      "code": "service219",
+      "display": "CS BOYAMA"
+    },
+    {
+      "code": "service220",
+      "display": "CS CAMP BEKAN"
+    },
+    {
+      "code": "service221",
+      "display": "CS CAMP DOSSEYE"
+    },
+    {
+      "code": "service222",
+      "display": "CS CENTRE VILLE"
+    },
+    {
+      "code": "service223",
+      "display": "CS CHADDRA URBAIN"
+    },
+    {
+      "code": "service224",
+      "display": "CS CHAWIR"
+    },
+    {
+      "code": "service225",
+      "display": "CS CHINGUIL"
+    },
+    {
+      "code": "service226",
+      "display": "CS CHIRAGUINE"
+    },
+    {
+      "code": "service227",
+      "display": "CS CHOGOYA"
+    },
+    {
+      "code": "service228",
+      "display": "CS COM DOKOT"
+    },
+    {
+      "code": "service229",
+      "display": "CS CROIX-ROUGE"
+    },
+    {
+      "code": "service230",
+      "display": "CS CS HANGA"
+    },
+    {
+      "code": "service231",
+      "display": "CS DADLILE"
+    },
+    {
+      "code": "service232",
+      "display": "CS DADOUAR"
+    },
+    {
+      "code": "service233",
+      "display": "CS DAGUE"
+    },
+    {
+      "code": "service234",
+      "display": "CS DAGUESSA"
+    },
+    {
+      "code": "service235",
+      "display": "CS DAGUILA"
+    },
+    {
+      "code": "service236",
+      "display": "CS DAHA"
+    },
+    {
+      "code": "service237",
+      "display": "CS DALE"
+    },
+    {
+      "code": "service238",
+      "display": "CS DANAMADJA"
+    },
+    {
+      "code": "service239",
+      "display": "CS DANDI-NIBECK"
+    },
+    {
+      "code": "service240",
+      "display": "CS DANOUNA"
+    },
+    {
+      "code": "service241",
+      "display": "CS DARADIR"
+    },
+    {
+      "code": "service242",
+      "display": "CS DARADJA"
+    },
+    {
+      "code": "service243",
+      "display": "CS DARASNA"
+    },
+    {
+      "code": "service244",
+      "display": "CS DARBE"
+    },
+    {
+      "code": "service245",
+      "display": "CS DARDA"
+    },
+    {
+      "code": "service246",
+      "display": "CS DARI"
+    },
+    {
+      "code": "service247",
+      "display": "CS DARMASSA"
+    },
+    {
+      "code": "service248",
+      "display": "CS DAR-OUMAR"
+    },
+    {
+      "code": "service249",
+      "display": "CS DARSALAM"
+    },
+    {
+      "code": "service250",
+      "display": "CS DE MÉDÉ"
+    },
+    {
+      "code": "service251",
+      "display": "CS DELBIAN PUBLIC"
+    },
+    {
+      "code": "service252",
+      "display": "CS DEMBE"
+    },
+    {
+      "code": "service253",
+      "display": "CS DEMBO"
+    },
+    {
+      "code": "service254",
+      "display": "CS DENI"
+    },
+    {
+      "code": "service255",
+      "display": "CS DERBALEBENE"
+    },
+    {
+      "code": "service256",
+      "display": "CS DIGUEL ANGABO"
+    },
+    {
+      "code": "service257",
+      "display": "CS DIGUEL EST"
+    },
+    {
+      "code": "service258",
+      "display": "CS DIGUEL NORD"
+    },
+    {
+      "code": "service259",
+      "display": "CS DIGUEL RIAD"
+    },
+    {
+      "code": "service260",
+      "display": "CS DIKER"
+    },
+    {
+      "code": "service261",
+      "display": "CS DILBINI"
+    },
+    {
+      "code": "service262",
+      "display": "CS DILEMA"
+    },
+    {
+      "code": "service263",
+      "display": "CS DILINGALA"
+    },
+    {
+      "code": "service264",
+      "display": "CS DINDJEKONO"
+    },
+    {
+      "code": "service265",
+      "display": "CS DJABAL"
+    },
+    {
+      "code": "service266",
+      "display": "CS DJAGUIR"
+    },
+    {
+      "code": "service267",
+      "display": "CS DJANA"
+    },
+    {
+      "code": "service268",
+      "display": "CS DJAR"
+    },
+    {
+      "code": "service269",
+      "display": "CS DJATINIE"
+    },
+    {
+      "code": "service270",
+      "display": "CS DJAYA"
+    },
+    {
+      "code": "service271",
+      "display": "CS DJAZIRE-TAMA"
+    },
+    {
+      "code": "service272",
+      "display": "CS DJENANDOUM"
+    },
+    {
+      "code": "service273",
+      "display": "CS DJENGRENG II"
+    },
+    {
+      "code": "service274",
+      "display": "CS DJENGRENG RESIDENCE"
+    },
+    {
+      "code": "service275",
+      "display": "CS DJERA"
+    },
+    {
+      "code": "service276",
+      "display": "CS DJI"
+    },
+    {
+      "code": "service277",
+      "display": "CS DJIMEZÉ"
+    },
+    {
+      "code": "service278",
+      "display": "CS DJINERE"
+    },
+    {
+      "code": "service279",
+      "display": "CS DJODO GASSA"
+    },
+    {
+      "code": "service280",
+      "display": "CS DJOGORI"
+    },
+    {
+      "code": "service281",
+      "display": "CS DJOKANE"
+    },
+    {
+      "code": "service282",
+      "display": "CS DJOLA II"
+    },
+    {
+      "code": "service283",
+      "display": "CS DJOLI"
+    },
+    {
+      "code": "service284",
+      "display": "CS DJOUDJOU"
+    },
+    {
+      "code": "service285",
+      "display": "CS DJOUKOULKOULI"
+    },
+    {
+      "code": "service286",
+      "display": "CS DJOUNA"
+    },
+    {
+      "code": "service287",
+      "display": "CS DJOUROUF"
+    },
+    {
+      "code": "service288",
+      "display": "CS DOBA URBAIN"
+    },
+    {
+      "code": "service289",
+      "display": "CS DOBA/AEROPORT"
+    },
+    {
+      "code": "service290",
+      "display": "CS DOBARA"
+    },
+    {
+      "code": "service291",
+      "display": "CS DOBEBE"
+    },
+    {
+      "code": "service292",
+      "display": "CS DOBITI"
+    },
+    {
+      "code": "service293",
+      "display": "CS DODANG 2"
+    },
+    {
+      "code": "service294",
+      "display": "CS DODJINDA"
+    },
+    {
+      "code": "service295",
+      "display": "CS DOGDORE"
+    },
+    {
+      "code": "service296",
+      "display": "CS DOH"
+    },
+    {
+      "code": "service297",
+      "display": "CS DOHOLO"
+    },
+    {
+      "code": "service298",
+      "display": "CS DOKORA"
+    },
+    {
+      "code": "service299",
+      "display": "CS DOKOU"
+    },
+    {
+      "code": "service300",
+      "display": "CS DONIA ISLAMIQUE"
+    },
+    {
+      "code": "service301",
+      "display": "CS DONIA MSP"
+    },
+    {
+      "code": "service302",
+      "display": "CS DOP-DOP"
+    },
+    {
+      "code": "service303",
+      "display": "CS DORE"
+    },
+    {
+      "code": "service304",
+      "display": "CS DORGA"
+    },
+    {
+      "code": "service305",
+      "display": "CS DORMON"
+    },
+    {
+      "code": "service306",
+      "display": "CS DOUBADANE III"
+    },
+    {
+      "code": "service307",
+      "display": "CS DOUE"
+    },
+    {
+      "code": "service308",
+      "display": "CS DOUGOUL"
+    },
+    {
+      "code": "service309",
+      "display": "CS DOUGUIA"
+    },
+    {
+      "code": "service310",
+      "display": "CS DOUGUINE"
+    },
+    {
+      "code": "service311",
+      "display": "CS DOUMOUGOU"
+    },
+    {
+      "code": "service312",
+      "display": "CS DOUNGABO"
+    },
+    {
+      "code": "service313",
+      "display": "CS DOURBALI 1"
+    },
+    {
+      "code": "service314",
+      "display": "CS DOURBALI 2"
+    },
+    {
+      "code": "service315",
+      "display": "CS DOURDOURA"
+    },
+    {
+      "code": "service316",
+      "display": "CS DOURGOULANGA"
+    },
+    {
+      "code": "service317",
+      "display": "CS DOUVOUL"
+    },
+    {
+      "code": "service318",
+      "display": "CS DOZANGA"
+    },
+    {
+      "code": "service319",
+      "display": "CS ERBEYE"
+    },
+    {
+      "code": "service320",
+      "display": "CS EREF"
+    },
+    {
+      "code": "service321",
+      "display": "CS ERNÉ"
+    },
+    {
+      "code": "service322",
+      "display": "CS ERRE"
+    },
+    {
+      "code": "service323",
+      "display": "CS FADA"
+    },
+    {
+      "code": "service324",
+      "display": "CS FARÉ"
+    },
+    {
+      "code": "service325",
+      "display": "CS FASSALADJOUL"
+    },
+    {
+      "code": "service326",
+      "display": "CS FASTALADJOU"
+    },
+    {
+      "code": "service327",
+      "display": "CS FAYA GARNISON"
+    },
+    {
+      "code": "service328",
+      "display": "CS FAYA URBAIN"
+    },
+    {
+      "code": "service329",
+      "display": "CS FIANGA URBAIN"
+    },
+    {
+      "code": "service330",
+      "display": "CS FIRMOUGA"
+    },
+    {
+      "code": "service331",
+      "display": "CS FIZIGUI"
+    },
+    {
+      "code": "service332",
+      "display": "CS FONDORE"
+    },
+    {
+      "code": "service333",
+      "display": "CS FOULOUNGA"
+    },
+    {
+      "code": "service334",
+      "display": "CS GABA"
+    },
+    {
+      "code": "service335",
+      "display": "CS GABOLO"
+    },
+    {
+      "code": "service336",
+      "display": "CS GABRI-NGOLO"
+    },
+    {
+      "code": "service337",
+      "display": "CS GAKI"
+    },
+    {
+      "code": "service338",
+      "display": "CS GALA"
+    },
+    {
+      "code": "service339",
+      "display": "CS GAMA"
+    },
+    {
+      "code": "service340",
+      "display": "CS GAMA-URBAIN"
+    },
+    {
+      "code": "service341",
+      "display": "CS GAMBAROU"
+    },
+    {
+      "code": "service342",
+      "display": "CS GAMBIR"
+    },
+    {
+      "code": "service343",
+      "display": "CS GAME"
+    },
+    {
+      "code": "service344",
+      "display": "CS GAOUI"
+    },
+    {
+      "code": "service345",
+      "display": "CS GARDOLE"
+    },
+    {
+      "code": "service346",
+      "display": "CS GARI"
+    },
+    {
+      "code": "service347",
+      "display": "CS GARI II"
+    },
+    {
+      "code": "service348",
+      "display": "CS GASALLA"
+    },
+    {
+      "code": "service349",
+      "display": "CS GASSARA"
+    },
+    {
+      "code": "service350",
+      "display": "CS GAYAM II"
+    },
+    {
+      "code": "service351",
+      "display": "CS GOIGOUDOUM"
+    },
+    {
+      "code": "service352",
+      "display": "CS GON"
+    },
+    {
+      "code": "service353",
+      "display": "CS GONOGOTOR"
+    },
+    {
+      "code": "service354",
+      "display": "CS GONORI 2"
+    },
+    {
+      "code": "service355",
+      "display": "CS GONRA"
+    },
+    {
+      "code": "service356",
+      "display": "CS GORE URBAIN"
+    },
+    {
+      "code": "service357",
+      "display": "CS GOUDJI"
+    },
+    {
+      "code": "service358",
+      "display": "CS GOUDJI CHARAFA"
+    },
+    {
+      "code": "service359",
+      "display": "CS GOUIN"
+    },
+    {
+      "code": "service360",
+      "display": "CS GOUNOU GAYA I"
+    },
+    {
+      "code": "service361",
+      "display": "CS GOUNOU GAYA II"
+    },
+    {
+      "code": "service362",
+      "display": "CS GOURMA"
+    },
+    {
+      "code": "service363",
+      "display": "CS GOURMAKA"
+    },
+    {
+      "code": "service364",
+      "display": "CS GOURNAIDA"
+    },
+    {
+      "code": "service365",
+      "display": "CS GOURO"
+    },
+    {
+      "code": "service366",
+      "display": "CS GOUROUKOUN"
+    },
+    {
+      "code": "service367",
+      "display": "CS GOZ DJARAT"
+    },
+    {
+      "code": "service368",
+      "display": "CS GOZAMIR"
+    },
+    {
+      "code": "service369",
+      "display": "CS GOZATOR COM"
+    },
+    {
+      "code": "service370",
+      "display": "CS GUEBANNE"
+    },
+    {
+      "code": "service371",
+      "display": "CS GUÉNÉ"
+    },
+    {
+      "code": "service372",
+      "display": "CS GUEREDA URBAIN"
+    },
+    {
+      "code": "service373",
+      "display": "CS GUETALET"
+    },
+    {
+      "code": "service374",
+      "display": "CS GUILANDINGA"
+    },
+    {
+      "code": "service375",
+      "display": "CS GUITTE"
+    },
+    {
+      "code": "service376",
+      "display": "CS HADIDE"
+    },
+    {
+      "code": "service377",
+      "display": "CS HAOUSSA"
+    },
+    {
+      "code": "service378",
+      "display": "CS HARANGADJI"
+    },
+    {
+      "code": "service379",
+      "display": "CS HARAZE"
+    },
+    {
+      "code": "service380",
+      "display": "CS HILE"
+    },
+    {
+      "code": "service381",
+      "display": "CS HILE CLAIR"
+    },
+    {
+      "code": "service382",
+      "display": "CS HILLE AFFA"
+    },
+    {
+      "code": "service383",
+      "display": "CS HINDINA"
+    },
+    {
+      "code": "service384",
+      "display": "CS HOLLOM"
+    },
+    {
+      "code": "service385",
+      "display": "CS IBNI HAITHAM"
+    },
+    {
+      "code": "service386",
+      "display": "CS IDBO"
+    },
+    {
+      "code": "service387",
+      "display": "CS IDETER"
+    },
+    {
+      "code": "service388",
+      "display": "CS ILILI"
+    },
+    {
+      "code": "service389",
+      "display": "CS IRIBA URBAIN"
+    },
+    {
+      "code": "service390",
+      "display": "CS IRIBOUGOUDI"
+    },
+    {
+      "code": "service391",
+      "display": "CS ISLAMQUE"
+    },
+    {
+      "code": "service392",
+      "display": "CS ITOU"
+    },
+    {
+      "code": "service393",
+      "display": "CS KADJASKE"
+    },
+    {
+      "code": "service394",
+      "display": "CS KAGAPALPAYE"
+    },
+    {
+      "code": "service395",
+      "display": "CS KAGPAL"
+    },
+    {
+      "code": "service396",
+      "display": "CS KALAIT URBAIN"
+    },
+    {
+      "code": "service397",
+      "display": "CS KALIWA"
+    },
+    {
+      "code": "service398",
+      "display": "CS KALME"
+    },
+    {
+      "code": "service399",
+      "display": "CS KAMINA"
+    },
+    {
+      "code": "service400",
+      "display": "CS KAMKALAGA"
+    },
+    {
+      "code": "service401",
+      "display": "CS KANTARA"
+    },
+    {
+      "code": "service402",
+      "display": "CS KAOURA"
+    },
+    {
+      "code": "service403",
+      "display": "CS KARA"
+    },
+    {
+      "code": "service404",
+      "display": "CS KARIARI"
+    },
+    {
+      "code": "service405",
+      "display": "CS KARKA"
+    },
+    {
+      "code": "service406",
+      "display": "CS KARNAK"
+    },
+    {
+      "code": "service407",
+      "display": "CS KARO"
+    },
+    {
+      "code": "service408",
+      "display": "CS KASKINÉ"
+    },
+    {
+      "code": "service409",
+      "display": "CS KASSAI"
+    },
+    {
+      "code": "service410",
+      "display": "CS KASSARA"
+    },
+    {
+      "code": "service411",
+      "display": "CS KATAO"
+    },
+    {
+      "code": "service412",
+      "display": "CS KEDJOU"
+    },
+    {
+      "code": "service413",
+      "display": "CS KEIKE"
+    },
+    {
+      "code": "service414",
+      "display": "CS KEKEDINA"
+    },
+    {
+      "code": "service415",
+      "display": "CS KEKERKÉ"
+    },
+    {
+      "code": "service416",
+      "display": "CS KELENGUE"
+    },
+    {
+      "code": "service417",
+      "display": "CS KEMATA"
+    },
+    {
+      "code": "service418",
+      "display": "CS KEMKADA"
+    },
+    {
+      "code": "service419",
+      "display": "CS KEMNDERE"
+    },
+    {
+      "code": "service420",
+      "display": "CS KERFI"
+    },
+    {
+      "code": "service421",
+      "display": "CS KHIRERIB"
+    },
+    {
+      "code": "service422",
+      "display": "CS KIRDIMI"
+    },
+    {
+      "code": "service423",
+      "display": "CS KIRKA"
+    },
+    {
+      "code": "service424",
+      "display": "CS KOKAGA"
+    },
+    {
+      "code": "service425",
+      "display": "CS KOKOYE"
+    },
+    {
+      "code": "service426",
+      "display": "CS KOLLET"
+    },
+    {
+      "code": "service427",
+      "display": "CS KOLON"
+    },
+    {
+      "code": "service428",
+      "display": "CS KOME NDOLEBE"
+    },
+    {
+      "code": "service429",
+      "display": "CS KORBOL"
+    },
+    {
+      "code": "service430",
+      "display": "CS KOTRO-FALATA"
+    },
+    {
+      "code": "service431",
+      "display": "CS KOUBA"
+    },
+    {
+      "code": "service432",
+      "display": "CS KOUBEIGOU"
+    },
+    {
+      "code": "service433",
+      "display": "CS KOUBO ADOUGOUL"
+    },
+    {
+      "code": "service434",
+      "display": "CS KOUCHANE"
+    },
+    {
+      "code": "service435",
+      "display": "CS KOUDIGUINE"
+    },
+    {
+      "code": "service436",
+      "display": "CS KOUDJOUR DOURAYE"
+    },
+    {
+      "code": "service437",
+      "display": "CS KOUKA"
+    },
+    {
+      "code": "service438",
+      "display": "CS KOUKOU"
+    },
+    {
+      "code": "service439",
+      "display": "CS KOULKOULAYE"
+    },
+    {
+      "code": "service440",
+      "display": "CS KOUMA"
+    },
+    {
+      "code": "service441",
+      "display": "CS KOUMOGO"
+    },
+    {
+      "code": "service442",
+      "display": "CS KOUMOU"
+    },
+    {
+      "code": "service443",
+      "display": "CS KOUMRA EST"
+    },
+    {
+      "code": "service444",
+      "display": "CS KOUMRA NORD"
+    },
+    {
+      "code": "service445",
+      "display": "CS KOUMRA OUEST"
+    },
+    {
+      "code": "service446",
+      "display": "CS KOUNDJ"
+    },
+    {
+      "code": "service447",
+      "display": "CS KOUNDOUL1"
+    },
+    {
+      "code": "service448",
+      "display": "CS KOUNDOUL2"
+    },
+    {
+      "code": "service449",
+      "display": "CS KOUNDOUL3"
+    },
+    {
+      "code": "service450",
+      "display": "CS KOUNDOUL5"
+    },
+    {
+      "code": "service451",
+      "display": "CS KOUPOR I"
+    },
+    {
+      "code": "service452",
+      "display": "CS KOUPOR II"
+    },
+    {
+      "code": "service453",
+      "display": "CS KOUREYE"
+    },
+    {
+      "code": "service454",
+      "display": "CS KOURI-KOURI"
+    },
+    {
+      "code": "service455",
+      "display": "CS KOURKOURÉ"
+    },
+    {
+      "code": "service456",
+      "display": "CS KOURNAH"
+    },
+    {
+      "code": "service457",
+      "display": "CS KOURNARI"
+    },
+    {
+      "code": "service458",
+      "display": "CS KOURSIGUÉ"
+    },
+    {
+      "code": "service459",
+      "display": "CS KOUTERE"
+    },
+    {
+      "code": "service460",
+      "display": "CS KOUTOU"
+    },
+    {
+      "code": "service461",
+      "display": "CS KOUTOUFOU"
+    },
+    {
+      "code": "service462",
+      "display": "CS KOUYAKO"
+    },
+    {
+      "code": "service463",
+      "display": "CS KOWEITIEN"
+    },
+    {
+      "code": "service464",
+      "display": "CS KOWETIEN"
+    },
+    {
+      "code": "service465",
+      "display": "CS KRIM KRIM"
+    },
+    {
+      "code": "service466",
+      "display": "CS KYABE NORD"
+    },
+    {
+      "code": "service467",
+      "display": "CS KYABE SUD"
+    },
+    {
+      "code": "service468",
+      "display": "CS KYATA-NDOKDO"
+    },
+    {
+      "code": "service469",
+      "display": "CS LAI AVION"
+    },
+    {
+      "code": "service470",
+      "display": "CS LAI URBAIN"
+    },
+    {
+      "code": "service471",
+      "display": "CS LAI-URBAIN"
+    },
+    {
+      "code": "service472",
+      "display": "CS LAMKA"
+    },
+    {
+      "code": "service473",
+      "display": "CS LAOKASSY"
+    },
+    {
+      "code": "service474",
+      "display": "CS LAOROUBA"
+    },
+    {
+      "code": "service475",
+      "display": "CS LARMANAYE"
+    },
+    {
+      "code": "service476",
+      "display": "CS LELE"
+    },
+    {
+      "code": "service477",
+      "display": "CS LEO-MBASSA"
+    },
+    {
+      "code": "service478",
+      "display": "CS LEPROSERIE"
+    },
+    {
+      "code": "service479",
+      "display": "CS LERE-URBAIN"
+    },
+    {
+      "code": "service480",
+      "display": "CS LIGRA"
+    },
+    {
+      "code": "service481",
+      "display": "CS LIMA"
+    },
+    {
+      "code": "service482",
+      "display": "CS LINIA 1"
+    },
+    {
+      "code": "service483",
+      "display": "CS LINIA 2"
+    },
+    {
+      "code": "service484",
+      "display": "CS LINIA 3"
+    },
+    {
+      "code": "service485",
+      "display": "CS LOGONE GANA"
+    },
+    {
+      "code": "service486",
+      "display": "CS LOUBOUTIGUE"
+    },
+    {
+      "code": "service487",
+      "display": "CS LOUMIA"
+    },
+    {
+      "code": "service488",
+      "display": "CS MABASSAIACKRE"
+    },
+    {
+      "code": "service489",
+      "display": "CS MACHAGA"
+    },
+    {
+      "code": "service490",
+      "display": "CS MADANA"
+    },
+    {
+      "code": "service491",
+      "display": "CS MADEMERE"
+    },
+    {
+      "code": "service492",
+      "display": "CS MADGORO"
+    },
+    {
+      "code": "service493",
+      "display": "CS MAGA"
+    },
+    {
+      "code": "service494",
+      "display": "CS MAGNAM"
+    },
+    {
+      "code": "service495",
+      "display": "CS MAGOUMBOU"
+    },
+    {
+      "code": "service496",
+      "display": "CS MAGUIYANGA"
+    },
+    {
+      "code": "service497",
+      "display": "CS MAI-ACHE"
+    },
+    {
+      "code": "service498",
+      "display": "CS MAIGANA"
+    },
+    {
+      "code": "service499",
+      "display": "CS MAILAO"
+    },
+    {
+      "code": "service500",
+      "display": "CS MAINGARA"
+    },
+    {
+      "code": "service501",
+      "display": "CS MAKABOU"
+    },
+    {
+      "code": "service502",
+      "display": "CS MALIAM"
+    },
+    {
+      "code": "service503",
+      "display": "CS MALISSAMA"
+    },
+    {
+      "code": "service504",
+      "display": "CS MALLELI"
+    },
+    {
+      "code": "service505",
+      "display": "CS MALLOUMRI"
+    },
+    {
+      "code": "service506",
+      "display": "CS MALO4"
+    },
+    {
+      "code": "service507",
+      "display": "CS MAMBOU"
+    },
+    {
+      "code": "service508",
+      "display": "CS MAMPAL"
+    },
+    {
+      "code": "service509",
+      "display": "CS MANANG"
+    },
+    {
+      "code": "service510",
+      "display": "CS MANDA"
+    },
+    {
+      "code": "service511",
+      "display": "CS MANDA 1"
+    },
+    {
+      "code": "service512",
+      "display": "CS MANDA II"
+    },
+    {
+      "code": "service513",
+      "display": "CS MANDELE"
+    },
+    {
+      "code": "service514",
+      "display": "CS MANDÉLIA"
+    },
+    {
+      "code": "service515",
+      "display": "CS MANDJOURA"
+    },
+    {
+      "code": "service516",
+      "display": "CS MANGA BALBAL"
+    },
+    {
+      "code": "service517",
+      "display": "CS MANGA NGOLO"
+    },
+    {
+      "code": "service518",
+      "display": "CS MANGAGUER"
+    },
+    {
+      "code": "service519",
+      "display": "CS MANI URBAIN"
+    },
+    {
+      "code": "service520",
+      "display": "CS MANJA"
+    },
+    {
+      "code": "service521",
+      "display": "CS MAO CENTRE"
+    },
+    {
+      "code": "service522",
+      "display": "CS MAO MOSQUEE"
+    },
+    {
+      "code": "service523",
+      "display": "CS MAO-MOTO"
+    },
+    {
+      "code": "service524",
+      "display": "CS MAOUA"
+    },
+    {
+      "code": "service525",
+      "display": "CS MARASABRE"
+    },
+    {
+      "code": "service526",
+      "display": "CS MARBA GOGOR"
+    },
+    {
+      "code": "service527",
+      "display": "CS MARDAGUAYE"
+    },
+    {
+      "code": "service528",
+      "display": "CS MARLAK"
+    },
+    {
+      "code": "service529",
+      "display": "CS MARO"
+    },
+    {
+      "code": "service530",
+      "display": "CS MARTIBE"
+    },
+    {
+      "code": "service531",
+      "display": "CS MASSANBAYE"
+    },
+    {
+      "code": "service532",
+      "display": "CS MASSENYA"
+    },
+    {
+      "code": "service533",
+      "display": "CS MATA"
+    },
+    {
+      "code": "service534",
+      "display": "CS MATADJANA"
+    },
+    {
+      "code": "service535",
+      "display": "CS MATARKA-BISSOURI"
+    },
+    {
+      "code": "service536",
+      "display": "CS MATEKAGA"
+    },
+    {
+      "code": "service537",
+      "display": "CS MBAKOURI"
+    },
+    {
+      "code": "service538",
+      "display": "CS MBALA"
+    },
+    {
+      "code": "service539",
+      "display": "CS MEKAB"
+    },
+    {
+      "code": "service540",
+      "display": "CS MELEAT"
+    },
+    {
+      "code": "service541",
+      "display": "CS MELFI URBAIN"
+    },
+    {
+      "code": "service542",
+      "display": "CS MELLEAH"
+    },
+    {
+      "code": "service543",
+      "display": "CS MGO-EST"
+    },
+    {
+      "code": "service544",
+      "display": "CS MGO-NORD"
+    },
+    {
+      "code": "service545",
+      "display": "CS MGO-OUEST"
+    },
+    {
+      "code": "service546",
+      "display": "CS MIANDOUM MSP"
+    },
+    {
+      "code": "service547",
+      "display": "CS MICHEMIRE"
+    },
+    {
+      "code": "service548",
+      "display": "CS MICHETIR"
+    },
+    {
+      "code": "service549",
+      "display": "CS MIGUEROM"
+    },
+    {
+      "code": "service550",
+      "display": "CS MINA"
+    },
+    {
+      "code": "service551",
+      "display": "CS MINI"
+    },
+    {
+      "code": "service552",
+      "display": "CS MIOUH"
+    },
+    {
+      "code": "service553",
+      "display": "CS MIRER"
+    },
+    {
+      "code": "service554",
+      "display": "CS MITERINE"
+    },
+    {
+      "code": "service555",
+      "display": "CS MITMITI"
+    },
+    {
+      "code": "service556",
+      "display": "CS MOAL"
+    },
+    {
+      "code": "service557",
+      "display": "CS MOGOYE"
+    },
+    {
+      "code": "service558",
+      "display": "CS MOKOFI"
+    },
+    {
+      "code": "service559",
+      "display": "CS MOLFOUDEYE"
+    },
+    {
+      "code": "service560",
+      "display": "CS MONDO CENTRE"
+    },
+    {
+      "code": "service561",
+      "display": "CS MONOGOYE"
+    },
+    {
+      "code": "service562",
+      "display": "CS MOSKILIM"
+    },
+    {
+      "code": "service563",
+      "display": "CS MOTOA"
+    },
+    {
+      "code": "service564",
+      "display": "CS MOUDEINA"
+    },
+    {
+      "code": "service565",
+      "display": "CS MOUDRÉ"
+    },
+    {
+      "code": "service566",
+      "display": "CS MOUKASSA"
+    },
+    {
+      "code": "service567",
+      "display": "CS MOUKAYE"
+    },
+    {
+      "code": "service568",
+      "display": "CS MOULKOU URBAIN"
+    },
+    {
+      "code": "service569",
+      "display": "CS MOURAYE"
+    },
+    {
+      "code": "service570",
+      "display": "CS MOURDI"
+    },
+    {
+      "code": "service571",
+      "display": "CS MOUROUM-TOULOUM"
+    },
+    {
+      "code": "service572",
+      "display": "CS MOURSALE"
+    },
+    {
+      "code": "service573",
+      "display": "CS MOURZIGUI"
+    },
+    {
+      "code": "service574",
+      "display": "CS MOUSSININI"
+    },
+    {
+      "code": "service575",
+      "display": "CS MOUSSORO URBAIN"
+    },
+    {
+      "code": "service576",
+      "display": "CS MOUZRAGUI"
+    },
+    {
+      "code": "service577",
+      "display": "CS MOYTO"
+    },
+    {
+      "code": "service578",
+      "display": "CS NAMA"
+    },
+    {
+      "code": "service579",
+      "display": "CS NANKESSE"
+    },
+    {
+      "code": "service580",
+      "display": "CS NANOU"
+    },
+    {
+      "code": "service581",
+      "display": "CS NASSIAN"
+    },
+    {
+      "code": "service582",
+      "display": "CS NDA"
+    },
+    {
+      "code": "service583",
+      "display": "CS NDAM"
+    },
+    {
+      "code": "service584",
+      "display": "CS NDILA"
+    },
+    {
+      "code": "service585",
+      "display": "CS NDJAMENA ALI DINAR"
+    },
+    {
+      "code": "service586",
+      "display": "CS NDJAMENA BILALA"
+    },
+    {
+      "code": "service587",
+      "display": "CS NDJAR KAWAS"
+    },
+    {
+      "code": "service588",
+      "display": "CS NDJARI"
+    },
+    {
+      "code": "service589",
+      "display": "CS NELMBI"
+    },
+    {
+      "code": "service590",
+      "display": "CS NERGUE GAM"
+    },
+    {
+      "code": "service591",
+      "display": "CS NERGUÉ GOUDJOUBA"
+    },
+    {
+      "code": "service592",
+      "display": "CS NGAMA KOTOKO"
+    },
+    {
+      "code": "service593",
+      "display": "CS NGOMONGO"
+    },
+    {
+      "code": "service594",
+      "display": "CS NGOURA"
+    },
+    {
+      "code": "service595",
+      "display": "CS NGUETO"
+    },
+    {
+      "code": "service596",
+      "display": "CS NIELLIM"
+    },
+    {
+      "code": "service597",
+      "display": "CS NINGA"
+    },
+    {
+      "code": "service598",
+      "display": "CS NOKOU"
+    },
+    {
+      "code": "service599",
+      "display": "CS N'TIONA URBAIN"
+    },
+    {
+      "code": "service600",
+      "display": "CS OGUI"
+    },
+    {
+      "code": "service601",
+      "display": "CS ONOKO"
+    },
+    {
+      "code": "service602",
+      "display": "CS ORDRE MAL"
+    },
+    {
+      "code": "service603",
+      "display": "CS OROCTA"
+    },
+    {
+      "code": "service604",
+      "display": "CS OUDOUMIAN"
+    },
+    {
+      "code": "service605",
+      "display": "CS OULED-BELLI"
+    },
+    {
+      "code": "service606",
+      "display": "CS OUM-HADJER EST"
+    },
+    {
+      "code": "service607",
+      "display": "CS OUM-HADJER NORD"
+    },
+    {
+      "code": "service608",
+      "display": "CS OUM-HADJER SUD"
+    },
+    {
+      "code": "service609",
+      "display": "CS OUNIANGA SAKKER"
+    },
+    {
+      "code": "service610",
+      "display": "CS OURBA"
+    },
+    {
+      "code": "service611",
+      "display": "CS OURDA"
+    },
+    {
+      "code": "service612",
+      "display": "CS OURE CASSONI"
+    },
+    {
+      "code": "service613",
+      "display": "CS PAIX DU SAHEL"
+    },
+    {
+      "code": "service614",
+      "display": "CS PARI-DOUMGAO"
+    },
+    {
+      "code": "service615",
+      "display": "CS PIBOU"
+    },
+    {
+      "code": "service616",
+      "display": "CS PLACE NORD"
+    },
+    {
+      "code": "service617",
+      "display": "CS PONT CAROL I"
+    },
+    {
+      "code": "service618",
+      "display": "CS PONT CAROL II"
+    },
+    {
+      "code": "service619",
+      "display": "CS POUDOUE"
+    },
+    {
+      "code": "service620",
+      "display": "CS RAF"
+    },
+    {
+      "code": "service621",
+      "display": "CS RAOUL FOLLEREAU"
+    },
+    {
+      "code": "service622",
+      "display": "CS REGNEGNE"
+    },
+    {
+      "code": "service623",
+      "display": "CS REPOS"
+    },
+    {
+      "code": "service624",
+      "display": "CS RIBAO"
+    },
+    {
+      "code": "service625",
+      "display": "CS RIDINA"
+    },
+    {
+      "code": "service626",
+      "display": "CS RIMEIKHO"
+    },
+    {
+      "code": "service627",
+      "display": "CS ROUT-ROUT"
+    },
+    {
+      "code": "service628",
+      "display": "CS SAFOYO"
+    },
+    {
+      "code": "service629",
+      "display": "CS SAKO-GONGO"
+    },
+    {
+      "code": "service630",
+      "display": "CS SALAMAT"
+    },
+    {
+      "code": "service631",
+      "display": "CS SALEH-MANGA"
+    },
+    {
+      "code": "service632",
+      "display": "CS SARA ARABE"
+    },
+    {
+      "code": "service633",
+      "display": "CS SARH CENTRE"
+    },
+    {
+      "code": "service634",
+      "display": "CS SECOURS"
+    },
+    {
+      "code": "service635",
+      "display": "CS SENEGAL"
+    },
+    {
+      "code": "service636",
+      "display": "CS SEWE"
+    },
+    {
+      "code": "service637",
+      "display": "CS SIDI-MALARI"
+    },
+    {
+      "code": "service638",
+      "display": "CS SIHEB"
+    },
+    {
+      "code": "service639",
+      "display": "CS SILA"
+    },
+    {
+      "code": "service640",
+      "display": "CS SIMARALDJANA"
+    },
+    {
+      "code": "service641",
+      "display": "CS SIMEGOTOBE"
+    },
+    {
+      "code": "service642",
+      "display": "CS SISSI"
+    },
+    {
+      "code": "service643",
+      "display": "CS SOKOYE"
+    },
+    {
+      "code": "service644",
+      "display": "CS SOLIDARITÉ ISLAMIQUE"
+    },
+    {
+      "code": "service645",
+      "display": "CS SOS"
+    },
+    {
+      "code": "service646",
+      "display": "CS SOUDIO"
+    },
+    {
+      "code": "service647",
+      "display": "CS SOULOUSSANGA"
+    },
+    {
+      "code": "service648",
+      "display": "CS TAGAL"
+    },
+    {
+      "code": "service649",
+      "display": "CS TAIBA"
+    },
+    {
+      "code": "service650",
+      "display": "CS TAILLE"
+    },
+    {
+      "code": "service651",
+      "display": "CS TAKALAW"
+    },
+    {
+      "code": "service652",
+      "display": "CS TAKAOUA"
+    },
+    {
+      "code": "service653",
+      "display": "CS TALA"
+    },
+    {
+      "code": "service654",
+      "display": "CS TAMYO"
+    },
+    {
+      "code": "service655",
+      "display": "CS TANGLEAT"
+    },
+    {
+      "code": "service656",
+      "display": "CS TAPOLE"
+    },
+    {
+      "code": "service657",
+      "display": "CS TARFE"
+    },
+    {
+      "code": "service658",
+      "display": "CS TARSOUROU"
+    },
+    {
+      "code": "service659",
+      "display": "CS TAYE"
+    },
+    {
+      "code": "service660",
+      "display": "CS TCHALLA"
+    },
+    {
+      "code": "service661",
+      "display": "CS TCHANGSOUS"
+    },
+    {
+      "code": "service662",
+      "display": "CS TCHANGSOUSS"
+    },
+    {
+      "code": "service663",
+      "display": "CS TCHAWAYE"
+    },
+    {
+      "code": "service664",
+      "display": "CS TCHELI"
+    },
+    {
+      "code": "service665",
+      "display": "CS TCHINFOGO"
+    },
+    {
+      "code": "service666",
+      "display": "CS TCHIRE GALAPMA"
+    },
+    {
+      "code": "service667",
+      "display": "CS TCHOUKOIROM"
+    },
+    {
+      "code": "service668",
+      "display": "CS TEBI"
+    },
+    {
+      "code": "service669",
+      "display": "CS TEFOULTRENE"
+    },
+    {
+      "code": "service670",
+      "display": "CS TELELENGA"
+    },
+    {
+      "code": "service671",
+      "display": "CS TELELI BOUZED"
+    },
+    {
+      "code": "service672",
+      "display": "CS TERREBOU"
+    },
+    {
+      "code": "service673",
+      "display": "CS TIKEM"
+    },
+    {
+      "code": "service674",
+      "display": "CS TILO"
+    },
+    {
+      "code": "service675",
+      "display": "CS TINE"
+    },
+    {
+      "code": "service676",
+      "display": "CS TIORO"
+    },
+    {
+      "code": "service677",
+      "display": "CS TISSI URBAIN"
+    },
+    {
+      "code": "service678",
+      "display": "CS TOLLO"
+    },
+    {
+      "code": "service679",
+      "display": "CS TOMBOLONG"
+    },
+    {
+      "code": "service680",
+      "display": "CS TOMOD"
+    },
+    {
+      "code": "service681",
+      "display": "CS TORROCK"
+    },
+    {
+      "code": "service682",
+      "display": "CS TOUKOULI"
+    },
+    {
+      "code": "service683",
+      "display": "CS TOUKRA1"
+    },
+    {
+      "code": "service684",
+      "display": "CS TOULA"
+    },
+    {
+      "code": "service685",
+      "display": "CS TOULALA"
+    },
+    {
+      "code": "service686",
+      "display": "CS TRENE"
+    },
+    {
+      "code": "service687",
+      "display": "CS TRI"
+    },
+    {
+      "code": "service688",
+      "display": "CS URBAIN"
+    },
+    {
+      "code": "service689",
+      "display": "CS WACHENKELEE"
+    },
+    {
+      "code": "service690",
+      "display": "CS WADI CHAGARA"
+    },
+    {
+      "code": "service691",
+      "display": "CS WADI INOU"
+    },
+    {
+      "code": "service692",
+      "display": "CS WADJIGUI"
+    },
+    {
+      "code": "service693",
+      "display": "CS WAYA"
+    },
+    {
+      "code": "service694",
+      "display": "CS WEE"
+    },
+    {
+      "code": "service695",
+      "display": "CS WESSENG"
+    },
+    {
+      "code": "service696",
+      "display": "CS WILLIKOURÉ"
+    },
+    {
+      "code": "service697",
+      "display": "CS WOULOUMANGA"
+    },
+    {
+      "code": "service698",
+      "display": "CS WOUTOUKOULFOU"
+    },
+    {
+      "code": "service699",
+      "display": "CS YALNAS"
+    },
+    {
+      "code": "service700",
+      "display": "CS YAMODO"
+    },
+    {
+      "code": "service701",
+      "display": "CS YAO"
+    },
+    {
+      "code": "service702",
+      "display": "CS YEN"
+    },
+    {
+      "code": "service703",
+      "display": "CS YOUGOUMI"
+    },
+    {
+      "code": "service704",
+      "display": "CS ZAFAYA"
+    },
+    {
+      "code": "service705",
+      "display": "CS ZAFAYE EST"
+    },
+    {
+      "code": "service706",
+      "display": "CS ZAFAYE OUEST"
+    },
+    {
+      "code": "service707",
+      "display": "CS ZAGUERE"
+    },
+    {
+      "code": "service708",
+      "display": "CS ZALBI"
+    },
+    {
+      "code": "service709",
+      "display": "CS ZAMAGOIN"
+    },
+    {
+      "code": "service710",
+      "display": "CS ZARZOURA"
+    },
+    {
+      "code": "service711",
+      "display": "CS ZEBLE"
+    },
+    {
+      "code": "service712",
+      "display": "CS ZIGUI MARBA"
+    },
+    {
+      "code": "service713",
+      "display": "CS ZOKNGO"
+    },
+    {
+      "code": "service714",
+      "display": "CS ZOUMRI"
+    },
+    {
+      "code": "service715",
+      "display": "DELEGATION"
+    },
+    {
+      "code": "service716",
+      "display": "DEPRA"
+    },
+    {
+      "code": "service717",
+      "display": "DERMATOLOGIE"
+    },
+    {
+      "code": "service718",
+      "display": "DIALYSE"
+    },
+    {
+      "code": "service719",
+      "display": "DISSING"
+    },
+    {
+      "code": "service720",
+      "display": "DISTRICT"
+    },
+    {
+      "code": "service721",
+      "display": "DOUE"
+    },
+    {
+      "code": "service722",
+      "display": "DRHF"
+    },
+    {
+      "code": "service723",
+      "display": "ECOGRAPHIE"
+    },
+    {
+      "code": "service724",
+      "display": "ECOLE PROVINCIALE DE SANTE ET DES AFFAIRES SOCIALES (EPSASB)"
+    },
+    {
+      "code": "service725",
+      "display": "EN INSTANCE D'AFFECTATION"
+    },
+    {
+      "code": "service726",
+      "display": "ENDOCRINE-DIABÉTOLOGIE"
+    },
+    {
+      "code": "service727",
+      "display": "EPIDEMIOLOGIE"
+    },
+    {
+      "code": "service728",
+      "display": "FORMATION"
+    },
+    {
+      "code": "service729",
+      "display": "GASTROENTEROLOGIE"
+    },
+    {
+      "code": "service730",
+      "display": "GESTION"
+    },
+    {
+      "code": "service731",
+      "display": "GUICHET"
+    },
+    {
+      "code": "service732",
+      "display": "GYNECO-OBSTÉTRIQUE"
+    },
+    {
+      "code": "service733",
+      "display": "HEMODIALYSE"
+    },
+    {
+      "code": "service734",
+      "display": "HOPITAL CONFESSIONNEL"
+    },
+    {
+      "code": "service735",
+      "display": "HOPITAL DU JOUR"
+    },
+    {
+      "code": "service736",
+      "display": "HOPITAL-DISTRICT"
+    },
+    {
+      "code": "service737",
+      "display": "HOPITAL-PROVINCIAL"
+    },
+    {
+      "code": "service738",
+      "display": "HP MASSENYA"
+    },
+    {
+      "code": "service739",
+      "display": "HP MOUSSORO"
+    },
+    {
+      "code": "service740",
+      "display": "HYGIENE"
+    },
+    {
+      "code": "service741",
+      "display": "HYGIENE ET ASSAINISSEMENT"
+    },
+    {
+      "code": "service742",
+      "display": "HYGIENE ET ENVIRONNEMENT"
+    },
+    {
+      "code": "service743",
+      "display": "HYGIENISTE-LABO"
+    },
+    {
+      "code": "service744",
+      "display": "IMAGERIE"
+    },
+    {
+      "code": "service745",
+      "display": "IMAGERIE ORL"
+    },
+    {
+      "code": "service746",
+      "display": "INFORMATION EDUCTION COMMUNICATION (IEC)"
+    },
+    {
+      "code": "service747",
+      "display": "INFORMATIQUE"
+    },
+    {
+      "code": "service748",
+      "display": "KINE-THERAPIE"
+    },
+    {
+      "code": "service749",
+      "display": "LABORATOIRE"
+    },
+    {
+      "code": "service750",
+      "display": "LAI-AVION"
+    },
+    {
+      "code": "service751",
+      "display": "LOGISTIQUE"
+    },
+    {
+      "code": "service752",
+      "display": "MABROUKA"
+    },
+    {
+      "code": "service753",
+      "display": "MAGASIN"
+    },
+    {
+      "code": "service754",
+      "display": "MAINTENANCE"
+    },
+    {
+      "code": "service755",
+      "display": "MAINTENANCE/GENIE CIVIL/BIOMEDICAL"
+    },
+    {
+      "code": "service756",
+      "display": "MAISON D'ARRET"
+    },
+    {
+      "code": "service757",
+      "display": "MALADIE CHRONIQUE"
+    },
+    {
+      "code": "service758",
+      "display": "MALADIES INFECTIEUSES"
+    },
+    {
+      "code": "service759",
+      "display": "MATERIEL"
+    },
+    {
+      "code": "service760",
+      "display": "MATERNITE"
+    },
+    {
+      "code": "service761",
+      "display": "MEDECINE"
+    },
+    {
+      "code": "service762",
+      "display": "MEDECINE I"
+    },
+    {
+      "code": "service763",
+      "display": "MEDECINE II"
+    },
+    {
+      "code": "service764",
+      "display": "MEDECINE III"
+    },
+    {
+      "code": "service765",
+      "display": "MELLEAH"
+    },
+    {
+      "code": "service766",
+      "display": "MORGUE"
+    },
+    {
+      "code": "service767",
+      "display": "NEPHROLOGIE"
+    },
+    {
+      "code": "service768",
+      "display": "NUTRITION"
+    },
+    {
+      "code": "service769",
+      "display": "ODONTOLOGIE"
+    },
+    {
+      "code": "service770",
+      "display": "ODONTOSTOMATOLOGIE"
+    },
+    {
+      "code": "service771",
+      "display": "OPHTALMOLOGIE"
+    },
+    {
+      "code": "service772",
+      "display": "ORL"
+    },
+    {
+      "code": "service773",
+      "display": "PALUE"
+    },
+    {
+      "code": "service774",
+      "display": "PARC AUTOMOBILE"
+    },
+    {
+      "code": "service775",
+      "display": "PATICIPATION COMMUNAUTAIRE"
+    },
+    {
+      "code": "service776",
+      "display": "PAVILLON URGENCE(PU)"
+    },
+    {
+      "code": "service777",
+      "display": "PEDIATRIE"
+    },
+    {
+      "code": "service778",
+      "display": "PETITE CHIRURGIE"
+    },
+    {
+      "code": "service779",
+      "display": "PEV DELEGATION"
+    },
+    {
+      "code": "service780",
+      "display": "PEV DISTRICT"
+    },
+    {
+      "code": "service781",
+      "display": "PF/TUBERCLOSE/VIH"
+    },
+    {
+      "code": "service782",
+      "display": "PHARMACIE"
+    },
+    {
+      "code": "service783",
+      "display": "PHARMACIE PROVINCIAL D’APPROVISIONNEMENT(PPA)"
+    },
+    {
+      "code": "service784",
+      "display": "PHTISIOLOGIE"
+    },
+    {
+      "code": "service785",
+      "display": "PLANIFICATION"
+    },
+    {
+      "code": "service786",
+      "display": "PNEUMOLOGIE"
+    },
+    {
+      "code": "service787",
+      "display": "PONGSCS"
+    },
+    {
+      "code": "service788",
+      "display": "POSTE OPERE"
+    },
+    {
+      "code": "service789",
+      "display": "PREVENTION MICRONUTRIMENT"
+    },
+    {
+      "code": "service790",
+      "display": "PROGRAMME D TRANSMISSION DE LA MÈRE ET ENFANT(PTME)"
+    },
+    {
+      "code": "service791",
+      "display": "PROGRAMME ÉLARGIE DE VACCINATION(PEV)"
+    },
+    {
+      "code": "service792",
+      "display": "PROGRAMME NATIONAL LUTTE CONTRE TRYPANOSOMIASE(PNLTHA)"
+    },
+    {
+      "code": "service793",
+      "display": "PROMOTION DE LA SANTE"
+    },
+    {
+      "code": "service794",
+      "display": "PSYCHIATRIE ET SANTÉ MENTALE"
+    },
+    {
+      "code": "service795",
+      "display": "RADIOLOGIE(IMAGERIE MÉDICAL)"
+    },
+    {
+      "code": "service796",
+      "display": "REANIMATION"
+    },
+    {
+      "code": "service797",
+      "display": "REEDUCATION"
+    },
+    {
+      "code": "service798",
+      "display": "RETOUR DE FORMATION"
+    },
+    {
+      "code": "service799",
+      "display": "SANTE DE LA REPRODUCTION DE L'HOMME ET DES PERSONNES AGES"
+    },
+    {
+      "code": "service800",
+      "display": "SANTE REPRODUCTION(SR)"
+    },
+    {
+      "code": "service801",
+      "display": "SECRETARIAT"
+    },
+    {
+      "code": "service802",
+      "display": "SERVICE APPUI AU ONG"
+    },
+    {
+      "code": "service803",
+      "display": "SERVICE APPUI AU SECTEUR DECENTRALISE"
+    },
+    {
+      "code": "service804",
+      "display": "SERVICE DES ETUDES, APPUI ET DU SUIVI DES DOSSIERS"
+    },
+    {
+      "code": "service805",
+      "display": "SERVICE SANTE DE L'ENFANT ET COORDINATION PCIME"
+    },
+    {
+      "code": "service806",
+      "display": "SERVICE SOCIAL"
+    },
+    {
+      "code": "service807",
+      "display": "SIGASPE"
+    },
+    {
+      "code": "service808",
+      "display": "SOINS INTENSIFS"
+    },
+    {
+      "code": "service809",
+      "display": "SOLDE"
+    },
+    {
+      "code": "service810",
+      "display": "STATISTIQUES MEDICALES"
+    },
+    {
+      "code": "service811",
+      "display": "SUIVI EVALUATION"
+    },
+    {
+      "code": "service812",
+      "display": "SURVEILLANT"
+    },
+    {
+      "code": "service813",
+      "display": "TITULARISATION"
+    },
+    {
+      "code": "service814",
+      "display": "TRAUMATOLOGIE"
+    },
+    {
+      "code": "service815",
+      "display": "TUBERCULOSE"
+    },
+    {
+      "code": "service816",
+      "display": "UROLOGIE"
+    },
+    {
+      "code": "service817",
+      "display": "VACCINATION"
+    },
+    {
+      "code": "service818",
+      "display": "VIH/SIDA"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 818
+}

@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "ClassificationClassCodeSystem",
+  "id": "classification-class-codesystem",
+  "title": "Classification Class Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/classification-class-codesystem",
+  "concept": [
+    {
+      "code": "1",
+      "display": "1"
+    },
+    {
+      "code": "2",
+      "display": "2"
+    },
+    {
+      "code": "3",
+      "display": "3"
+    },
+    {
+      "code": "4",
+      "display": "4"
+    },
+    {
+      "code": "5",
+      "display": "5"
+    },
+    {
+      "code": "6",
+      "display": "6"
+    },
+    {
+      "code": "7",
+      "display": "7"
+    },
+    {
+      "code": "8",
+      "display": "8"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 8
+}

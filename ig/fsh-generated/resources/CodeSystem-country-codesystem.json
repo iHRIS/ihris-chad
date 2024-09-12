@@ -1,0 +1,454 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CountryCodeSystem",
+  "id": "country-codesystem",
+  "title": "Country Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/country-codesystem",
+  "concept": [
+    {
+      "code": "country1",
+      "display": "AFRIQUE DU SUD"
+    },
+    {
+      "code": "country2",
+      "display": "AFRIQUE SUD"
+    },
+    {
+      "code": "country3",
+      "display": "ALGERIE"
+    },
+    {
+      "code": "country4",
+      "display": "ALLEMAGNE"
+    },
+    {
+      "code": "country5",
+      "display": "ANGOLA"
+    },
+    {
+      "code": "country6",
+      "display": "ARABIE SAOUDITE"
+    },
+    {
+      "code": "country7",
+      "display": "ARGENTINE"
+    },
+    {
+      "code": "country8",
+      "display": "AUTRICHE"
+    },
+    {
+      "code": "country9",
+      "display": "BANGLADESH"
+    },
+    {
+      "code": "country10",
+      "display": "BELGIQUE"
+    },
+    {
+      "code": "country11",
+      "display": "BENIN"
+    },
+    {
+      "code": "country12",
+      "display": "BURKINA FASO"
+    },
+    {
+      "code": "country13",
+      "display": "BURUNDI"
+    },
+    {
+      "code": "country14",
+      "display": "CAMEROUN"
+    },
+    {
+      "code": "country15",
+      "display": "CANADA"
+    },
+    {
+      "code": "country16",
+      "display": "CENTRAFRIQUE"
+    },
+    {
+      "code": "country17",
+      "display": "CHINE"
+    },
+    {
+      "code": "country18",
+      "display": "CONGO"
+    },
+    {
+      "code": "country19",
+      "display": "COREE DU SUD"
+    },
+    {
+      "code": "country20",
+      "display": "COTE D'IVOIRE"
+    },
+    {
+      "code": "country21",
+      "display": "CÔTE D'IVOIRE"
+    },
+    {
+      "code": "country22",
+      "display": "CUBA"
+    },
+    {
+      "code": "country23",
+      "display": "DANEMARK"
+    },
+    {
+      "code": "country24",
+      "display": "DJIBOUTI"
+    },
+    {
+      "code": "country25",
+      "display": "DUBAÏ"
+    },
+    {
+      "code": "country26",
+      "display": "EGYPTE"
+    },
+    {
+      "code": "country27",
+      "display": "EMIRATS ARABES UNIS"
+    },
+    {
+      "code": "country28",
+      "display": "ESPAGNE"
+    },
+    {
+      "code": "country29",
+      "display": "ETATS UNIS"
+    },
+    {
+      "code": "country30",
+      "display": "ETHIOPIE"
+    },
+    {
+      "code": "country31",
+      "display": "FINLAND"
+    },
+    {
+      "code": "country32",
+      "display": "FRANCE"
+    },
+    {
+      "code": "country33",
+      "display": "GABON"
+    },
+    {
+      "code": "country34",
+      "display": "GAMBIE"
+    },
+    {
+      "code": "country35",
+      "display": "GHANA"
+    },
+    {
+      "code": "country36",
+      "display": "GRANDE BRETAGNE"
+    },
+    {
+      "code": "country37",
+      "display": "GRECE"
+    },
+    {
+      "code": "country38",
+      "display": "GUINEE BISSAU"
+    },
+    {
+      "code": "country39",
+      "display": "GUINEE CONAKRY"
+    },
+    {
+      "code": "country40",
+      "display": "GUINEE EQUATORIALE"
+    },
+    {
+      "code": "country41",
+      "display": "HOLLANDE-PAYS BAS"
+    },
+    {
+      "code": "country42",
+      "display": "HONGRIE"
+    },
+    {
+      "code": "country43",
+      "display": "INDE"
+    },
+    {
+      "code": "country44",
+      "display": "IRAN"
+    },
+    {
+      "code": "country45",
+      "display": "IRAQ"
+    },
+    {
+      "code": "country46",
+      "display": "IRLANDE"
+    },
+    {
+      "code": "country47",
+      "display": "ISLANDE"
+    },
+    {
+      "code": "country48",
+      "display": "ISRAEL"
+    },
+    {
+      "code": "country49",
+      "display": "ITALIE"
+    },
+    {
+      "code": "country50",
+      "display": "JAPON"
+    },
+    {
+      "code": "country51",
+      "display": "KENYA"
+    },
+    {
+      "code": "country52",
+      "display": "KOWEIT"
+    },
+    {
+      "code": "country53",
+      "display": "LESOTHO"
+    },
+    {
+      "code": "country54",
+      "display": "LIBAN"
+    },
+    {
+      "code": "country55",
+      "display": "LIBERIA"
+    },
+    {
+      "code": "country56",
+      "display": "LIBYE"
+    },
+    {
+      "code": "country57",
+      "display": "LUXEMBOURG"
+    },
+    {
+      "code": "country58",
+      "display": "LYBIE"
+    },
+    {
+      "code": "country59",
+      "display": "MADAGASCAR"
+    },
+    {
+      "code": "country60",
+      "display": "MALAISIE"
+    },
+    {
+      "code": "country61",
+      "display": "MALAWI"
+    },
+    {
+      "code": "country62",
+      "display": "MALI"
+    },
+    {
+      "code": "country63",
+      "display": "MAROC"
+    },
+    {
+      "code": "country64",
+      "display": "MAURICE (ILES)"
+    },
+    {
+      "code": "country65",
+      "display": "MAURITANIE"
+    },
+    {
+      "code": "country66",
+      "display": "MEXIQUE"
+    },
+    {
+      "code": "country67",
+      "display": "MOZAMBIQUE"
+    },
+    {
+      "code": "country68",
+      "display": "NAMIBIE"
+    },
+    {
+      "code": "country69",
+      "display": "NIGER"
+    },
+    {
+      "code": "country70",
+      "display": "NIGERIA"
+    },
+    {
+      "code": "country71",
+      "display": "NORVÈGE"
+    },
+    {
+      "code": "country72",
+      "display": "OMAN (SULTANAT D')"
+    },
+    {
+      "code": "country73",
+      "display": "OUGANDA"
+    },
+    {
+      "code": "country74",
+      "display": "OUGANDA"
+    },
+    {
+      "code": "country75",
+      "display": "PAKISTAN"
+    },
+    {
+      "code": "country76",
+      "display": "PANAMA"
+    },
+    {
+      "code": "country77",
+      "display": "PEROU"
+    },
+    {
+      "code": "country78",
+      "display": "POLOGNE"
+    },
+    {
+      "code": "country79",
+      "display": "PORTUGAL"
+    },
+    {
+      "code": "country80",
+      "display": "QATAR"
+    },
+    {
+      "code": "country81",
+      "display": "ROUMANIE"
+    },
+    {
+      "code": "country82",
+      "display": "ROYAUME UNIE"
+    },
+    {
+      "code": "country83",
+      "display": "RUSSIE"
+    },
+    {
+      "code": "country84",
+      "display": "RWANDA"
+    },
+    {
+      "code": "country85",
+      "display": "SENEGAL"
+    },
+    {
+      "code": "country86",
+      "display": "SEYCHELLES (ILES)"
+    },
+    {
+      "code": "country87",
+      "display": "SIERRA LEONE"
+    },
+    {
+      "code": "country88",
+      "display": "SLOVAQUIE"
+    },
+    {
+      "code": "country89",
+      "display": "SLOVENIE"
+    },
+    {
+      "code": "country90",
+      "display": "SOUDAN"
+    },
+    {
+      "code": "country91",
+      "display": "SUD SOUDAN"
+    },
+    {
+      "code": "country92",
+      "display": "SUÈDE"
+    },
+    {
+      "code": "country93",
+      "display": "SUISSE"
+    },
+    {
+      "code": "country94",
+      "display": "SWAZILAND"
+    },
+    {
+      "code": "country95",
+      "display": "SYRIE"
+    },
+    {
+      "code": "country96",
+      "display": "TAIWAN"
+    },
+    {
+      "code": "country97",
+      "display": "TANZANIE"
+    },
+    {
+      "code": "country98",
+      "display": "TCHAD"
+    },
+    {
+      "code": "country99",
+      "display": "THAILANDE"
+    },
+    {
+      "code": "country100",
+      "display": "TOGO"
+    },
+    {
+      "code": "country101",
+      "display": "TUNISIE"
+    },
+    {
+      "code": "country102",
+      "display": "TURQUIE"
+    },
+    {
+      "code": "country103",
+      "display": "UKRAINE"
+    },
+    {
+      "code": "country104",
+      "display": "URSS"
+    },
+    {
+      "code": "country105",
+      "display": "VATICAN"
+    },
+    {
+      "code": "country106",
+      "display": "VIET NAM (NORD)"
+    },
+    {
+      "code": "country107",
+      "display": "YEMEN"
+    },
+    {
+      "code": "country108",
+      "display": "YOUGOSLAVIE"
+    },
+    {
+      "code": "country109",
+      "display": "ZAMBIE"
+    },
+    {
+      "code": "country110",
+      "display": "ZIMBABWE"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 110
+}

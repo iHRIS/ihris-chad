@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "YesNoCodeSystem",
+  "id": "yes-no-codesystem",
+  "title": "Yes/No Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem",
+  "concept": [
+    {
+      "code": "yes",
+      "display": "Oui"
+    },
+    {
+      "code": "no",
+      "display": "Non"
+    }
+  ],
+  "date": "2024-02-19T13:41:00.000Z",
+  "count": 2
+}

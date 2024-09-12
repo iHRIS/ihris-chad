@@ -1,0 +1,58 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "StudyLevelCodeSystem",
+  "id": "study-level-codesystem",
+  "title": "Level of Study Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/study-level-codesystem",
+  "concept": [
+    {
+      "code": "bac2",
+      "display": "BAC+2"
+    },
+    {
+      "code": "bac3",
+      "display": "BAC+3"
+    },
+    {
+      "code": "bac4",
+      "display": "BAC+4"
+    },
+    {
+      "code": "bac5",
+      "display": "BAC+5"
+    },
+    {
+      "code": "bac6",
+      "display": "BAC+6"
+    },
+    {
+      "code": "bac7",
+      "display": "BAC+7"
+    },
+    {
+      "code": "bac8",
+      "display": "BAC+8"
+    },
+    {
+      "code": "bepcet",
+      "display": "BEPCET"
+    },
+    {
+      "code": "cepet",
+      "display": "CEPET"
+    },
+    {
+      "code": "permisdeconduire",
+      "display": "Permis de Conduire"
+    },
+    {
+      "code": "bac",
+      "display": "BAC"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 11
+}

@@ -144,7 +144,7 @@
         },
         {
           "name": "site:nav:menu:dashboard:url",
-          "valueString": "/ihrisapp/ihris-data-visualizer/index.html#/dashBuilder/7136"
+          "valueString": "/ihrisapp/ihris-data-visualizer/index.html#/dashBuilder/33539"
         },
         {
           "name": "site:nav:menu:dashboard:external",
@@ -999,6 +999,18 @@
           "valueString": "6"
         },
         {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerange:text",
+          "valueString": "Staff By Age Range"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerange:url",
+          "valueString": "/report/ihris-es-report-age-range"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerange:order",
+          "valueString": "7"
+        },
+        {
           "name": "site:nav:menu:users:text",
           "valueString": "System Users"
         },
@@ -1040,7 +1052,7 @@
         },
         {
           "name": "site:nav:menu:audit:url",
-          "valueString": "/resource/search/auditevent"
+          "valueString": "/auditevent"
         },
         {
           "name": "site:nav:menu:password:text",

@@ -114,7 +114,7 @@ const preservicetraining = {
                 }).valueString
               })
             }
-            let specialization = training.extension.find((ext) => {
+            specialization = training.extension.find((ext) => {
               return ext.url === 'specialization'
             })?.valueCoding?.display
             if(!sector) {

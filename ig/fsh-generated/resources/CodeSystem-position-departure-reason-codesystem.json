@@ -1,0 +1,46 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "PositionDepartureReasonCodeSystem",
+  "id": "position-departure-reason-codesystem",
+  "title": "Reason For Change/Departure",
+  "version": "0.3.0",
+  "url": "http://ihris.org/fhir/CodeSystem/position-departure-reason-codesystem",
+  "concept": [
+    {
+      "code": "transfer",
+      "display": "Affectation"
+    },
+    {
+      "code": "death",
+      "display": "Mort"
+    },
+    {
+      "code": "redeployment",
+      "display": "Mutation"
+    },
+    {
+      "code": "earlyRetirement",
+      "display": "Retraite anticipée"
+    },
+    {
+      "code": "mandatoryRetirement",
+      "display": "Retraite obligatoire"
+    },
+    {
+      "code": "resignation",
+      "display": "Démission"
+    },
+    {
+      "code": "health",
+      "display": "Cause de maladie"
+    },
+    {
+      "code": "quit",
+      "display": "Abandon de poste"
+    }
+  ],
+  "date": "2020-11-14T08:41:04.362Z",
+  "count": 8
+}

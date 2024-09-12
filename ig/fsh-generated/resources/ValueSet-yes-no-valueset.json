@@ -1,0 +1,17 @@
+{
+  "resourceType": "ValueSet",
+  "status": "active",
+  "name": "YesNoValueSet",
+  "id": "yes-no-valueset",
+  "title": "Yes/No ValueSet",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/ValueSet/yes-no-valueset",
+  "date": "2024-02-19T13:41:00.000Z",
+  "compose": {
+    "include": [
+      {
+        "system": "http://ihris.org/fhir/CodeSystem/yes-no-codesystem"
+      }
+    ]
+  }
+}

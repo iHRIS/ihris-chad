@@ -1,0 +1,226 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MinistryCodeSystem",
+  "id": "ministry-codesystem",
+  "title": "Ministry Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/ministry-codesystem",
+  "concept": [
+    {
+      "code": "ministry1",
+      "display": "Assemblée Nationale"
+    },
+    {
+      "code": "ministry2",
+      "display": "Conseil Constitutionnel"
+    },
+    {
+      "code": "ministry3",
+      "display": "Conseil Economique et Sociale"
+    },
+    {
+      "code": "ministry4",
+      "display": "Cour Suprême"
+    },
+    {
+      "code": "ministry5",
+      "display": "Depenses Communes Interministerielles"
+    },
+    {
+      "code": "ministry6",
+      "display": "Haut Conseil de la Communication"
+    },
+    {
+      "code": "ministry7",
+      "display": "Haute Cour de la Justice"
+    },
+    {
+      "code": "ministry8",
+      "display": "Médiature"
+    },
+    {
+      "code": "ministry9",
+      "display": "Ministère de la Formation Professionnelle et de la Promotion des metiers"
+    },
+    {
+      "code": "ministry10",
+      "display": "Ministère des Droits de l'Homme et de la Promotion des Libertés Fondamentales"
+    },
+    {
+      "code": "ministry11",
+      "display": "Ministère du Développement Industriel, Commercial et de la Promotion du Secteur Privé"
+    },
+    {
+      "code": "ministry12",
+      "display": "Ministère du Développement Touristique, de la Culture et de l' Artisanat"
+    },
+    {
+      "code": "ministry13",
+      "display": "Ministère Chargé de la Decentralisation"
+    },
+    {
+      "code": "ministry14",
+      "display": "Ministère de Développement Pastorale et des Productions Animales"
+    },
+    {
+      "code": "ministry15",
+      "display": "Ministère de l' Administration du Territoire, de la Sécurité Publique et de la Gouvernance Locale"
+    },
+    {
+      "code": "ministry16",
+      "display": "Ministère de la Communication, Porte Parole du Gouvernement"
+    },
+    {
+      "code": "ministry17",
+      "display": "Ministère de la Femme, de la Protection de la Petite Enfance et de la Solidarité Nationale"
+    },
+    {
+      "code": "ministry18",
+      "display": "Ministère de la Fonction Publique, du Travail et du Dialogue Social"
+    },
+    {
+      "code": "ministry19",
+      "display": "Ministère de la Formation Professionnelle et des Petits Métiers"
+    },
+    {
+      "code": "ministry20",
+      "display": "Ministère de la Formation Professionnelle et des petits Metiers"
+    },
+    {
+      "code": "ministry21",
+      "display": "Ministère de la Justice, Garde de Sceaux, Chargé des Droits Humains"
+    },
+    {
+      "code": "ministry22",
+      "display": "Ministère de la Production,de l' Irrigation et des Equipements Agricoles"
+    },
+    {
+      "code": "ministry23",
+      "display": "Ministère de la Promotion des Jeunes, des Sports et de l'Emploi"
+    },
+    {
+      "code": "ministry24",
+      "display": "MINISTÈRE DE LA SANTÉ PUBLIQUE ET DE LA PRÉVENTION"
+    },
+    {
+      "code": "ministry25",
+      "display": "Ministère de la Securité Publique et de l'Immigration"
+    },
+    {
+      "code": "ministry26",
+      "display": "Ministère de l'Amenagement du Territoire de l'Urbanisme et de l'Habitat"
+    },
+    {
+      "code": "ministry27",
+      "display": "Ministère de l'Amenagement du Territoire, du Developpement de l'Habitat et de l'Urbanisme"
+    },
+    {
+      "code": "ministry28",
+      "display": "Ministère de l'Aménagement du Territoire, Du Developpement de l'Habitat et de l'Urbanisme"
+    },
+    {
+      "code": "ministry29",
+      "display": "Ministère de l'Aménagement du Territoire, du Développemnt de l'Habitat et de l'Urbanisme"
+    },
+    {
+      "code": "ministry30",
+      "display": "Ministère de l'Avion Civile et de la Météorologie Nationale"
+    },
+    {
+      "code": "ministry31",
+      "display": "Ministère de l'Eau et de l'Assainissement"
+    },
+    {
+      "code": "ministry33",
+      "display": "Ministère de l'Economie et de la Planification du Développement"
+    },
+    {
+      "code": "ministry34",
+      "display": "Ministère de l'Education Nationale et de la Promotion Civique"
+    },
+    {
+      "code": "ministry36",
+      "display": "Ministère de l'Elevage et de l'Hydraulique"
+    },
+    {
+      "code": "ministry37",
+      "display": "Ministère de l'Elevage et des Productions Animales"
+    },
+    {
+      "code": "ministry38",
+      "display": "Ministère de l'Elevage et des Ressources Animales"
+    },
+    {
+      "code": "ministry39",
+      "display": "Ministère de l'Enseignement Supérieur, de la Recherche et de l'Innovation"
+    },
+    {
+      "code": "ministry40",
+      "display": "Ministère de l'Environnement de l'Eau et de la Pêche"
+    },
+    {
+      "code": "ministry41",
+      "display": "Ministère Délegue à la Présidence chargé de la Défense Nationale et des Anciens Combattants"
+    },
+    {
+      "code": "ministry42",
+      "display": "Ministère des Affaires Etrangères, de l'Intégration Africaine, de la Coop Inter et de la Diaspora"
+    },
+    {
+      "code": "ministry43",
+      "display": "Ministère des Finances et du Budget"
+    },
+    {
+      "code": "ministry44",
+      "display": "Ministère des Infrastructures, des Transports et du Désenclavement"
+    },
+    {
+      "code": "ministry45",
+      "display": "Ministère des Mines, du Développement Industriel, Commercial et de la Promotion du Secteur Privé"
+    },
+    {
+      "code": "ministry46",
+      "display": "Ministère des Postes et des Nouvelles Technologies de l'Information et de la Communication"
+    },
+    {
+      "code": "ministry47",
+      "display": "Ministère du Développement Industriel, Commercial et de la Promotion du Secteur Privé"
+    },
+    {
+      "code": "ministry48",
+      "display": "Ministère du Développement Industriel,Commercial et de la Promotion du Secteur Privé"
+    },
+    {
+      "code": "ministry49",
+      "display": "Ministère du Développement Touristique, de la Culture et de l'Artisana"
+    },
+    {
+      "code": "ministry50",
+      "display": "Ministère du Développement Touristique, de la Culture et de l'Artisanat"
+    },
+    {
+      "code": "ministry51",
+      "display": "Ministère du Pétrole et de l'Energie"
+    },
+    {
+      "code": "ministry52",
+      "display": "Ministère Environnement, Eau et de la pêche"
+    },
+    {
+      "code": "ministry53",
+      "display": "Présidence de la République"
+    },
+    {
+      "code": "ministry54",
+      "display": "Primature"
+    },
+    {
+      "code": "ministry55",
+      "display": "Secrétariat Général du Gouvernement, Chargé des Relations avec Assemblée Nationale"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 53
+}

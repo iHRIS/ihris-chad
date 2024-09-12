@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "LevelCodeSystem",
+  "id": "level-codesystem",
+  "title": "Level Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/level-codesystem",
+  "concept": [
+    {
+      "code": "central",
+      "display": "Central"
+    },
+    {
+      "code": "province",
+      "display": "Province"
+    },
+    {
+      "code": "district",
+      "display": "District"
+    },
+    {
+      "code": "healthstructure",
+      "display": "Structure Sanitaire"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 4
+}

@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "MaritalStatusCodeSystem",
+  "id": "marital-status-codesystem",
+  "title": "Marital Status Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/marital-status-codesystem",
+  "concept": [
+    {
+      "code": "divorced",
+      "display": "Divorcé(e)"
+    },
+    {
+      "code": "married",
+      "display": "Marié(e)"
+    },
+    {
+      "code": "single",
+      "display": "Célibataire"
+    },
+    {
+      "code": "widowed",
+      "display": "Veuf(ve)"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 4
+}

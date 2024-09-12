@@ -1,0 +1,17 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "NAResourceCodeSystem",
+  "id": "na-resource-codesystem",
+  "title": "Code System for iHRIS Basic Resources.",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/na-resource-codesystem",
+  "concept": [
+    {
+      "code": "standard-lists",
+      "display": "Standard Lists"
+    }
+  ],
+  "count": 1
+}

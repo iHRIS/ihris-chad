@@ -1,0 +1,18 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "EducationSectorCodeSystem",
+  "id": "education-sector-codesystem",
+  "title": "Education Sector Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/education-sector-codesystem",
+  "concept": [
+    {
+      "code": "health",
+      "display": "Santé"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 1
+}

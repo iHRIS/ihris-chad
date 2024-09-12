@@ -1,0 +1,42 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "AgentStatusCodeSystem",
+  "id": "agent-status-codesystem",
+  "title": "Agent Status Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem",
+  "concept": [
+    {
+      "code": "regularcivilservant",
+      "display": "Fonctionnaire Titulaire"
+    },
+    {
+      "code": "traineecivilservant",
+      "display": "Fonctionnaire Stagiaire"
+    },
+    {
+      "code": "politicalpersonality",
+      "display": "Personnalité Politique"
+    },
+    {
+      "code": "contractual",
+      "display": "Contractuel"
+    },
+    {
+      "code": "costreccontr",
+      "display": "Contractuel sur recouvrement de coût"
+    },
+    {
+      "code": "contractualpartners",
+      "display": "Contractuel des Partenaires"
+    },
+    {
+      "code": "other",
+      "display": "Autres"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 7
+}

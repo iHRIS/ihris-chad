@@ -89,25 +89,25 @@ const workexperience = {
             let employment = response.entry[0].resource.extension.find((ext) => {
               return ext.url === 'http://ihris.org/fhir/StructureDefinition/ihris-employment-history'
             })
-            let ministry = employment.extension.find((ext) => {
+            ministry = employment.extension.find((ext) => {
               return ext.url === 'ministry'
             })?.valueCoding?.display
-            let country = employment.extension.find((ext) => {
+            country = employment.extension.find((ext) => {
               return ext.url === 'country'
             })?.valueCoding?.display
-            let job = employment.extension.find((ext) => {
+            job = employment.extension.find((ext) => {
               return ext.url === 'job'
             })?.valueString
-            let startYear = employment.extension.find((ext) => {
+            startYear = employment.extension.find((ext) => {
               return ext.url === 'start-year'
             })?.valueDate
-            let endYear = employment.extension.find((ext) => {
+            endYear = employment.extension.find((ext) => {
               return ext.url === 'end-year'
             })?.valueDate
-            let service = employment.extension.find((ext) => {
+            service = employment.extension.find((ext) => {
               return ext.url === 'service'
             })?.valueCoding?.display
-            let location = employment.extension.find((ext) => {
+            location = employment.extension.find((ext) => {
               return ext.url === 'location'
             })?.valueReference?.reference
             if(location) {

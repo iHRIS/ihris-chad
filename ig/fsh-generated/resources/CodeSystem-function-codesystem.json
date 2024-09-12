@@ -1,0 +1,1082 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "FunctionCodeSystem",
+  "id": "function-codesystem",
+  "title": "Function Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/function-codesystem",
+  "concept": [
+    {
+      "code": "function1",
+      "display": "ACCOUCHEUSE"
+    },
+    {
+      "code": "function2",
+      "display": "Adjoint Technique (Chasse)"
+    },
+    {
+      "code": "function3",
+      "display": "Adjoint chef de zone"
+    },
+    {
+      "code": "function4",
+      "display": "Adjoint social"
+    },
+    {
+      "code": "function5",
+      "display": "Adjoint technique"
+    },
+    {
+      "code": "function6",
+      "display": "Adjoint Technique de la Statistique"
+    },
+    {
+      "code": "function7",
+      "display": "Adjoint technique de santé"
+    },
+    {
+      "code": "function8",
+      "display": "Administrateur"
+    },
+    {
+      "code": "function9",
+      "display": "Administrateur Gestionnaire"
+    },
+    {
+      "code": "function10",
+      "display": "Administrateur civil"
+    },
+    {
+      "code": "function11",
+      "display": "Agent"
+    },
+    {
+      "code": "function12",
+      "display": "Agent Comptable"
+    },
+    {
+      "code": "function13",
+      "display": "Agent de sécurité"
+    },
+    {
+      "code": "function14",
+      "display": "Agent Sanitaire"
+    },
+    {
+      "code": "function15",
+      "display": "AGENT TECHNIQUE DE SANTE(ATS)"
+    },
+    {
+      "code": "function16",
+      "display": "AIDE MECANICIEN"
+    },
+    {
+      "code": "function17",
+      "display": "Aide Social"
+    },
+    {
+      "code": "function18",
+      "display": "AIDE SOIGNANT"
+    },
+    {
+      "code": "function19",
+      "display": "Aide-Comptable"
+    },
+    {
+      "code": "function20",
+      "display": "AIDE-INFIRMIER"
+    },
+    {
+      "code": "function21",
+      "display": "AMBULANCIER"
+    },
+    {
+      "code": "function22",
+      "display": "ANESTHESISTE"
+    },
+    {
+      "code": "function23",
+      "display": "Animateur de Centre"
+    },
+    {
+      "code": "function24",
+      "display": "Archiviste"
+    },
+    {
+      "code": "function25",
+      "display": "Assistance Sociale"
+    },
+    {
+      "code": "function26",
+      "display": "Assistant"
+    },
+    {
+      "code": "function27",
+      "display": "Assistant de Direction"
+    },
+    {
+      "code": "function28",
+      "display": "ASSISTANT DE DIRECTION ADJOINT"
+    },
+    {
+      "code": "function29",
+      "display": "Assistant de santé"
+    },
+    {
+      "code": "function30",
+      "display": "Assistant en soins infirmiers"
+    },
+    {
+      "code": "function31",
+      "display": "ASSISTANT EN SOINS MEDICAL"
+    },
+    {
+      "code": "function32",
+      "display": "Assistant social"
+    },
+    {
+      "code": "function33",
+      "display": "Assistant Technique"
+    },
+    {
+      "code": "function34",
+      "display": "ASSISTANT UNIVERSITE"
+    },
+    {
+      "code": "function35",
+      "display": "Attaché de santé"
+    },
+    {
+      "code": "function36",
+      "display": "ATTACHEE DÉPARTEMENT MÉDICOTECHNIQUE"
+    },
+    {
+      "code": "function37",
+      "display": "AUTRES A PRECISER"
+    },
+    {
+      "code": "function38",
+      "display": "Auxiliaire de la Sante"
+    },
+    {
+      "code": "function39",
+      "display": "Biologiste"
+    },
+    {
+      "code": "function40",
+      "display": "Caissier"
+    },
+    {
+      "code": "function41",
+      "display": "CASSIERS"
+    },
+    {
+      "code": "function42",
+      "display": "CHARG DE COURS"
+    },
+    {
+      "code": "function43",
+      "display": "Chargé d'affaires"
+    },
+    {
+      "code": "function44",
+      "display": "CHARGE DE ARCHIVE"
+    },
+    {
+      "code": "function45",
+      "display": "CHARGE DE AVANCEMENT"
+    },
+    {
+      "code": "function46",
+      "display": "CHARGE DE COMMUNICATION"
+    },
+    {
+      "code": "function47",
+      "display": "CHARGÉ DE FORMATION COORDINATION DES SOINS"
+    },
+    {
+      "code": "function48",
+      "display": "CHARGE DE LA PHARMACIE ET DE MATÉRIEL BIOMÉDICAUX"
+    },
+    {
+      "code": "function49",
+      "display": "CHARGE DE PROGRAMME"
+    },
+    {
+      "code": "function50",
+      "display": "CHARGE DE PTME COMMUNAUTAIRE"
+    },
+    {
+      "code": "function51",
+      "display": "CHARGE DE RECLASSEMENT"
+    },
+    {
+      "code": "function52",
+      "display": "Chargé de relation publique"
+    },
+    {
+      "code": "function53",
+      "display": "CHARGE DE SUIVI ET EVALUATION"
+    },
+    {
+      "code": "function54",
+      "display": "CHARGE DE TITULARISATION"
+    },
+    {
+      "code": "function55",
+      "display": "CHARGE DES ACHATS ET STOCK"
+    },
+    {
+      "code": "function56",
+      "display": "CHARGÉÉ DE COMMUNICATION ADJOINT"
+    },
+    {
+      "code": "function57",
+      "display": "Chauffeur"
+    },
+    {
+      "code": "function58",
+      "display": "Chauffeur Ambulancier"
+    },
+    {
+      "code": "function59",
+      "display": "CHEF CHIRURGIE"
+    },
+    {
+      "code": "function60",
+      "display": "Chef Comptable"
+    },
+    {
+      "code": "function61",
+      "display": "CHEF D’ANTENNE SURVEILLANCE EPIDEMIOLOGIE(CASE)"
+    },
+    {
+      "code": "function62",
+      "display": "Chef de bloc Operatoire"
+    },
+    {
+      "code": "function63",
+      "display": "Chef de bureau"
+    },
+    {
+      "code": "function64",
+      "display": "Chef de centre"
+    },
+    {
+      "code": "function65",
+      "display": "Chef de division"
+    },
+    {
+      "code": "function66",
+      "display": "CHEF DE LABORATOIRE"
+    },
+    {
+      "code": "function67",
+      "display": "Chef de Magasinier"
+    },
+    {
+      "code": "function68",
+      "display": "CHEF DE MATERIEL"
+    },
+    {
+      "code": "function69",
+      "display": "CHEF DE PERSONNEL"
+    },
+    {
+      "code": "function70",
+      "display": "CHEF DE PERSONNEL ADJOINT"
+    },
+    {
+      "code": "function71",
+      "display": "Chef de Secteur"
+    },
+    {
+      "code": "function72",
+      "display": "CHEF DE SECTION"
+    },
+    {
+      "code": "function73",
+      "display": "Chef de service"
+    },
+    {
+      "code": "function74",
+      "display": "CHEF DE SERVICE ADJOINT(E)"
+    },
+    {
+      "code": "function75",
+      "display": "Chef de sous Secteur"
+    },
+    {
+      "code": "function76",
+      "display": "Chef de zone"
+    },
+    {
+      "code": "function77",
+      "display": "CHEF DÉPARTEMENT DES SOINS INFIRMIERS"
+    },
+    {
+      "code": "function78",
+      "display": "CHEF DÉPARTEMENT MÉDICOTECHNIQUE"
+    },
+    {
+      "code": "function79",
+      "display": "CHEF ENDOCRINODIABÉTOLOGIE"
+    },
+    {
+      "code": "function80",
+      "display": "CHEF ENTRÉES ET STATISTIQUES MÉDICALES"
+    },
+    {
+      "code": "function81",
+      "display": "CHEF GASTROENTÉROLOGIE"
+    },
+    {
+      "code": "function82",
+      "display": "CHEF HÉMODIALYSE"
+    },
+    {
+      "code": "function83",
+      "display": "CHEF IMAGERIE MEDICALE"
+    },
+    {
+      "code": "function84",
+      "display": "CHEF MAINTENANCE/GÉNIE CIVIL/BIO"
+    },
+    {
+      "code": "function85",
+      "display": "CHEF MALADIES INFECTIEUSES"
+    },
+    {
+      "code": "function86",
+      "display": "CHEF MATERNITE"
+    },
+    {
+      "code": "function87",
+      "display": "CHEF MEDECINE"
+    },
+    {
+      "code": "function88",
+      "display": "CHEF ODONTOSTOMATOLOGIE"
+    },
+    {
+      "code": "function89",
+      "display": "CHEF OPHTALMOLOGIE"
+    },
+    {
+      "code": "function90",
+      "display": "CHEF ORL"
+    },
+    {
+      "code": "function91",
+      "display": "CHEF PAVILLON DES URGENCES"
+    },
+    {
+      "code": "function92",
+      "display": "Chef Pharmacie"
+    },
+    {
+      "code": "function93",
+      "display": "CHEF PNEUMOLOGIE"
+    },
+    {
+      "code": "function94",
+      "display": "CHEF RÉANIMATION"
+    },
+    {
+      "code": "function95",
+      "display": "CHEF TRAUMATOLOGIE"
+    },
+    {
+      "code": "function96",
+      "display": "CHEF UROLOGIE"
+    },
+    {
+      "code": "function97",
+      "display": "Chirurgien"
+    },
+    {
+      "code": "function98",
+      "display": "Commis"
+    },
+    {
+      "code": "function99",
+      "display": "Comptable"
+    },
+    {
+      "code": "function100",
+      "display": "Conseiller"
+    },
+    {
+      "code": "function101",
+      "display": "Conseiller de Ministre"
+    },
+    {
+      "code": "function102",
+      "display": "Conservateur musée"
+    },
+    {
+      "code": "function103",
+      "display": "Contrôleur"
+    },
+    {
+      "code": "function104",
+      "display": "Coordinateur"
+    },
+    {
+      "code": "function105",
+      "display": "Coordinateur des programmes"
+    },
+    {
+      "code": "function106",
+      "display": "Coordinnateur Adjoint"
+    },
+    {
+      "code": "function107",
+      "display": "Cuisinier"
+    },
+    {
+      "code": "function108",
+      "display": "DELEGUE SANITAIRE"
+    },
+    {
+      "code": "function109",
+      "display": "Dentiste"
+    },
+    {
+      "code": "function110",
+      "display": "Directeur adjoint"
+    },
+    {
+      "code": "function111",
+      "display": "Directeur administratif"
+    },
+    {
+      "code": "function112",
+      "display": "DIRECTEUR CABINET"
+    },
+    {
+      "code": "function113",
+      "display": "Directeur centre hospitalier national"
+    },
+    {
+      "code": "function114",
+      "display": "Directeur de l'ecole d'Enseignement Primaire"
+    },
+    {
+      "code": "function115",
+      "display": "Directeur des Hopitaux"
+    },
+    {
+      "code": "function116",
+      "display": "Directeur général"
+    },
+    {
+      "code": "function117",
+      "display": "Directeur général adjoint"
+    },
+    {
+      "code": "function118",
+      "display": "DIRECTEUR GÉNÉRAL TECHNIQUE"
+    },
+    {
+      "code": "function119",
+      "display": "Directeur Pharmacie"
+    },
+    {
+      "code": "function120",
+      "display": "Directeur(rice) des ressources humaines"
+    },
+    {
+      "code": "function121",
+      "display": "DIRECTEUR(TRICE)"
+    },
+    {
+      "code": "function122",
+      "display": "Econome"
+    },
+    {
+      "code": "function123",
+      "display": "Educateur"
+    },
+    {
+      "code": "function124",
+      "display": "Electricien"
+    },
+    {
+      "code": "function125",
+      "display": "Electro-mécanicien"
+    },
+    {
+      "code": "function126",
+      "display": "Encadreur"
+    },
+    {
+      "code": "function127",
+      "display": "Enquêteur (trice)"
+    },
+    {
+      "code": "function128",
+      "display": "Enseignant"
+    },
+    {
+      "code": "function129",
+      "display": "Enseignant permenant"
+    },
+    {
+      "code": "function130",
+      "display": "FILLE DE SALLE"
+    },
+    {
+      "code": "function131",
+      "display": "Formateur"
+    },
+    {
+      "code": "function132",
+      "display": "Garçon de Salle"
+    },
+    {
+      "code": "function133",
+      "display": "GARDIEN"
+    },
+    {
+      "code": "function134",
+      "display": "GERANT PHARMACIE"
+    },
+    {
+      "code": "function135",
+      "display": "Gestionnaire"
+    },
+    {
+      "code": "function136",
+      "display": "GESTIONNAIRE COMPTABLE"
+    },
+    {
+      "code": "function137",
+      "display": "Gestionnaire de stock"
+    },
+    {
+      "code": "function138",
+      "display": "GESTIONNAIRE DE STOCK ADDJOINT"
+    },
+    {
+      "code": "function139",
+      "display": "GESTIONNAIRE DISTRICT"
+    },
+    {
+      "code": "function140",
+      "display": "GYNECOLOGUE"
+    },
+    {
+      "code": "function141",
+      "display": "Hotesse"
+    },
+    {
+      "code": "function142",
+      "display": "Hotesse -Cabinet"
+    },
+    {
+      "code": "function143",
+      "display": "Hotesse d'accueil"
+    },
+    {
+      "code": "function144",
+      "display": "HYGIENISTE"
+    },
+    {
+      "code": "function145",
+      "display": "Infirmier"
+    },
+    {
+      "code": "function146",
+      "display": "Infirmier breveté"
+    },
+    {
+      "code": "function147",
+      "display": "Infirmier Major"
+    },
+    {
+      "code": "function148",
+      "display": "Infirmier Vétérinaire"
+    },
+    {
+      "code": "function149",
+      "display": "INFIRMIER(IÈRE) DIPLÔMÉ(E) D'ETAT(IDE)"
+    },
+    {
+      "code": "function150",
+      "display": "Informaticien-analyste"
+    },
+    {
+      "code": "function151",
+      "display": "Ingénieur"
+    },
+    {
+      "code": "function152",
+      "display": "Ingénieur de Travaux Agricole"
+    },
+    {
+      "code": "function153",
+      "display": "Ingénieur Informatique"
+    },
+    {
+      "code": "function154",
+      "display": "Inspecteur"
+    },
+    {
+      "code": "function155",
+      "display": "Inspecteur chargé contrôle gestion"
+    },
+    {
+      "code": "function156",
+      "display": "Inspecteur Departement de l'Enseignement Primaire"
+    },
+    {
+      "code": "function157",
+      "display": "Inspecteur Général"
+    },
+    {
+      "code": "function158",
+      "display": "Inspecteur Général Adjoint"
+    },
+    {
+      "code": "function159",
+      "display": "Inspecteur Technique"
+    },
+    {
+      "code": "function160",
+      "display": "Jardinier"
+    },
+    {
+      "code": "function161",
+      "display": "Journaliste présentateur"
+    },
+    {
+      "code": "function162",
+      "display": "Laborantin"
+    },
+    {
+      "code": "function163",
+      "display": "Logisticien"
+    },
+    {
+      "code": "function164",
+      "display": "Magasinier"
+    },
+    {
+      "code": "function165",
+      "display": "MAINTENANCIER"
+    },
+    {
+      "code": "function166",
+      "display": "Maître assistant"
+    },
+    {
+      "code": "function167",
+      "display": "Major"
+    },
+    {
+      "code": "function168",
+      "display": "MAJOR ADJOINT"
+    },
+    {
+      "code": "function169",
+      "display": "Manoeuvre"
+    },
+    {
+      "code": "function170",
+      "display": "Matrone"
+    },
+    {
+      "code": "function171",
+      "display": "Mecanicien"
+    },
+    {
+      "code": "function172",
+      "display": "MEDECIN"
+    },
+    {
+      "code": "function173",
+      "display": "MEDECIN CHEF DE L' HOPITAL(MCH)"
+    },
+    {
+      "code": "function174",
+      "display": "MEDECIN CHEF DISTRICT(MCD)"
+    },
+    {
+      "code": "function175",
+      "display": "Médecin Chef de l'Hopital"
+    },
+    {
+      "code": "function176",
+      "display": "Médecin spécialiste"
+    },
+    {
+      "code": "function177",
+      "display": "MEDECIN TRAITANT"
+    },
+    {
+      "code": "function178",
+      "display": "Menuisier"
+    },
+    {
+      "code": "function179",
+      "display": "Métrologue"
+    },
+    {
+      "code": "function180",
+      "display": "Ministre"
+    },
+    {
+      "code": "function181",
+      "display": "Ministre d'Etat"
+    },
+    {
+      "code": "function182",
+      "display": "Nutritionniste"
+    },
+    {
+      "code": "function183",
+      "display": "Nutritionniste médical"
+    },
+    {
+      "code": "function184",
+      "display": "Operateur de Saisie"
+    },
+    {
+      "code": "function185",
+      "display": "Ophtalmologue"
+    },
+    {
+      "code": "function186",
+      "display": "Ouvrier"
+    },
+    {
+      "code": "function187",
+      "display": "Ouvrier qualifié"
+    },
+    {
+      "code": "function188",
+      "display": "Peintre"
+    },
+    {
+      "code": "function189",
+      "display": "Pharmacien"
+    },
+    {
+      "code": "function190",
+      "display": "Pharmacien spécialiste"
+    },
+    {
+      "code": "function191",
+      "display": "Planificateur"
+    },
+    {
+      "code": "function192",
+      "display": "Planton"
+    },
+    {
+      "code": "function193",
+      "display": "plombier"
+    },
+    {
+      "code": "function194",
+      "display": "POINT FOCAL"
+    },
+    {
+      "code": "function195",
+      "display": "POINT FOCAL CANCER"
+    },
+    {
+      "code": "function196",
+      "display": "Point focal consultation prénatal(PF CPNA)"
+    },
+    {
+      "code": "function197",
+      "display": "POINT FOCAL INFORMATION EDUCTION COMMUNICATION (IEC)"
+    },
+    {
+      "code": "function198",
+      "display": "POINT FOCAL NUTRITION"
+    },
+    {
+      "code": "function199",
+      "display": "Point focal Palue"
+    },
+    {
+      "code": "function200",
+      "display": "POINT FOCAL PAVILLON DES URGENCES"
+    },
+    {
+      "code": "function201",
+      "display": "POINT FOCAL PEV"
+    },
+    {
+      "code": "function202",
+      "display": "POINT FOCAL PTME"
+    },
+    {
+      "code": "function203",
+      "display": "POINT FOCAL PTME-VIH"
+    },
+    {
+      "code": "function204",
+      "display": "POINT FOCAL SANTE COMMUNAUTAIRE"
+    },
+    {
+      "code": "function205",
+      "display": "POINT FOCAL SANTE REPRODUCTION(SR)"
+    },
+    {
+      "code": "function206",
+      "display": "POINT FOCAL TUBERCULOSE-VIH"
+    },
+    {
+      "code": "function207",
+      "display": "Producteur radio/tv"
+    },
+    {
+      "code": "function208",
+      "display": "Professeur Certifié"
+    },
+    {
+      "code": "function209",
+      "display": "Professeur collège enseignement général"
+    },
+    {
+      "code": "function210",
+      "display": "Professeur Permanent ENASS"
+    },
+    {
+      "code": "function211",
+      "display": "Psychiatre"
+    },
+    {
+      "code": "function212",
+      "display": "Radiologue"
+    },
+    {
+      "code": "function213",
+      "display": "Rédacteur"
+    },
+    {
+      "code": "function214",
+      "display": "Rédacteur"
+    },
+    {
+      "code": "function215",
+      "display": "Responsable"
+    },
+    {
+      "code": "function216",
+      "display": "RESPONSABLE ADJOINT"
+    },
+    {
+      "code": "function217",
+      "display": "RESPONSABLE DE CENTRE SANTE (RCS)"
+    },
+    {
+      "code": "function218",
+      "display": "Responsable de Centres de Sante Rural des Unites de survelliance"
+    },
+    {
+      "code": "function219",
+      "display": "Responsable de dispensaire isolé"
+    },
+    {
+      "code": "function220",
+      "display": "RESPONSABLE DE TUBERCULOSE"
+    },
+    {
+      "code": "function221",
+      "display": "RESPONSABLE GRATUITE DE SOINS"
+    },
+    {
+      "code": "function222",
+      "display": "RESPONSABLE LABORATOIRE"
+    },
+    {
+      "code": "function223",
+      "display": "RESPONSABLE MATERNITE"
+    },
+    {
+      "code": "function224",
+      "display": "RESPONSABLE ODONTOLOGIE"
+    },
+    {
+      "code": "function225",
+      "display": "RESPONSABLE OPTALMOLOGIE"
+    },
+    {
+      "code": "function226",
+      "display": "RESPONSABLE PARC AUTO"
+    },
+    {
+      "code": "function227",
+      "display": "RESPONSABLE PEDIATRIE"
+    },
+    {
+      "code": "function228",
+      "display": "RESPONSABLE PEV HOPITAL DE DISTRICT"
+    },
+    {
+      "code": "function229",
+      "display": "RESPONSABLE PEV DELEGATION"
+    },
+    {
+      "code": "function230",
+      "display": "Responsable PEV du district"
+    },
+    {
+      "code": "function231",
+      "display": "RESPONSABLE PHARMACIE"
+    },
+    {
+      "code": "function232",
+      "display": "Responsable sante de reproduction(SR)"
+    },
+    {
+      "code": "function233",
+      "display": "SAGE FEMME DIPLÔMÉE D'ÉTAT(SFDE)"
+    },
+    {
+      "code": "function234",
+      "display": "SECRETAIRE"
+    },
+    {
+      "code": "function235",
+      "display": "Sécrétaire Administratif"
+    },
+    {
+      "code": "function236",
+      "display": "Secrétaire dactylo"
+    },
+    {
+      "code": "function237",
+      "display": "Secrétaire Dactylo -Cabinet"
+    },
+    {
+      "code": "function238",
+      "display": "SECRETAIRE D'ADMINISTRATION"
+    },
+    {
+      "code": "function239",
+      "display": "SECRETAIRE DE DIRECTION"
+    },
+    {
+      "code": "function240",
+      "display": "Secrétaire d'Etat"
+    },
+    {
+      "code": "function241",
+      "display": "SECRETAIRE GENERAL ADJOINT(SGA)"
+    },
+    {
+      "code": "function242",
+      "display": "SECRETAIRE GENERAL(SG)"
+    },
+    {
+      "code": "function243",
+      "display": "Sentinelle"
+    },
+    {
+      "code": "function244",
+      "display": "Sociologue"
+    },
+    {
+      "code": "function245",
+      "display": "Stagiaire"
+    },
+    {
+      "code": "function246",
+      "display": "Standardiste"
+    },
+    {
+      "code": "function247",
+      "display": "Statisticien"
+    },
+    {
+      "code": "function248",
+      "display": "Surveillance des Aires Protegées"
+    },
+    {
+      "code": "function249",
+      "display": "Surveillant"
+    },
+    {
+      "code": "function250",
+      "display": "SURVEILLANT CHIRURGIE"
+    },
+    {
+      "code": "function251",
+      "display": "Surveillant de Service"
+    },
+    {
+      "code": "function252",
+      "display": "SURVEILLANT GENERAL"
+    },
+    {
+      "code": "function253",
+      "display": "SURVEILLANT GENERAL ADJOINT"
+    },
+    {
+      "code": "function254",
+      "display": "SURVEILLANT UNITE"
+    },
+    {
+      "code": "function255",
+      "display": "Surveillants unité médico-technique"
+    },
+    {
+      "code": "function256",
+      "display": "Technicien"
+    },
+    {
+      "code": "function257",
+      "display": "Technicien de laboratoire"
+    },
+    {
+      "code": "function258",
+      "display": "Technicien supérieur"
+    },
+    {
+      "code": "function259",
+      "display": "Technicien supérieur de laboratoire"
+    },
+    {
+      "code": "function260",
+      "display": "TECHNICIEN SUPÉRIEUR EN IMAGERIE"
+    },
+    {
+      "code": "function261",
+      "display": "TECHNICIEN SUPÉRIEUR EN NUTRITION"
+    },
+    {
+      "code": "function262",
+      "display": "TECHNICIEN SUPÉRIEUR EN OPHTALMOLOGIE"
+    },
+    {
+      "code": "function263",
+      "display": "Technicien supérieur en pharmacie"
+    },
+    {
+      "code": "function264",
+      "display": "TECHNICIEN SUPERIEUR EN SOINS INFIMIERS"
+    },
+    {
+      "code": "function265",
+      "display": "TECHNICIEN SUPERIEUR EN SOINS OBSTETRICAUX"
+    },
+    {
+      "code": "function266",
+      "display": "TECHNICIEN SUPÉRIEUR SANTE"
+    },
+    {
+      "code": "function267",
+      "display": "UROLOGUE"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 267
+}

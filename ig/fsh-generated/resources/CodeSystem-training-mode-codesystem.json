@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "TrainingModeCodeSystem",
+  "id": "training-mode-codesystem",
+  "title": "Training Mode Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/training-mode-codesystem",
+  "concept": [
+    {
+      "code": "online",
+      "display": "En ligne"
+    },
+    {
+      "code": "inperson",
+      "display": "En Présentiel"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 2
+}

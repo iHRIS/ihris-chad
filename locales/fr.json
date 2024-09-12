@@ -96,7 +96,8 @@
       "Work Experience": "L'expérience professionnelle",
       "Performance Evaluation": "Evaluation de la Performance",
       "Visualizations": "",
-      "Relation": ""
+      "Relation": "",
+      "Diploma": ""
     },
     "intro": {
       "Summary": "Résumé",
@@ -173,7 +174,13 @@
       "Service Start Date": "Date de Prise de Service",
       "Effective Presence Date": "Date de Présence effective",
       "Place of Assignment": "Structure",
-      "preservicetraining Information": ""
+      "preservicetraining Information": "",
+      "Facility": "",
+      "District": "",
+      "Province": "",
+      "Age Range Count": "",
+      "Age Range": "",
+      "Total": ""
     },
     "ihris-codesystem": {},
     "ihris-search": {},
@@ -756,7 +763,43 @@
       "Criteria 3: Effectiveness in carrying out duties": "",
       "Criteria 4: Aptitude for command functions": "",
       "Criteria 5: Manner of carrying out its functions": "",
-      "Criteria 4: Manner of carrying out its functions": ""
+      "Criteria 4: Manner of carrying out its functions": "",
+      "Resumption Date": "",
+      "Resumption Reference": "",
+      "Banking Information": "",
+      "Bank Name": "",
+      "Account Number": "",
+      "Account Name": "",
+      "Account Type": "",
+      "Request Extension Of Inservice Training": "",
+      "Confirmation Letter Date": "",
+      "Extension Start Date": "",
+      "Extension End Year": "",
+      "Staff Child": "",
+      "Child Name": "",
+      "First Service Start Date": "",
+      "View Training Request": "",
+      "Commune": "",
+      "Institution Type Code System": "",
+      "Profession Group": "",
+      "Profession Sub-Group": "",
+      "Inservice Training Extension Request Information": "",
+      "Request Extension Of Inservice Training details": "",
+      "name": "",
+      "Staff Child Information": "",
+      "Staff Child details": "",
+      "Organization Code System": "",
+      "Agent Type Code System": "",
+      "Agent Type": "",
+      "Bank Name Code System": "",
+      "Bank": "",
+      "Facility Sector Code System": "",
+      "Unit": "",
+      "Unit Code": "",
+      "Budget Type Code System": "",
+      "Budget Type": "",
+      "Program": "",
+      "Program Code": ""
     },
     "hardcoded-texts": {
       "must be an integer": "must be an integer",
@@ -845,7 +888,13 @@
       "Please fill in all fields": "Merci de remplir tous les champs",
       "what_is_ihris": "IHRIS est un logiciel gratuit et open source d'Intrahealth International qui aide les pays du monde à suivre et à gérer leurs données des agent de santé pour améliorer l'accès aux services. Les pays l'utilisent pour capturer et maintenir des informations de haute qualité pour la planification, la gestion, la réglementation et la formation des effectifs de la santé.",
       "Filters": "Filtres",
-      "Print": ""
+      "Print": "",
+      "dashboardintro1": "",
+      "dashboardintro2": "",
+      "confirm_delete_dashboard": "",
+      "No": "",
+      "Values For": "",
+      "Apply1": ""
     }
   }
 }

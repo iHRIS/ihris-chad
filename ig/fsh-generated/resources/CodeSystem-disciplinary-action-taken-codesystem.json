@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "DisciplinaryActionTakenCodeSystem",
+  "id": "disciplinary-action-taken-codesystem",
+  "title": "Disciplinary Action Taken",
+  "version": "0.3.0",
+  "url": "http://ihris.org/fhir/CodeSystem/disciplinary-action-taken-codesystem",
+  "concept": [
+    {
+      "code": "order",
+      "display": "Arrêté"
+    },
+    {
+      "code": "memo",
+      "display": "Note de service"
+    },
+    {
+      "code": "decision",
+      "display": "Décision"
+    },
+    {
+      "code": "decree",
+      "display": "Décret"
+    }
+  ],
+  "date": "2020-11-10T08:41:04.362Z",
+  "count": 4
+}

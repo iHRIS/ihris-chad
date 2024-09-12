@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CivilServantCategoryCodeSystem",
+  "id": "civil-servant-category-codesystem",
+  "title": "Civil Servant Category Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/civil-servant-category-codesystem",
+  "concept": [
+    {
+      "code": "A",
+      "display": "A"
+    },
+    {
+      "code": "B",
+      "display": "B"
+    },
+    {
+      "code": "C",
+      "display": "C"
+    },
+    {
+      "code": "D",
+      "display": "D"
+    }
+  ],
+  "date": "2024-02-07T08:12:00.000Z",
+  "count": 4
+}

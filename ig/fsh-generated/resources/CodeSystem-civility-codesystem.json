@@ -1,0 +1,30 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "CivilityCodeSystem",
+  "id": "civility-codesystem",
+  "title": "Civility Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/civility-codesystem",
+  "concept": [
+    {
+      "code": "madam",
+      "display": "Madame"
+    },
+    {
+      "code": "miss",
+      "display": "Mademoiselle"
+    },
+    {
+      "code": "sir",
+      "display": "Monsieur"
+    },
+    {
+      "code": "doctor",
+      "display": "Docteur"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 4
+}

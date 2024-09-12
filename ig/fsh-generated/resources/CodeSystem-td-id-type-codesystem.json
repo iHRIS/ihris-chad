@@ -1,0 +1,34 @@
+{
+  "resourceType": "CodeSystem",
+  "status": "active",
+  "content": "complete",
+  "name": "TDIDTypeCodeSystem",
+  "id": "td-id-type-codesystem",
+  "title": "Identifier Types Code System",
+  "version": "0.1.0",
+  "url": "http://ihris.org/fhir/CodeSystem/td-id-type-codesystem",
+  "concept": [
+    {
+      "code": "employeecode",
+      "display": "Numéro Matricule"
+    },
+    {
+      "code": "nni",
+      "display": "Numero National d’Identification (NNI)"
+    },
+    {
+      "code": "passport",
+      "display": "Passeport"
+    },
+    {
+      "code": "drivinglicense",
+      "display": "Permis de conduire"
+    },
+    {
+      "code": "cni",
+      "display": "Carte Nationale d’Identité (CNI)"
+    }
+  ],
+  "date": "2024-02-02T08:14:00.000Z",
+  "count": 5
+}
