@@ -1,6 +1,6 @@
 "use strict";
 const axios = require('axios');
-const moment = require('moment')
+const async = require("async")
 const URI = require('urijs');
 const config = require("../../../modules/config")
 
@@ -94,117 +94,379 @@ function createESIndex(name, IDFields, callback) {
 
 const agerange = {
   run: () => {
-    return new Promise(async(resolve, reject) => {
-      await deleteESIndex("agerange").catch(() => {
-        console.log('An error occured while deleting the index, this may cause dupplicate age range');
+    return new Promise((resolve, reject) => {
+      Promise.all([bygender(), bySpecialty()]).then(() => {
+        resolve()
+      }).catch(() => {
+        reject()
       })
-      createESIndex("agerange", ["agerange"], (err) => {
-        if(err) {
-          console.log("An error has occured");
-          return
-        }
-        let url = URI(config.get("elasticsearch:base")).segment("chadstaffdirectorate").segment('_search').toString();
-        let body = {
-          "size": 0,
-          "aggs": {
-            "age_ranges": {
-              range: {
-                script: {
-                  source: "return doc['age']"
-                }, 
-                ranges: [
-                  {
-                    from: 0,
-                    to: 18,
-                    key: "<18"
-                  },
-                  {
-                    from: 18,
-                    to: 19,
-                    key: "18-19"
-                  },
-                  {
-                    from: 20,
-                    to: 29,
-                    key: "20-29"
-                  },
-                  {
-                    from: 30,
-                    to: 39,
-                    key: "30-39"
-                  },
-                  {
-                    from: 40,
-                    to: 49,
-                    key: "40-49"
-                  },
-                  {
-                    from: 50,
-                    to: 59,
-                    key: "50-59"
-                  },
-                  {
-                    from: 60,
-                    to: 69,
-                    key: "60-69"
-                  },
-                  {
-                    from: 70,
-                    to: 1000,
-                    key: ">69"
-                  }
-                ]
-              }
+      function bygender() {
+        return new Promise(async(resolve, reject) => {
+          await deleteESIndex("agerangegender").catch(() => {
+            console.log('An error occured while deleting the index, this may cause dupplicate age range');
+          })
+          createESIndex("agerangegender", ["agerangegender"], (err) => {
+            if(err) {
+              console.log("An error has occured");
+              return
             }
-          }
-        }
-        let options = {
-          url,
-          method: "POST",
-          auth: {
-            username: config.get("elasticsearch:username"),
-            password: config.get("elasticsearch:password"),
-          },
-          data: body
-        }
-        axios(options).then((response) => {
-          const promises = []
-          if(response.data && response.data.aggregations && response.data.aggregations.age_ranges && response.data.aggregations.age_ranges.buckets) {
-            for(let bucket of response.data.aggregations.age_ranges.buckets) {
+            let url = URI(config.get("elasticsearch:base")).segment("chadstaffdirectorate").segment('_search').toString();
+            let bulk = []
+            let gender = ["male", "female"]
+            const promises = []
+            for(let gnd of gender) {
               promises.push(new Promise((resolve, reject) => {
-                let body = {}
-                body.agerange = bucket.key
-                body.total = bucket.doc_count
-                if(!body.total) {
-                  body.total = 0
+                let body = {
+                  size: 0,
+                  query: {
+                    bool: {
+                      must: [{
+                        terms: {
+                          "gender.keyword": [gnd]
+                        }
+                      }],
+                      must_not: []
+                    }
+                  },
+                  aggs: {
+                    age_ranges: {
+                      range: {
+                        script: {
+                          source: "return doc['age']"
+                        }, 
+                        ranges: [
+                          {
+                            from: 0,
+                            to: 18,
+                            key: "<18"
+                          },
+                          {
+                            from: 18,
+                            to: 19,
+                            key: "18-19"
+                          },
+                          {
+                            from: 20,
+                            to: 29,
+                            key: "20-29"
+                          },
+                          {
+                            from: 30,
+                            to: 39,
+                            key: "30-39"
+                          },
+                          {
+                            from: 40,
+                            to: 49,
+                            key: "40-49"
+                          },
+                          {
+                            from: 50,
+                            to: 59,
+                            key: "50-59"
+                          },
+                          {
+                            from: 60,
+                            to: 69,
+                            key: "60-69"
+                          },
+                          {
+                            from: 70,
+                            to: 1000,
+                            key: ">69"
+                          }
+                        ]
+                      }
+                    }
+                  }
                 }
-                saveDoc(body).then(() => {
-                  resolve()
+                let options = {
+                  url,
+                  method: "POST",
+                  auth: {
+                    username: config.get("elasticsearch:username"),
+                    password: config.get("elasticsearch:password"),
+                  },
+                  data: body
+                }
+                axios(options).then((response) => {
+                  const promises = []
+                  if(response.data && response.data.aggregations && response.data.aggregations.age_ranges && response.data.aggregations.age_ranges.buckets) {
+                    for(let bucket of response.data.aggregations.age_ranges.buckets) {
+                      let body = {}
+                      body.agerange = bucket.key
+                      body.gender = gnd
+                      body.total = bucket.doc_count
+                      if(!body.total) {
+                        body.total = 0
+                      }
+                      bulk.push(body)
+                    }
+                    resolve()
+                  } else {
+                    resolve()
+                  }
+                  Promise.all(promises).then(() => {
+                    const bulkBody = bulk.flatMap(doc => [
+                      { index: { _index: 'agerangegender' } },
+                      doc
+                    ]);
+                    let bulkRequestBody = bulkBody.map(doc => JSON.stringify(doc)).join('\n') + '\n';
+                    bulkSave(bulkRequestBody).then(() => {
+                      resolve()
+                    }).catch(() => {
+                      reject()
+                    })
+                  }).catch(() => {
+                    resolve()
+                  })
                 }).catch((err) => {
-                  console.log(err);
                   reject()
                 })
               }))
             }
-          } else {
-            resolve()
-          }
-          Promise.all(promises).then(() => {
-            resolve()
-          }).catch(() => {
-            resolve()
+            Promise.all(promises).then(() => {
+              resolve()
+            }).catch(() => {
+              reject()
+            })
           })
-        }).catch((err) => {
-
         })
-      })
+      }
+
+      function bySpecialty() {
+        return new Promise(async(resolve, reject) => {
+          await deleteESIndex("agerangespecialty").catch(() => {
+            console.log('An error occured while deleting the index, this may cause dupplicate age range');
+          })
+          createESIndex("agerangespecialty", ["agerangespecialty"], async(err) => {
+            if(err) {
+              console.log(err);
+              console.log("An error has occured");
+              return
+            }
+            let url = URI(config.get("elasticsearch:base")).segment("chadstaffdirectorate").segment('_search').toString();
+            let specialties = await getDistinct("chadstaffdirectorate", "specialty", true)
+            let bulk = []
+            const promises = []
+            for(let specialty of specialties) {
+              promises.push(new Promise((resolve, reject) => {
+                let body = {
+                  size: 0,
+                  query: {
+                    bool: {
+                      must: [{
+                        terms: {
+                          "specialty.keyword": [specialty.key.value]
+                        }
+                      }],
+                      must_not: []
+                    }
+                  },
+                  aggs: {
+                    age_ranges: {
+                      range: {
+                        script: {
+                          source: "return doc['age']"
+                        }, 
+                        ranges: [
+                          {
+                            from: 0,
+                            to: 18,
+                            key: "<18"
+                          },
+                          {
+                            from: 18,
+                            to: 19,
+                            key: "18-19"
+                          },
+                          {
+                            from: 20,
+                            to: 29,
+                            key: "20-29"
+                          },
+                          {
+                            from: 30,
+                            to: 39,
+                            key: "30-39"
+                          },
+                          {
+                            from: 40,
+                            to: 49,
+                            key: "40-49"
+                          },
+                          {
+                            from: 50,
+                            to: 59,
+                            key: "50-59"
+                          },
+                          {
+                            from: 60,
+                            to: 69,
+                            key: "60-69"
+                          },
+                          {
+                            from: 70,
+                            to: 1000,
+                            key: ">69"
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+                let options = {
+                  url,
+                  method: "POST",
+                  auth: {
+                    username: config.get("elasticsearch:username"),
+                    password: config.get("elasticsearch:password"),
+                  },
+                  data: body
+                }
+                axios(options).then((response) => {
+                  if(response.data && response.data.aggregations && response.data.aggregations.age_ranges && response.data.aggregations.age_ranges.buckets) {
+                    for(let bucket of response.data.aggregations.age_ranges.buckets) {
+                      let body = {}
+                      body.agerange = bucket.key
+                      body.specialty = specialty.key.value
+                      body.total = bucket.doc_count
+                      if(!body.total) {
+                        body.total = 0
+                      }
+                      bulk.push(body)
+                    }
+                    resolve()
+                  } else {
+                    resolve()
+                  }
+                }).catch((err) => {
+                  reject()
+                })
+              }))
+            }
+            Promise.all(promises).then(() => {
+              const bulkBody = bulk.flatMap(doc => [
+                { index: { _index: 'agerangespecialty' } },
+                doc
+              ]);
+              let bulkRequestBody = bulkBody.map(doc => JSON.stringify(doc)).join('\n') + '\n';
+              bulkSave(bulkRequestBody).then(() => {
+                resolve()
+              }).catch(() => {
+                reject()
+              })
+            }).catch(() => {
+              reject()
+            })
+          })
+        })
+      }
     })
   }
 }
 
-function saveDoc(doc, practitioner) {
+function getDistinct(indexName, field, hasKeyword) {
   return new Promise((resolve, reject) => {
-    let url = URI(config.get("elasticsearch:base")).segment("agerange").segment('_doc').toString();
+    if(hasKeyword) {
+      field = `${field}.keyword`
+    }
+    let body = {
+      size: 0,
+      aggs: {
+        uniq_values: {
+          composite: {
+            size: 10000,
+            sources: [
+              { value: { terms: { field: field } } }
+            ]
+          }
+        }
+      }
+    }
+    let url = URI(config.get('elasticsearch:base')).segment(indexName).segment('_search').toString()
+    let next = true
+    let buckets = []
+    async.whilst(
+      callback1 => {
+        return callback1(null, next !== false);
+      },
+      callback => {
+        let options = {
+          method: 'GET',
+          url,
+          auth: {
+            username: config.get('elasticsearch:username'),
+            password: config.get('elasticsearch:password'),
+          },
+          data: body
+        };
+        next = false;
+        axios(options).then((response) => {
+          buckets = buckets.concat(response.data.aggregations.uniq_values.buckets)
+          if(response.data.aggregations.uniq_values.buckets.length > 0) {
+            body.aggs.uniq_values.composite.after = {}
+            body.aggs.uniq_values.composite.after.value = response.data.aggregations.uniq_values.after_key.value
+            next = true
+          }
+          return callback(null, next);
+        }).catch((err) => {
+          console.error(err.message);
+          return reject()
+        })
+      }, () => {
+        return resolve(buckets)
+      }
+    );
+  })            
+}
+
+function bulkSave(bulkRequestBody) {
+  return new Promise((resolve, reject) => {
+    let url = URI(config.get("elasticsearch:base")).segment("_bulk").toString();
+    axios.post(url, bulkRequestBody, {
+      headers: { 'Content-Type': 'application/x-ndjson' }
+    }).then(() => {
+      resolve()
+    }).catch((err) => {
+      console.log(err);
+      console.error('Error during bulk operation:', err.response ? err.response.data : err.message);
+      if (err.response && (err.response.status === 429 || err.response.statusText === 'Conflict' || err.response.status === 409)) {
+        if(err.response.status === 429) {
+          console.warn('ES is overloaded with too many requests, delaying for 2 seconds');
+        }
+        if(err.response.status === 409) {
+          console.warn('Conflict occured, rerunning this request');
+        }
+        setTimeout(() => {
+          bulkSave(bulkRequestBody).then(() => {
+            resolve()
+          }).catch((err) => {
+            console.error(err);
+            reject()
+          })
+        }, 700)
+      } else {
+        let error = {}
+        if (err.response && err.response.data) {
+          error = {
+            error: err.response.data
+          }
+        } else if(err.error) {
+          error.error = err.error
+        } else {
+          error.error = err
+        }
+        error.url = url
+        console.error(JSON.stringify(error, 0, 2));
+        reject()
+      }
+    });
+  })
+}
+function saveDoc(doc, indexName) {
+  return new Promise((resolve, reject) => {
+    let url = URI(config.get("elasticsearch:base")).segment(indexName).segment('_doc').toString();
     let options = {
       url,
       method: "POST",
@@ -225,7 +487,7 @@ function saveDoc(doc, practitioner) {
           console.warn('Conflict occured, rerunning this request');
         }
         setTimeout(() => {
-          saveDoc(doc, practitioner).then(() => {
+          saveDoc(doc, indexName).then(() => {
             resolve()
           }).catch((err) => {
             console.error(err);

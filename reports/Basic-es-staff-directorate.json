@@ -187,7 +187,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 16
+          "valueInteger": 17
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -253,6 +253,30 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
+          "valueString": "Agent Status"
+        }, {
+          "url": "name",
+          "valueString": "agentstatus"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.agentstatus({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 4
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
           "valueString": "Qualification"
         }, {
           "url": "name",
@@ -271,7 +295,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 4
+          "valueInteger": 5
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -295,43 +319,19 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 5
-        }]
-      }, {
-        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
-        "extension": [{
-          "url": "display",
-          "valueString": "Civil Servant Category"
-        }, {
-          "url": "name",
-          "valueString": "civilcategory"
-        }, {
-          "url": "function",
-          "valueString": "staffdirectorate.civilservcategory({staffdirectoratedata})"
-        }, {
-          "url": "parameters",
-          "valueString": "staffdirectoratedata"
-        }, {
-          "url": "filter",
-          "valueBoolean": true
-        }, {
-          "url": "dropDownFilter",
-          "valueBoolean": true
-        }, {
-          "url": "order",
           "valueInteger": 6
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
-          "valueString": "Contractual Category"
+          "valueString": "Category"
         }, {
           "url": "name",
-          "valueString": "contractualcategory"
+          "valueString": "category"
         }, {
           "url": "function",
-          "valueString": "staffdirectorate.contractualcategory({staffdirectoratedata})"
+          "valueString": "staffdirectorate.category({staffdirectoratedata})"
         }, {
           "url": "parameters",
           "valueString": "staffdirectoratedata"
@@ -344,6 +344,30 @@
         }, {
           "url": "order",
           "valueInteger": 7
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Organization"
+        }, {
+          "url": "name",
+          "valueString": "organization"
+        }, {
+          "url": "function",
+          "valueString": "staffdirectorate.organization({staffdirectoratedata})"
+        }, {
+          "url": "parameters",
+          "valueString": "staffdirectoratedata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 8
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -367,7 +391,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 11
+          "valueInteger": 12
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -421,7 +445,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 12
+          "valueInteger": 14
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -448,7 +472,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 14
+          "valueInteger": 15
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -475,7 +499,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 15
+          "valueInteger": 16
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -499,7 +523,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 8
+          "valueInteger": 9
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -523,7 +547,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 9
+          "valueInteger": 10
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -547,7 +571,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 10
+          "valueInteger": 11
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

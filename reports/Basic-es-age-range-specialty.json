@@ -1,6 +1,6 @@
 {
   "resourceType": "Basic",
-  "id": "ihris-es-report-age-range",
+  "id": "ihris-es-report-age-range-specialty",
   "extension": [{
       "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportDetails",
       "extension": [{
@@ -11,7 +11,7 @@
         "valueBoolean": false
       }, {
         "url": "name",
-        "valueString": "agerange"
+        "valueString": "agerangespecialty"
       }, {
         "url": "locationBasedConstraint",
         "valueBoolean": true
@@ -21,6 +21,24 @@
       }, {
         "url": "externalCachingModule",
         "valueString": "agerange.run()"
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
+          "valueString": "Specialty"
+        }, {
+          "url": "name",
+          "valueString": "specialty"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 0
+        }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
@@ -37,7 +55,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 0
+          "valueInteger": 1
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -55,7 +73,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 1
+          "valueInteger": 2
         }]
       }
       ]

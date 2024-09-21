@@ -7,6 +7,8 @@ const staffdirectorate = {
     return new Promise((resolve, reject) => {
       let jobtitle = ""
       let qualification = ""
+      let agentstatus = ""
+      let organization = ""
       let specialization = ""
       let contractualcategory = ""
       let civilservcategory = ""
@@ -37,25 +39,19 @@ const staffdirectorate = {
             appointmentdate = response.entry[0].resource.extension.find((ext) => {
               return ext.url === "http://ihris.org/fhir/StructureDefinition/appointment-date"
             })?.valueDate
-            if(appointmentdate) {
-              appointmentdate = moment(appointmentdate).format("DD-MM-YYYY")
-            } else {
+            if(!appointmentdate) {
               appointmentdate = ""
             }
 
             servicestartdate = response.entry[0].resource?.period?.start
-            if(servicestartdate) {
-              servicestartdate = moment(servicestartdate).format("DD-MM-YYYY")
-            } else {
+            if(!servicestartdate) {
               servicestartdate = ""
             }
 
             effectivepresdate = response.entry[0].resource.extension.find((ext) => {
               return ext.url === "http://ihris.org/fhir/StructureDefinition/effective-presence-date"
             })?.valueDate
-            if(effectivepresdate) {
-              effectivepresdate = moment(effectivepresdate).format("DD-MM-YYYY")
-            } else {
+            if(!effectivepresdate) {
               effectivepresdate = ""
             }
             if(response.entry[0].resource?.location) {
@@ -124,6 +120,18 @@ const staffdirectorate = {
             })?.valueCoding?.display
             if(!qualification) {
               qualification = ""
+            }
+            agentstatus = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === 'http://ihris.org/fhir/StructureDefinition/agent-status'
+            })?.valueCoding?.display
+            if(!agentstatus) {
+              agentstatus = ""
+            }
+            organization = response.entry[0].resource.extension.find((ext) => {
+              return ext.url === 'http://ihris.org/fhir/StructureDefinition/organization'
+            })?.valueCoding?.display
+            if(!organization) {
+              organization = ""
             }
           }
           resolve()
@@ -231,9 +239,7 @@ const staffdirectorate = {
             integrationdate = response.entry[0].resource.extension.find((ext) => {
               return ext.url === "http://ihris.org/fhir/StructureDefinition/integration-date"
             })?.valueDate
-            if(integrationdate) {
-              integrationdate = moment(integrationdate).format("DD-MM-YYYY")
-            } else {
+            if(!integrationdate) {
               integrationdate = ""
             }
           }
@@ -244,7 +250,7 @@ const staffdirectorate = {
         })
       })
       Promise.all([job, situation, specialty, classification]).then(() => {
-        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory +"-^-" + contractualcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region
+        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory +"-^-" + contractualcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + agentstatus + "-^-" + organization
         resolve(value)
       })
     })
@@ -276,22 +282,17 @@ const staffdirectorate = {
       resolve(values[2])
     })
   },
-  civilservcategory: (fields) => {
+  category: (fields) => {
     return new Promise((resolve) => {
       if(!fields.staffdirectoratedata) {
         resolve()
       }
       let values = fields.staffdirectoratedata.split("-^-")
-      resolve(values[3])
-    })
-  },
-  contractualcategory: (fields) => {
-    return new Promise((resolve) => {
-      if(!fields.staffdirectoratedata) {
-        resolve()
+      let category = values[3]
+      if(!category) {
+        category = values[4]
       }
-      let values = fields.staffdirectoratedata.split("-^-")
-      resolve(values[4])
+      resolve(category)
     })
   },
   appointmentdate: (fields) => {
@@ -355,6 +356,24 @@ const staffdirectorate = {
       }
       let values = fields.staffdirectoratedata.split("-^-")
       resolve(values[11])
+    })
+  },
+  agentstatus: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[12])
+    })
+  },
+  organization: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      resolve(values[13])
     })
   }
 }

@@ -313,7 +313,7 @@ Usage:          #example
 * extension[section][11].extension[resource].extension[column][0].extension[header].valueString = "Reviewer Name"
 * extension[section][11].extension[resource].extension[column][0].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='evaluator').valueString"
 * extension[section][11].extension[resource].extension[column][1].extension[header].valueString = "Score"
-* extension[section][11].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='score').valueCoding.display"
+* extension[section][11].extension[resource].extension[column][1].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='score').valueInteger"
 * extension[section][11].extension[resource].extension[column][2].extension[header].valueString = "Start Date"
 * extension[section][11].extension[resource].extension[column][2].extension[field].valueString = "extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-performance').extension.where(url='start-date').valueDate"
 * extension[section][11].extension[resource].extension[column][3].extension[header].valueString = "End Date"
