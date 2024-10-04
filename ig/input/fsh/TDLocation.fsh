@@ -35,6 +35,11 @@ Description:    "iHRIS Profile of Locations to manage jurisdictions."
 * partOf 1..1 MS
 * partOf only Reference(TDCountry)
 * partOf ^label = "Country"
+* extension contains
+    LocationCode named code 1..1 MS
+* extension[code]  1..1 MS
+* extension[code]  ^label = "Code"
+* extension[code].valueString MS
 
 Profile:        TDDistrict
 Parent:         Location
@@ -100,6 +105,16 @@ Description:    "Profile of Locations to manage department."
 * partOf 1..1 MS 
 * partOf only Reference(TDFacility)
 * partOf ^label = "Location"
+
+Extension:      LocationCode
+Id:             locationcode
+Title:          "Code"
+Description:    "Code."
+* ^context.type = #element
+* ^context.expression = "Location"
+* value[x] only string
+* valueString 1..1 MS
+* valueString ^label = "Code"
 
 Instance:       ihris-page-td-department
 InstanceOf:     IhrisPage

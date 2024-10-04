@@ -7,6 +7,7 @@ const inservicetraining = {
       let sector = ""
       let institution = ""
       let country = ""
+      let completed = ""
       let startYear = ""
       let endYear = ""
       let degree = ""
@@ -98,6 +99,9 @@ const inservicetraining = {
             country = training.extension.find((ext) => {
               return ext.url === 'country'
             })?.valueCoding?.display
+            completed = training.extension.find((ext) => {
+              return ext.url === 'completed'
+            })?.valueCoding?.display
             startYear = training.extension.find((ext) => {
               return ext.url === 'start-year'
             })?.valueDate
@@ -149,7 +153,7 @@ const inservicetraining = {
       })
 
       Promise.all([job, training]).then(() => {
-        let value = sector +"-^-"+ institution +"-^-"+ country +"-^-" + startYear +"-^-" + endYear +"-^-" + degree +"-^-" + specialization +"-^-" + facility +"-^-" + district +"-^-" + region
+        let value = sector +"-^-"+ institution +"-^-"+ country +"-^-" + startYear +"-^-" + endYear +"-^-" + degree +"-^-" + specialization +"-^-" + facility +"-^-" + district +"-^-" + region +"-^-" + completed
         resolve(value)
       }).catch((err) => {
         console.log(err);
@@ -246,7 +250,16 @@ const inservicetraining = {
       let values = fields.inservicetrainingdata.split("-^-")
       resolve(values[9])
     })
-  }
+  },
+  completed: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.inservicetrainingdata) {
+        resolve()
+      }
+      let values = fields.inservicetrainingdata.split("-^-")
+      resolve(values[10])
+    })
+  },
 }
 
 module.exports = inservicetraining

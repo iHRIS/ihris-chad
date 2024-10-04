@@ -271,6 +271,30 @@
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
           "url": "display",
+          "valueString": "Completed"
+        }, {
+          "url": "name",
+          "valueString": "completed"
+        }, {
+          "url": "function",
+          "valueString": "inservicetraining.completed({inservicetrainingdata})"
+        }, {
+          "url": "parameters",
+          "valueString": "inservicetrainingdata"
+        }, {
+          "url": "filter",
+          "valueBoolean": true
+        }, {
+          "url": "dropDownFilter",
+          "valueBoolean": true
+        }, {
+          "url": "order",
+          "valueInteger": 8
+        }]
+      }, {
+        "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
+        "extension": [{
+          "url": "display",
           "valueString": "Diploma"
         }, {
           "url": "name",
@@ -289,7 +313,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 8
+          "valueInteger": 9
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -313,7 +337,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 9
+          "valueInteger": 10
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -337,7 +361,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 10
+          "valueInteger": 11
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -361,7 +385,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 11
+          "valueInteger": 12
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -385,7 +409,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 12
+          "valueInteger": 13
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -409,7 +433,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 13
+          "valueInteger": 14
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -433,7 +457,7 @@
           "valueBoolean": false
         }, {
           "url": "order",
-          "valueInteger": 14
+          "valueInteger": 15
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -457,7 +481,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 15
+          "valueInteger": 16
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -481,7 +505,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 16
+          "valueInteger": 17
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
@@ -505,7 +529,7 @@
           "valueBoolean": true
         }, {
           "url": "order",
-          "valueInteger": 17
+          "valueInteger": 18
         }]
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",

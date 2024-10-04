@@ -19,6 +19,7 @@ const staffdirectorate = {
       let facility = ""
       let district = ""
       let region = ""
+      let regioncode = ""
       const job = new Promise((resolve, reject) => {
         let params = {
           practitioner: fields.practitionerid,
@@ -63,6 +64,9 @@ const staffdirectorate = {
                   district = loc.name
                 } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
                   region = loc.name
+                  regioncode = loc.extension && loc.extension.find((ext) => {
+                    return ext.url === 'http://ihris.org/fhir/StructureDefinition/locationcode'
+                  })?.valueString
                 }
                 if(loc.partOf && loc.partOf.reference) {
                   await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then(async(loc) => {
@@ -72,6 +76,9 @@ const staffdirectorate = {
                       district = loc.name
                     } else if(loc.meta.profile.includes("http://ihris.org/fhir/StructureDefinition/td-region")) {
                       region = loc.name
+                      regioncode = loc.extension && loc.extension.find((ext) => {
+                        return ext.url === 'http://ihris.org/fhir/StructureDefinition/locationcode'
+                      })?.valueString
                     }
                     if(loc.partOf && loc.partOf.reference) {
                       await fhirAxios.read("Location", loc.partOf.reference.split("/")[1]).then((loc) => {
@@ -250,7 +257,7 @@ const staffdirectorate = {
         })
       })
       Promise.all([job, situation, specialty, classification]).then(() => {
-        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory +"-^-" + contractualcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + agentstatus + "-^-" + organization
+        let value = jobtitle+"-^-"+qualification+"-^-" + specialization +"-^-" + civilservcategory +"-^-" + contractualcategory + "-^-" + appointmentdate + "-^-" + integrationdate + "-^-" + servicestartdate + "-^-" + effectivepresdate + "-^-" + facility + "-^-" + district + "-^-" + region + "-^-" + agentstatus + "-^-" + organization + "-^-" + regioncode
         resolve(value)
       })
     })
@@ -375,7 +382,19 @@ const staffdirectorate = {
       let values = fields.staffdirectoratedata.split("-^-")
       resolve(values[13])
     })
-  }
+  },
+  regioncode: (fields) => {
+    return new Promise((resolve) => {
+      if(!fields.staffdirectoratedata) {
+        resolve()
+      }
+      let values = fields.staffdirectoratedata.split("-^-")
+      if(!values[14]) {
+        values[14] = "TCD.23_1"
+      }
+      resolve(values[14])
+    })
+  },
 }
 
 module.exports = staffdirectorate

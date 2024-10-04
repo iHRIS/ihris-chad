@@ -947,6 +947,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/locationcode"
+        },
+        "name": "Code",
+        "description": "Code.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/note"
         },
         "name": "Note",

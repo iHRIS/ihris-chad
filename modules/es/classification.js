@@ -198,22 +198,17 @@ const classification = {
       resolve(classification[1])
     })
   },
-  civilservcategory: (fields) => {
+  category: (fields) => {
     return new Promise((resolve) => {
       if(!fields.classificationdata) {
         resolve()
       }
-      let classification = fields.classificationdata.split("-^-")
-      resolve(classification[2])
-    })
-  },
-  contractualcategory: (fields) => {
-    return new Promise((resolve) => {
-      if(!fields.classificationdata) {
-        resolve()
+      let values = fields.classificationdata.split("-^-")
+      let category = values[2]
+      if(!category) {
+        category = values[3]
       }
-      let classification = fields.classificationdata.split("-^-")
-      resolve(classification[3])
+      resolve(category)
     })
   },
   classificationcatcategory: (fields) => {

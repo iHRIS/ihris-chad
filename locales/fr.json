@@ -97,7 +97,10 @@
       "Performance Evaluation": "Evaluation de la Performance",
       "Visualizations": "",
       "Relation": "",
-      "Diploma": ""
+      "Diploma": "",
+      "Disciplinary Incidences": "",
+      "Staff By Age Range And Gender": "",
+      "Staff By Age Range And Specialty": ""
     },
     "intro": {
       "Summary": "Résumé",
@@ -180,7 +183,16 @@
       "Province": "",
       "Age Range Count": "",
       "Age Range": "",
-      "Total": ""
+      "Total": "",
+      "Category": "",
+      "Completed": "",
+      "Agent Status": "",
+      "Organization": "",
+      "Age Range Gender Count": "",
+      "Age Range Specialty Count": "",
+      "Disciplinary Events": "",
+      "Action Type": "",
+      "Action Taken": ""
     },
     "ihris-codesystem": {},
     "ihris-search": {},

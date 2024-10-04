@@ -55,6 +55,14 @@ const index = {
       let date = moment(fields.dob).add(age, "years").format("DD-MM-YYYY")
       resolve(date)
     })
+  },
+  retirementYear: (fields) => {
+    return new Promise((resolve) => {
+      if(fields.retirementDate) {
+        return resolve(fields.retirementDate.split("-")[2])
+      }
+      resolve()
+    })
   }
 }
 

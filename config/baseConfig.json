@@ -100,6 +100,30 @@
       "valueString": "http://localhost:8081/chad/fhir"
     },
     {
+      "name": "fhir:flattener",
+      "valueString": "fhir2es"
+    },
+    {
+      "name": "database:name",
+      "valueString": "superset"
+    },
+    {
+      "name": "database:username",
+      "valueString": "superset"
+    },
+    {
+      "name": "database:password",
+      "valueString": "superset"
+    },
+    {
+      "name": "database:port",
+      "valueString": "5433"
+    },
+    {
+      "name": "database:dialect",
+      "valueString": "postgres"
+    },
+    {
       "name": "emnutt:base",
       "valueString": "http://localhost:3002/emNutt/fhir"
     },
@@ -177,11 +201,11 @@
     },
     {
       "name": "elasticsearch:username",
-      "valueString": ""
+      "valueString": "elastic"
     },
     {
       "name": "elasticsearch:password",
-      "valueString": ""
+      "valueString": "qL6kqgc5to6m1+-QTKIy"
     },
     {
       "name": "elasticsearch:max_compiliation_rate",

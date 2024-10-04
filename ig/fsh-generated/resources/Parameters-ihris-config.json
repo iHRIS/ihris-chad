@@ -144,11 +144,7 @@
         },
         {
           "name": "site:nav:menu:dashboard:url",
-          "valueString": "/ihrisapp/ihris-data-visualizer/index.html#/dashBuilder/33539"
-        },
-        {
-          "name": "site:nav:menu:dashboard:external",
-          "valueString": "true"
+          "valueString": "/list-dashboards"
         },
         {
           "name": "site:nav:active",
@@ -999,16 +995,40 @@
           "valueString": "6"
         },
         {
-          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerange:text",
-          "valueString": "Staff By Age Range"
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:text",
+          "valueString": "Disciplinary Incidences"
         },
         {
-          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerange:url",
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:url",
+          "valueString": "/report/ihris-es-report-discipline"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:discipline:order",
+          "valueString": "7"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangegender:text",
+          "valueString": "Staff By Age Range And Gender"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangegender:url",
           "valueString": "/report/ihris-es-report-age-range"
         },
         {
-          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerange:order",
-          "valueString": "7"
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangegender:order",
+          "valueString": "8"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangespecialty:text",
+          "valueString": "Staff By Age Range And Specialty"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangespecialty:url",
+          "valueString": "/report/ihris-es-report-age-specialty"
+        },
+        {
+          "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangespecialty:order",
+          "valueString": "9"
         },
         {
           "name": "site:nav:menu:users:text",

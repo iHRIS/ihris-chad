@@ -477,10 +477,10 @@
           "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
           "extension": [{
             "url": "name",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "function",
-            "valueString": "performance.populate({practitionerid})"
+            "valueString": "orgunits.populate({practitionerid})"
           }, {
             "url": "parameters",
             "valueString": "practitionerid"
@@ -504,10 +504,10 @@
             "valueString": "facility"
           }, {
             "url": "function",
-            "valueString": "performance.facility({performancedata})"
+            "valueString": "orgunits.facility({orgunitsdata})"
           }, {
             "url": "parameters",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -528,10 +528,10 @@
             "valueString": "district"
           }, {
             "url": "function",
-            "valueString": "performance.district({performancedata})"
+            "valueString": "orgunits.district({orgunitsdata})"
           }, {
             "url": "parameters",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "filter",
             "valueBoolean": true
@@ -552,10 +552,10 @@
             "valueString": "region"
           }, {
             "url": "function",
-            "valueString": "performance.region({performancedata})"
+            "valueString": "orgunits.region({orgunitsdata})"
           }, {
             "url": "parameters",
-            "valueString": "performancedata"
+            "valueString": "orgunitsdata"
           }, {
             "url": "filter",
             "valueBoolean": true

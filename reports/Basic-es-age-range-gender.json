@@ -5,7 +5,7 @@
       "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportDetails",
       "extension": [{
         "url": "label",
-        "valueString": "Age Range Count"
+        "valueString": "Age Range Gender Count"
       }, {
         "url": "displayCheckbox",
         "valueBoolean": false
@@ -18,9 +18,6 @@
       }, {
         "url": "cachingDisabled",
         "valueBoolean": true
-      }, {
-        "url": "externalCachingModule",
-        "valueString": "agerange.run()"
       }, {
         "url": "http://ihris.org/fhir/StructureDefinition/iHRISReportElement",
         "extension": [{
