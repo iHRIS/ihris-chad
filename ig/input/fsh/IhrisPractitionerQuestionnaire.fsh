@@ -105,17 +105,24 @@ Usage:          #definition
 * item[0].item[7].repeats = false
 
 * item[0].item[8].linkId = "Practitioner.extension[4]"
-* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger"
-* item[0].item[8].text = "Number of Children"
-* item[0].item[8].type = #integer
+* item[0].item[8].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:first-service-start-date.value[x]:valueDate"
+* item[0].item[8].text = "First Service Start Date"
+* item[0].item[8].type = #date
 * item[0].item[8].required = true
 * item[0].item[8].repeats = false
 
-* item[0].item[9].linkId = "Practitioner.active"
-* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.active"
-* item[0].item[9].text = "Active"
-* item[0].item[9].type = #boolean
+* item[0].item[9].linkId = "Practitioner.extension[5]"
+* item[0].item[9].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger"
+* item[0].item[9].text = "Number of Children"
+* item[0].item[9].type = #integer
 * item[0].item[9].required = true
+* item[0].item[9].repeats = false
+
+* item[0].item[10].linkId = "Practitioner.active"
+* item[0].item[10].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.active"
+* item[0].item[10].text = "Active"
+* item[0].item[10].type = #boolean
+* item[0].item[10].required = true
 
 * item[1].linkId = "__Practitioner:contact"
 * item[1].definition = "http://ihris.org/fhir/StructureDefinition/ihris-practitioner"

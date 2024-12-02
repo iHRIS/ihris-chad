@@ -21,22 +21,43 @@
         {
           "url": "resource",
           "valueReference": {
-            "reference": "CodeSystem/agent-status-codesystem"
+            "reference": "StructureDefinition/agent-status-profile"
           }
         },
         {
           "url": "search",
-          "valueString": "Display|display"
+          "valueString": "Agent Status|extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding"
         },
         {
-          "url": "search",
-          "valueString": "Code|code"
+          "extension": [
+            {
+              "url": "field",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "url",
+              "valueUrl": "/resource/view/practitioner/FIELD"
+            },
+            {
+              "url": "text",
+              "valueString": "View Health Worker"
+            },
+            {
+              "url": "button",
+              "valueBoolean": true
+            },
+            {
+              "url": "icon",
+              "valueString": "mdi-account-arrow-right"
+            }
+          ],
+          "url": "link"
         },
         {
           "extension": [
             {
               "url": "path",
-              "valueString": "CodeSystem.code"
+              "valueString": "Basic.extension:practitioner.value[x]:valueReference"
             },
             {
               "url": "readOnlyIfSet",
@@ -51,23 +72,31 @@
       "extension": [
         {
           "url": "title",
-          "valueString": "Agent Status"
+          "valueString": "Agent Status Information"
         },
         {
           "url": "description",
-          "valueString": "Agent Status"
+          "valueString": "Agent Status Information"
         },
         {
           "url": "name",
-          "valueString": "CodeSystem"
+          "valueString": "agentstatusinformation"
         },
         {
           "url": "field",
-          "valueString": "CodeSystem.display"
+          "valueString": "Basic.extension:practitioner"
         },
         {
           "url": "field",
-          "valueString": "CodeSystem.code"
+          "valueString": "Basic.extension:agent-status"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:start-date"
+        },
+        {
+          "url": "field",
+          "valueString": "Basic.extension:end-date"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"

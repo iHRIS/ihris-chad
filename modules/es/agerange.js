@@ -427,6 +427,9 @@ function getDistinct(indexName, field, hasKeyword) {
 
 function bulkSave(bulkRequestBody) {
   return new Promise((resolve, reject) => {
+    if(bulkRequestBody === "\n") {
+      return resolve()
+    }
     let url = URI(config.get("elasticsearch:base")).segment("_bulk").toString();
     let options = {
       url,

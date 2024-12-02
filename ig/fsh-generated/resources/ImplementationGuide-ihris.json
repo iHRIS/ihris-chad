@@ -28,6 +28,14 @@
     "resource": [
       {
         "reference": {
+          "reference": "StructureDefinition/agent-status-profile"
+        },
+        "name": "Agent Status Information",
+        "description": "Agent Status Information Profile.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/bw-person-user"
         },
         "name": "System User",
@@ -372,6 +380,14 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/agent-status-other"
+        },
+        "name": "Agent Status",
+        "description": "Agent Status.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/appointment-date"
         },
         "name": "iHRIS Job Description First Employment Date",
@@ -548,10 +564,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/end-date"
+        },
+        "name": "End Date",
+        "description": "End Date.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/end-service-reference"
         },
         "name": "End of Service Reference",
         "description": "End of Service Reference.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/first-service-start-date"
+        },
+        "name": "First Service Start Date",
+        "description": "First Service Start Date.",
         "exampleBoolean": false
       },
       {
@@ -1040,6 +1072,22 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/resumption-date"
+        },
+        "name": "Resumption Date",
+        "description": "Resumption Date.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/resumption-reference"
+        },
+        "name": "Resumption Reference",
+        "description": "Resumption Reference.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/scanned-document"
         },
         "name": "Document",
@@ -1079,10 +1127,26 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/situation-status"
+        },
+        "name": "Agent Status",
+        "description": "Agent Status.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/specialty"
         },
         "name": "Specialty",
         "description": "Specialty.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/start-date"
+        },
+        "name": "Start Date",
+        "description": "Start Date.",
         "exampleBoolean": false
       },
       {
@@ -1582,6 +1646,13 @@
         },
         "name": "Service type",
         "description": "This value set defines an example set of codes of service-types.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/situation-status-valueset"
+        },
+        "name": "Agent Status ValueSet",
         "exampleBoolean": false
       },
       {
@@ -2122,6 +2193,13 @@
       },
       {
         "reference": {
+          "reference": "CodeSystem/situation-status-codesystem"
+        },
+        "name": "Agent Status Code System",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
           "reference": "CodeSystem/specialization-codesystem"
         },
         "name": "Specialization Code System",
@@ -2210,6 +2288,13 @@
           "reference": "SearchParameter/active-user"
         },
         "name": "active-user",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Questionnaire/agent-status"
+        },
+        "name": "AgentStatus",
         "exampleBoolean": false
       },
       {
@@ -2390,6 +2475,13 @@
       {
         "reference": {
           "reference": "Basic/ihris-page-agent-status"
+        },
+        "name": "Agent Status Information Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-agent-status-list"
         },
         "name": "Agent Status Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
@@ -2678,7 +2770,7 @@
         "reference": {
           "reference": "Basic/ihris-page-role"
         },
-        "name": "NHWR Roles",
+        "name": "Roles",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2742,6 +2834,13 @@
           "reference": "Basic/ihris-page-situation"
         },
         "name": "Situation Information Page",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-page-situation-status"
+        },
+        "name": "Agent Status Page",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-page"
       },
       {
@@ -2921,6 +3020,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-add-agent-status"
+        },
+        "name": "Add Agent Status",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-add-classification"
         },
         "name": "Add Classification",
@@ -3015,6 +3121,13 @@
           "reference": "Basic/ihris-task-all-permissions-to-everything"
         },
         "name": "iHRIS Task With All Permissions To Everything",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-edit-agent-status"
+        },
+        "name": "Edit Agent Status",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3127,6 +3240,13 @@
           "reference": "Basic/ihris-task-navigation-profile"
         },
         "name": "iHRIS Task To Navigate to Profile",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-read-auditevent-resource"
+        },
+        "name": "iHRIS Task To Read AuditEvent resource",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
       },
       {
@@ -3292,6 +3412,13 @@
       },
       {
         "reference": {
+          "reference": "Basic/ihris-task-write-auditevent-resource"
+        },
+        "name": "iHRIS Task To Write AuditEvent resource",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
           "reference": "Basic/ihris-task-write-basic-resource"
         },
         "name": "iHRIS Task To Write Basic resource",
@@ -3384,6 +3511,13 @@
       {
         "reference": {
           "reference": "Basic/ihris-task-write-value-set"
+        },
+        "name": "iHRIS Task To Write Valueset Resource",
+        "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"
+      },
+      {
+        "reference": {
+          "reference": "Basic/ihris-task-write-valueset-resource"
         },
         "name": "iHRIS Task To Write Valueset Resource",
         "exampleCanonical": "http://ihris.org/fhir/StructureDefinition/ihris-task"

@@ -6,16 +6,16 @@ Description:    "Situation Information Profile."
 * extension[practitioner].valueReference 1..1 MS
 * extension[practitioner].valueReference ^label = "Health Practitioner"
 * extension contains
-    AgentStatus named agent-status 1..1 MS and
+    SituationStatus named situation-status 1..1 MS and
     Qualification named qualification 1..1 MS and
     Function named function 1..1 MS and
     Level named level 1..1 MS and
     StudyLevel named study-level 1..1 MS and
     Organization named organization 1..1 MS and
     Specialty named specialty 1..1 MS
-* extension[agent-status]  1..1 MS
-* extension[agent-status]  ^label = "Agent Status"
-* extension[agent-status].valueCoding MS
+* extension[situation-status]  1..1 MS
+* extension[situation-status]  ^label = "Agent Status"
+* extension[situation-status].valueCoding MS
 * extension[qualification]  1..1 MS
 * extension[qualification]  ^label = "Profile/Qualification"
 * extension[qualification].valueCoding MS
@@ -35,8 +35,8 @@ Description:    "Situation Information Profile."
 * extension[specialty]  ^label = "Specialty"
 * extension[specialty].valueCoding MS
 
-Extension:      AgentStatus
-Id:             agent-status
+Extension:      SituationStatus
+Id:             situation-status
 Title:          "Agent Status"
 Description:    "Agent Status."
 * ^context.type = #element
@@ -44,7 +44,7 @@ Description:    "Agent Status."
 * value[x] only Coding
 * valueCoding 1..1 MS
 * valueCoding ^label = "Agent Status"
-* valueCoding from http://ihris.org/fhir/ValueSet/agent-status-valueset (required)
+* valueCoding from http://ihris.org/fhir/ValueSet/situation-status-valueset (required)
 
 Extension:      Specialty
 Id:             specialty
@@ -118,10 +118,10 @@ Usage:          #definition
 * item[0].type = #group
 
 * item[0].item[0].linkId = "Basic.extension[0]"
-* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:agent-status.value[x]:valueCoding"
+* item[0].item[0].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:situation-status.value[x]:valueCoding"
 * item[0].item[0].text = "Agent Status"
 * item[0].item[0].type = #choice
-* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/agent-status-valueset"
+* item[0].item[0].answerValueSet = "http://ihris.org/fhir/ValueSet/situation-status-valueset"
 * item[0].item[0].required = true
 * item[0].item[0].repeats = false
 
@@ -134,7 +134,7 @@ Usage:          #definition
 * item[0].item[1].repeats = false
 * item[0].item[1].enableWhen[0].question = "Basic.extension[0]"
 * item[0].item[1].enableWhen[0].operator = #=
-* item[0].item[1].enableWhen[0].answerCoding = agent-status-codesystem#contractualpartners
+* item[0].item[1].enableWhen[0].answerCoding = situation-status-codesystem#contractualpartners
 
 * item[0].item[2].linkId = "Basic.extension[2]"
 * item[0].item[2].definition = "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:qualification.value[x]:valueCoding"
@@ -187,14 +187,14 @@ Usage:          #example
 * extension[display].extension[link][0].extension[button].valueBoolean = true
 * extension[display].extension[link][0].extension[icon].valueString = "mdi-account-arrow-right"
 * extension[display].extension[link][0].extension[url].valueUrl = "/resource/view/practitioner/FIELD"
-* extension[display].extension[search][0].valueString = "Agent Status|extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding"
+* extension[display].extension[search][0].valueString = "Agent Status|extension.where(url='http://ihris.org/fhir/StructureDefinition/situation-status').valueCoding"
 * extension[display].extension[field][0].extension[path].valueString = "Basic.extension:practitioner.value[x]:valueReference"
 * extension[display].extension[field][0].extension[readOnlyIfSet].valueBoolean = true
 * extension[section][0].extension[title].valueString = "Situation Information"
 * extension[section][0].extension[description].valueString = "Situation Information"
 * extension[section][0].extension[name].valueString = "situationinformation"
 * extension[section][0].extension[field][0].valueString = "Basic.extension:practitioner"
-* extension[section][0].extension[field][1].valueString = "Basic.extension:agent-status"
+* extension[section][0].extension[field][1].valueString = "Basic.extension:situation-status"
 * extension[section][0].extension[field][2].valueString = "Basic.extension:organization"
 * extension[section][0].extension[field][3].valueString = "Basic.extension:qualification"
 * extension[section][0].extension[field][4].valueString = "Basic.extension:function"

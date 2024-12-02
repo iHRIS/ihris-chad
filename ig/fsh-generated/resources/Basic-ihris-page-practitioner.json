@@ -182,6 +182,10 @@
         {
           "url": "field",
           "valueString": "Practitioner.extension:nationality"
+        },
+        {
+          "url": "field",
+          "valueString": "Practitioner.extension:first-service-start-date"
         }
       ],
       "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
@@ -2344,6 +2348,152 @@
                 {
                   "url": "task",
                   "valueId": "ihris-task-edit-emergency"
+                }
+              ],
+              "url": "action"
+            }
+          ],
+          "url": "resource"
+        }
+      ],
+      "url": "http://ihris.org/fhir/StructureDefinition/ihris-page-section"
+    },
+    {
+      "extension": [
+        {
+          "url": "title",
+          "valueString": "Agent Status"
+        },
+        {
+          "url": "description",
+          "valueString": "Agent Status"
+        },
+        {
+          "url": "name",
+          "valueString": "agent-status"
+        },
+        {
+          "extension": [
+            {
+              "url": "resource",
+              "valueReference": {
+                "reference": "StructureDefinition/agent-status-profile"
+              }
+            },
+            {
+              "url": "linkfield",
+              "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/ihris-practitioner-reference').valueReference.reference"
+            },
+            {
+              "url": "column",
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Status"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/agent-status').valueCoding.display"
+                }
+              ]
+            },
+            {
+              "url": "searchfield",
+              "valueString": "practitioner"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Resumption/Start Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/start-date').valueDate | extension.where(url='http://ihris.org/fhir/StructureDefinition/resumption-date').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "End Date"
+                },
+                {
+                  "url": "field",
+                  "valueString": "extension.where(url='http://ihris.org/fhir/StructureDefinition/end-date').valueDate"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "header",
+                  "valueString": "Actions"
+                },
+                {
+                  "url": "field",
+                  "valueString": "_action"
+                }
+              ],
+              "url": "column"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/agent-status/agent-status?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Add Status"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": false
+                },
+                {
+                  "url": "emptyDisplay",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-add-agent-status"
+                }
+              ],
+              "url": "action"
+            },
+            {
+              "extension": [
+                {
+                  "url": "link",
+                  "valueString": "/questionnaire/agent-status/agent-status/ITEMID?practitioner=FHIRID"
+                },
+                {
+                  "url": "text",
+                  "valueString": "Edit"
+                },
+                {
+                  "url": "row",
+                  "valueBoolean": true
+                },
+                {
+                  "url": "class",
+                  "valueString": "primary"
+                },
+                {
+                  "url": "condition",
+                  "valueString": "Basic.extension.where(url='http://ihris.org/fhir/StructureDefinition/end-date').empty()"
+                },
+                {
+                  "url": "task",
+                  "valueId": "ihris-task-edit-agent-status"
                 }
               ],
               "url": "action"

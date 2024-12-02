@@ -1134,8 +1134,8 @@ Title:            "Service ValueSet"
 * ^version = "0.1.0"
 * codes from system WorkServiceCodeSystem
 
-CodeSystem:       AgentStatusCodeSystem
-Id:               agent-status-codesystem
+CodeSystem:       SituationStatusCodeSystem
+Id:               situation-status-codesystem
 Title:            "Agent Status Code System"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
@@ -1147,11 +1147,30 @@ Title:            "Agent Status Code System"
 * #contractualpartners "Contractuel des Partenaires"
 * #other "Autres"
 
-ValueSet:          AgentStatusValueSet
-Id:                agent-status-valueset
+ValueSet:          SituationStatusValueSet
+Id:                situation-status-valueset
 Title:            "Agent Status ValueSet"
 * ^date = "2024-02-07T08:12:00.000Z"
 * ^version = "0.1.0"
+* codes from system SituationStatusCodeSystem
+
+CodeSystem:      AgentStatusCodeSystem
+Id:              agent-status-codesystem
+Title:           "Agent Status Code System"
+* ^date = "2020-10-20T08:41:04.362Z"
+* #active "Activité"
+* #inactive "En activité"
+* #abandon "Abandon de Poste"
+* #enformation "En Formation"
+* #malade "Malade"
+* #miseendisponibilite "Mise en Disponibilité"
+* #retraite "Retraité(e)"
+
+ValueSet:         AgentStatusValueSet
+Id:               agent-status-valueset
+Title:            "Agent Status ValueSet"
+* ^date = "2020-10-20T08:41:04.362Z"
+* ^version = "0.2.0"
 * codes from system AgentStatusCodeSystem
 
 CodeSystem:       QualificationCodeSystem

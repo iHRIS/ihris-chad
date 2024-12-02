@@ -119,7 +119,8 @@ Description:    "iHRIS profile of Practitioner."
     BirthPlace named birth-place 0..1 MS and
     IhrisPractitionerNationality named nationality 0..1 MS and
     IhrisPractitionerMaritalStatus named marital-status 0..1 MS and
-    IhrisPractitionerChildren named children 0..1 MS
+    IhrisPractitionerChildren named children 0..1 MS and
+    FirstServiceStartDate named first-service-start-date 0..1 MS
 * extension[birth-place] ^label = "Place of Birth"
 * extension[birth-place].valueString MS
 * extension[nationality]  ^label = "Nationality"
@@ -130,6 +131,8 @@ Description:    "iHRIS profile of Practitioner."
 * extension[children].valueInteger MS
 * extension[registrationNumber].valueString 1..1 MS
 * extension[registrationNumber].valueString ^label = "Registration Number"
+* extension[first-service-start-date]  ^label = "First Service Start Date"
+* extension[first-service-start-date].valueDate MS
 * active 1..1 MS
 * active ^label = "Active"
 
@@ -152,6 +155,16 @@ Description:    "Registration Number"
 * value[x] only string
 * valueString 1..1 MS
 * valueString ^label = "Registration Number"
+
+Extension:      FirstServiceStartDate
+Id:             first-service-start-date
+Title:          "First Service Start Date"
+Description:    "First Service Start Date."
+* ^context.type = #element
+* ^context.expression = "Practitioner"
+* value[x] only date
+* valueDate 1..1 MS
+* valueDate ^label = "First Service Start Date"
 
 Extension:      IdIssueDate
 Id:             id-issue-date

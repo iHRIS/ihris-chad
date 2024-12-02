@@ -22,10 +22,10 @@
       "item": [
         {
           "linkId": "Basic.extension[0]",
-          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:agent-status.value[x]:valueCoding",
+          "definition": "http://ihris.org/fhir/StructureDefinition/situation-profile#Basic.extension:situation-status.value[x]:valueCoding",
           "text": "Agent Status",
           "type": "choice",
-          "answerValueSet": "http://ihris.org/fhir/ValueSet/agent-status-valueset",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/situation-status-valueset",
           "required": true,
           "repeats": false
         },
@@ -43,7 +43,7 @@
               "operator": "=",
               "answerCoding": {
                 "code": "contractualpartners",
-                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
+                "system": "http://ihris.org/fhir/CodeSystem/situation-status-codesystem"
               }
             }
           ]

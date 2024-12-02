@@ -132,6 +132,14 @@
         },
         {
           "linkId": "Practitioner.extension[4]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:first-service-start-date.value[x]:valueDate",
+          "text": "First Service Start Date",
+          "type": "date",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Practitioner.extension[5]",
           "definition": "http://ihris.org/fhir/StructureDefinition/ihris-practitioner#Practitioner.extension:children.value[x]:valueInteger",
           "text": "Number of Children",
           "type": "integer",

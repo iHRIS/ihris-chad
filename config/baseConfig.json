@@ -40,6 +40,14 @@
       "valueString": "fhir.js"
     },
     {
+      "name": "app:site:routes:practitioner:mount",
+      "valueString": "/site/practitioner"
+    },
+    {
+      "name": "app:site:routes:practitioner:path",
+      "valueString": "practitionerroute.js"
+    },
+    {
       "name": "app:site:routes:testroute:mount",
       "valueString": "/site/testroute"
     },
@@ -226,6 +234,10 @@
     {
       "name": "kibana:password",
       "valueString": ""
+    },
+    {
+      "name": "kibana:ignoredashboards",
+      "valueString": "testing,production"
     },
     {
       "name": "logs",

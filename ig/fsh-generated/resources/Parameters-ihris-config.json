@@ -527,6 +527,18 @@
           "valueString": "mdi-database"
         },
         {
+          "name": "site:nav:menu:database:menu:otherLists:menu:agent-status:text",
+          "valueString": "Agent Status"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:agent-status:url",
+          "valueString": "/resource/search/agent-status-list"
+        },
+        {
+          "name": "site:nav:menu:database:menu:otherLists:menu:agent-status:order",
+          "valueString": "0"
+        },
+        {
           "name": "site:nav:menu:database:menu:otherLists:menu:identifier:text",
           "valueString": "Identifier Types"
         },
@@ -699,15 +711,15 @@
           "valueString": "4"
         },
         {
-          "name": "site:nav:menu:database:menu:situation:menu:agent-status:text",
-          "valueString": "Agent Status"
+          "name": "site:nav:menu:database:menu:situation:menu:situation-status:text",
+          "valueString": "Situation Status"
         },
         {
-          "name": "site:nav:menu:database:menu:situation:menu:agent-status:url",
-          "valueString": "/resource/search/agent-status"
+          "name": "site:nav:menu:database:menu:situation:menu:situation-status:url",
+          "valueString": "/resource/search/situation-status"
         },
         {
-          "name": "site:nav:menu:database:menu:situation:menu:agent-status:order",
+          "name": "site:nav:menu:database:menu:situation:menu:situation-status:order",
           "valueString": "5"
         },
         {
@@ -1012,7 +1024,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangegender:url",
-          "valueString": "/report/ihris-es-report-age-range"
+          "valueString": "/report/ihris-es-report-age-range-gender"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangegender:order",
@@ -1024,7 +1036,7 @@
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangespecialty:url",
-          "valueString": "/report/ihris-es-report-age-specialty"
+          "valueString": "/report/ihris-es-report-age-range-specialty"
         },
         {
           "name": "site:nav:menu:reports:menu:staff-reports:menu:agerangespecialty:order",
@@ -1091,12 +1103,28 @@
           "valueString": "/questionnaire/ihris-change-password/user"
         },
         {
+          "name": "site:nav:menu:practitionerimport:text",
+          "valueString": "Import Practitioners"
+        },
+        {
+          "name": "site:nav:menu:practitionerimport:order",
+          "valueString": "13"
+        },
+        {
+          "name": "site:nav:menu:practitionerimport:icon",
+          "valueString": "mdi-file-import-outline"
+        },
+        {
+          "name": "site:nav:menu:practitionerimport:url",
+          "valueString": "/custom/import-practitioners?path=/chad/components"
+        },
+        {
           "name": "site:nav:menu:ihris-apps-list:text",
           "valueString": "Apps"
         },
         {
           "name": "site:nav:menu:ihris-apps-list:order",
-          "valueString": "13"
+          "valueString": "14"
         },
         {
           "name": "site:nav:menu:ihris-apps-list:icon",
@@ -1193,6 +1221,14 @@
         {
           "name": "defaults:fields:Location.partOf:user_filter:replace",
           "valueString": "$1"
+        },
+        {
+          "name": "workflow:processor:agent-status:file",
+          "valueString": "agentStatusWorkflow"
+        },
+        {
+          "name": "workflow:questionnaire:agent-status:url",
+          "valueString": "http://ihris.org/fhir/Questionnaire/agent-status"
         },
         {
           "name": "workflow:processor:ihris-practitioner:file",

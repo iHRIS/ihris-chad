@@ -656,9 +656,9 @@
         ]
       },
       {
-        "id": "Basic.extension:agent-status",
+        "id": "Basic.extension:situation-status",
         "path": "Basic.extension",
-        "sliceName": "agent-status",
+        "sliceName": "situation-status",
         "label": "Agent Status",
         "short": "Additional content defined by implementations",
         "definition": "May be used to represent additional information that is not part of the basic definition of the resource. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
@@ -678,7 +678,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://ihris.org/fhir/StructureDefinition/agent-status"
+              "http://ihris.org/fhir/StructureDefinition/situation-status"
             ]
           }
         ],
@@ -711,7 +711,7 @@
         ]
       },
       {
-        "id": "Basic.extension:agent-status.id",
+        "id": "Basic.extension:situation-status.id",
         "path": "Basic.extension.id",
         "representation": [
           "xmlAttr"
@@ -746,7 +746,7 @@
         ]
       },
       {
-        "id": "Basic.extension:agent-status.extension",
+        "id": "Basic.extension:situation-status.extension",
         "path": "Basic.extension.extension",
         "slicing": {
           "discriminator": [
@@ -805,7 +805,7 @@
         ]
       },
       {
-        "id": "Basic.extension:agent-status.url",
+        "id": "Basic.extension:situation-status.url",
         "path": "Basic.extension.url",
         "representation": [
           "xmlAttr"
@@ -831,7 +831,7 @@
             ]
           }
         ],
-        "fixedUri": "http://ihris.org/fhir/StructureDefinition/agent-status",
+        "fixedUri": "http://ihris.org/fhir/StructureDefinition/situation-status",
         "isModifier": false,
         "isSummary": false,
         "mapping": [
@@ -842,7 +842,7 @@
         ]
       },
       {
-        "id": "Basic.extension:agent-status.value[x]",
+        "id": "Basic.extension:situation-status.value[x]",
         "path": "Basic.extension.value[x]",
         "slicing": {
           "discriminator": [
@@ -888,7 +888,7 @@
         ]
       },
       {
-        "id": "Basic.extension:agent-status.value[x]:valueCoding",
+        "id": "Basic.extension:situation-status.value[x]:valueCoding",
         "path": "Basic.extension.value[x]",
         "sliceName": "valueCoding",
         "label": "Agent Status",
@@ -921,7 +921,7 @@
         "isSummary": false,
         "binding": {
           "strength": "required",
-          "valueSet": "http://ihris.org/fhir/ValueSet/agent-status-valueset"
+          "valueSet": "http://ihris.org/fhir/ValueSet/situation-status-valueset"
         },
         "mapping": [
           {
@@ -2898,9 +2898,9 @@
         "mustSupport": true
       },
       {
-        "id": "Basic.extension:agent-status",
+        "id": "Basic.extension:situation-status",
         "path": "Basic.extension",
-        "sliceName": "agent-status",
+        "sliceName": "situation-status",
         "label": "Agent Status",
         "min": 1,
         "max": "1",
@@ -2908,7 +2908,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://ihris.org/fhir/StructureDefinition/agent-status"
+              "http://ihris.org/fhir/StructureDefinition/situation-status"
             ]
           }
         ],

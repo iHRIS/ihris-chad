@@ -100,7 +100,9 @@
       "Diploma": "",
       "Disciplinary Incidences": "",
       "Staff By Age Range And Gender": "",
-      "Staff By Age Range And Specialty": ""
+      "Staff By Age Range And Specialty": "",
+      "Situation Status": "",
+      "Import Practitioners": ""
     },
     "intro": {
       "Summary": "Résumé",
@@ -192,7 +194,11 @@
       "Age Range Specialty Count": "",
       "Disciplinary Events": "",
       "Action Type": "",
-      "Action Taken": ""
+      "Action Taken": "",
+      "`speciality": "",
+      "Facility/Place of work": "",
+      "Staff": "",
+      "Retirement Year": ""
     },
     "ihris-codesystem": {},
     "ihris-search": {},
@@ -811,7 +817,13 @@
       "Budget Type Code System": "",
       "Budget Type": "",
       "Program": "",
-      "Program Code": ""
+      "Program Code": "",
+      "Role Details": "",
+      "Agent Status Information": "",
+      "Other Agent Status": "",
+      "Situation Status": "",
+      "Add Status": "",
+      "Resumption/Start Date": ""
     },
     "hardcoded-texts": {
       "must be an integer": "must be an integer",

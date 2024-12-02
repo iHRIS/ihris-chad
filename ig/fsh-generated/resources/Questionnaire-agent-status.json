@@ -1,0 +1,89 @@
+{
+  "resourceType": "Questionnaire",
+  "id": "agent-status",
+  "meta": {
+    "profile": [
+      "http://ihris.org/fhir/StructureDefinition/ihris-questionnaire"
+    ]
+  },
+  "url": "http://ihris.org/fhir/Questionnaire/agent-status",
+  "title": "iHRIS Agent Status Information Workflow",
+  "description": "iHRIS workflow to record agent status information",
+  "name": "agent-status",
+  "status": "active",
+  "date": "2020-09-02",
+  "purpose": "Agent Status information.",
+  "item": [
+    {
+      "linkId": "Basic",
+      "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile",
+      "text": "Agent Status",
+      "type": "group",
+      "item": [
+        {
+          "linkId": "Basic.extension[0]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:agent-status.value[x]:valueCoding",
+          "text": "Status",
+          "type": "choice",
+          "answerValueSet": "http://ihris.org/fhir/ValueSet/agent-status-valueset",
+          "required": true,
+          "repeats": false
+        },
+        {
+          "linkId": "Basic.extension[1]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:resumption-date.value[x]:valueDate",
+          "text": "Resumption Date",
+          "type": "date",
+          "required": true,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Basic.extension[0]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "active",
+                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Basic.extension[2]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:resumption-reference.value[x]:valueString",
+          "text": "Resumption Reference",
+          "type": "string",
+          "required": false,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Basic.extension[0]",
+              "operator": "=",
+              "answerCoding": {
+                "code": "active",
+                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
+              }
+            }
+          ]
+        },
+        {
+          "linkId": "Basic.extension[3]",
+          "definition": "http://ihris.org/fhir/StructureDefinition/agent-status-profile#Basic.extension:start-date.value[x]:valueDate",
+          "text": "Start Date",
+          "type": "date",
+          "required": true,
+          "repeats": false,
+          "enableWhen": [
+            {
+              "question": "Basic.extension[0]",
+              "operator": "!=",
+              "answerCoding": {
+                "code": "active",
+                "system": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

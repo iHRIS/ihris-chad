@@ -9,34 +9,34 @@
   "url": "http://ihris.org/fhir/CodeSystem/agent-status-codesystem",
   "concept": [
     {
-      "code": "regularcivilservant",
-      "display": "Fonctionnaire Titulaire"
+      "code": "active",
+      "display": "Activité"
     },
     {
-      "code": "traineecivilservant",
-      "display": "Fonctionnaire Stagiaire"
+      "code": "inactive",
+      "display": "En activité"
     },
     {
-      "code": "politicalpersonality",
-      "display": "Personnalité Politique"
+      "code": "abandon",
+      "display": "Abandon de Poste"
     },
     {
-      "code": "contractual",
-      "display": "Contractuel"
+      "code": "enformation",
+      "display": "En Formation"
     },
     {
-      "code": "costreccontr",
-      "display": "Contractuel sur recouvrement de coût"
+      "code": "malade",
+      "display": "Malade"
     },
     {
-      "code": "contractualpartners",
-      "display": "Contractuel des Partenaires"
+      "code": "miseendisponibilite",
+      "display": "Mise en Disponibilité"
     },
     {
-      "code": "other",
-      "display": "Autres"
+      "code": "retraite",
+      "display": "Retraité(e)"
     }
   ],
-  "date": "2024-02-07T08:12:00.000Z",
+  "date": "2020-10-20T08:41:04.362Z",
   "count": 7
 }

@@ -354,6 +354,26 @@ Title:          "Edit Validation"
 * extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
 * extension[attributes][0].extension[instance].valueId = "edit-validation"
 
+Instance:       ihris-task-add-agent-status
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Add Agent Status"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "add-agent-status"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "add-agent-status"
+
+Instance:       ihris-task-edit-agent-status
+InstanceOf:     IhrisTask
+Usage:          #example
+Title:          "Edit Agent Status"
+* code = IhrisResourceCodeSystem#task
+* extension[name].valueString = "edit-agent-status"
+* extension[attributes][0].extension[permission].valueCode = IhrisTaskPermissionCodeSystem#special
+* extension[attributes][0].extension[resource].valueCode = IhrisTaskResourceCodeSystem#special
+* extension[attributes][0].extension[instance].valueId = "edit-agent-status"
+
 Instance:       ihris-task-add-inservice-training-request
 InstanceOf:     IhrisTask
 Usage:          #example
